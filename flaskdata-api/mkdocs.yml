@@ -1,0 +1,4 @@
+site_name: FlaskData Documentation
+nav:
+    - Introduction: index.md
+    - API flows: apiflows.md
