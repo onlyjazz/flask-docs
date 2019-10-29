@@ -108,3 +108,29 @@ OR
 3. POST /flask/viewer/{token}/save-crf - with token of the current link and data from the current CRF
 
 ### Example of JS code:
+    var xhrcall = $.ajax({
+                            url: 'https://dev-api.flaskdata.io/flask/link/filter',
+                            type: 'POST',
+                            headers: {
+                                'Authorization': jwt},
+                            data: '{
+                                    "pagination": {
+                                      "page": 0,
+                                      "size": 10,
+                                      "sort": "name,asc"
+                                    },
+                                    "subject": 0,
+                                    "status": "string"
+                                  }',
+                              contentType: 'application/json'
+                          });
+      //promise syntax to render after xhr completes
+      xhrcall
+          .done(function(data){
+                  // Enter your code here
+          })
+          .fail(function(error) {
+                    if(error) {
+                        // Enter your code here  
+                    }
+          });
