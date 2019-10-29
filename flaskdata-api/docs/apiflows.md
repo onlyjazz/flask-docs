@@ -5,7 +5,7 @@ The API has 2 parts of APIs - EDC and Flask.
 * EDC - APIs are related to ClinCapture EDC (extract EDC data and etc.)
 * Flask - APIs are related to flask data (extract data, insert data and etc.)
 
-NOTES - Authorization parameter in the header request should be the token you had get before from you [authorization request](index.md#authorization).
+NOTES - Authorization parameter in the header request should be the token you had get before from you [authorization request](apiindex.md#authorization).
         EDC parameter in the header request should be the EDC DB name.
 
 In this document there are a few examples of FlaskData APIs - There are more EDC APIs, their description exists in swagger.
