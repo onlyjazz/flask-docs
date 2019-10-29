@@ -1,4 +1,4 @@
-# Use cases/API flows
+# API flows
 
 The API has 2 parts of APIs - EDC and Flask.
 
@@ -88,3 +88,21 @@ NOTE - This API delete the users that were assigned to this study and assigned t
 
 ### /flask/subject/extract-study-event-data-to-CSV
 This API extract all study data (from FlaskForms) based on study id and download CSV files.
+
+## Use Case example
+
+Your study uses FlaskForms application.
+
+You have a mobile app and you want to collect data and save it to a Flask Forms Event/CRF
+
+The API flow should be:
+
+1. POST /flask/link/filter - Get the list of Links - it contains all the links which subject has. Data include the token, id, and URL for each link
+2. GET /flask/viewer/{token}/data Get subject CRFs Data included subject, and all CRFs in this event
+3. POST /flask/viewer/{token}/save-crf - with token of the current link and data from the current CRF
+
+OR
+
+1. GET /flask/viewer/{token}/data Get subject CRFs Data included subject, and all CRFs in this event
+2. GET /flask/link/{linkId} Get Link - get token from this request
+3. POST /flask/viewer/{token}/save-crf - with token of the current link and data from the current CRF
