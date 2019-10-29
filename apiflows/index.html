@@ -118,7 +118,30 @@ For more details and questions contact us by sending email to <a href="mailto:su
 <p>This API download a zip folder includes EDC study data. Each csv is an event CRF data.</p>
 <h4 id="edcsubjectscreate-subject">/edc/subjects/create-subject</h4>
 <p>This API create a subject in EDC DB and return the study_subject_id value.</p>
-<h2 id="flask">Flask</h2></div>
+<h2 id="flask">Flask</h2>
+<h3 id="flaskcustomerextract-data-to-json">/flask/customer/extract-data-to-json</h3>
+<p>This API extract data from flask tables and views for your customer.
+The table/ view should have customer_id column for this process.</p>
+<p>For example: studies table, audit_user_login, billing_reports_customer and etc.
+studyIds and filters are optional.</p>
+<h3 id="flaskcustomerdownload-billing-reports">/flask/customer/download-billing-reports</h3>
+<p>This API download a billing reports folder for the month of the billingDate parameter.
+The billing report zip folder includes all the billing report files for your customer.
+NOTE - This process will download files only if the billing reports features turn on in your customer account.</p>
+<h3 id="flaskdeviceget-logs">/flask/device/get-logs</h3>
+<p>This API returns device logs of a study.</p>
+<h3 id="flaskdeviceinsert-log">/flask/device/insert-log</h3>
+<p>This API inserts device log into flaskData with correct study_id according to EDC.
+payload parameter is optional and can include each key value pairs.</p>
+<h3 id="flaskstudycreate-update-flask-study">/flask/study/create-update-flask-study</h3>
+<p>This API creates/updates study in FlaskData.</p>
+<h3 id="flasksitecreate-update-flask-site">/flask/site/create-update-flask-site</h3>
+<p>This API creates/updates site in FlaskData.</p>
+<h3 id="flaskstudycreate-update-flask-study-users">/flask/study/create-update-flask-study-users</h3>
+<p>This API create user if not exists and assigned users to study.
+NOTE - This API delete the users that were assigned to this study and assigned the new users.</p>
+<h3 id="flasksubjectextract-study-event-data-to-csv">/flask/subject/extract-study-event-data-to-CSV</h3>
+<p>This API extract all study data (from FlaskForms) based on study id and download CSV files.</p></div>
         </div>
 
         <footer class="col-md-12">
