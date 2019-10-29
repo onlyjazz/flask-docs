@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>FlaskData Documentation</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href=".">FlaskData Documentation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href=".">Introduction</a>
+                            </li>
+                            <li >
+                                <a href="apiflows/">API flows</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="disabled">
+                                <a rel="next" >
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="apiflows/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#introduction">Introduction</a></li>
+            <li><a href="#audience">Audience</a></li>
+            <li><a href="#concepts-and-terms">Concepts and terms</a></li>
+            <li><a href="#clincapture-edc">ClinCapture EDC</a></li>
+            <li><a href="#flask-forms">Flask Forms</a></li>
+        <li class="main "><a href="#getting-started">Getting started</a></li>
+            <li><a href="#authorization">Authorization</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="introduction">Introduction</h1>
+<h3 id="audience">Audience</h3>
+<p>Developers who want to use the Flask API to collect and extract data.</p>
+<h3 id="concepts-and-terms">Concepts and terms</h3>
+<p>The user should have API permissions - An API user that defined by FlaskData team.</p>
+<p>This API user has access to get data of his customer and EDC DBs that defined in his studies' EDC (dbname).</p>
+<p>There are 3 FlaskData API environments:</p>
+<ul>
+<li>development environment : <a href="https://dev-api.flaskdata.io">dev-api.flaskdata.io</a></li>
+<li>staging environment : <a href="https://staging-api.flaskdata.io">staging-api.flaskdata.io</a></li>
+<li>production environment : <a href="https://api.flaskdata.io">api.flaskdata.io</a></li>
+</ul>
+<p>All the API environments have swagger UI.</p>
+<p>Swagger Schemes should be HTTPS.</p>
+<p><img alt="Screenshot" src="imgs/swagger_schemes.PNG" /></p>
+<p>For using FlaskData API by swagger you need to click on "Try it out" of the relevant API.</p>
+<p><img alt="Screenshot" src="imgs/try_it_out.PNG" /></p>
+<p>Config/ change header and body request as needed and click on "Execute" button.</p>
+<p><img alt="Screenshot" src="imgs/execute_api.PNG" /></p>
+<h3 id="clincapture-edc">ClinCapture EDC</h3>
+<p>ClinCapture EDC is a database includes all study data (events, crfs, items, sites, subjects, data and etc.)</p>
+<p>Some studies use EDC data and UI to insert/update/delete/extract the study data.</p>
+<p>FlaskData and EDC are related, there are ETLs to load EDC data to FlaskData, FlaskData uses the data for analytics, alerts and etc.</p>
+<p>FlaskData APIs extract data from EDC.</p>
+<h3 id="flask-forms">Flask Forms</h3>
+<p>Flask Forms is a platform to save study CRFs data ( events, crfs, items and the data), This is a tool developed by FlaskData team, easy to use!</p>
+<p>Some studies use FlaskForms, The customer can build/ edit his study or FlaskData can do it for him.</p>
+<p>FlaskData and FlaskForms are related and there's a perfect user experience.</p>
+<p>FlaskData API extract data from FlaskForms data.</p>
+<h1 id="getting-started">Getting started</h1>
+<h3 id="authorization">Authorization</h3>
+<p>For using FlaskData APIs you need to get token first.</p>
+<p>For getting FlaskData token use auth/authorize API.</p>
+<p>For example - in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a></p>
+<p>In the body request (JSON) you need to set your API user's email and password, like:</p>
+<p><code>{
+  "email": "xxx@gmail.com",
+  "password": "12345678"
+}</code></p>
+<p>In the response body you get an access token, like:</p>
+<p><code>{
+  "token": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k",
+  "expired": "2019-10-28T15:23:10.407Z"
+}</code></p>
+<p>NOTE: The expired time is UTC time.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-10-29 06:19:16
+-->
