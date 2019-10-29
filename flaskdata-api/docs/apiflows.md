@@ -7,7 +7,7 @@ The API has 2 parts of APIs - EDC and Flask.
 
 NOTES:
 
-* Authorization parameter in the header request should be the token you had get before from you [authorization request](apiindex.md#authorization).
+* Authorization parameter in the header request should be the token you had get before from you [authorization request](index.md#authorization).
 
 * EDC parameter in the header request should be the EDC DB name.
 
@@ -106,3 +106,5 @@ OR
 1. GET /flask/viewer/{token}/data Get subject CRFs Data included subject, and all CRFs in this event
 2. GET /flask/link/{linkId} Get Link - get token from this request
 3. POST /flask/viewer/{token}/save-crf - with token of the current link and data from the current CRF
+
+### Example of JS code:
