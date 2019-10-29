@@ -46,3 +46,35 @@ This API download a zip folder includes EDC study data. Each csv is an event CRF
 This API create a subject in EDC DB and return the study_subject_id value.
 
 ## Flask
+
+### /flask/customer/extract-data-to-json
+This API extract data from flask tables and views for your customer.
+The table/ view should have customer_id column for this process.
+
+For example: studies table, audit_user_login, billing_reports_customer and etc.
+studyIds and filters are optional.
+
+### /flask/customer/download-billing-reports
+This API download a billing reports folder for the month of the billingDate parameter.
+The billing report zip folder includes all the billing report files for your customer.
+NOTE - This process will download files only if the billing reports features turn on in your customer account.
+
+### /flask/device/get-logs
+This API returns device logs of a study.
+
+### /flask/device/insert-log
+This API inserts device log into flaskData with correct study_id according to EDC.
+payload parameter is optional and can include each key value pairs.
+
+### /flask/study/create-update-flask-study
+This API creates/updates study in FlaskData.
+
+### /flask/site/create-update-flask-site
+This API creates/updates site in FlaskData.
+
+### /flask/study/create-update-flask-study-users
+This API create user if not exists and assigned users to study.
+NOTE - This API delete the users that were assigned to this study and assigned the new users.
+
+### /flask/subject/extract-study-event-data-to-CSV
+This API extract all study data (from FlaskForms) based on study id and download CSV files.
