@@ -79,11 +79,34 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#use-casesapi-flows">Use cases/API flows</a></li>
+            <li><a href="#edc">EDC</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="use-casesapi-flows">Use cases/API flows</h1></div>
+<h1 id="use-casesapi-flows">Use cases/API flows</h1>
+<p>The API has 2 parts of APIs - EDC and Flask.</p>
+<ul>
+<li>EDC - APIs are related to ClinCapture EDC (extract EDC data and etc.)</li>
+<li>Flask - APIs are related to flask data (extract data, insert data and etc.)</li>
+</ul>
+<p>NOTE - Authorization parameter in the header request should be the token you had get before from you ![authorization request].
+       EDC parameter in the header request should be the EDC DB name.</p>
+<h2 id="edc">EDC</h2>
+<h3 id="extract-edc-data">Extract EDC Data</h3>
+<p>There are a few APIs you can use to extract your ClinCapture EDC data.</p>
+<p>For example:</p>
+<h4 id="edcstudyextract-data">/edc/study/extract-data</h4>
+<p>This API extract EDC data of each table/view/function (like functionName()) and return json.</p>
+<p>fromDate, toDate, sort, filters and inputVariables(if tableName is a function) are optional values.</p>
+<p>Filters and inputVariable json objects - the key is the column name/ input variable name in postgres, the json value is the compare value (like where site = XXX)/ input value in function (like schema.function(XXX)).</p>
+<p>For example:
+<code>{
+  "tableName": "cc_event_data",
+  "fromDate": "2017-01-01T00:00:00.000Z",
+  "toDate": "2019-02-01T00:00:00.000Z",
+  "sort": "subject"
+}</code></p></div>
         </div>
 
         <footer class="col-md-12">
