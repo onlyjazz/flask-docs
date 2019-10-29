@@ -78,14 +78,15 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#use-casesapi-flows">Use cases/API flows</a></li>
+        <li class="main active"><a href="#api-flows">API flows</a></li>
             <li><a href="#edc">EDC</a></li>
             <li><a href="#flask">Flask</a></li>
+            <li><a href="#use-case-example">Use Case example</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="use-casesapi-flows">Use cases/API flows</h1>
+<h1 id="api-flows">API flows</h1>
 <p>The API has 2 parts of APIs - EDC and Flask.</p>
 <ul>
 <li>EDC - APIs are related to ClinCapture EDC (extract EDC data and etc.)</li>
@@ -148,7 +149,22 @@
 <p>This API create user if not exists and assigned users to study.</p>
 <p>NOTE - This API delete the users that were assigned to this study and assigned the new users.</p>
 <h3 id="flasksubjectextract-study-event-data-to-csv">/flask/subject/extract-study-event-data-to-CSV</h3>
-<p>This API extract all study data (from FlaskForms) based on study id and download CSV files.</p></div>
+<p>This API extract all study data (from FlaskForms) based on study id and download CSV files.</p>
+<h2 id="use-case-example">Use Case example</h2>
+<p>Your study uses FlaskForms application.</p>
+<p>You have a mobile app and you want to collect data and save it to a Flask Forms Event/CRF</p>
+<p>The API flow should be:</p>
+<ol>
+<li>POST /flask/link/filter - Get the list of Links - it contains all the links which subject has. Data include the token, id, and URL for each link</li>
+<li>GET /flask/viewer/{token}/data Get subject CRFs Data included subject, and all CRFs in this event</li>
+<li>POST /flask/viewer/{token}/save-crf - with token of the current link and data from the current CRF</li>
+</ol>
+<p>OR</p>
+<ol>
+<li>GET /flask/viewer/{token}/data Get subject CRFs Data included subject, and all CRFs in this event</li>
+<li>GET /flask/link/{linkId} Get Link - get token from this request</li>
+<li>POST /flask/viewer/{token}/save-crf - with token of the current link and data from the current CRF</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
