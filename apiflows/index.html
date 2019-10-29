@@ -80,6 +80,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#use-casesapi-flows">Use cases/API flows</a></li>
             <li><a href="#edc">EDC</a></li>
+            <li><a href="#flask">Flask</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -90,8 +91,10 @@
 <li>EDC - APIs are related to ClinCapture EDC (extract EDC data and etc.)</li>
 <li>Flask - APIs are related to flask data (extract data, insert data and etc.)</li>
 </ul>
-<p>NOTE - Authorization parameter in the header request should be the token you had get before from you ![authorization request].
-       EDC parameter in the header request should be the EDC DB name.</p>
+<p>NOTES - Authorization parameter in the header request should be the token you had get before from you <a href="..#authorization">authorization request</a>.
+        EDC parameter in the header request should be the EDC DB name.</p>
+<p>In this document there are a few examples of FlaskData APIs - There are more EDC APIs, their description exists in swagger.
+For more details and questions contact us by sending email to <a href="mailto:support@clearclinica.com">support@clearclinica.com</a>.</p>
 <h2 id="edc">EDC</h2>
 <h3 id="extract-edc-data">Extract EDC Data</h3>
 <p>There are a few APIs you can use to extract your ClinCapture EDC data.</p>
@@ -100,13 +103,22 @@
 <p>This API extract EDC data of each table/view/function (like functionName()) and return json.</p>
 <p>fromDate, toDate, sort, filters and inputVariables(if tableName is a function) are optional values.</p>
 <p>Filters and inputVariable json objects - the key is the column name/ input variable name in postgres, the json value is the compare value (like where site = XXX)/ input value in function (like schema.function(XXX)).</p>
-<p>For example:
-<code>{
+<p>For example:</p>
+<p><code>{
   "tableName": "cc_event_data",
   "fromDate": "2017-01-01T00:00:00.000Z",
   "toDate": "2019-02-01T00:00:00.000Z",
   "sort": "subject"
-}</code></p></div>
+}</code></p>
+<p>Another example:</p>
+<p><code>{
+  "tableName": "cross_event_crf_data"
+}</code></p>
+<h4 id="edcstudydownload-csvs-data">/edc/study/download-csvs-data</h4>
+<p>This API download a zip folder includes EDC study data. Each csv is an event CRF data.</p>
+<h4 id="edcsubjectscreate-subject">/edc/subjects/create-subject</h4>
+<p>This API create a subject in EDC DB and return the study_subject_id value.</p>
+<h2 id="flask">Flask</h2></div>
         </div>
 
         <footer class="col-md-12">
