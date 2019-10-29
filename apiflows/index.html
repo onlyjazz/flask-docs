@@ -165,7 +165,34 @@
 <li>GET /flask/link/{linkId} Get Link - get token from this request</li>
 <li>POST /flask/viewer/{token}/save-crf - with token of the current link and data from the current CRF</li>
 </ol>
-<h3 id="example-of-js-code">Example of JS code:</h3></div>
+<h3 id="example-of-js-code">Example of JS code:</h3>
+<pre><code>var xhrcall = $.ajax({
+                        url: 'https://dev-api.flaskdata.io/flask/link/filter',
+                        type: 'POST',
+                        headers: {
+                            'Authorization': jwt},
+                        data: '{
+                                "pagination": {
+                                  "page": 0,
+                                  "size": 10,
+                                  "sort": "name,asc"
+                                },
+                                "subject": 0,
+                                "status": "string"
+                              }',
+                          contentType: 'application/json'
+                      });
+  //promise syntax to render after xhr completes
+  xhrcall
+      .done(function(data){
+              // Enter your code here
+      })
+      .fail(function(error) {
+                if(error) {
+                    // Enter your code here  
+                }
+      });
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
