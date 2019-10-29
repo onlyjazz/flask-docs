@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>FlaskData Documentation</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>API Introduction - FlaskData Documentation</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,13 +19,13 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href=".">FlaskData Documentation</a>
+                    <a class="navbar-brand" href="..">FlaskData Documentation</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,10 +47,10 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="active">
-                                <a href=".">Introduction</a>
+                                <a href="./">API Introduction</a>
                             </li>
                             <li >
-                                <a href="apiflows/">API flows</a>
+                                <a href="../apiflows/">API flows</a>
                             </li>
                         </ul>
 
@@ -66,7 +66,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="apiflows/">
+                                <a rel="prev" href="../apiflows/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -78,19 +78,19 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#introduction">Introduction</a></li>
+        <li class="main active"><a href="#api-introduction">API Introduction</a></li>
             <li><a href="#audience">Audience</a></li>
             <li><a href="#concepts-and-terms">Concepts and terms</a></li>
             <li><a href="#clincapture-edc">ClinCapture EDC</a></li>
             <li><a href="#flask-forms">Flask Forms</a></li>
-        <li class="main "><a href="#getting-started">Getting started</a></li>
+        <li class="main "><a href="#getting-started-api">Getting started API</a></li>
             <li><a href="#authorization">Authorization</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="img/flaskdata_logo.PNG" /></a></p>
-<h1 id="introduction">Introduction</h1>
+<p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="../img/flaskdata_logo.PNG" /></a></p>
+<h1 id="api-introduction">API Introduction</h1>
 <h3 id="audience">Audience</h3>
 <p>Developers who want to use the Flask API to collect and extract data.</p>
 <h3 id="concepts-and-terms">Concepts and terms</h3>
@@ -104,11 +104,11 @@
 </ul>
 <p>All the API environments have swagger UI.</p>
 <p>Swagger Schemes should be HTTPS.</p>
-<p><img alt="Screenshot" src="img/swagger_schemes.PNG" /></p>
+<p><img alt="Screenshot" src="../img/swagger_schemes.PNG" /></p>
 <p>For using FlaskData API by swagger you need to click on "Try it out" of the relevant API.</p>
-<p><img alt="Screenshot" src="img/try_it_out.PNG" /></p>
+<p><img alt="Screenshot" src="../img/try_it_out.PNG" /></p>
 <p>Config/ change header and body request as needed and click on "Execute" button.</p>
-<p><img alt="Screenshot" src="img/execute_api.PNG" /></p>
+<p><img alt="Screenshot" src="../img/execute_api.PNG" /></p>
 <h3 id="clincapture-edc">ClinCapture EDC</h3>
 <p>ClinCapture EDC is a database includes all study data (events, crfs, items, sites, subjects, data and etc.)</p>
 <p>Some studies use EDC data and UI to insert/update/delete/extract the study data.</p>
@@ -119,7 +119,7 @@
 <p>Some studies use FlaskForms, The customer can build/ edit his study or FlaskData can do it for him.</p>
 <p>FlaskData and FlaskForms are related and there's a perfect user experience.</p>
 <p>FlaskData API extract data from FlaskForms data.</p>
-<h1 id="getting-started">Getting started</h1>
+<h1 id="getting-started-api">Getting started API</h1>
 <h3 id="authorization">Authorization</h3>
 <p>For using FlaskData APIs you need to get token first.</p>
 <p>For getting FlaskData token use auth/authorize API.</p>
@@ -142,11 +142,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
@@ -214,8 +214,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-10-29 10:59:50
--->
