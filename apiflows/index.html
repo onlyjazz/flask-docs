@@ -124,6 +124,14 @@
 }</code></p>
 <h4 id="edcstudydownload-csvs-data">/edc/study/download-csvs-data</h4>
 <p>This API download a zip folder includes EDC study data. Each csv is an event CRF data.</p>
+<h4 id="edcstudyextract-study-data-at-crf-level">/edc/study/extract-study-data-at-crf-level</h4>
+<p>This API extract EDC data at CRF level and return the data as a json object.
+This API return only CRFs with data.
+This API have filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).</p>
+<h4 id="edcstudyextract-study-data-at-crf-level-to-csvs">/edc/study/extract-study-data-at-crf-level-to-csvs</h4>
+<p>This API extract EDC data at CRF level and return a zip folder includes CSV files (each CRF as CSV file).
+This API return only CRFs with data.
+This API have filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).</p>
 <h4 id="edcsubjectscreate-subject">/edc/subjects/create-subject</h4>
 <p>This API create a subject in EDC DB and return the study_subject_id value.</p>
 <h2 id="flask">Flask</h2>
