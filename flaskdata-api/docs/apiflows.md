@@ -48,12 +48,16 @@ This API download a zip folder includes EDC study data. Each csv is an event CRF
 
 #### /edc/study/extract-study-data-at-crf-level
 This API extract EDC data at CRF level and return the data as a json object.
+
 This API return only CRFs with data.
+
 This API have filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).
 
 #### /edc/study/extract-study-data-at-crf-level-to-csvs
 This API extract EDC data at CRF level and return a zip folder includes CSV files (each CRF as CSV file).
+
 This API return only CRFs with data.
+
 This API have filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).
 
 #### /edc/subjects/create-subject
