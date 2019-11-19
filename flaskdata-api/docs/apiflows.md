@@ -105,6 +105,8 @@ This API extract all study data (from FlaskForms) based on study id and download
 
 ## Use Cases
 
+NOTE: The following examples require jQuery later version
+
 ### General example of extract data using JS:
     var xhrcall = $.ajax({
                             url: 'https://dev-api.flaskdata.io/flask/customer/extract-data-to-json',
@@ -422,3 +424,19 @@ for example: `{"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2}`
 ![Screenshot](img/itemVariables.PNG)
 The output should be new CRF for the subject with the correct data, for example:
 ![Screenshot](img/crfData.PNG)
+
+### Example of calling FlaskData API using jQuery older version
+      var http = new XMLHttpRequest();
+      var url = 'https://dev-api.flaskdata.io/auth/authorize';
+      var params = '{"email":"xxx@gmail.com","password":"123456"}';
+      http.open('POST', url, true);
+
+      //Send the proper header information along with the request
+      http.setRequestHeader('Content-type', 'application/json');
+
+      http.onreadystatechange = function() {//Call a function when the state changes.
+          if(http.readyState == 4 && http.status == 200) {
+              alert(http.responseText);
+          }
+      }
+      http.send(params);
