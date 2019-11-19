@@ -159,6 +159,7 @@
 <h3 id="flasksubjectextract-study-event-data-to-csv">/flask/subject/extract-study-event-data-to-CSV</h3>
 <p>This API extract all study data (from FlaskForms) based on study id and download CSV files.</p>
 <h2 id="use-cases">Use Cases</h2>
+<p>NOTE: The following examples require jQuery later version</p>
 <h3 id="general-example-of-extract-data-using-js">General example of extract data using JS:</h3>
 <pre><code>var xhrcall = $.ajax({
                         url: 'https://dev-api.flaskdata.io/flask/customer/extract-data-to-json',
@@ -472,7 +473,23 @@ for example: <code>{"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2}</code>
 <img alt="Screenshot" src="../img/itemVariables.PNG" />
 The output should be new CRF for the subject with the correct data, for example:
 <img alt="Screenshot" src="../img/crfData.PNG" /></li>
-</ul></div>
+</ul>
+<h3 id="example-of-calling-flaskdata-api-using-jquery-older-version">Example of calling FlaskData API using jQuery older version</h3>
+<pre><code>  var http = new XMLHttpRequest();
+  var url = 'https://dev-api.flaskdata.io/auth/authorize';
+  var params = '{"email":"mongositerole@clearclinica.com","password":"123456"}';
+  http.open('POST', url, true);
+
+  //Send the proper header information along with the request
+  http.setRequestHeader('Content-type', 'application/json');
+
+  http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 &amp;&amp; http.status == 200) {
+          alert(http.responseText);
+      }
+  }
+  http.send(params);
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
