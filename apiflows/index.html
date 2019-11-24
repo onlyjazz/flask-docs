@@ -193,7 +193,7 @@
           // Input values : user email, user password, study id, subject label, event name, CRF name, CRF data.
           insertDataIntoFlaskFormsCRF("mongositerole@clearclinica.com", "123456", 145858, 'mongo_test_site_1-03', 'Screening', 'Subject properties', {"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2});
      });
-    var insertDataIntoFlaskForms = function(uEmail, uPass, studyId, subjectLabel, eventName, crfName, crfData){
+    var insertDataIntoFlaskFormsCRF = function(uEmail, uPass, studyId, subjectLabel, eventName, crfName, crfData){
         // Get token
         getFlaskDataToken(uEmail, uPass, function(userToken){
             var token = userToken;
