@@ -103,6 +103,25 @@ NOTE - This API delete the users that were assigned to this study and assigned t
 ### /flask/subject/extract-study-event-data-to-CSV
 This API extract all study data (from FlaskForms) based on study id and download CSV files.
 
+### /flask/crf/create-CRF-and-insert-data
+This API create CRF in existing event and insert data
+
+Example - Create a new AE (adverse event) CRF in existing event.
+
+### /flask/crf/create-event-CRF-and-insert-data
+This API create event and CRF and insert data.
+
+Example - Create a new Medication event with CRF and insert data.
+
+### /flask/crf/get-CRF-data-ids
+This API returns subject's crf data Id (unique for each CRF) for specific crf name.
+
+### /flask/crf/update-CRF-data
+This API updates CRF data by crf data id.
+
+### /flask/crf/create-CRF-and-insert-data
+This API Create CRF in existing event and insert data
+
 ## Use Cases
 
 NOTE: The following examples require jQuery later version
@@ -131,7 +150,7 @@ NOTE: The following examples require jQuery later version
                     }
           });
 
-### Save data in CRF.
+### Save data in CRF JS Example.
 
 Your study uses FlaskForms application.
 
@@ -148,31 +167,10 @@ This JS code is an example to create CRF and save its data into existing event.
             // Get token
             getFlaskDataToken(uEmail, uPass, function(userToken){
                 var token = userToken;
-                // Get mongo subject Id by label
-                getSubjectId(token, studyId, subjectLabel, function(subjectId){
-                    //console.log(subjectId);
-                    // Get current event token by event name (the event should be added to the subject )
-                    getSubjectEventToken(token, subjectId, eventName, function(eventLinkId, eventToken){
-                        //console.log(eventLinkId);
-                        // Add new CRF in current event
-                        getEventLinkProperties(token, eventLinkId, function(linkProperties){
-                            // get CRF id by crf name
-                            getCrfId(token, studyId, crfName, function(crfId){
-                                // Assinged new CRF to existing event for specific subject
-                                assingNewCrfInEvent(token, eventLinkId, linkProperties, crfId, function(newLinkProperties, crfdataId){
-                                    //console.log("New CRF dataId : " + crfdataId);
-                                    // GET crf PROPERTIES
-                                    getCrfProperties(eventToken, crfdataId, function(crfProperties){
-                                        //console.log(crfProperties);
-                                        // Save CRF data
-                                        saveCrfData(eventToken, crfProperties, crfData, crfdataId, function(resultStatus){
-                                          console.log(resultStatus);
-                                        });
-                                    });
-                                });
-                            });
-                        });
-                    });
+                // Create new CRF in existin event and insert data
+                createCRFandInsertData(token, studyId, subjectLabel, eventName, crfName, crfData, function(crfDataId){
+                    console.log(crfDataId);
+                    // Save this crfDataId if you will need to update this CRF data                    
                 });
             });
         }
@@ -199,213 +197,30 @@ This JS code is an example to create CRF and save its data into existing event.
                     });
           }
 
-
-          // Get list of subject in the study (for example studyId = 209843), filter by subject label and return its mongo subject id
-          // /flask/subject/filter
-          var getSubjectId = function(token, study_id, subject_label, cb) {
+          // Create new CRF and insert data
+          // /flask/crf/create-CRF-and-insert-data
+          var createCRFandInsertData = function(token, study_id, subject_label, event_name, crf_name, crf_data, cb) {
               var xhrcall = $.ajax({
-                                      url: 'https://dev-api.flaskdata.io/flask/subject/filter',
+                                      url: 'https://dev-api.flaskdata.io/flask/crf/create-CRF-and-insert-data',
                                       type: 'POST',
                                       headers: {
                                           'Authorization': token},
-                                      data: '{"pagination": {"page": 0,"size": 10000,"sort": "name,asc" },"study_id": ' +study_id+ ' }',
+                                      data: '{"study_id": '+study_id+',"subject_label": "'+subject_label+'","event_name": "'+event_name+'","crf_name": "'+crf_name+'","crf_data": '+ JSON.stringify(crf_data) +' }',
                                       contentType: 'application/json'
                                     });
                 //promise syntax to render after xhr completes
                 xhrcall
                     .done(function(data){
-                            // Enter your code here
-                            var subjects = data.items;
-                            cb(subjects.filter(s => s.subjectId == subject_label)[0].id);
+                            // Enter your code here                            
+                            cb(data.crfDataId);
                     })
                     .fail(function(error) {
                               if(error) {
                                   // Enter your code here
-                                  console.log('Failed to get study subjects for study ' + study_id + ' :'+ error);
+                                  console.log('Failed to create CRF and insert data :' + JSON.stringify(error));
                               }
                     });
           }
-
-          // Get list of subject events and crfs
-          // /flask/link/filter
-          var getSubjectEventToken = function(token, subjectId, eventName, cb) {
-              var xhrcall = $.ajax({
-                                      url: 'https://dev-api.flaskdata.io/flask/link/filter',
-                                      type: 'POST',
-                                      headers: {
-                                          'Authorization': token},
-                                      data: '{"pagination": {"page": 0,"size": 10000,"sort": "name,asc" },"subject": "' +subjectId+ '",  "status": "" }',
-                                      contentType: 'application/json'
-                                    });
-                //promise syntax to render after xhr completes
-                xhrcall
-                    .done(function(data){
-                            // Enter your code here
-                            var events = data.items;
-                            cb(events.filter(e => e.name.ENGLISH == eventName)[0].id, events.filter(e => e.name.ENGLISH == eventName)[0].token);
-                    })
-                    .fail(function(error) {
-                              if(error) {
-                                  // Enter your code here
-                                  console.log('Failed to get subject event token :'+ error);
-                              }
-                    });
-          }
-
-          // Get list of crfs - filter on crf specific
-          // /flask/crf/filter
-          var getCrfId = function(token, studyId, crfName, cb) {
-              var xhrcall = $.ajax({
-                                      url: 'https://dev-api.flaskdata.io/flask/crf/filter',
-                                      type: 'POST',
-                                      headers: {
-                                          'Authorization': token},
-                                      data: '{"pagination": {"page": 0,"size": 10000,"sort": "name,asc" },"study_id": "' +studyId+ '"}',
-                                      contentType: 'application/json'
-                                    });
-                //promise syntax to render after xhr completes
-                xhrcall
-                    .done(function(data){
-                            // Enter your code here
-                            var crfs = data.items;
-                            cb(crfs.filter(c => c.name.ENGLISH == crfName)[0].id);
-                    })
-                    .fail(function(error) {
-                              if(error) {
-                                  // Enter your code here
-                                  console.log('Failed to get list of CRFs :'+ error);
-                              }
-                    });
-          }
-
-        // Get CRFs properties - list of crfs
-          ///flask/viewer/{token}/data
-          var getCrfProperties = function(token, crfdataId, cb) {
-              var xhrcall = $.ajax({
-                                      url: 'https://dev-api.flaskdata.io/flask/viewer/'+token+'/data',
-                                      type: 'GET',
-                                      contentType: 'application/json'
-                                    });
-                //promise syntax to render after xhr completes
-                xhrcall
-                    .done(function(data){
-                          //console.log(data);
-                          cb(data.CRFs.filter(crf => crf.dataId == crfdataId)[0]);
-                    })
-                    .fail(function(error) {
-                              if(error) {
-                                  // Enter your code here
-                                  console.log('Failed to get CRFs properties :'+ error);
-                              }
-                    });
-          }
-
-          // Get event link with all its properties
-         // /flask/link/{linkId}
-           var getEventLinkProperties = function(token, linkId, cb) {
-               var xhrcall = $.ajax({
-                                       url: 'https://dev-api.flaskdata.io/flask/link/'+ linkId,
-                                       type: 'GET',
-                                       headers: {
-                                           'Authorization': token},
-                                       contentType: 'application/json'
-                                     });
-                 //promise syntax to render after xhr completes
-                 xhrcall
-                     .done(function(data){
-                           //console.log(data);
-                           cb(data);
-                     })
-                     .fail(function(error) {
-                               if(error) {
-                                   // Enter your code here
-                                   console.log('Failed to get link properties :'+ error);
-                               }
-                     });
-           }
-
-           // Update event link with new CRF
-          // /flask/link/{linkId}
-            var assingNewCrfInEvent = function(token, linkId, linkProperties, crfId, cb) {
-
-                var dataId = Math.random().toString(36).substr(2, 10).toUpperCase();
-
-                var newCRF = {"crf": crfId,
-                             "omt": true,
-                             "dataId": dataId,
-                             "order": linkProperties.CRFs.length}
-                linkProperties.CRFs.push(newCRF);
-
-                var newStatus= {
-                             "last_edited": new Date().toISOString(),
-                             "dataId": dataId,
-                             "status": "Started",
-                             "_id":  crfId
-                }
-                linkProperties.statuses.push(newStatus);
-                linkProperties.force = true;
-                linkProperties.status = "Started"
-                //console.log(JSON.stringify(linkProperties));
-                var xhrcall = $.ajax({
-                                        url: 'https://dev-api.flaskdata.io/flask/link/'+ linkId,
-                                        type: 'PUT',
-                                        headers: {
-                                            'Authorization': token},
-                                        data : JSON.stringify(linkProperties),
-                                        contentType: 'application/json'
-                                      });
-                  //promise syntax to render after xhr completes
-                  xhrcall
-                      .done(function(data){
-                            //console.log(data);
-                            cb(data, dataId);
-                      })
-                      .fail(function(error) {
-                                if(error) {
-                                    // Enter your code here
-                                    console.log('Failed to update link properties with new CRF :'+ JSON.stringify(error));
-                                }
-                      });
-            }
-
-
-          // Save CRF data
-         // /flask/viewer/{token}/save-crf
-           var saveCrfData = function(eventToken, crfProperties, crfData, crfdataId, cb) {
-               Object.keys(crfData).forEach(function(itemData) {
-                  crfProperties.sections.map(function(s) {
-                      s.items.map(function(i) {
-                          if(i.variable == itemData){
-                              //console.log('item: ' + i.variable);
-                              i.value = [crfData[itemData]];
-                              i.dataId = crfdataId;
-                              i.date_updated = new Date().toISOString();
-                          }
-                      });
-                  });
-               });
-               crfProperties.completed = false;
-
-               //console.log(JSON.stringify(crfProperties));
-               var xhrcall = $.ajax({
-                                       url: 'https://dev-api.flaskdata.io/flask/viewer/'+eventToken+'/save-crf',
-                                       type: 'POST',
-                                       data : JSON.stringify(crfProperties),
-                                       contentType: 'application/json'
-                                     });
-                 //promise syntax to render after xhr completes
-                 xhrcall
-                     .done(function(data){
-                           //console.log(data);
-                           cb(data);
-                     })
-                     .fail(function(error) {
-                               if(error) {
-                                   // Enter your code here
-                                   console.log('Failed to update link properties with new CRF :'+ JSON.stringify(error));
-                               }
-                     });
-           }
 
 Your application should call insertDataIntoFlaskFormsCRF function with the following input parameters:
 
