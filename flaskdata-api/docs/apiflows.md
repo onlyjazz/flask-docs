@@ -44,29 +44,29 @@ Another example:
 }```
 
 #### /edc/study/download-csvs-data
-This API download a zip folder includes EDC study data. Each csv is an event CRF data.
+This API downloads a zip folder includes EDC study data. Each csv is an event CRF data.
 
 #### /edc/study/extract-study-data-at-crf-level
-This API extract EDC data at CRF level and return the data as a json object.
+This API extracts EDC data at CRF level and returns the data as a json object.
 
-This API return only CRFs with data.
+This API returns only CRFs with data.
 
-This API have filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).
+This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).
 
 #### /edc/study/extract-study-data-at-crf-level-to-csvs
-This API extract EDC data at CRF level and return a zip folder includes CSV files (each CRF as CSV file).
+This API extracts EDC data at CRF level and returns a zip folder includes CSV files (each CRF as CSV file).
 
-This API return only CRFs with data.
+This API returns only CRFs with data.
 
-This API have filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).
+This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).
 
 #### /edc/subjects/create-subject
-This API create a subject in EDC DB and return the study_subject_id value.
+This API creates a subject in EDC DB and returns the study_subject_id value.
 
 ## Flask
 
 ### /flask/customer/extract-data-to-json
-This API extract data from flask tables and views for your customer.
+This API extracts data from flask tables and views for your customer.
 
 The table/ view should have customer_id column for this process.
 
@@ -75,7 +75,7 @@ For example: studies table, audit_user_login, billing_reports_customer and etc.
 studyIds and filters are optional.
 
 ### /flask/customer/download-billing-reports
-This API download a billing reports folder for the month of the billingDate parameter.
+This API downloads a billing reports folder for the month of the billingDate parameter.
 
 The billing report zip folder includes all the billing report files for your customer.
 
@@ -96,31 +96,28 @@ This API creates/updates study in FlaskData.
 This API creates/updates site in FlaskData.
 
 ### /flask/study/create-update-flask-study-users
-This API create user if not exists and assigned users to study.
+This API creates user if not exists and assigned users to study.
 
-NOTE - This API delete the users that were assigned to this study and assigned the new users.
+NOTE - This API deletes the users that were assigned to this study and assigned the new users.
 
 ### /flask/subject/extract-study-event-data-to-CSV
-This API extract all study data (from FlaskForms) based on study id and download CSV files.
+This API extracts all study data (from FlaskForms) based on study id and download CSV files.
 
 ### /flask/crf/create-CRF-and-insert-data
-This API create CRF in existing event and insert data
+This API creates CRF in existing event and insert data
 
-Example - Create a new AE (adverse event) CRF in existing event.
+Example - Creates a new AE (adverse event) CRF in existing event.
 
 ### /flask/crf/create-event-CRF-and-insert-data
-This API create event and CRF and insert data.
+This API creates event and CRF and inserts data.
 
-Example - Create a new Medication event with CRF and insert data.
+Example - Creates a new Medication event with CRF and inserts data.
 
 ### /flask/crf/get-CRF-data-ids
 This API returns subject's crf data Id (unique for each CRF) for specific crf name.
 
 ### /flask/crf/update-CRF-data
 This API updates CRF data by crf data id.
-
-### /flask/crf/create-CRF-and-insert-data
-This API Create CRF in existing event and insert data
 
 ## Use Cases
 
