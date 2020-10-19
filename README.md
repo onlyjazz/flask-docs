@@ -19,3 +19,5 @@ Open your browser - http://127.0.0.1:8000
 
 # Upload to https://docs.flaskdata.io
 Run ```mkdocs build```
+
+Run ```mkdocs gh-deploy```
