@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CNAME" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/apiflows.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/apiflows.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/crfData.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/crfData.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/crfName.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/crfName.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/eventName.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/eventName.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/execute_api.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/execute_api.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/flaskdata_logo.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/flaskdata_logo.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/itemVariables.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/itemVariables.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/studyId.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/studyId.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/subjectLabel.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/subjectLabel.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/swagger_schemes.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/swagger_schemes.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/try_it_out.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/try_it_out.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskdata-api/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1j5puYBEzNGfcrt8HOw6YVoguB0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flaskdata-api/docs/img" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flaskdata-api/docs/img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="" />
+      <created>1603104030438</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603104030438</updated>
+      <workItem from="1603104031583" duration="1239000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="451" y="210" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603105159553">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="451" y="210" width="1084" height="710" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1603105159553" />
+  </component>
+</project>

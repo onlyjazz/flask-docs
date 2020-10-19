@@ -9,3 +9,13 @@ MkDocs is a fast, simple and good looking static site generator that's geared to
 # Hosted on https://docs.flaskdata.io/
 MkDocs builds completely static HTML sites that is hosted on GitHub pages on the flask-docs project repo
 The master branch contains the published static HTML and development branch(es) will contain the MkDocs project source markdown files.
+
+# Installation
+Run ```apt-get install mkdocs```
+
+# Running
+Run ```mkdocs serve```
+Open your browser - http://127.0.0.1:8000
+
+# Upload to https://docs.flaskdata.io
+Run ```mkdocs build```
