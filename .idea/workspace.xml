@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CNAME" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/apiflows.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/apiflows.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/crfData.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/crfData.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/crfName.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/crfName.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/eventName.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/eventName.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/execute_api.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/execute_api.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/flaskdata_logo.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/flaskdata_logo.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/itemVariables.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/itemVariables.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/studyId.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/studyId.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/subjectLabel.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/subjectLabel.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/swagger_schemes.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/swagger_schemes.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/img/try_it_out.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/try_it_out.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskdata-api/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
