@@ -1,0 +1,567 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../img/logo.PNG">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Manage Studies - FlaskData Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#studies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="FlaskData Documentations" class="md-header-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            FlaskData Documentations
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Manage Studies
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FlaskData Documentations" class="md-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    FlaskData Documentations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../registration/" class="md-nav__link">
+      Registration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../first_study/" class="md-nav__link">
+      First Study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Manage Studies
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Manage Studies
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-study" class="md-nav__link">
+    Add study
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-manage-users" class="md-nav__link">
+    Study manage users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-manage-sites" class="md-nav__link">
+    Study manage sites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-edit" class="md-nav__link">
+    Study Edit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-profile" class="md-nav__link">
+    Study Profile
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_sites/" class="md-nav__link">
+      Manage Sites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_users/" class="md-nav__link">
+      Manage Users
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      FlaskData API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="FlaskData API" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        FlaskData API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_introduction/" class="md-nav__link">
+      API Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apiflows/" class="md-nav__link">
+      API Flows
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-study" class="md-nav__link">
+    Add study
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-manage-users" class="md-nav__link">
+    Study manage users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-manage-sites" class="md-nav__link">
+    Study manage sites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-edit" class="md-nav__link">
+    Study Edit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-profile" class="md-nav__link">
+    Study Profile
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="../img/flaskdata_logo.PNG" /></a></p>
+<h1 id="studies">Studies</h1>
+<p>You can run a few studies in parallel.
+You can add/edit your studies properties, users, sites etc.</p>
+<h2 id="add-study">Add study</h2>
+<p>To add studies go to studies index page by clicking on studies in the left bar.
+Click on <strong>ADD STUDY</strong> green button.</p>
+<p><img alt="Screenshot" src="../img/studies_index_add_study.PNG" />
+Fill your study properties and click <strong>SAVE</strong> mange users page will be opened.</p>
+<hr />
+<p><strong>NOTES:</strong></p>
+<ol>
+<li><em>Database</em> and <em>EDC URL</em> fields are related to EDC db, if you have EDC (clin capture) db you should fill them.</li>
+<li><em>Enable patient reported outcome module?</em> Check this checkbox if your study has a PRO for patients.</li>
+<li><em>PRO URL</em>: If study has another PRO then FlaskData fill the <em>PRO URL</em> field with your study's PRO URL.</li>
+<li><em>Package</em>: There are 3 available packages, Start, Submit and Validate.<ul>
+<li>Start - study uses IRB and Forms</li>
+<li>Submit - Flask+Forms+Tools+EDC. Unlimited sites.</li>
+<li>Validate - Flask+Forms+Tools+EDC. Limited to 3 sites.</li>
+</ul>
+</li>
+<li><em>Alert data source</em>: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL otherwise choose MongoDB).</li>
+</ol>
+<hr />
+<h2 id="study-manage-users">Study manage users</h2>
+<p>In manage users page you can add/remove user from this study.</p>
+<p>To add a new user to the study - you need to <a href="../manage_users/#add-user">create the user</a> first.</p>
+<p>Type any part of the user's name in the Select users box and choose the relevant user.</p>
+<p><img alt="Screenshot" src="../img/study_mange_users_type.PNG" /></p>
+<p>Click <strong>NEXT STEP</strong>, Welcome emails will be sent to users' emails.</p>
+<p>Manage sites page will be opened.</p>
+<h2 id="study-manage-sites">Study manage sites</h2>
+<p>In manage sites page you can add/remove site from this study.</p>
+<p>To add a new site to study - you need <a href="../manage_sites/#add-a-new-site">create the site</a> first.</p>
+<p><img alt="Screenshot" src="../img/study_manage_sites.PNG" /></p>
+<p>Type any part of the site's name in the Select sites box and choose the relevant site.</p>
+<p>Click <strong>NEXT STEP</strong></p>
+<h2 id="study-edit">Study Edit</h2>
+<p>In studies index page you have option to edit your study.</p>
+<p>To edit the study - check it and then click on <strong>ACTIONS</strong> green button and choose the <strong>Edit</strong> option.</p>
+<p><img alt="Screenshot" src="../img/studies_index_actions.PNG" /></p>
+<p>In edit study window you can define your study profile, definitions etc.</p>
+<hr />
+<p><strong>NOTES:</strong></p>
+<ol>
+<li><em>Study subject prefix</em>: Prefix of creation subject label, like study1-001.</li>
+<li><em>Subject’s IDPs settings</em>: IDP settings for subjects-patients.</li>
+</ol>
+<hr />
+<p>When you click <strong>SAVE</strong> the profile study will be opened.</p>
+<h2 id="study-profile">Study Profile</h2>
+<p>In study profile page you can see your study's definitions, alert rules, analytic rules, users, sites and comments.</p>
+<p><img alt="Screenshot" src="../img/study_profile.PNG" /></p>
+<p>There is a <strong>Comments</strong> card that you can write all your comments about your study.</p>
+<p><img alt="Screenshot" src="../img/study_comment.PNG" /></p>
+<p>There is an <strong>ACTIONS</strong> green button with manage users and manage sites options.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../first_study/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                First Study
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../manage_sites/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Manage Sites
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

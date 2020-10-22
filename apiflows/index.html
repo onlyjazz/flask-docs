@@ -1,91 +1,747 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../img/logo.PNG">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>API Flows - FlaskData Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
         
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
         
+      
+    
+    
+    
+      
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Apiflows - FlaskData Documentation</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-	
-	<script src="../js/jquery-1.10.2.min.js"></script>
-        <script src="../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../js/highlight.pack.js"></script> 
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="..">FlaskData Documentation</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                    <li >
-                        <a href="..">Home</a>
-                    </li>
-                    <li class="active">
-                        <a href="./">Apiflows</a>
-                    </li>
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                    <li >
-                        <a rel="next" href="..">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li class="disabled">
-                        <a rel="prev" >
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-flows" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="FlaskData Documentations" class="md-header-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            FlaskData Documentations
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              API Flows
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#api-flows">API flows</a></li>
-            <li><a href="#edc">EDC</a></li>
-            <li><a href="#flask">Flask</a></li>
-            <li><a href="#use-cases">Use Cases</a></li>
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FlaskData Documentations" class="md-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    FlaskData Documentations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../registration/" class="md-nav__link">
+      Registration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../first_study/" class="md-nav__link">
+      First Study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_studies/" class="md-nav__link">
+      Manage Studies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_sites/" class="md-nav__link">
+      Manage Sites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_users/" class="md-nav__link">
+      Manage Users
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      FlaskData API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="FlaskData API" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        FlaskData API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_introduction/" class="md-nav__link">
+      API Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        API Flows
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      API Flows
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edc" class="md-nav__link">
+    EDC
+  </a>
+  
+    <nav class="md-nav" aria-label="EDC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract-edc-data" class="md-nav__link">
+    Extract EDC Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract EDC Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-data" class="md-nav__link">
+    /edc/study/extract-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudydownload-csvs-data" class="md-nav__link">
+    /edc/study/download-csvs-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-study-data-at-crf-level" class="md-nav__link">
+    /edc/study/extract-study-data-at-crf-level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-study-data-at-crf-level-to-csvs" class="md-nav__link">
+    /edc/study/extract-study-data-at-crf-level-to-csvs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcsubjectscreate-subject" class="md-nav__link">
+    /edc/subjects/create-subject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    Flask
+  </a>
+  
+    <nav class="md-nav" aria-label="Flask">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flaskcustomerextract-data-to-json" class="md-nav__link">
+    /flask/customer/extract-data-to-json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcustomerdownload-billing-reports" class="md-nav__link">
+    /flask/customer/download-billing-reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskdeviceget-logs" class="md-nav__link">
+    /flask/device/get-logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskdeviceinsert-log" class="md-nav__link">
+    /flask/device/insert-log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskstudycreate-update-flask-study" class="md-nav__link">
+    /flask/study/create-update-flask-study
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flasksitecreate-update-flask-site" class="md-nav__link">
+    /flask/site/create-update-flask-site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskstudycreate-update-flask-study-users" class="md-nav__link">
+    /flask/study/create-update-flask-study-users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flasksubjectextract-study-event-data-to-csv" class="md-nav__link">
+    /flask/subject/extract-study-event-data-to-CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfcreate-crf-and-insert-data" class="md-nav__link">
+    /flask/crf/create-CRF-and-insert-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfcreate-event-crf-and-insert-data" class="md-nav__link">
+    /flask/crf/create-event-CRF-and-insert-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfget-crf-data-ids" class="md-nav__link">
+    /flask/crf/get-CRF-data-ids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfupdate-crf-data" class="md-nav__link">
+    /flask/crf/update-CRF-data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use Cases
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-example-of-extract-data-using-js" class="md-nav__link">
+    General example of extract data using JS:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-data-in-crf-js-example" class="md-nav__link">
+    Save data in CRF JS Example.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-calling-flaskdata-api-using-jquery-older-version" class="md-nav__link">
+    Example of calling FlaskData API using jQuery older version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+  
+</nav>
+    
+  </li>
 
-<h1 id="api-flows">API flows</h1>
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edc" class="md-nav__link">
+    EDC
+  </a>
+  
+    <nav class="md-nav" aria-label="EDC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract-edc-data" class="md-nav__link">
+    Extract EDC Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract EDC Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-data" class="md-nav__link">
+    /edc/study/extract-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudydownload-csvs-data" class="md-nav__link">
+    /edc/study/download-csvs-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-study-data-at-crf-level" class="md-nav__link">
+    /edc/study/extract-study-data-at-crf-level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-study-data-at-crf-level-to-csvs" class="md-nav__link">
+    /edc/study/extract-study-data-at-crf-level-to-csvs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcsubjectscreate-subject" class="md-nav__link">
+    /edc/subjects/create-subject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    Flask
+  </a>
+  
+    <nav class="md-nav" aria-label="Flask">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flaskcustomerextract-data-to-json" class="md-nav__link">
+    /flask/customer/extract-data-to-json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcustomerdownload-billing-reports" class="md-nav__link">
+    /flask/customer/download-billing-reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskdeviceget-logs" class="md-nav__link">
+    /flask/device/get-logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskdeviceinsert-log" class="md-nav__link">
+    /flask/device/insert-log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskstudycreate-update-flask-study" class="md-nav__link">
+    /flask/study/create-update-flask-study
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flasksitecreate-update-flask-site" class="md-nav__link">
+    /flask/site/create-update-flask-site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskstudycreate-update-flask-study-users" class="md-nav__link">
+    /flask/study/create-update-flask-study-users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flasksubjectextract-study-event-data-to-csv" class="md-nav__link">
+    /flask/subject/extract-study-event-data-to-CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfcreate-crf-and-insert-data" class="md-nav__link">
+    /flask/crf/create-CRF-and-insert-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfcreate-event-crf-and-insert-data" class="md-nav__link">
+    /flask/crf/create-event-CRF-and-insert-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfget-crf-data-ids" class="md-nav__link">
+    /flask/crf/get-CRF-data-ids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfupdate-crf-data" class="md-nav__link">
+    /flask/crf/update-CRF-data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use Cases
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-example-of-extract-data-using-js" class="md-nav__link">
+    General example of extract data using JS:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-data-in-crf-js-example" class="md-nav__link">
+    Save data in CRF JS Example.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-calling-flaskdata-api-using-jquery-older-version" class="md-nav__link">
+    Example of calling FlaskData API using jQuery older version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="api-flows">API flows</h1>
 <p>The API has 2 parts of APIs - EDC and Flask.</p>
 <ul>
 <li>EDC - APIs are related to ClinCapture EDC (extract EDC data and etc.)</li>
@@ -294,39 +950,72 @@ The output should be new CRF for the subject with the correct data, for example:
       }
   }
   http.send(params);
-</code></pre></div>
-        </div>
+</code></pre>
+                
+              
+              
+                
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>var base_url = '..';</script>
-        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
-        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+
+              
+            </article>
+          </div>
         </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../api_introduction/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                API Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     </div>
-</div>
-
-    </body>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
 </html>
