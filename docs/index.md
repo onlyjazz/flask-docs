@@ -1,73 +1,17 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
-# API Introduction
+#FlaskData
+**Your clinical trials made 1000X faster**
 
-### Audience
-Developers who want to use the Flask API to collect and extract data.
+Flaskdata is an Israeli tech startup that specializes in helping life sciences companies complete their Phase 2 and Phase 3 clinical trials 3-6 months faster.
 
-### Concepts and terms
-The user should have API permissions - An API user that defined by FlaskData team.
+Flask scales to any-sized trial and sustains procedural adherence and verified-data.  Our customers in pain, gastro and oncology indications sustain 95% protocol compliance and data cycles of < 1 day.
 
-This API user has access to get data of his customer and EDC DBs that defined in his studies' EDC (dbname).
+The FlaskData platform provides real-time data collection and automated detection and response. An open [API](https://api.flaskdata.io/swagger)  architecture fits easily into any digital health, digital therapeutics or eClinical software.  Flask collects data from any combination of sources – investigators, patients, mobile, wearables, passive monitoring, connected medical devices and code.
 
-There are 3 FlaskData API environments:
 
-* development environment : <a href="https://dev-api.flaskdata.io">dev-api.flaskdata.io</a>
-* staging environment : <a href="https://staging-api.flaskdata.io">staging-api.flaskdata.io</a>
-* production environment : <a href="https://api.flaskdata.io">api.flaskdata.io</a>
 
-All the API environments have swagger UI.
+The Flaskdata.io platform is a complete solution for decentralized clinical trials, patient-centric interventions, digital therapeutics and site-less trials.The platform integrates EDC, mobile ePRO and connected devices using a continuous data feed.    The Detect & Respond sub-system processes the continuous data feed to provide an immediate picture of protocol compliance for your  research.
 
-Swagger Schemes should be HTTPS.
+Automated playbooks provide adaptive reinforcement messages for patients in their own time and treatment frame and help them achieve high levels of adherence.
 
-![Screenshot](img/swagger_schemes.PNG)
-
-For using FlaskData API by swagger you need to click on "Try it out" of the relevant API.
-
-![Screenshot](img/try_it_out.PNG)
-
-Config/ change header and body request as needed and click on "Execute" button.
-
-![Screenshot](img/execute_api.PNG)
-
-### ClinCapture EDC
-ClinCapture EDC is a database includes all study data (events, crfs, items, sites, subjects, data and etc.)
-
-Some studies use EDC data and UI to insert/update/delete/extract the study data.
-
-FlaskData and EDC are related, there are ETLs to load EDC data to FlaskData, FlaskData uses the data for analytics, alerts and etc.
-
-FlaskData APIs extract data from EDC.
-
-### Flask Forms
-Flask Forms is a platform to save study CRFs data ( events, crfs, items and the data), This is a tool developed by FlaskData team, easy to use!
-
-Some studies use FlaskForms, The customer can build/ edit his study or FlaskData can do it for him.
-
-FlaskData and FlaskForms are related and there's a perfect user experience.
-
-FlaskData API extract data from FlaskForms data.
-
-# Getting started API
-
-### Authorization
-For using FlaskData APIs you need to get token first.
-
-For getting FlaskData token use auth/authorize API.
-
-For example - in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a>
-
-In the body request (JSON) you need to set your API user's email and password, like:
-
-```{
-  "email": "xxx@gmail.com",
-  "password": "12345678"
-}```
-
-In the response body you get an access token, like:
-
-```{
-  "token": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k",
-  "expired": "2019-10-28T15:23:10.407Z"
-}```
-
-NOTE: The expired time is UTC time.
+Flaskdata.io cloud services are GDPR, HIPAA and 21 CFR Part 11-compliant.

@@ -1,4 +1,19 @@
-site_name: FlaskData Documentation
+site_name: FlaskData Documentations
 nav:
-    - API Introduction: index.md
-    - API flows: apiflows.md
+  - Getting Started:
+    - Registration: registration.md
+    - First Study: first_study.md
+    - Manage Studies: manage_studies.md
+    - Manage Sites: manage_sites.md
+    - Manage Users: manage_users.md
+  - FlaskData API:
+    - API Introduction: api_introduction.md
+    - API Flows: apiflows.md
+theme:
+  name: 'material'
+  logo: 'img/logo.PNG'
+  favicon: 'img/logo.PNG'
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
