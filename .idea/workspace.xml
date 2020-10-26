@@ -2,11 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/img/registration_page.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/studies_index.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api_introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/api_introduction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/first_study.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/first_study.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/crfData.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/crfName.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/default_users.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/default_users.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/edit_study.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/edit_study.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/eventName.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/execute_api.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/api/execute_api.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/invite_button.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/itemVariables.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/left_bar_sites.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/registration_page.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/customer/registration_page.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/site_edit.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/site_manage_users.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/sites_actions.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/sites_index_add_site.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/studies_index.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/studies_index.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/studies_index_actions.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/studies_index_actions.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/studies_index_add_study.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/studies_index_add_study.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/studyId.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/study_comment.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/study_comment.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/study_in_title.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/study_in_title.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/study_manage_sites.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/study_manage_sites.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/study_manage_users.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/study_manage_users.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/study_mange_users_type.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/study_mange_users_type.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/study_profile.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/study/study_profile.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/subjectLabel.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/swagger_schemes.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/api/swagger_schemes.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/try_it_out.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/api/try_it_out.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_create_new_user.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_create_new_user.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_create_success.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_create_success.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_edit.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_edit.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_manage_user_sites.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_manage_user_sites.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_profile_actions_button.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_profile_actions_button.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_profile_comments.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_profile_comments.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_profile_modify_pass.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_profile_modify_pass.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_profile_sites_card.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_profile_sites_card.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/user_profile_studies_card.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/user_profile_studies_card.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/users_index_actions.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/users_index_actions.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/users_index_add_user.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/users_index_add_user.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/users_index_filter.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/user/users_index_filter.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_sites.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_sites.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_studies.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_studies.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_users.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_users.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/registration.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/registration.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +68,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flask-api" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -38,8 +79,11 @@
       <recent name="$PROJECT_DIR$/flaskdata-api/docs/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/img" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docs/img/api" />
+      <recent name="$PROJECT_DIR$/docs/img/site" />
+      <recent name="$PROJECT_DIR$/docs/img/user" />
+      <recent name="$PROJECT_DIR$/docs/img/study" />
+      <recent name="$PROJECT_DIR$/docs/img/customer" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -51,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603104030438</updated>
       <workItem from="1603104031583" duration="1239000" />
-      <workItem from="1603188656837" duration="25004000" />
+      <workItem from="1603188656837" duration="27593000" />
     </task>
     <servers />
   </component>
@@ -71,5 +115,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="709" y="354" width="558" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1603180594577" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603697137471">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1603697137471" />
   </component>
 </project>

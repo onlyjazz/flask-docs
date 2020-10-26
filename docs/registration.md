@@ -13,7 +13,7 @@ How to create a new account? It's so simple...
 
 Go to <a href="https://app.flaskdata.io/users/register">Registration</a>
 
-![Screenshot](img/registration_page.PNG) 
+![Screenshot](img/customer/registration_page.PNG) 
 
 Fill your properties and click **CREATE AN ACCOUNT**
 

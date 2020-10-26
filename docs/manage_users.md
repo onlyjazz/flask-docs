@@ -5,7 +5,7 @@ In this page - Users index you can add users to your study, edit users, assign u
 
 You can filter users by study, site or what you want by the **Search** filter and then click **APPLY**
 
-![Screenshot](img/users_index_filter.PNG)
+![Screenshot](img/user/users_index_filter.PNG)
 
 ##Default users
 By default, you have 4 users assigned to your study:
@@ -14,19 +14,19 @@ By default, you have 4 users assigned to your study:
     2.CRC Default - CRF user
     3.PI Default - PI user
     4.CRA Default - CRA user
-![Screenshot](img/default_users.PNG)
+![Screenshot](img/user/default_users.PNG)
 
 **Each default user has another permissions.**
 
 ##Edit User
 Edit the default users to your right users one by one, by **ACTIONS**-> **EDIT** option
 
-![Screenshot](img/users_index_actions.PNG)
+![Screenshot](img/user/users_index_actions.PNG)
 
 ###Profile
 In user profile page there is a pen in the right corner of **Profile card**, click on it and edit user's properties.
 
-![Screenshot](img/user_edit.PNG)
+![Screenshot](img/user/user_edit.PNG)
 
 After you change user's email you can send him/her an email to create password by a click on **Send create password**
 
@@ -47,23 +47,23 @@ In edit user profile action you can change a few user's parameters
 ###Studies
 In **Studies card** you can see the user's studies
 
-![Screenshot](img/user_profile_studies_card.PNG)
+![Screenshot](img/user/user_profile_studies_card.PNG)
 
 ###Sites
 In **Sites card** you can see the user's sites (if the user is study role or customer admin he can see al study's sites)
 
-![Screenshot](img/user_profile_sites_card.PNG)
+![Screenshot](img/user/user_profile_sites_card.PNG)
 
 ###Comments
 In **Comments card** you can add comments about this user.
 Write your comments and click on **ADD COMMENT** button
 
-![Screenshot](img/user_profile_comments.PNG)
+![Screenshot](img/user/user_profile_comments.PNG)
 
 ##Mange user sites
 In user profile page you have an option to manage user sites.
 
-![Screenshot](img/user_profile_actions_button.PNG)
+![Screenshot](img/user/user_profile_actions_button.PNG)
 
 ---
 **NOTE:** You have this option just if the user is a site role user, otherwise the user has permissions to all study's sites
@@ -71,7 +71,7 @@ In user profile page you have an option to manage user sites.
 ---
 In manage user sites page you can add/remove sites from user privileges.
 
-![Screenshot](img/user_manage_user_sites.PNG)
+![Screenshot](img/user/user_manage_user_sites.PNG)
 
 ##User actions
 In user profile page you have **ACTIONS** green button.
@@ -81,16 +81,16 @@ In these actions button you have a few actions options:
 2. **Login as this user** - By clicking on this option you login to the system like you are this user.
 3. **Modify password** - By clicking on this option you can modify the user password.
 
-    ![Screenshot](img/user_profile_modify_pass.PNG)
+    ![Screenshot](img/user/user_profile_modify_pass.PNG)
     
 ##Add User
 To add user click on **ADD USER** green button in users index page
 
-![Screenshot](img/users_index_add_user.PNG)
+![Screenshot](img/user/users_index_add_user.PNG)
 
 The user will be added to the selected study that appears in the title.
 
-![Screenshot](img/study_in_title.PNG)
+![Screenshot](img/study/study_in_title.PNG)
 
 ---
 **NOTES:**
@@ -105,8 +105,8 @@ The user will be added to the selected study that appears in the title.
 
 Click on **SAVE** green button.
 
-![Screenshot](img/user_create_new_user.PNG)
+![Screenshot](img/user/user_create_new_user.PNG)
 
 The user will get a welcome email.
 
-![Screenshot](img/user_create_success.PNG)
+![Screenshot](img/user/user_create_success.PNG)

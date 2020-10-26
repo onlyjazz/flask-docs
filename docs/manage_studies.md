@@ -8,7 +8,7 @@ You can add/edit your studies properties, users, sites etc.
 To add studies go to studies index page by clicking on studies in the left bar.
 Click on **ADD STUDY** green button.
 
-![Screenshot](img/studies_index_add_study.PNG)
+![Screenshot](img/study/studies_index_add_study.PNG)
 Fill your study properties and click **SAVE** mange users page will be opened.
 
 ---
@@ -31,7 +31,7 @@ To add a new user to the study - you need to [create the user](./manage_users.md
 
 Type any part of the user's name in the Select users box and choose the relevant user.
 
-![Screenshot](img/study_mange_users_type.PNG)
+![Screenshot](img/study/study_mange_users_type.PNG)
 
 Click **NEXT STEP**, Welcome emails will be sent to users' emails.
 
@@ -42,7 +42,7 @@ In manage sites page you can add/remove site from this study.
 
 To add a new site to study - you need [create the site](./manage_sites.md#add-a-new-site) first.
 
-![Screenshot](img/study_manage_sites.PNG)
+![Screenshot](img/study/study_manage_sites.PNG)
 
 Type any part of the site's name in the Select sites box and choose the relevant site.
 
@@ -53,7 +53,7 @@ In studies index page you have option to edit your study.
 
 To edit the study - check it and then click on **ACTIONS** green button and choose the **Edit** option.
 
-![Screenshot](img/studies_index_actions.PNG)
+![Screenshot](img/study/studies_index_actions.PNG)
  
  In edit study window you can define your study profile, definitions etc.
  
@@ -69,10 +69,10 @@ When you click **SAVE** the profile study will be opened.
 ##Study Profile
 In study profile page you can see your study's definitions, alert rules, analytic rules, users, sites and comments.
 
-  ![Screenshot](img/study_profile.PNG)
+  ![Screenshot](img/study/study_profile.PNG)
 
 There is a **Comments** card that you can write all your comments about your study.
 
-![Screenshot](img/study_comment.PNG)
+![Screenshot](img/study/study_comment.PNG)
 
 There is an **ACTIONS** green button with manage users and manage sites options.

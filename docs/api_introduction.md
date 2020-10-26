@@ -19,15 +19,15 @@ All the API environments have swagger UI.
 
 Swagger Schemes should be HTTPS.
 
-![Screenshot](img/swagger_schemes.PNG)
+![Screenshot](img/api/swagger_schemes.PNG)
 
 For using FlaskData API by swagger you need to click on "Try it out" of the relevant API.
 
-![Screenshot](img/try_it_out.PNG)
+![Screenshot](img/api/try_it_out.PNG)
 
 Config/ change header and body request as needed and click on "Execute" button.
 
-![Screenshot](img/execute_api.PNG)
+![Screenshot](img/api/execute_api.PNG)
 
 ### ClinCapture EDC
 ClinCapture EDC is a database includes all study data (events, crfs, items, sites, subjects, data and etc.)

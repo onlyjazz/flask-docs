@@ -6,11 +6,11 @@ Now you have the first study called ```default-XXX```.
 ##Study Edit
 To edit the study - check it, in **ACTIONS** click on **Edit** option.
 
-![Screenshot](img/studies_index_actions.PNG)
+![Screenshot](img/study/studies_index_actions.PNG)
  
  In edit study window you can define your study profile, definitions and etc.
  
- ![Screenshot](img/edit_study.PNG)
+ ![Screenshot](img/study/edit_study.PNG)
 
 ---
 **NOTES:**
@@ -32,11 +32,11 @@ When you click **SAVE** the profile study will be opened.
 ##Study Profile
 In study profile page you can see your study's definitions, alert rules, analytic rules, users, sites and comments.
 
-  ![Screenshot](img/study_profile.PNG)
+  ![Screenshot](img/study/study_profile.PNG)
 ---
 **NOTE:** In comments card you can write all your comments about your study.
 
-![Screenshot](img/study_comment.PNG)
+![Screenshot](img/study/study_comment.PNG)
 ---
 In study profile page you have **ACTIONS** green button with manage users and manage sites options.
 
@@ -45,11 +45,11 @@ In manage users page you can add/remove user from this study.
 
 To add a new user to the study - you need to [create the user](./manage_users.md#add-user) first.
 
-![Screenshot](img/study_manage_users.PNG)
+![Screenshot](img/study/study_manage_users.PNG)
 
 Type any part of the user's name in the Select users box and choose the relevant user.
 
-![Screenshot](img/study_mange_users_type.PNG)
+![Screenshot](img/study/study_mange_users_type.PNG)
 
 Click **NEXT STEP**, Welcoma emails will be sent to users' emails.
 
@@ -58,7 +58,7 @@ In manage sites page you can add/remove site from this study.
 
 To add a new site to study - you need [create the site](./manage_sites.md#add-a-new-site) first.
 
-![Screenshot](img/study_manage_sites.PNG)
+![Screenshot](img/study/study_manage_sites.PNG)
 
 Type any part of the site's name in the Select sites box and choose the relevant site.
 
