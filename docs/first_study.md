@@ -1,21 +1,21 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
 
 #Define your study
-Now you have the first study called ```default-XXX```.
+After signing up, the system will create your first study called ```default-XXX```.
 
 ##Study Edit
 To edit the study - check it, in **ACTIONS** click on **Edit** option.
 
 ![Screenshot](img/study/studies_index_actions.PNG)
- 
+
  In edit study window you can define your study profile, definitions and etc.
- 
+
  ![Screenshot](img/study/edit_study.PNG)
 
 ---
 **NOTES:**
 
-1. *Database* and *EDC URL* fields are related to EDC db, if you have EDC (clin capture) db you should fill them.
+1. *Database* and *EDC URL* fields are related to EDC db, if you have EDC (ClinCapture) db you should fill them.
 2. *Enable patient reported outcome module?* Check this checkbox if your study has a PRO for patients.
 3. *PRO URL*: If study has another PRO then FlaskData fill the *PRO URL* field with your study's PRO URL.
 4. *Package*: There are 3 available packages, Start, Submit and Validate.
@@ -30,31 +30,31 @@ To edit the study - check it, in **ACTIONS** click on **Edit** option.
 When you click **SAVE** the profile study will be opened.
 
 ##Study Profile
-In study profile page you can see your study's definitions, alert rules, analytic rules, users, sites and comments.
+In the Study Profile page you can see your study's definitions, alert rules, analytic rules, Users, sites and comments.
 
   ![Screenshot](img/study/study_profile.PNG)
 ---
-**NOTE:** In comments card you can write all your comments about your study.
+**NOTE:** In comments card you can record free text annotations about your study.
 
 ![Screenshot](img/study/study_comment.PNG)
 ---
-In study profile page you have **ACTIONS** green button with manage users and manage sites options.
+In Study Profile page you have **ACTIONS** green button with manage Users and manage sites options.
 
-##Study manage users
-In manage users page you can add/remove user from this study.
+##Study manage Users
+In Manage Users page you can add/remove User from this study.
 
-To add a new user to the study - you need to [create the user](./manage_users.md#add-user) first.
+To add a new User to the study - you need to [create the User](./manage_users.md#add-user) first.
 
 ![Screenshot](img/study/study_manage_users.PNG)
 
-Type any part of the user's name in the Select users box and choose the relevant user.
+Type any part of the User's name in the Select Users box and choose the relevant User.
 
 ![Screenshot](img/study/study_mange_users_type.PNG)
 
-Click **NEXT STEP**, Welcoma emails will be sent to users' emails.
+Click **NEXT STEP**, Welcoma emails will be sent to Users' emails.
 
 ##Study manage sites
-In manage sites page you can add/remove site from this study.
+In Manage sites page you can add/remove site from this study.
 
 To add a new site to study - you need [create the site](./manage_sites.md#add-a-new-site) first.
 

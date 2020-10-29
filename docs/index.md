@@ -1,17 +1,18 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
 #FlaskData
-**Your clinical trials made 1000X faster**
+**Collect, Detect and Act**
 
-Flaskdata is an Israeli tech startup that specializes in helping life sciences companies complete their Phase 2 and Phase 3 clinical trials 3-6 months faster.
+FlaskData is a cloud API platform to collect and monitor clinical data.
 
-Flask scales to any-sized trial and sustains procedural adherence and verified-data.  Our customers in pain, gastro and oncology indications sustain 95% protocol compliance and data cycles of < 1 day.
+FlaskData helps you achieve high levels of protocol compliance and save time and money by automating the manual work of compliance monitoring in clinical trials.  
 
 The FlaskData platform provides real-time data collection and automated detection and response. An open [API](https://api.flaskdata.io/swagger)  architecture fits easily into any digital health, digital therapeutics or eClinical software.  Flask collects data from any combination of sources – investigators, patients, mobile, wearables, passive monitoring, connected medical devices and code.
 
+Collect provides you with desktop, mobile and RESTful Flask Data [API](https://api.flaskdata.io/swagger/) services to collect data directly from patients, investigators and connected medical devices.
 
+Detect  provides you with the capability to automated deviation monitoring of all your clinical data continuously. This is based on techniques used widely in cyber security – read more here about
+[An attack modeling approach for monitoring clinical data](https://www.flaskdata.io/an-attack-modeling-approach-for-remote-monitoring-of-clinical-trials/)
 
-The Flaskdata.io platform is a complete solution for decentralized clinical trials, patient-centric interventions, digital therapeutics and site-less trials.The platform integrates EDC, mobile ePRO and connected devices using a continuous data feed.    The Detect & Respond sub-system processes the continuous data feed to provide an immediate picture of protocol compliance for your  research.
+Act  provides you with the capability to automate response to patients and clinical operations teams with push notifications triggered by computed protocol compliance metrics over threshold.
 
-Automated playbooks provide adaptive reinforcement messages for patients in their own time and treatment frame and help them achieve high levels of adherence.
-
-Flaskdata.io cloud services are GDPR, HIPAA and 21 CFR Part 11-compliant.
+Read more about the Flaskdata software architecture here:  [Flaskdata software architecture white paper](https://www.flaskdata.io/flaskdata-software-architecture-white-paper/)

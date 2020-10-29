@@ -3,17 +3,20 @@
 
 Welcome to FlaskData :tada:
 
-The FlaskData platform provides real-time data collection and automated detection and response. An open API  architecture fits easily into any digital health, digital therapeutics or eClinical software.  Flask collects data from any combination of sources – investigators, patients, mobile, wearables, passive monitoring, connected medical devices and code.
+FlaskData is a cloud API platform to collect and monitor clinical data.
+
+FlaskData helps you achieve high levels of protocol compliance and save time and money by automating the manual work of compliance monitoring in clinical trials.  
+
 
 ###Audience
-People that wants to achieve speed to results in their study by eliminating avoidable rework.
+Anyone in charge of running a clinical trial.
 
 ##Create a new account
 How to create a new account? It's so simple...
 
 Go to <a href="https://app.flaskdata.io/users/register">Registration</a>
 
-![Screenshot](img/customer/registration_page.PNG) 
+![Screenshot](img/customer/registration_page.PNG)
 
 Fill your properties and click **CREATE AN ACCOUNT**
 
