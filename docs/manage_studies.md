@@ -2,14 +2,14 @@
 
 #Studies
 You can run a few studies in parallel.
-You can add/edit your studies properties, users, sites etc.
+You can add/edit your studies properties, Users, sites etc.
 
 ##Add study
 To add studies go to studies index page by clicking on studies in the left bar.
 Click on **ADD STUDY** green button.
 
 ![Screenshot](img/study/studies_index_add_study.PNG)
-Fill your study properties and click **SAVE** mange users page will be opened.
+Fill your study properties and click **SAVE** mange Users page will be opened.
 
 ---
 **NOTES:**
@@ -24,55 +24,55 @@ Fill your study properties and click **SAVE** mange users page will be opened.
 5. *Alert data source*: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL otherwise choose MongoDB).
 ---
 
-##Study manage users
-In manage users page you can add/remove user from this study.
+##Study manage Users
+In manage Users page you can add/remove User from this study.
 
-To add a new user to the study - you need to [create the user](./manage_users.md#add-user) first.
+To add a new User to the study - you need to [create the User](./manage_users.md#add-user) first.
 
-Type any part of the user's name in the Select users box and choose the relevant user.
+Type any part of the User's name in the Select Users box and choose the relevant User.
 
 ![Screenshot](img/study/study_mange_users_type.PNG)
 
-Click **NEXT STEP**, Welcome emails will be sent to users' emails.
+Click **NEXT STEP**, Welcome emails will be sent to Users' emails.
 
-Manage sites page will be opened.
+The Manage Sites page will be opened.
 
 ##Study manage sites
 In manage sites page you can add/remove site from this study.
 
-To add a new site to study - you need [create the site](./manage_sites.md#add-a-new-site) first.
+To add a new site to your study - click on [Create Site](./manage_sites.md#add-a-new-site) first.
 
 ![Screenshot](img/study/study_manage_sites.PNG)
 
-Type any part of the site's name in the Select sites box and choose the relevant site.
+Type any part of the site name in the Select sites box and pick the site you want to add to your study.
 
 Click **NEXT STEP**
 
 ##Study Edit
-In studies index page you have option to edit your study.
+In the Studies index page you can edit your study.
 
-To edit the study - check it and then click on **ACTIONS** green button and choose the **Edit** option.
+To edit your study - check it and then click on the green **ACTIONS**  button and choose the **Edit** option.
 
 ![Screenshot](img/study/studies_index_actions.PNG)
- 
- In edit study window you can define your study profile, definitions etc.
- 
+
+ In the Edit Study page you can define your study profile, definitions etc.
+
 ---
 **NOTES:**
 
-1. *Study subject prefix*: Prefix of creation subject label, like study1-001.
+1. *Study subject prefix*: Prefix for automatically creating a subject label, like study1-001.
 2. *Subject’s IDPs settings*: IDP settings for subjects-patients.
 ___
 
-When you click **SAVE** the profile study will be opened.
+When you click **SAVE** the Study Profile will be opened.
 
 ##Study Profile
-In study profile page you can see your study's definitions, alert rules, analytic rules, users, sites and comments.
+In the Study Profile page you can see your study's definitions, alert rules, analytic rules, Users, sites and comments.
 
   ![Screenshot](img/study/study_profile.PNG)
 
-There is a **Comments** card that you can write all your comments about your study.
+There is a **Comments** card that you can write all free text comments about your study.
 
 ![Screenshot](img/study/study_comment.PNG)
 
-There is an **ACTIONS** green button with manage users and manage sites options.
+There is an **ACTIONS** green button with Manage Users and Manage Sites options.

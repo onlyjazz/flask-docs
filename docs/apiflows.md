@@ -2,8 +2,8 @@
 
 The API has 2 parts of APIs - EDC and Flask.
 
-* EDC - APIs are related to ClinCapture EDC (extract EDC data and etc.)
-* Flask - APIs are related to flask data (extract data, insert data and etc.)
+* EDC - APIs are related to a ClinCapture EDC instance (extract EDC data etc.)
+* Flask - APIs are related to Flas data (extract data, insert data etc.)
 
 NOTES:
 
@@ -96,9 +96,9 @@ This API creates/updates study in FlaskData.
 This API creates/updates site in FlaskData.
 
 ### /flask/study/create-update-flask-study-users
-This API creates user if not exists and assigned users to study.
+This API creates User if not exists and assigned Users to study.
 
-NOTE - This API deletes the users that were assigned to this study and assigned the new users.
+NOTE - This API deletes the Users that were assigned to this study and assigned the new Users.
 
 ### /flask/subject/extract-study-event-data-to-CSV
 This API extracts all study data (from FlaskForms) based on study id and download CSV files.
@@ -157,13 +157,13 @@ This JS code is an example to create CRF and save its data into existing event.
 
         $(document).ready(function() {
               // Call insertDataIntoFlaskFormsCRF function to assign new CRF and save data.
-              // Input values : user email, user password, study id, subject label, event name, CRF name, CRF data.
+              // Input values : User email, User password, study id, subject label, event name, CRF name, CRF data.
               insertDataIntoFlaskFormsCRF("mongositerole@clearclinica.com", "123456", 145858, 'mongo_test_site_1-03', 'Screening', 'Subject properties', {"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2});
          });
         var insertDataIntoFlaskFormsCRF = function(uEmail, uPass, studyId, subjectLabel, eventName, crfName, crfData){
             // Get token
             getFlaskDataToken(uEmail, uPass, function(userToken){
-                var token = userToken;
+                var token = UserToken;
                 // Create new CRF in existin event and insert data
                 createCRFandInsertData(token, studyId, subjectLabel, eventName, crfName, crfData, function(crfDataId){
                     console.log(crfDataId);
@@ -221,8 +221,8 @@ This JS code is an example to create CRF and save its data into existing event.
 
 Your application should call insertDataIntoFlaskFormsCRF function with the following input parameters:
 
-* user email - Your customer API user email address for authorization.
-* user password - Your customer API user password for authorization.
+* User email - Your customer API User email address for authorization.
+* User password - Your customer API User password for authorization.
 * studyId - Your study Id parameter, You can take it from study dashboard URL.
 ![Screenshot](img/studyId.PNG)
 * Subject label - Subject label from flaskdata, for example:

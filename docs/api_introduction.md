@@ -2,12 +2,13 @@
 # API Introduction
 
 ### Audience
-Developers who want to use the Flask API to collect and extract data.
+Developers who want to use the Flask API.
 
 ### Concepts and terms
-The user should have API permissions - An API user that defined by FlaskData team.
+A developer will need credentials to a User account with an API role.
+This User can be created by customer admin role.
 
-This API user has access to get data of his customer and EDC DBs that defined in his studies' EDC (dbname).
+The API User has access to data of the customer account and EDC databases that defined in the study EDC dbname.
 
 There are 3 FlaskData API environments:
 
@@ -15,9 +16,8 @@ There are 3 FlaskData API environments:
 * staging environment : <a href="https://staging-api.flaskdata.io">staging-api.flaskdata.io</a>
 * production environment : <a href="https://api.flaskdata.io">api.flaskdata.io</a>
 
-All the API environments have swagger UI.
-
-Swagger Schemes should be HTTPS.
+Each API environments has its own swagger UI - like https://api.flaskdata.io/swagger/
+Select HTTPS in the Swagger Schemes dropdown before trying it out.
 
 ![Screenshot](img/api/swagger_schemes.PNG)
 
@@ -43,7 +43,7 @@ Flask Forms is a platform to save study CRFs data ( events, crfs, items and the 
 
 Some studies use FlaskForms, The customer can build/ edit his study or FlaskData can do it for him.
 
-FlaskData and FlaskForms are related and there's a perfect user experience.
+FlaskData and FlaskForms are related and there's a perfect User experience.
 
 FlaskData API extract data from FlaskForms data.
 
@@ -56,7 +56,7 @@ For getting FlaskData token use auth/authorize API.
 
 For example - in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a>
 
-In the body request (JSON) you need to set your API user's email and password, like:
+In the body request (JSON) you need to set your API User's email and password, like:
 
 ```{
   "email": "xxx@gmail.com",
