@@ -416,23 +416,24 @@
                 <p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="../img/flaskdata_logo.PNG" /></a></p>
 <h1 id="api-introduction">API Introduction</h1>
 <h3 id="audience">Audience</h3>
-<p>Developers who want to use the Flask API to collect and extract data.</p>
+<p>Developers who want to use the Flask API.</p>
 <h3 id="concepts-and-terms">Concepts and terms</h3>
-<p>The user should have API permissions - An API user that defined by FlaskData team.</p>
-<p>This API user has access to get data of his customer and EDC DBs that defined in his studies' EDC (dbname).</p>
+<p>A developer will need credentials to a User account with an API role.
+This User can be created by customer admin role.</p>
+<p>The API User has access to data of the customer account and EDC databases that defined in the study EDC dbname.</p>
 <p>There are 3 FlaskData API environments:</p>
 <ul>
 <li>development environment : <a href="https://dev-api.flaskdata.io">dev-api.flaskdata.io</a></li>
 <li>staging environment : <a href="https://staging-api.flaskdata.io">staging-api.flaskdata.io</a></li>
 <li>production environment : <a href="https://api.flaskdata.io">api.flaskdata.io</a></li>
 </ul>
-<p>All the API environments have swagger UI.</p>
-<p>Swagger Schemes should be HTTPS.</p>
-<p><img alt="Screenshot" src="../img/swagger_schemes.PNG" /></p>
+<p>Each API environments has its own swagger UI - like https://api.flaskdata.io/swagger/
+Select HTTPS in the Swagger Schemes dropdown before trying it out.</p>
+<p><img alt="Screenshot" src="../img/api/swagger_schemes.PNG" /></p>
 <p>For using FlaskData API by swagger you need to click on "Try it out" of the relevant API.</p>
-<p><img alt="Screenshot" src="../img/try_it_out.PNG" /></p>
+<p><img alt="Screenshot" src="../img/api/try_it_out.PNG" /></p>
 <p>Config/ change header and body request as needed and click on "Execute" button.</p>
-<p><img alt="Screenshot" src="../img/execute_api.PNG" /></p>
+<p><img alt="Screenshot" src="../img/api/execute_api.PNG" /></p>
 <h3 id="clincapture-edc">ClinCapture EDC</h3>
 <p>ClinCapture EDC is a database includes all study data (events, crfs, items, sites, subjects, data and etc.)</p>
 <p>Some studies use EDC data and UI to insert/update/delete/extract the study data.</p>
@@ -441,14 +442,14 @@
 <h3 id="flask-forms">Flask Forms</h3>
 <p>Flask Forms is a platform to save study CRFs data ( events, crfs, items and the data), This is a tool developed by FlaskData team, easy to use!</p>
 <p>Some studies use FlaskForms, The customer can build/ edit his study or FlaskData can do it for him.</p>
-<p>FlaskData and FlaskForms are related and there's a perfect user experience.</p>
+<p>FlaskData and FlaskForms are related and there's a perfect User experience.</p>
 <p>FlaskData API extract data from FlaskForms data.</p>
 <h1 id="getting-started-api">Getting started API</h1>
 <h3 id="authorization">Authorization</h3>
 <p>For using FlaskData APIs you need to get token first.</p>
 <p>For getting FlaskData token use auth/authorize API.</p>
 <p>For example - in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a></p>
-<p>In the body request (JSON) you need to set your API user's email and password, like:</p>
+<p>In the body request (JSON) you need to set your API User's email and password, like:</p>
 <p><code>{
   "email": "xxx@gmail.com",
   "password": "12345678"

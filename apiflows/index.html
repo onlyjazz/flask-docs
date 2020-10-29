@@ -744,8 +744,8 @@
                 <h1 id="api-flows">API flows</h1>
 <p>The API has 2 parts of APIs - EDC and Flask.</p>
 <ul>
-<li>EDC - APIs are related to ClinCapture EDC (extract EDC data and etc.)</li>
-<li>Flask - APIs are related to flask data (extract data, insert data and etc.)</li>
+<li>EDC - APIs are related to a ClinCapture EDC instance (extract EDC data etc.)</li>
+<li>Flask - APIs are related to Flas data (extract data, insert data etc.)</li>
 </ul>
 <p>NOTES:</p>
 <ul>
@@ -809,8 +809,8 @@
 <h3 id="flasksitecreate-update-flask-site">/flask/site/create-update-flask-site</h3>
 <p>This API creates/updates site in FlaskData.</p>
 <h3 id="flaskstudycreate-update-flask-study-users">/flask/study/create-update-flask-study-users</h3>
-<p>This API creates user if not exists and assigned users to study.</p>
-<p>NOTE - This API deletes the users that were assigned to this study and assigned the new users.</p>
+<p>This API creates User if not exists and assigned Users to study.</p>
+<p>NOTE - This API deletes the Users that were assigned to this study and assigned the new Users.</p>
 <h3 id="flasksubjectextract-study-event-data-to-csv">/flask/subject/extract-study-event-data-to-CSV</h3>
 <p>This API extracts all study data (from FlaskForms) based on study id and download CSV files.</p>
 <h3 id="flaskcrfcreate-crf-and-insert-data">/flask/crf/create-CRF-and-insert-data</h3>
@@ -855,13 +855,13 @@
 <p>This JS code is an example to create CRF and save its data into existing event.</p>
 <pre><code>    $(document).ready(function() {
           // Call insertDataIntoFlaskFormsCRF function to assign new CRF and save data.
-          // Input values : user email, user password, study id, subject label, event name, CRF name, CRF data.
+          // Input values : User email, User password, study id, subject label, event name, CRF name, CRF data.
           insertDataIntoFlaskFormsCRF("mongositerole@clearclinica.com", "123456", 145858, 'mongo_test_site_1-03', 'Screening', 'Subject properties', {"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2});
      });
     var insertDataIntoFlaskFormsCRF = function(uEmail, uPass, studyId, subjectLabel, eventName, crfName, crfData){
         // Get token
         getFlaskDataToken(uEmail, uPass, function(userToken){
-            var token = userToken;
+            var token = UserToken;
             // Create new CRF in existin event and insert data
             createCRFandInsertData(token, studyId, subjectLabel, eventName, crfName, crfData, function(crfDataId){
                 console.log(crfDataId);
@@ -919,21 +919,21 @@
 </code></pre>
 <p>Your application should call insertDataIntoFlaskFormsCRF function with the following input parameters:</p>
 <ul>
-<li>user email - Your customer API user email address for authorization.</li>
-<li>user password - Your customer API user password for authorization.</li>
+<li>User email - Your customer API User email address for authorization.</li>
+<li>User password - Your customer API User password for authorization.</li>
 <li>studyId - Your study Id parameter, You can take it from study dashboard URL.
-<img alt="Screenshot" src="../img/studyId.PNG" /></li>
+<img alt="Screenshot" src="img/studyId.PNG" /></li>
 <li>Subject label - Subject label from flaskdata, for example:
-<img alt="Screenshot" src="../img/subjectLabel.PNG" /></li>
+<img alt="Screenshot" src="img/subjectLabel.PNG" /></li>
 <li>Event name for creating CRF, for example:
-<img alt="Screenshot" src="../img/eventName.PNG" /></li>
+<img alt="Screenshot" src="img/eventName.PNG" /></li>
 <li>CRF name for creating CRF, for example (in flask forms):
-<img alt="Screenshot" src="../img/crfName.PNG" /></li>
+<img alt="Screenshot" src="img/crfName.PNG" /></li>
 <li>CRF data - for saving CRF data, Json structure, key value pair, The key is the item's variable (as it's defined in flask forms) and the value is the data for this variable.
 for example: <code>{"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2}</code>
-<img alt="Screenshot" src="../img/itemVariables.PNG" />
+<img alt="Screenshot" src="img/itemVariables.PNG" />
 The output should be new CRF for the subject with the correct data, for example:
-<img alt="Screenshot" src="../img/crfData.PNG" /></li>
+<img alt="Screenshot" src="img/crfData.PNG" /></li>
 </ul>
 <h3 id="example-of-calling-flaskdata-api-using-jquery-older-version">Example of calling FlaskData API using jQuery older version</h3>
 <pre><code>  var http = new XMLHttpRequest();
