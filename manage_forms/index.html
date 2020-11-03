@@ -1,0 +1,1078 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../img/logo.PNG">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Manage Forms - FlaskData Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manage-forms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="FlaskData Documentations" class="md-header-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            FlaskData Documentations
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Manage Forms
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FlaskData Documentations" class="md-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    FlaskData Documentations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../registration/" class="md-nav__link">
+      Registration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../first_study/" class="md-nav__link">
+      First Study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_studies/" class="md-nav__link">
+      Manage Studies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_sites/" class="md-nav__link">
+      Manage Sites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_users/" class="md-nav__link">
+      Manage Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Manage Forms
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Manage Forms
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-flask-forms" class="md-nav__link">
+    What is Flask Forms?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-your-esource-app" class="md-nav__link">
+    Build your eSource app
+  </a>
+  
+    <nav class="md-nav" aria-label="Build your eSource app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crfs" class="md-nav__link">
+    CRFS
+  </a>
+  
+    <nav class="md-nav" aria-label="CRFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crf-properties" class="md-nav__link">
+    CRF Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="CRF Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-examples" class="md-nav__link">
+    Layout examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crf-sections" class="md-nav__link">
+    CRF Sections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crf-items" class="md-nav__link">
+    CRF Items
+  </a>
+  
+    <nav class="md-nav" aria-label="CRF Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-crf-item" class="md-nav__link">
+    Edit CRF Item
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit CRF Item">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    Labels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    Value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations" class="md-nav__link">
+    Validations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branching-logic" class="md-nav__link">
+    Branching Logic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crf-actions" class="md-nav__link">
+    CRF Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-csv" class="md-nav__link">
+    Export CSV
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-definitions" class="md-nav__link">
+    Event Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-definition-actions" class="md-nav__link">
+    Event Definition Actions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#study-schedules" class="md-nav__link">
+    Study Schedules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-definitions" class="md-nav__link">
+    Alert Definitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#languages" class="md-nav__link">
+    Languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studies" class="md-nav__link">
+    Studies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hamburger" class="md-nav__link">
+    Hamburger
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_queries/" class="md-nav__link">
+      Manage Queries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_subjects/" class="md-nav__link">
+      Manage Subjects
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../extras/" class="md-nav__link">
+      Extras
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FlaskData API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="FlaskData API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        FlaskData API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_introduction/" class="md-nav__link">
+      API Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apiflows/" class="md-nav__link">
+      API Flows
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-flask-forms" class="md-nav__link">
+    What is Flask Forms?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-your-esource-app" class="md-nav__link">
+    Build your eSource app
+  </a>
+  
+    <nav class="md-nav" aria-label="Build your eSource app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crfs" class="md-nav__link">
+    CRFS
+  </a>
+  
+    <nav class="md-nav" aria-label="CRFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crf-properties" class="md-nav__link">
+    CRF Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="CRF Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-examples" class="md-nav__link">
+    Layout examples:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crf-sections" class="md-nav__link">
+    CRF Sections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crf-items" class="md-nav__link">
+    CRF Items
+  </a>
+  
+    <nav class="md-nav" aria-label="CRF Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-crf-item" class="md-nav__link">
+    Edit CRF Item
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit CRF Item">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#labels" class="md-nav__link">
+    Labels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    Value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations" class="md-nav__link">
+    Validations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branching-logic" class="md-nav__link">
+    Branching Logic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crf-actions" class="md-nav__link">
+    CRF Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-csv" class="md-nav__link">
+    Export CSV
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-definitions" class="md-nav__link">
+    Event Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Event Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-definition-actions" class="md-nav__link">
+    Event Definition Actions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#study-schedules" class="md-nav__link">
+    Study Schedules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-definitions" class="md-nav__link">
+    Alert Definitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#languages" class="md-nav__link">
+    Languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studies" class="md-nav__link">
+    Studies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hamburger" class="md-nav__link">
+    Hamburger
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="../img/flaskdata_logo.PNG" /></a></p>
+<h1 id="manage-forms">Manage Forms</h1>
+<p>In the left menu bar click on FORMS.</p>
+<h2 id="what-is-flask-forms">What is Flask Forms?</h2>
+<ul>
+<li>Flask Forms is an online eSource app</li>
+<li>Forms features unlimited subjects, forms and data. </li>
+<li>You can create the eCRFs yourself using a super friendly interface.  </li>
+<li>Includes a library of ready-to-go eCRF templates.</li>
+<li>Runs on desktops, notebooks, tablets and phones.</li>
+</ul>
+<h2 id="build-your-esource-app">Build your eSource app</h2>
+<p>In Forms page you can define the study's CRFs, Events , Pro and Alert rules.</p>
+<h3 id="crfs">CRFS</h3>
+<p>In order to create a new CRF click on <strong>ADD CRF</strong> green button</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_add_crf.PNG" /></p>
+<h4 id="crf-properties">CRF Properties</h4>
+<p>In CRF card you need to define the CRF properties (You can also edit it after the saving).
+* Queries status - Turn on/off CRF queries option (See <a href="../manage_queries/#manage-queries">manage queries</a>).</p>
+<p>When CRF queries is Turn on - each item in this CRF has queries dialog - add query by click on the question mark.</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_query.PNG" /></p>
+<ul>
+<li>Layout - Layout of CRF, There are several layouts:<ul>
+<li>Default (question after question vertically) </li>
+<li>Grid</li>
+<li>Cards on grid</li>
+</ul>
+</li>
+<li>Columns - If the layout is grid or Cards on grid choose the number of fields in each row.</li>
+<li>Name - CRF name</li>
+<li>Description - CRF Description</li>
+</ul>
+<p>Click <strong>YES</strong> to create this CRF</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_add_properties.PNG" /></p>
+<h5 id="layout-examples">Layout examples:</h5>
+<ul>
+<li>Default layout</li>
+</ul>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_default_layout.PNG" /></p>
+<ul>
+<li>Grid layout</li>
+</ul>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_grid_layout.PNG" /></p>
+<ul>
+<li>Cards on grid layout</li>
+</ul>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_cards_on_grid_layout.PNG" /></p>
+<h4 id="crf-sections">CRF Sections</h4>
+<p>In Section card define CRF's section, You can also edit it after the saving.
+ (One CRF can include more than one section)</p>
+<ul>
+<li>Name</li>
+<li>Description</li>
+</ul>
+<p><img alt="Screenshot" src="../img/forms/forms_add_crf_section.PNG" /></p>
+<p>You can add sections to CRF by click on <strong>ADD SECTION</strong> button</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_add_section.PNG" /></p>
+<h4 id="crf-items">CRF Items</h4>
+<p>You can define items in each CRF.
+By click on component the component is added to the CRF (in the end of the list)</p>
+<p><img alt="Screenshot" src="../img/forms/forms_add_crf_item.PNG" /> </p>
+<p>After adding item you should define the new item properties by click on <strong>EDIT</strong> option</p>
+<h5 id="edit-crf-item">Edit CRF Item</h5>
+<p>By click on <strong>EDIT</strong> button of item an Edit card is opened.</p>
+<h6 id="labels">Labels</h6>
+<p>In the first tab <strong>LABELS</strong> you should define item's name, description etc.
+<img alt="Screenshot" src="../img/forms/forms_crf_edit_item_labels.PNG" /></p>
+<h6 id="value">Value</h6>
+<p>Second tab is <strong>VALUE</strong> you can set a default value to this item
+<img alt="Screenshot" src="../img/forms/forms_crf_item_edit_value.PNG" /></p>
+<h6 id="validations">Validations</h6>
+<p>The third tab is <strong>Validation</strong>, each component has another validation options.</p>
+<p>For example - number component has the following validation tab:</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_edit_item_validations.PNG" /></p>
+<p>Required, Disabled and Confirm parameters exist in each component.</p>
+<ul>
+<li>Required - Check it if this item is a mandatory.</li>
+<li>Disabled - Check it if this item is disabled - the user cannot change/edit it</li>
+<li>Confirm - This item popup a confirm dialog card.</li>
+</ul>
+<h6 id="branching-logic">Branching Logic</h6>
+<p>The fourth tab is the <strong>Branching Logic</strong>, In this tab you can write a simple logic for this item.</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_item_edit_branching_logic.PNG" />
+<code>Branching logic expression for this item
+ To use the autocomplete service, 
+ type "$" and select the variable of interest for you. 
+ Use variables to make expression for hide current form control.
+ The terminal supports any JavaScript expressions for the value of the available form variables. 
+ For example:
+   $ITEM_IMPORTANT_VAR == 'string_var_value'</code></p>
+<p>For example - Show/Hide method.
+Item that depends on another item.</p>
+<p>A radio button item has 2 options - Man or Female (required question)
+<img alt="Screenshot" src="../img/forms/forms_man_female_item.PNG" />
+If user check female -&gt; Another item 'Number of children' is opened.</p>
+<p>For do it - you need to create the basic item (man/female) first,</p>
+<p>Then save it by click on <strong>SAVE</strong> button in the top of the page.</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_item_save.PNG" /></p>
+<p>By save option the system generates variables to the CRF items, and you can use them for the branching logic.</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_item_variable.PNG" /></p>
+<p>After you saved items CRF you can add branching logic to 'Number of children' item,</p>
+<p>Go to Hide/Show item branching logic and write your logic.</p>
+<p><img alt="Screenshot" src="../img/forms/forms_show_hide_logic.PNG" /></p>
+<h4 id="crf-actions">CRF Actions</h4>
+<p>There are a few available actions for each CRF.</p>
+<p><img alt="Screenshot" src="../img/forms/forms_crf_actions.PNG" /></p>
+<p>In CRFS tab there is an <strong>ACTIONS</strong> blue button with the following options:</p>
+<ul>
+<li>PREVIEW - By a click on <strong>PREVIEW</strong> option - a new window is opened with this CRF layout</li>
+<li>Edit CRF - Edit <a href="#crf-properties">CRF Properties</a></li>
+<li>Edit ITEMS - Edit <a href="#crf-items">CRF Items</a></li>
+<li>DUPLICATE CRF - By click on this option a new CRF is created same as this CRF (with the same properties, sections and items)</li>
+<li>Notice: The CRF OID and items' variable are different.</li>
+<li>DELETE - Delete this CRF</li>
+</ul>
+<h4 id="export-csv">Export CSV</h4>
+<p>There is <strong>EXPORT CSV</strong> green button.</p>
+<p>By click on this button you download a zip folder with all CRF data.</p>
+<p>One CSV file for each CRF.</p>
+<p><img alt="Screenshot" src="../img/forms/forms_export_csv.PNG" /></p>
+<h3 id="event-definitions">Event Definitions</h3>
+<p>In order to manage study events, click on <strong>EVENT DEFINITIONS</strong> tab.</p>
+<p>Create event by click on <strong>ADD EVENT DEFINITION</strong> green button</p>
+<p><img alt="Screenshot" src="../img/forms/forms_event_edd_event.PNG" /></p>
+<p>There are a few properties of event:</p>
+<ul>
+<li>Name - the display name of this event</li>
+<li>Attached CRF list - CRFs in this event.
+    <img alt="Screenshot" src="../img/forms/forms_event_crf_list.PNG" /><ul>
+<li><strong>ADD CRF</strong> green button to add CRF in this event</li>
+<li><strong>one more time</strong> add option in this event's CRF to add additional this CRF in this event</li>
+<li><strong>Render 'Finish' on last form only</strong> Finish button will be appeared in the last CRF of this event (instead of appear in each CRF - by default)</li>
+</ul>
+</li>
+<li>Attached Rules list, You can create rules and add them to this event.
+  Event rule generates an error when CRC save the event with error.</li>
+</ul>
+<p>Click <strong>SAVE</strong> blue button to save your changes OR <strong>BACK TO LIST</strong>/<strong>CLEAR CHANGES</strong> to unsave your changes.</p>
+<h4 id="event-definition-actions">Event Definition Actions</h4>
+<p>There are a few available actions for each Event.</p>
+<ul>
+<li>Edit event definition - to edit this event (add CRF, delete CRF etc.)</li>
+<li>Delete - Delete this event.</li>
+</ul>
+<h3 id="study-schedules">Study Schedules</h3>
+<p>This tab is related to study PRO.</p>
+<p>If your study has PRO for patients (subjects link)  </p>
+<p>To define PRO/s for study you need to create study schedule</p>
+<p><img alt="Screenshot" src="../img/forms/forms_create_study_schedule.PNG" /></p>
+<p>There are a few definitions of study schedule:</p>
+<ul>
+<li>Name - Name of this Study Schedule</li>
+<li>Periods - Study periods, Add periods by click on <strong>ADD PERIOD</strong> blue button<ul>
+<li>Period Length - Period length in days</li>
+<li>Name - the name of this period</li>
+<li>Description - description of this period</li>
+<li>Allow expanding this period - continue this period until another period begin to the subject.</li>
+<li>For randomized subjects - Begin this period for randomized subject (CRC should define it to each subject)</li>
+<li>
+<p>Event Definitions - Define the <a href="#event-definitions">event</a> to this period PRO
+     Click on Event Definitions, Event Definitions list will be opened, choose one event.
+     <img alt="Screenshot" src="../img/forms/forms_period_events.PNG" />
+     Click on <strong>ADD EVENT DEFINITIONS</strong> green button (You can add a few events).</p>
+<p>The selected event will be added to the list with Scheduled time and Scheduled days.</p>
+<ul>
+<li><strong>Scheduled time</strong> You can choose the time of available this event to PRO of subject</li>
+<li><strong>Scheduled days</strong> You can choose the days of this PRO event.</li>
+</ul>
+<p>By default, Scheduled time is 10:00 and Scheduled days are all the days of week.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Save you Study Schedule by click on <strong>SAVE</strong> button</p>
+<h3 id="alert-definitions">Alert Definitions</h3>
+<p>See <a href="../extras/#alert-definitions">Alert Definitions</a></p>
+<h3 id="languages">Languages</h3>
+<p>You can switch between languages by click on Languages tab and select the desired language.</p>
+<h3 id="studies">Studies</h3>
+<p>In the last option in the top bar you can switch between your studies and manage forms to each one of them.
+(In case you have several studies).</p>
+<h3 id="hamburger">Hamburger</h3>
+<p>The last item in the top bar is the "Hamburger"</p>
+<p>By standing with the mouse on the hamburger a list of options opens.</p>
+<p><img alt="Screenshot" src="../img/forms/forms_hamburger.PNG" /></p>
+<ul>
+<li><strong>Signed in as</strong> - The login user (It's you <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /> )</li>
+<li><strong>Study Alerts</strong> - Open <a href="../extras/#study-alerts">study alerts list</a></li>
+<li>
+<p><strong>Database Audit Log</strong> - Open the data audit log (create/update/delete CRF/Events/Data etc.)</p>
+<p><img alt="Screenshot" src="../img/forms/forms_database_audit_log.PNG" /></p>
+</li>
+<li>
+<p><strong>Restore Study CRFs</strong> - Put backup of study CRFs and restore it here (in the current study)
+    <img alt="Screenshot" src="../img/forms/forms_restore_crf.PNG" /></p>
+<p><strong>NOTE</strong> - Restore study CRFs restores json file.</p>
+</li>
+<li>
+<p><strong>Create a dump of study CRFs</strong> Create a backup of this study's CRFs.
+    <img alt="Screenshot" src="../img/forms/forms_dump_crfs.PNG" /></p>
+<p><strong>NOTE</strong> - You can create a dump includes/excludes events definitions, You can dump a few CRFs you choose.</p>
+<p>This option downloads CRFsDump.zip folder includes json file. Extract the file to restore it.</p>
+</li>
+<li>
+<p><strong>Logout</strong> - Logout from FlaskData</p>
+</li>
+</ul>
+<hr />
+<p><strong>NOTE</strong> to return to flask application click on FlaskData logo</p>
+<p><img alt="Screenshot" src="../img/forms/forms_flaskdata_logo.PNG" /></p>
+<hr />
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../manage_users/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Manage Users
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../manage_queries/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Manage Queries
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
