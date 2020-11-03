@@ -11,7 +11,7 @@ You can filter Users by study, site or what you want by the **Search** filter an
 By default, you have 4 Users assigned to your study:
 
     1.Customer admin User - This is your User!
-    2.CRC Default - CRF User
+    2.CRC Default - CRC User
     3.PI Default - PI User
     4.CRA Default - CRA User
 ![Screenshot](img/user/default_users.PNG)

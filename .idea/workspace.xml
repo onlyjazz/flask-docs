@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_users.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_users.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,22 +26,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flask-forms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs" />
-      <recent name="$PROJECT_DIR$/docs/img" />
-      <recent name="$PROJECT_DIR$/flaskdata-api/docs/img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/img/forms" />
       <recent name="$PROJECT_DIR$/docs/img/api" />
       <recent name="$PROJECT_DIR$/docs/img/site" />
       <recent name="$PROJECT_DIR$/docs/img/user" />
       <recent name="$PROJECT_DIR$/docs/img/study" />
-      <recent name="$PROJECT_DIR$/docs/img/customer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/docs/img/forms" />
+      <recent name="$PROJECT_DIR$/docs/img" />
+      <recent name="$PROJECT_DIR$/flaskdata-api/docs/img" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -51,7 +55,7 @@
       <updated>1603104030438</updated>
       <workItem from="1603104031583" duration="1239000" />
       <workItem from="1603188656837" duration="30723000" />
-      <workItem from="1603870734963" duration="598000" />
+      <workItem from="1603870734963" duration="37393000" />
     </task>
     <servers />
   </component>

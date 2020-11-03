@@ -1,11 +1,16 @@
 site_name: FlaskData Documentations
 nav:
+  - Home: index.md
   - Getting Started:
     - Registration: registration.md
     - First Study: first_study.md
     - Manage Studies: manage_studies.md
     - Manage Sites: manage_sites.md
     - Manage Users: manage_users.md
+    - Manage Forms: manage_forms.md
+    - Manage Queries: manage_queries.md
+    - Manage Subjects: manage_subjects.md
+  - Extras: extras.md
   - FlaskData API:
     - API Introduction: api_introduction.md
     - API Flows: apiflows.md
