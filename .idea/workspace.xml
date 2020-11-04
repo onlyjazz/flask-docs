@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/extras.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_alerts_definitions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_data.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_data.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/manage_forms.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_forms.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_studies.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_studies.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_subjects.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_subjects.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_queries.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_queries.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
       <updated>1603104030438</updated>
       <workItem from="1603104031583" duration="1239000" />
       <workItem from="1603188656837" duration="30723000" />
-      <workItem from="1603870734963" duration="58792000" />
+      <workItem from="1603870734963" duration="60375000" />
     </task>
     <servers />
   </component>

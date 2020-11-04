@@ -172,6 +172,7 @@ There are a few properties of event:
     * **Render 'Finish' on last form only** Finish button will be appeared in the last CRF of this event (instead of appear in each CRF - by default)
 * Attached Rules list, You can create rules and add them to this event.
   Event rule generates an error when CRC save the event with error.
+  * When user try to save the last CRF inside the event this rule will be checked and user will get an error if this expression returns false.
   
 
 Click **SAVE** blue button to save your changes OR **BACK TO LIST**/**CLEAR CHANGES** to unsave your changes.
