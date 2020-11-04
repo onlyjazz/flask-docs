@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/extras.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_alerts_definitions.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_users.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_users.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_data.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_data.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_forms.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_forms.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_studies.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_studies.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_subjects.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_subjects.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +59,7 @@
       <updated>1603104030438</updated>
       <workItem from="1603104031583" duration="1239000" />
       <workItem from="1603188656837" duration="30723000" />
-      <workItem from="1603870734963" duration="37393000" />
+      <workItem from="1603870734963" duration="58792000" />
     </task>
     <servers />
   </component>
@@ -79,5 +83,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1603714155786" />
+    <state x="683" y="291" width="620" height="522" key="find.popup" timestamp="1604474556979">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="683" y="291" width="620" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604474556979" />
   </component>
 </project>

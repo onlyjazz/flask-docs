@@ -55,21 +55,36 @@ To edit your study - check it and then click on the green **ACTIONS**  button an
 
 ![Screenshot](img/study/studies_index_actions.PNG)
 
- In the Edit Study page you can define your study profile, definitions etc.
+In the Edit Study page you can define your study profile, definitions etc.
 
 ---
 **NOTES:**
 
-1. *Study subject prefix*: Prefix for automatically creating a subject label, like study1-001.
-2. *Subject’s IDPs settings*: IDP settings for subjects-patients.
+1. [Study subject prefix](./manage_features.md#subject-label-calculation): Prefix for automatically creating a subject label, like study1-001.
+2. [Subject’s IDPs settings](./manage_features.md#idp-configuration): IDP settings for subjects-patients.
 ___
 
 When you click **SAVE** the Study Profile will be opened.
 
+###Archived studies
+**Caution!** Archived studies cannot be modified!!
+
+To mark study as Archived you need to change its status to **Close**.
+
+Studies with Closed status, you can see their data but cannot change data, add subject etc. There are inactive studies.
+
+If you mark study status as closed, the study marked as **Archived**, and you cannot see it in studies list.
+
+But don't worry go to studies index page and filter studies with **Archived only**
+
+Now you can see the study but cannot change it.
+
+![Screenshot](img/study/archived_study.PNG)
+
 ##Study Profile
 In the Study Profile page you can see your study's definitions, alert rules, analytic rules, Users, sites and comments.
 
-  ![Screenshot](img/study/study_profile.PNG)
+![Screenshot](img/study/study_profile.PNG)
 
 There is a **Comments** card that you can write all free text comments about your study.
 

@@ -59,10 +59,39 @@ Read more about the Flaskdata software architecture here:  [Flaskdata software a
   - Currently logged-in user and role 
   - Click on here at any time to access and change your User Profile – including changing your password.
   
-  ![Screenshot](img/forms/hamburger.PNG)
+![Screenshot](img/forms/hamburger.PNG)
+  
+###Change password
+Change password allows you to change your password when you want,
+
+Just click on **Change password** option, a reset password email will send to you.
+
+###Request support
+If you need support from us, click on this option.
+
+A request support page will be opened.
+
+Write your request, you can upload file.
+
+**Please detail your request as much as possible**
+
+![Screenshot](img/customer/request_support.PNG)
+
+**Every effort will be made to get back to you soon.**
   
 ###Logout
 * Logout – use the logout button
 * Don’t just close the browser
   - This will leave open sessions on the server and potentially cause problems
+  
+###Languages
+You can change your app language, by press on the languages' symbol. 
+
+![Screenshot](img/customer/flask_languages.PNG)
+
+###FlaskData Logo
+Clicking on FlaskData logo opens [Study Dashboard](./study_dashboard.md#study-dashboard) page.
+
+![Screenshot](img/customer/flaskdata_logo_go_to_dashboard.PNG)
+
   

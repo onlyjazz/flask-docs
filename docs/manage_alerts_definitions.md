@@ -2,10 +2,23 @@
 
 #Alert Definitions
 In Flask Forms you can create alert definitions for your study.
+
 ![Screenshot](img/alerts/alert_definitions_tab.PNG)
+
+Alert Definition entity was designed for use in the data analysis process.
+ 
+Alert Definition allows determining the expression that will be used for data checking and the actions that will be executed if the expression returns true.
+
+In the Actions dropdown, you can find the Delete and Edit Alert Definition buttons.
+
+![Screenshot](img/alerts/alert_actions.PNG)
+
+
 
 ##Add Alerts Definition
 In order to add alert definition click on **ADD ALERT DEFINITION** green button.
+
+![Screenshot](img/alerts/alert_add.PNG)
 
 There are few properties of alert definition:
 
@@ -15,8 +28,8 @@ There are few properties of alert definition:
 * **SMS Message** - this message will appear in this alert SMS (if Send SMS to subject is marked)
 * **Trigger Time** - optional field, time of alert generation. If this field is empty - alert will generate in real time.
 * **Send SMS to subject** - select it If this alert definition requires to send SMS to subject about this alert.
-* **Expression** - see [Expression](./extras.md#alert-language)
-* **Alert Definition Actions** - which action to do with this alert. see [Expression](./extras.md#alert-action)
+* **Expression** - see [Expression](manage_alerts_definitions.md#alert-language)
+* **Alert Definition Actions** - which action to do with this alert. see [Expression](manage_alerts_definitions.md#alert-action)
 
 ##Alert Language
 Flask Alert Language was designed to provide the ability for users to create rules to find the errors, missing data, or critical values in the subject's data.
@@ -51,7 +64,9 @@ Logical operator !(NOT) also supporting in the current implementation
 * `!($SOME_VARIABLE == '5') && count($ELSE_ONE_VARIABLE) > '0'`
 * `!($SOME_VARIABLE == 'some string value')`
 
+
 ###Functions
+
 ####Count
 **count(variable, period)**- this is the general syntax of count function.
 
@@ -99,7 +114,7 @@ The count function receives the two arguments:
 * value(not required) - the expression that will be used for filtering by the value that a record contains
 * take(not required) - the expression that will be used to get the part of the records array
 
-The period parameter works similarly to the period parameter in the [count](./extras.md#count) function.
+The period parameter works similarly to the period parameter in the [count](manage_alerts_definitions.md#count) function.
 
 The value of the value parameter must be the string that looks like `>2`, `yes`, `==5`
 
@@ -181,6 +196,12 @@ In this case this expression will be replaced to `filter($SOME_VARIABLE, null, '
 
 ##Alert Action
 You can define a few actions to alert definition by **ADD ACTION** green button.
+
+![Screenshot](img/alerts/alert_add_action.PNG)
+
+These actions are additional settings that allow adding additional recipients to send email or SMS. 
+
+In the current time supported SMS and email actions.  
 
 Each action has a few properties:
 

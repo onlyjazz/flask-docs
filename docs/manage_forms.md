@@ -185,7 +185,7 @@ There are a few available actions for each Event.
 ###Study Schedules
 This tab is related to study PRO.
 
-If your study has PRO for patients (subjects link)  
+If your study has PRO for [patients](./manage_subjects.md#manage-subjects)
 
 To define PRO/s for study you need to create study schedule
 
@@ -215,7 +215,7 @@ There are a few definitions of study schedule:
 Save you Study Schedule by click on **SAVE** button
     
 ###Alert Definitions
-See [Alert Definitions](./extras.md#alert-definitions)
+See [Alert Definitions](manage_alerts_definitions.md#alert-definitions)
 
 ###Languages
 You can switch between languages by click on Languages tab and select the desired language.
@@ -232,7 +232,7 @@ By standing with the mouse on the hamburger a list of options opens.
 ![Screenshot](img/forms/forms_hamburger.PNG)
 
 * **Signed in as** - The login user (It's you :smile: )
-* **Study Alerts** - Open [study alerts list](./extras.md#study-alerts)
+* **Study Alerts** - Open [study alerts list](manage_alerts_definitions.md#study-alerts)
 * **Database Audit Log** - Open the data audit log (create/update/delete CRF/Events/Data etc.)
 
     ![Screenshot](img/forms/forms_database_audit_log.PNG)

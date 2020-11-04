@@ -10,7 +10,12 @@ nav:
     - Manage Forms: manage_forms.md
     - Manage Queries: manage_queries.md
     - Manage Subjects: manage_subjects.md
-  - Extras: extras.md
+    - Manage Data: manage_data.md
+  - Extras:
+    - Study Dashboard: study_dashboard.md
+    - Alerts Definitions: manage_alerts_definitions.md
+    - Tools: tools.md
+    - Features: manage_features.md
   - FlaskData API:
     - API Introduction: api_introduction.md
     - API Flows: apiflows.md
