@@ -273,6 +273,19 @@
     Study Edit
   </a>
   
+    <nav class="md-nav" aria-label="Study Edit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archived-studies" class="md-nav__link">
+    Archived studies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -349,6 +362,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_data/" class="md-nav__link">
+      Manage Data
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -359,10 +384,72 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../extras/" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       Extras
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Extras" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Extras
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../study_dashboard/" class="md-nav__link">
+      Study Dashboard
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_alerts_definitions/" class="md-nav__link">
+      Alerts Definitions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/" class="md-nav__link">
+      Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_features/" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -465,6 +552,19 @@
     Study Edit
   </a>
   
+    <nav class="md-nav" aria-label="Study Edit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archived-studies" class="md-nav__link">
+    Archived studies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -532,11 +632,19 @@ Fill your study properties and click <strong>SAVE</strong> mange Users page will
 <hr />
 <p><strong>NOTES:</strong></p>
 <ol>
-<li><em>Study subject prefix</em>: Prefix for automatically creating a subject label, like study1-001.</li>
-<li><em>Subject’s IDPs settings</em>: IDP settings for subjects-patients.</li>
+<li><a href="../manage_features/#subject-label-calculation">Study subject prefix</a>: Prefix for automatically creating a subject label, like study1-001.</li>
+<li><a href="../manage_features/#idp-configuration">Subject’s IDPs settings</a>: IDP settings for subjects-patients.</li>
 </ol>
 <hr />
 <p>When you click <strong>SAVE</strong> the Study Profile will be opened.</p>
+<h3 id="archived-studies">Archived studies</h3>
+<p><strong>Caution!</strong> Archived studies cannot be modified!!</p>
+<p>To mark study as Archived you need to change its status to <strong>Close</strong>.</p>
+<p>Studies with Closed status, you can see their data but cannot change data, add subject etc. There are inactive studies.</p>
+<p>If you mark study status as closed, the study marked as <strong>Archived</strong>, and you cannot see it in studies list.</p>
+<p>But don't worry go to studies index page and filter studies with <strong>Archived only</strong></p>
+<p>Now you can see the study but cannot change it.</p>
+<p><img alt="Screenshot" src="../img/study/archived_study.PNG" /></p>
 <h2 id="study-profile">Study Profile</h2>
 <p>In the Study Profile page you can see your study's definitions, alert rules, analytic rules, Users, sites and comments.</p>
 <p><img alt="Screenshot" src="../img/study/study_profile.PNG" /></p>
