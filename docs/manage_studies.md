@@ -11,18 +11,16 @@ Click on **ADD STUDY** green button.
 ![Screenshot](img/study/studies_index_add_study.PNG)
 Fill your study properties and click **SAVE** mange Users page will be opened.
 
----
-**NOTES:**
+!!! note "Study values"
 
-1. *Database* and *EDC URL* fields are related to EDC db, if you have EDC (clin capture) db you should fill them.
-2. *Enable patient reported outcome module?* Check this checkbox if your study has a PRO for patients.
-3. *PRO URL*: If study has another PRO then FlaskData fill the *PRO URL* field with your study's PRO URL.
-4. *Package*: There are 3 available packages, Start, Submit and Validate.
-    * Start - study uses IRB and Forms
-    * Submit - Flask+Forms+Tools+EDC. Unlimited sites.
-    * Validate - Flask+Forms+Tools+EDC. Limited to 3 sites.
-5. *Alert data source*: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL otherwise choose MongoDB).
----
+    1. *Database* and *EDC URL* fields are related to EDC db, if you have EDC (clin capture) db you should fill them.
+    2. *Enable patient reported outcome module?* Check this checkbox if your study has a PRO for patients.
+    3. *PRO URL*: If study has another PRO then FlaskData fill the *PRO URL* field with your study's PRO URL.
+    4. *Package*: There are 3 available packages, Start, Submit and Validate.
+        * Start - study uses IRB and Forms
+        * Submit - Flask+Forms+Tools+EDC. Unlimited sites.
+        * Validate - Flask+Forms+Tools+EDC. Limited to 3 sites.
+    5. *Alert data source*: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL otherwise choose MongoDB).
 
 ##Study manage Users
 In manage Users page you can add/remove User from this study.
@@ -57,19 +55,19 @@ To edit your study - check it and then click on the green **ACTIONS**  button an
 
 In the Edit Study page you can define your study profile, definitions etc.
 
----
-**NOTES:**
+!!! note
 
-1. [Study subject prefix](./manage_features.md#subject-label-calculation): Prefix for automatically creating a subject label, like study1-001.
-2. [Subject’s IDPs settings](./manage_features.md#idp-configuration): IDP settings for subjects-patients.
-___
+    1. [Study subject prefix](./manage_features.md#subject-label-calculation): Prefix for automatically creating a subject label, like study1-001.
+    2. [Subject’s IDPs settings](./manage_features.md#idp-configuration): IDP settings for subjects-patients.
 
 When you click **SAVE** the Study Profile will be opened.
 
 ###Archived studies
-**Caution!** Archived studies cannot be modified!!
-
 To mark study as Archived you need to change its status to **Close**.
+
+!!!danger 
+
+    Archived studies cannot be modified!!
 
 Studies with Closed status, you can see their data but cannot change data, add subject etc. There are inactive studies.
 

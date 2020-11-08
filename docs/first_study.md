@@ -12,20 +12,18 @@ To edit the study - check it, in **ACTIONS** click on **Edit** option.
 
  ![Screenshot](img/study/edit_study.PNG)
 
----
-**NOTES:**
+!!! note "Study definition values"
 
-1. *Database* and *EDC URL* fields are related to EDC db, if you have EDC (ClinCapture) db you should fill them.
-2. *Enable patient reported outcome module?* Check this checkbox if your study has a PRO for patients.
-3. *PRO URL*: If study has another PRO then FlaskData fill the *PRO URL* field with your study's PRO URL.
-4. *Package*: There are 3 available packages, Start, Submit and Validate.
-    * Start - study uses IRB and Forms
-    * Submit - Flask+Forms+Tools+EDC. Unlimited sites.
-    * Validate - Flask+Forms+Tools+EDC. Limited to 3 sites.
-5. *Alert data source*: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL otherwise choose MongoDB).
-6. *Study subject prefix*: Prefix of creation subject label, like study1-001.
-7. *Subject’s IDPs settings*: IDP settings for subjects-patients.
----
+    1. *Database* and *EDC URL* fields are related to EDC db, if you have EDC (ClinCapture) db you should fill them.
+    2. *Enable patient reported outcome module?* Check this checkbox if your study has a PRO for patients.
+    3. *PRO URL*: If study has another PRO then FlaskData fill the *PRO URL* field with your study's PRO URL.
+    4. *Package*: There are 3 available packages, Start, Submit and Validate.
+        * Start - study uses IRB and Forms
+        * Submit - Flask+Forms+Tools+EDC. Unlimited sites.
+        * Validate - Flask+Forms+Tools+EDC. Limited to 3 sites.
+    5. *Alert data source*: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL otherwise choose MongoDB).
+    6. *Study subject prefix*: Prefix of creation subject label, like study1-001.
+    7. *Subject’s IDPs settings*: IDP settings for subjects-patients.
 
 When you click **SAVE** the profile study will be opened.
 
@@ -33,11 +31,13 @@ When you click **SAVE** the profile study will be opened.
 In the Study Profile page you can see your study's definitions, alert rules, analytic rules, Users, sites and comments.
 
   ![Screenshot](img/study/study_profile.PNG)
----
-**NOTE:** In comments card you can record free text annotations about your study.
 
-![Screenshot](img/study/study_comment.PNG)
----
+!!! note "Comments"
+
+    In comments card you can record free text annotations about your study.
+
+    ![Screenshot](img/study/study_comment.PNG)
+
 In Study Profile page you have **ACTIONS** green button with manage Users and manage sites options.
 
 ##Study manage Users

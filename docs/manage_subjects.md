@@ -10,11 +10,10 @@ You can click on each subject and go to Flask Events
 ##Flask Events
 In flask events page you see al subject's events, crfs and data.
 
----
-**NOTE** You can just view the data (cannot edit and add CRFs).
-Just site role users can edit Subject's data.
+!!! note
 
----
+    You can just view the data (cannot edit and add CRFs).
+    Just site role users can edit Subject's data.
 
 You can see all subject's events list.
 

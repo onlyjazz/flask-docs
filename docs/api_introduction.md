@@ -1,5 +1,5 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
-# API Introduction
+#API Introduction
 
 ### Audience
 Developers who want to use the Flask API.
@@ -47,31 +47,35 @@ FlaskData and FlaskForms are related and there's a perfect User experience.
 
 FlaskData API extract data from FlaskForms data.
 
-# Getting started API
+##Getting started API
 
 ### Authorization
 For using FlaskData APIs you need to get token first.
 
 For getting FlaskData token use auth/authorize API.
 
-For example - in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a>
+!!!example
 
-In the body request (JSON) you need to set your API User's email and password, like:
+    in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a>
+    
+    In the body request (JSON) you need to set your API User's email and password, like:
+    
+    ```json
+    {
+      "email": "xxx@gmail.com",
+      "password": "12345678"
+    }
+    ```
 
-`
-{
-  "email": "xxx@gmail.com",
-  "password": "12345678"
-}
-`
+    In the response body you get an access token, like:
+    
+    ```json
+    {
+      "token": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k",
+      "expired": "2019-10-28T15:23:10.407Z"
+    }
+    ```
 
-In the response body you get an access token, like:
+!!! info
 
-`
-{
-  "token": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k",
-  "expired": "2019-10-28T15:23:10.407Z"
-}
-`
-
-**NOTE:** The expired time is UTC time.
+    The expired time is UTC time.

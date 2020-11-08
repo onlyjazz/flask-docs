@@ -6,10 +6,9 @@ Study Dashboard show your study monitoring.
 
 In [studies index](./manage_studies.md#studies) page, click on your study, now you see your study dashboard.
 
----
-**IMPORTANT** By press on study the study name appear in title bar and all the actions will be related to this study (like add user, add site etc.)
-
-___
+!!!important
+ 
+    By press on study the study name appear in title bar and all the actions will be related to this study (like add user, add site etc.)
 
 ![Screenshot](img/dashboard/study_dashboard.PNG)
 

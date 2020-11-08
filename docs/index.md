@@ -92,6 +92,4 @@ You can change your app language, by press on the languages' symbol.
 ###FlaskData Logo
 Clicking on FlaskData logo opens [Study Dashboard](./study_dashboard.md#study-dashboard) page.
 
-![Screenshot](img/customer/flaskdata_logo_go_to_dashboard.PNG)
-
-  
+![Screenshot](img/customer/flaskdata_logo_go_to_dashboard.PNG){: loading=lazy }

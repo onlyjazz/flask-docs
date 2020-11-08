@@ -41,9 +41,6 @@ The patient is invited to choose a password.
 
 Then he logins to his PRO.
 
-##
-
-
 
 
 
