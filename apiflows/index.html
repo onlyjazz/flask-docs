@@ -8,7 +8,7 @@
       
       
       
-      <link rel="shortcut icon" href="../img/logo.PNG">
+      <link rel="shortcut icon" href="../img/favicon.PNG">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
@@ -263,18 +263,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../manage_queries/" class="md-nav__link">
-      Manage Queries
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../manage_subjects/" class="md-nav__link">
       Manage Subjects
     </a>
@@ -363,6 +351,18 @@
   <li class="md-nav__item">
     <a href="../manage_features/" class="md-nav__link">
       Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_queries/" class="md-nav__link">
+      Manage Queries
     </a>
   </li>
 
@@ -647,6 +647,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../epro/" class="md-nav__link">
+      ePRO
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -881,16 +893,18 @@
 <li>EDC - APIs are related to a ClinCapture EDC instance (extract EDC data etc.)</li>
 <li>Flask - APIs are related to Flas data (extract data, insert data etc.)</li>
 </ul>
-<p>NOTES:</p>
+<div class="admonition note">
+<p class="admonition-title">Request header</p>
 <ul>
 <li>
-<p>Authorization parameter in the header request should be the token you had get before from you <a href="..#authorization">authorization request</a>.</p>
+<p>Authorization parameter in the header request should be the token you had get before from you <a href="../api_introduction/#authorization">authorization request</a></p>
 </li>
 <li>
-<p>EDC parameter in the header request should be the EDC DB name.</p>
+<p>EDC parameter in the header request should be the <a href="../manage_studies/#add-study">EDC DB name</a>.</p>
 </li>
 </ul>
-<p>In this document there are a few examples of FlaskData APIs - There are more EDC APIs, their description exists in swagger.</p>
+</div>
+<p>In this document there are a few examples of FlaskData APIs - There are more APIs, their description exists in swagger.</p>
 <p>For more details and questions contact us by sending email to <a href="mailto:support@clearclinica.com">support@clearclinica.com</a>.</p>
 <h2 id="edc">EDC</h2>
 <h3 id="extract-edc-data">Extract EDC Data</h3>
@@ -900,19 +914,26 @@
 <p>This API extract EDC data of each table/view/function (like functionName()) and return json.</p>
 <p>fromDate, toDate, sort, filters and inputVariables(if tableName is a function) are optional values.</p>
 <p>Filters and inputVariable json objects - the key is the column name/ input variable name in postgres, the json value is the compare value (like where site = XXX)/ input value in function (like schema.function(XXX)).</p>
-<p>For example:</p>
-<p><code>{
-  "tableName": "cc_event_data",
-  "fromDate": "2017-01-01T00:00:00.000Z",
-  "toDate": "2019-02-01T00:00:00.000Z",
-  "sort": "subject"
-}</code></p>
-<p>Another example:</p>
-<p><code>{
-  "tableName": "cross_event_crf_data"
-}</code></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;tableName&quot;</span><span class="p">:</span> <span class="s2">&quot;cc_event_data&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;fromDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-01T00:00:00.000Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;toDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-01T00:00:00.000Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;subject&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Another example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;tableName&quot;</span><span class="p">:</span> <span class="s2">&quot;cross_event_crf_data&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
 <h4 id="edcstudydownload-csvs-data">/edc/study/download-csvs-data</h4>
-<p>This API downloads a zip folder includes EDC study data. Each csv is an event CRF data.</p>
+<p>This API downloads a zip folder includes EDC study data. </p>
+<p>Each csv is an event CRF data.</p>
 <h4 id="edcstudyextract-study-data-at-crf-level">/edc/study/extract-study-data-at-crf-level</h4>
 <p>This API extracts EDC data at CRF level and returns the data as a json object.</p>
 <p>This API returns only CRFs with data.</p>
@@ -927,12 +948,18 @@
 <h3 id="flaskcustomerextract-data-to-json">/flask/customer/extract-data-to-json</h3>
 <p>This API extracts data from flask tables and views for your customer.</p>
 <p>The table/ view should have customer_id column for this process.</p>
-<p>For example: studies table, audit_user_login, billing_reports_customer and etc.</p>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
+<p>studies table, audit_user_login, billing_reports_customer and etc.</p>
+</div>
 <p>studyIds and filters are optional.</p>
 <h3 id="flaskcustomerdownload-billing-reports">/flask/customer/download-billing-reports</h3>
 <p>This API downloads a billing reports folder for the month of the billingDate parameter.</p>
 <p>The billing report zip folder includes all the billing report files for your customer.</p>
-<p>NOTE - This process will download files only if the billing reports features turn on in your customer account.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This process will download files only if the billing reports features turn on in your customer account.</p>
+</div>
 <h3 id="flaskdeviceget-logs">/flask/device/get-logs</h3>
 <p>This API returns device logs of a study.</p>
 <h3 id="flaskdeviceinsert-log">/flask/device/insert-log</h3>
@@ -944,12 +971,17 @@
 <p>This API creates/updates site in FlaskData.</p>
 <h3 id="flaskstudycreate-update-flask-study-users">/flask/study/create-update-flask-study-users</h3>
 <p>This API creates User if not exists and assigned Users to study.</p>
-<p>NOTE - This API deletes the Users that were assigned to this study and assigned the new Users.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This API deletes the Users that were assigned to this study and assigned the new Users.</p>
+</div>
 <h3 id="flasksubjectextract-study-event-data-to-csv">/flask/subject/extract-study-event-data-to-CSV</h3>
 <p>This API extracts all study data (from FlaskForms) based on study id and download CSV files.</p>
 <h3 id="flaskcrfcreate-crf-and-insert-data">/flask/crf/create-CRF-and-insert-data</h3>
 <p>This API creates CRF in existing event and insert data</p>
-<p>Example - Creates a new AE (adverse event) CRF in existing event.</p>
+<div class="admonition example">
+<p>Creates a new AE (adverse event) CRF in existing event.</p>
+</div>
 <h3 id="flaskcrfcreate-event-crf-and-insert-data">/flask/crf/create-event-CRF-and-insert-data</h3>
 <p>This API creates event and CRF and inserts data.</p>
 <p>Example - Creates a new Medication event with CRF and inserts data.</p>
@@ -958,133 +990,131 @@
 <h3 id="flaskcrfupdate-crf-data">/flask/crf/update-CRF-data</h3>
 <p>This API updates CRF data by crf data id.</p>
 <h2 id="use-cases">Use Cases</h2>
-<p>NOTE: The following examples require jQuery later version</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following examples require jQuery later version</p>
+</div>
 <h3 id="general-example-of-extract-data-using-js">General example of extract data using JS:</h3>
-<pre><code>var xhrcall = $.ajax({
-                        url: 'https://dev-api.flaskdata.io/flask/customer/extract-data-to-json',
-                        type: 'POST',
-                        headers: {
-                            'Authorization': jwt},
-                        data: '{
-                                "tableName": "studies",
-                                "fromDate": "2018-03-29T11:44:12.511Z",
-                                "toDate": "2019-03-29T11:44:12.511Z"                                    
-                              }',
-                          contentType: 'application/json'
-                      });
-  //promise syntax to render after xhr completes
-  xhrcall
-      .done(function(data){
-              // Enter your code here
-      })
-      .fail(function(error) {
-                if(error) {
-                    // Enter your code here  
-                }
-      });
-</code></pre>
+<div class="highlight"><pre><span></span><code>    <span class="kd">var</span> <span class="nx">xhrcall</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+                            <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://dev-api.flaskdata.io/flask/customer/extract-data-to-json&#39;</span><span class="p">,</span>
+                            <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+                            <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+                                <span class="s1">&#39;Authorization&#39;</span><span class="o">:</span> <span class="nx">jwt</span><span class="p">},</span>
+                            <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;{</span>
+<span class="s1">                                    &quot;tableName&quot;: &quot;studies&quot;,</span>
+<span class="s1">                                    &quot;fromDate&quot;: &quot;2018-03-29T11:44:12.511Z&quot;,</span>
+<span class="s1">                                    &quot;toDate&quot;: &quot;2019-03-29T11:44:12.511Z&quot;                                    </span>
+<span class="s1">                                  }&#39;</span><span class="p">,</span>
+                              <span class="nx">contentType</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
+                          <span class="p">});</span>
+      <span class="c1">//promise syntax to render after xhr completes</span>
+      <span class="nx">xhrcall</span>
+          <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+                  <span class="c1">// Enter your code here</span>
+          <span class="p">})</span>
+          <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="c1">// Enter your code here  </span>
+                    <span class="p">}</span>
+          <span class="p">});</span>
+</code></pre></div>
 <h3 id="save-data-in-crf-js-example">Save data in CRF JS Example.</h3>
 <p>Your study uses FlaskForms application.</p>
 <p>You have a mobile app and you want to collect data and save it to a Flask Forms Event/CRF</p>
-<p>This JS code is an example to create CRF and save its data into existing event.</p>
-<pre><code>    $(document).ready(function() {
-          // Call insertDataIntoFlaskFormsCRF function to assign new CRF and save data.
-          // Input values : User email, User password, study id, subject label, event name, CRF name, CRF data.
-          insertDataIntoFlaskFormsCRF("mongositerole@clearclinica.com", "123456", 145858, 'mongo_test_site_1-03', 'Screening', 'Subject properties', {"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2});
-     });
-    var insertDataIntoFlaskFormsCRF = function(uEmail, uPass, studyId, subjectLabel, eventName, crfName, crfData){
-        // Get token
-        getFlaskDataToken(uEmail, uPass, function(userToken){
-            var token = UserToken;
-            // Create new CRF in existin event and insert data
-            createCRFandInsertData(token, studyId, subjectLabel, eventName, crfName, crfData, function(crfDataId){
-                console.log(crfDataId);
-                // Save this crfDataId if you will need to update this CRF data                    
-            });
-        });
-    }
+<p>This JS code is an example to create CRF and save its data into existing event.
+<div class="highlight"><pre><span></span><code>        <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+              <span class="c1">// Call insertDataIntoFlaskFormsCRF function to assign new CRF and save data.</span>
+              <span class="c1">// Input values : User email, User password, study id, subject label, event name, CRF name, CRF data.</span>
+              <span class="nx">insertDataIntoFlaskFormsCRF</span><span class="p">(</span><span class="s2">&quot;mongositerole@clearclinica.com&quot;</span><span class="p">,</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span> <span class="mf">145858</span><span class="p">,</span> <span class="s1">&#39;mongo_test_site_1-03&#39;</span><span class="p">,</span> <span class="s1">&#39;Screening&#39;</span><span class="p">,</span> <span class="s1">&#39;Subject properties&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;ITEM_SP_AGE_WR6NP&quot;</span><span class="o">:</span><span class="mf">30</span><span class="p">,</span> <span class="s2">&quot;ITEM_SP_MANWOMAN_HDNAO&quot;</span><span class="o">:</span><span class="mf">2</span><span class="p">});</span>
+         <span class="p">});</span>
+        <span class="kd">var</span> <span class="nx">insertDataIntoFlaskFormsCRF</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">uEmail</span><span class="p">,</span> <span class="nx">uPass</span><span class="p">,</span> <span class="nx">studyId</span><span class="p">,</span> <span class="nx">subjectLabel</span><span class="p">,</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">crfName</span><span class="p">,</span> <span class="nx">crfData</span><span class="p">){</span>
+            <span class="c1">// Get token</span>
+            <span class="nx">getFlaskDataToken</span><span class="p">(</span><span class="nx">uEmail</span><span class="p">,</span> <span class="nx">uPass</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">userToken</span><span class="p">){</span>
+                <span class="kd">var</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">UserToken</span><span class="p">;</span>
+                <span class="c1">// Create new CRF in existin event and insert data</span>
+                <span class="nx">createCRFandInsertData</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="nx">studyId</span><span class="p">,</span> <span class="nx">subjectLabel</span><span class="p">,</span> <span class="nx">eventName</span><span class="p">,</span> <span class="nx">crfName</span><span class="p">,</span> <span class="nx">crfData</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">crfDataId</span><span class="p">){</span>
+                    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">crfDataId</span><span class="p">);</span>
+                    <span class="c1">// Save this crfDataId if you will need to update this CRF data                    </span>
+                <span class="p">});</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
 
-    var getFlaskDataToken = function(email, password, cb) {
-          // Get JWT token
-          var xhrcall = $.ajax({
-                                  url: 'https://dev-api.flaskdata.io/auth/authorize',
-                                  type: 'POST',
-                                  data: '{"email":"' + email + '","password":"' + password +'"}',
-                                    contentType: 'application/json'
-                                });
-            //promise syntax to render after xhr completes
-            xhrcall
-                .done(function(data){
-                        // Enter your code here
-                        cb(data.token);
-                })
-                .fail(function(error) {
-                          if(error) {
-                              // Enter your code here
-                              console.log('Failed to get token ' + error);
-                          }
-                });
-      }
+        <span class="kd">var</span> <span class="nx">getFlaskDataToken</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">email</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+              <span class="c1">// Get JWT token</span>
+              <span class="kd">var</span> <span class="nx">xhrcall</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+                                      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://dev-api.flaskdata.io/auth/authorize&#39;</span><span class="p">,</span>
+                                      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+                                      <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;{&quot;email&quot;:&quot;&#39;</span> <span class="o">+</span> <span class="nx">email</span> <span class="o">+</span> <span class="s1">&#39;&quot;,&quot;password&quot;:&quot;&#39;</span> <span class="o">+</span> <span class="nx">password</span> <span class="o">+</span><span class="s1">&#39;&quot;}&#39;</span><span class="p">,</span>
+                                        <span class="nx">contentType</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
+                                    <span class="p">});</span>
+                <span class="c1">//promise syntax to render after xhr completes</span>
+                <span class="nx">xhrcall</span>
+                    <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+                            <span class="c1">// Enter your code here</span>
+                            <span class="nx">cb</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">token</span><span class="p">);</span>
+                    <span class="p">})</span>
+                    <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                              <span class="k">if</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                                  <span class="c1">// Enter your code here</span>
+                                  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Failed to get token &#39;</span> <span class="o">+</span> <span class="nx">error</span><span class="p">);</span>
+                              <span class="p">}</span>
+                    <span class="p">});</span>
+          <span class="p">}</span>
 
-      // Create new CRF and insert data
-      // /flask/crf/create-CRF-and-insert-data
-      var createCRFandInsertData = function(token, study_id, subject_label, event_name, crf_name, crf_data, cb) {
-          var xhrcall = $.ajax({
-                                  url: 'https://dev-api.flaskdata.io/flask/crf/create-CRF-and-insert-data',
-                                  type: 'POST',
-                                  headers: {
-                                      'Authorization': token},
-                                  data: '{"study_id": '+study_id+',"subject_label": "'+subject_label+'","event_name": "'+event_name+'","crf_name": "'+crf_name+'","crf_data": '+ JSON.stringify(crf_data) +' }',
-                                  contentType: 'application/json'
-                                });
-            //promise syntax to render after xhr completes
-            xhrcall
-                .done(function(data){
-                        // Enter your code here                            
-                        cb(data.crfDataId);
-                })
-                .fail(function(error) {
-                          if(error) {
-                              // Enter your code here
-                              console.log('Failed to create CRF and insert data :' + JSON.stringify(error));
-                          }
-                });
-      }
-</code></pre>
+          <span class="c1">// Create new CRF and insert data</span>
+          <span class="c1">// /flask/crf/create-CRF-and-insert-data</span>
+          <span class="kd">var</span> <span class="nx">createCRFandInsertData</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="nx">study_id</span><span class="p">,</span> <span class="nx">subject_label</span><span class="p">,</span> <span class="nx">event_name</span><span class="p">,</span> <span class="nx">crf_name</span><span class="p">,</span> <span class="nx">crf_data</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+              <span class="kd">var</span> <span class="nx">xhrcall</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+                                      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://dev-api.flaskdata.io/flask/crf/create-CRF-and-insert-data&#39;</span><span class="p">,</span>
+                                      <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+                                      <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+                                          <span class="s1">&#39;Authorization&#39;</span><span class="o">:</span> <span class="nx">token</span><span class="p">},</span>
+                                      <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;{&quot;study_id&quot;: &#39;</span><span class="o">+</span><span class="nx">study_id</span><span class="o">+</span><span class="s1">&#39;,&quot;subject_label&quot;: &quot;&#39;</span><span class="o">+</span><span class="nx">subject_label</span><span class="o">+</span><span class="s1">&#39;&quot;,&quot;event_name&quot;: &quot;&#39;</span><span class="o">+</span><span class="nx">event_name</span><span class="o">+</span><span class="s1">&#39;&quot;,&quot;crf_name&quot;: &quot;&#39;</span><span class="o">+</span><span class="nx">crf_name</span><span class="o">+</span><span class="s1">&#39;&quot;,&quot;crf_data&quot;: &#39;</span><span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">crf_data</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39; }&#39;</span><span class="p">,</span>
+                                      <span class="nx">contentType</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
+                                    <span class="p">});</span>
+                <span class="c1">//promise syntax to render after xhr completes</span>
+                <span class="nx">xhrcall</span>
+                    <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+                            <span class="c1">// Enter your code here                            </span>
+                            <span class="nx">cb</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">crfDataId</span><span class="p">);</span>
+                    <span class="p">})</span>
+                    <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                              <span class="k">if</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                                  <span class="c1">// Enter your code here</span>
+                                  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Failed to create CRF and insert data :&#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+                              <span class="p">}</span>
+                    <span class="p">});</span>
+          <span class="p">}</span>
+</code></pre></div></p>
 <p>Your application should call insertDataIntoFlaskFormsCRF function with the following input parameters:</p>
 <ul>
 <li>User email - Your customer API User email address for authorization.</li>
 <li>User password - Your customer API User password for authorization.</li>
-<li>studyId - Your study Id parameter, You can take it from study dashboard URL.
-<img alt="Screenshot" src="img/studyId.PNG" /></li>
-<li>Subject label - Subject label from flaskdata, for example:
-<img alt="Screenshot" src="img/subjectLabel.PNG" /></li>
-<li>Event name for creating CRF, for example:
-<img alt="Screenshot" src="img/eventName.PNG" /></li>
-<li>CRF name for creating CRF, for example (in flask forms):
-<img alt="Screenshot" src="img/crfName.PNG" /></li>
-<li>CRF data - for saving CRF data, Json structure, key value pair, The key is the item's variable (as it's defined in flask forms) and the value is the data for this variable.
-for example: <code>{"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2}</code>
-<img alt="Screenshot" src="img/itemVariables.PNG" />
-The output should be new CRF for the subject with the correct data, for example:
-<img alt="Screenshot" src="img/crfData.PNG" /></li>
+<li>studyId - Your study Id parameter, You can take it from <a href="../study_dashboard/#study-dashboard">study dashboard</a> URL.</li>
+<li>Subject label - <a href="../manage_subjects/">Subject label</a> from FlaskData</li>
+<li><a href="../manage_forms/#event-definitions">Event</a> name for creating CRF</li>
+<li><a href="../manage_forms/#crfs">CRF</a> name for creating CRF.</li>
+<li>CRF data - for saving CRF data, Json structure, key value pair, The key is the <a href="../manage_forms/#crf-items">item's variable</a> (as it's defined in flask forms) and the value is the data for this variable.<br />
+        <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;ITEM_SP_AGE_WR6NP&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;ITEM_SP_MANWOMAN_HDNAO&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+</code></pre></div></li>
 </ul>
+<p>The output should be new CRF for the subject with the correct data.</p>
 <h3 id="example-of-calling-flaskdata-api-using-jquery-older-version">Example of calling FlaskData API using jQuery older version</h3>
-<pre><code>  var http = new XMLHttpRequest();
-  var url = 'https://dev-api.flaskdata.io/auth/authorize';
-  var params = '{"email":"xxx@gmail.com","password":"123456"}';
-  http.open('POST', url, true);
+<div class="highlight"><pre><span></span><code>      <span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+      <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;https://dev-api.flaskdata.io/auth/authorize&#39;</span><span class="p">;</span>
+      <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="s1">&#39;{&quot;email&quot;:&quot;xxx@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}&#39;</span><span class="p">;</span>
+      <span class="nx">http</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 
-  //Send the proper header information along with the request
-  http.setRequestHeader('Content-type', 'application/json');
+      <span class="c1">//Send the proper header information along with the request</span>
+      <span class="nx">http</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">);</span>
 
-  http.onreadystatechange = function() {//Call a function when the state changes.
-      if(http.readyState == 4 &amp;&amp; http.status == 200) {
-          alert(http.responseText);
-      }
-  }
-  http.send(params);
-</code></pre>
+      <span class="nx">http</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="c1">//Call a function when the state changes.</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mf">4</span> <span class="o">&amp;&amp;</span> <span class="nx">http</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mf">200</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nx">alert</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="nx">http</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
+</code></pre></div>
                 
               
               
@@ -1117,6 +1147,20 @@ The output should be new CRF for the subject with the correct data, for example:
             </div>
           </a>
         
+        
+          <a href="../epro/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ePRO
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

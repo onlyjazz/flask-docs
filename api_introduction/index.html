@@ -8,7 +8,7 @@
       
       
       
-      <link rel="shortcut icon" href="../img/logo.PNG">
+      <link rel="shortcut icon" href="../img/favicon.PNG">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
@@ -263,18 +263,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../manage_queries/" class="md-nav__link">
-      Manage Queries
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../manage_subjects/" class="md-nav__link">
       Manage Subjects
     </a>
@@ -363,6 +351,18 @@
   <li class="md-nav__item">
     <a href="../manage_features/" class="md-nav__link">
       Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_queries/" class="md-nav__link">
+      Manage Queries
     </a>
   </li>
 
@@ -459,6 +459,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getting-started-api" class="md-nav__link">
+    Getting started API
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    Authorization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -480,6 +500,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../epro/" class="md-nav__link">
+      ePRO
+    </a>
   </li>
 
     
@@ -534,6 +566,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getting-started-api" class="md-nav__link">
+    Getting started API
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    Authorization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -569,31 +621,40 @@ Select HTTPS in the Swagger Schemes dropdown before trying it out.</p>
 <p>Config/ change header and body request as needed and click on "Execute" button.</p>
 <p><img alt="Screenshot" src="../img/api/execute_api.PNG" /></p>
 <h3 id="clincapture-edc">ClinCapture EDC</h3>
-<p>ClinCapture EDC is a database includes all study data (events, crfs, items, sites, subjects, data and etc.)</p>
-<p>Some studies use EDC data and UI to insert/update/delete/extract the study data.</p>
-<p>FlaskData and EDC are related, there are ETLs to load EDC data to FlaskData, FlaskData uses the data for analytics, alerts and etc.</p>
-<p>FlaskData APIs extract data from EDC.</p>
+<p>ClinCapture EDC is a 21 CFR Part 11 compliant EDC system that is integrated into Flask Collect.
+The ClinCapture database uses a proven clinical data model (Visits, CRF, Items, Sites, Subjects, Queries, SDV, Audit log and data extracts)</p>
+<p>Users can work directly in ClinCapture to manage a study.   Automated ETL processes
+extract the data to Flask Detect and Act for analytics and alerts.</p>
+<p>You can use FlaskData APIs to extract / insert data to ClinCapture on demand.</p>
 <h3 id="flask-forms">Flask Forms</h3>
 <p>Flask Forms is a platform to save study CRFs data ( events, crfs, items and the data), This is a tool developed by FlaskData team, easy to use!</p>
 <p>Some studies use FlaskForms, The customer can build/ edit his study or FlaskData can do it for him.</p>
 <p>FlaskData and FlaskForms are related and there's a perfect User experience.</p>
 <p>FlaskData API extract data from FlaskForms data.</p>
-<h1 id="getting-started-api">Getting started API</h1>
+<h2 id="getting-started-api">Getting started API</h2>
 <h3 id="authorization">Authorization</h3>
 <p>For using FlaskData APIs you need to get token first.</p>
 <p>For getting FlaskData token use auth/authorize API.</p>
-<p>For example - in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a></p>
 <p>In the body request (JSON) you need to set your API User's email and password, like:</p>
-<p><code>{
-  "email": "xxx@gmail.com",
-  "password": "12345678"
-}</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;xxx@gmail.com&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;12345678&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>In the response body you get an access token, like:</p>
-<p><code>{
-  "token": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k",
-  "expired": "2019-10-28T15:23:10.407Z"
-}</code></p>
-<p>NOTE: The expired time is UTC time.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;expired&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-28T15:23:10.407Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The expired time is UTC time.</p>
+</div>
                 
               
               
@@ -612,7 +673,7 @@ Select HTTPS in the Swagger Schemes dropdown before trying it out.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../manage_features/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../manage_queries/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -621,7 +682,7 @@ Select HTTPS in the Swagger Schemes dropdown before trying it out.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Features
+                Manage Queries
               </div>
             </div>
           </a>

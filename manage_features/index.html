@@ -8,7 +8,7 @@
       
       
       
-      <link rel="shortcut icon" href="../img/logo.PNG">
+      <link rel="shortcut icon" href="../img/favicon.PNG">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
@@ -263,18 +263,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../manage_queries/" class="md-nav__link">
-      Manage Queries
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../manage_subjects/" class="md-nav__link">
       Manage Subjects
     </a>
@@ -463,6 +451,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_queries/" class="md-nav__link">
+      Manage Queries
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -515,6 +515,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../epro/" class="md-nav__link">
+      ePRO
+    </a>
   </li>
 
     
@@ -627,9 +639,9 @@
 <p>If this feature is turn on, <strong>Form designer</strong> field will be added to <a href="../manage_users/#edit-user">user edit</a></p>
 <p><img alt="Screenshot" src="../img/features/forms_designer_user_edit.PNG" /></p>
 <p>If you mark <strong>Form designer</strong> option, this user can enter to <a href="../manage_forms/#manage-forms">Flask Forms</a> and modify CRFs, Events etc.</p>
-<hr />
-<p><strong>NOTE</strong> By default only Customer admin users can enter to Flask Forms.</p>
-<p>-- </p>
+<div class="admonition note">
+<p>By default only Customer admin users can enter to Flask Forms.</p>
+</div>
 <h2 id="create-user-in-edc">Create user in EDC</h2>
 <p>This feature related to study with EDC DB.
 It creates user in EDC when you create user in Flask.</p>
@@ -651,15 +663,22 @@ It creates user in EDC when you create user in Flask.</p>
 <p><strong>Subject Prefix</strong>
 * <strong>Prefix</strong> Subject label can be defined to start with <a href="../manage_studies/#study-profile">study unique protocol id</a> or <a href="../manage_sites/#site-profile">site unique identifier</a>
 * <strong>Prefix mask</strong> number of numbers after the Prefix</p>
-<p><strong>Example</strong> Prefix = Site unique identifier, Prefix mask = NNN, subjects label seems like site01-001, site1-002 etc.</p>
-<hr />
-<p><strong>NOTE</strong> If you have existing study, Go to <a href="../manage_studies/#study-edit">study edit</a> to define the subject prefix calculation node.</p>
-<hr />
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Prefix = Site unique identifier, Prefix mask = NNN, subjects label seems like site01-001, site1-002 etc.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you have existing study, Go to <a href="../manage_studies/#study-edit">study edit</a> to define the subject prefix calculation node.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>You can change the subject numerator to specific <a href="../manage_sites/#edit-site">site</a>/<a href="../manage_studies/#study-edit">study</a>.</p>
-<p><strong>Example</strong> If you define your study subject prefix to "site unique identifier",</p>
+<p>If you define your study subject prefix to "site unique identifier",</p>
 <p>You can go to <a href="../manage_sites/#edit-site">site edit</a> or <a href="../manage_sites/#add-a-new-site">site add</a> and change the <strong>Starting subject ID</strong> to the desired number.</p>
 <p>The next patient label will be with this number (SHEBA-024).</p>
 <p><img alt="Screenshot" src="../img/features/subject_label_site_edit.PNG" /></p>
+</div>
 <h2 id="subject-personal-information">Subject Personal Information</h2>
 <p>This feature adds more fields to <a href="../manage_subjects/#add-subject">add subject</a> function.</p>
 <ul>
@@ -708,13 +727,13 @@ It creates user in EDC when you create user in Flask.</p>
           </a>
         
         
-          <a href="../api_introduction/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../manage_queries/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                API Introduction
+                Manage Queries
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

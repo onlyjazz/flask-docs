@@ -8,7 +8,7 @@
       
       
       
-      <link rel="shortcut icon" href="../img/logo.PNG">
+      <link rel="shortcut icon" href="../img/favicon.PNG">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
@@ -344,18 +344,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../manage_queries/" class="md-nav__link">
-      Manage Queries
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../manage_subjects/" class="md-nav__link">
       Manage Subjects
     </a>
@@ -448,6 +436,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_queries/" class="md-nav__link">
+      Manage Queries
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -500,6 +500,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../epro/" class="md-nav__link">
+      ePRO
+    </a>
   </li>
 
     
@@ -596,8 +608,8 @@ You can add/edit your studies properties, Users, sites etc.</p>
 Click on <strong>ADD STUDY</strong> green button.</p>
 <p><img alt="Screenshot" src="../img/study/studies_index_add_study.PNG" />
 Fill your study properties and click <strong>SAVE</strong> mange Users page will be opened.</p>
-<hr />
-<p><strong>NOTES:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Study values</p>
 <ol>
 <li><em>Database</em> and <em>EDC URL</em> fields are related to EDC db, if you have EDC (clin capture) db you should fill them.</li>
 <li><em>Enable patient reported outcome module?</em> Check this checkbox if your study has a PRO for patients.</li>
@@ -610,7 +622,7 @@ Fill your study properties and click <strong>SAVE</strong> mange Users page will
 </li>
 <li><em>Alert data source</em>: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL otherwise choose MongoDB).</li>
 </ol>
-<hr />
+</div>
 <h2 id="study-manage-users">Study manage Users</h2>
 <p>In manage Users page you can add/remove User from this study.</p>
 <p>To add a new User to the study - you need to <a href="../manage_users/#add-user">create the User</a> first.</p>
@@ -629,17 +641,20 @@ Fill your study properties and click <strong>SAVE</strong> mange Users page will
 <p>To edit your study - check it and then click on the green <strong>ACTIONS</strong>  button and choose the <strong>Edit</strong> option.</p>
 <p><img alt="Screenshot" src="../img/study/studies_index_actions.PNG" /></p>
 <p>In the Edit Study page you can define your study profile, definitions etc.</p>
-<hr />
-<p><strong>NOTES:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <ol>
 <li><a href="../manage_features/#subject-label-calculation">Study subject prefix</a>: Prefix for automatically creating a subject label, like study1-001.</li>
 <li><a href="../manage_features/#idp-configuration">Subject’s IDPs settings</a>: IDP settings for subjects-patients.</li>
 </ol>
-<hr />
+</div>
 <p>When you click <strong>SAVE</strong> the Study Profile will be opened.</p>
 <h3 id="archived-studies">Archived studies</h3>
-<p><strong>Caution!</strong> Archived studies cannot be modified!!</p>
 <p>To mark study as Archived you need to change its status to <strong>Close</strong>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Archived studies cannot be modified!!</p>
+</div>
 <p>Studies with Closed status, you can see their data but cannot change data, add subject etc. There are inactive studies.</p>
 <p>If you mark study status as closed, the study marked as <strong>Archived</strong>, and you cannot see it in studies list.</p>
 <p>But don't worry go to studies index page and filter studies with <strong>Archived only</strong></p>

@@ -8,7 +8,7 @@
       
       
       
-      <link rel="shortcut icon" href="../img/logo.PNG">
+      <link rel="shortcut icon" href="../img/favicon.PNG">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
@@ -263,18 +263,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../manage_queries/" class="md-nav__link">
-      Manage Queries
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../manage_subjects/" class="md-nav__link">
       Manage Subjects
     </a>
@@ -468,6 +456,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_queries/" class="md-nav__link">
+      Manage Queries
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -520,6 +520,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../epro/" class="md-nav__link">
+      ePRO
+    </a>
   </li>
 
     
@@ -660,18 +672,22 @@ When the CRF was created each item of this CRF gets a unique variable that looks
 <p>In current implementation you can use the simple expressions like <code>$SOME_VARIABLE == '0'</code>,</p>
 <p>or expressions with functions like <code>count($SOME_VARIABLE) == '0'</code> or <code>filter($SOME_VARIABLE) == '0'</code>.</p>
 <p>Also, you can combine these expressions using logical operators like <code>&amp;&amp;</code>(AND) or <code>||</code>(OR).</p>
-<p><strong>Examples:</strong></p>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
 <ul>
 <li><code>$SOME_VARIABLE == '0' &amp;&amp; count($ELSE_ONE_VARIABLE) &gt; '0'</code></li>
 <li><code>$SOME_VARIABLE != 'some string value' || $ELSE_ONE_VARIABLE &gt;= '0'</code></li>
 <li><code>filter($SOME_VARIABLE) &lt;= '4' &amp;&amp; count($ELSE_ONE_VARIABLE) != '5'</code></li>
 </ul>
+</div>
 <p>Logical operator !(NOT) also supporting in the current implementation</p>
-<p><strong>Examples:</strong></p>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
 <ul>
 <li><code>!($SOME_VARIABLE == '5') &amp;&amp; count($ELSE_ONE_VARIABLE) &gt; '0'</code></li>
 <li><code>!($SOME_VARIABLE == 'some string value')</code></li>
 </ul>
+</div>
 <h3 id="functions">Functions</h3>
 <h4 id="count">Count</h4>
 <p><strong>count(variable, period)</strong>- this is the general syntax of count function.</p>
@@ -682,30 +698,34 @@ When the CRF was created each item of this CRF gets a unique variable that looks
 <li>period(not required) - the time period for filtering the subject's data by date of creating the record.</li>
 </ul>
 <p>The value of the period parameter must be the string that looks like <code>24 hours</code></p>
-<p>You can use the following time units:</p>
-<ul>
-<li>milliseconds</li>
-<li>seconds</li>
-<li>minutes</li>
-<li>hours</li>
-<li>days</li>
-<li>weeks</li>
-<li>months</li>
-<li>years</li>
-</ul>
-<p><strong>Usage examples:</strong></p>
+<p>!!info</p>
+<pre><code>You can use the following time units:
+
+* milliseconds
+* seconds
+* minutes
+* hours
+* days
+* weeks
+* months
+* years
+</code></pre>
+<div class="admonition example">
+<p class="admonition-title">Usage examples:</p>
 <ul>
 <li><code>count($ELSE_ONE_VARIABLE)</code> - will return the number of records with variable $ELSE_ONE_VARIABLE for the all-time</li>
 <li><code>count($ELSE_ONE_VARIABLE, '24 hours')</code> - will return the number of records with variable $ELSE_ONE_VARIABLE for the last 24 hours</li>
 <li><code>count($ELSE_ONE_VARIABLE, '7 days')</code> - will return the number of records with variable $ELSE_ONE_VARIABLE for the last week</li>
 </ul>
+</div>
 <p>So, if you need to check did some subject fill some CRF during of 24 hours you can use the following expression:</p>
-<p><code>count($ELSE_ONE_VARIABLE, '24 hours') == '0';</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">count</span><span class="p">(</span><span class="nx">$ELSE_ONE_VARIABLE</span><span class="p">,</span> <span class="s1">&#39;24 hours&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">;</span>
+</code></pre></div>
 <p>In this case, if some subject didn't fill the CRF that contains an item with the current variable during 24 hours the function <code>count($ELSE_ONE_VARIABLE, '24 hours')</code> will return 0. The entire expression <code>count($ELSE_ONE_VARIABLE, '24 hours') == '0'</code> will return true and you will get the alert.</p>
 <h4 id="filter">Filter</h4>
 <p><strong>filter(variable, period, value, take)</strong> - this is the general syntax of the filter function.</p>
 <p>The filter function will return the number of records in the DB marked with this variable.</p>
-<p>The count function receives the two arguments:</p>
+<p>The count function receives the following arguments:</p>
 <ul>
 <li>variable - the unique variable of the CRF item.</li>
 <li>period(not required) - the time period for filtering the subject's data by the date of creating the record.</li>
@@ -714,6 +734,8 @@ When the CRF was created each item of this CRF gets a unique variable that looks
 </ul>
 <p>The period parameter works similarly to the period parameter in the <a href="./#count">count</a> function.</p>
 <p>The value of the value parameter must be the string that looks like <code>&gt;2</code>, <code>yes</code>, <code>==5</code></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>You can use the following operators:</p>
 <ul>
 <li><code>==</code></li>
@@ -723,27 +745,32 @@ When the CRF was created each item of this CRF gets a unique variable that looks
 <li><code>&gt;</code></li>
 <li><code>&lt;</code></li>
 </ul>
-<p><strong>Examples:</strong> </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <ul>
 <li><code>==2</code></li>
 <li><code>some string value</code></li>
 <li><code>&gt;=5</code></li>
 </ul>
-<hr />
-<p><strong>NOTE:</strong> the expression <code>==2</code> and <code>2</code> or  <code>==yes</code> and <code>yes</code> are equals!</p>
-<hr />
+</div>
+<div class="admonition note">
+<p>the expression <code>==2</code> and <code>2</code> or  <code>==yes</code> and <code>yes</code> are equals!</p>
+</div>
 <p>The value of the <strong>take parameter</strong> must be the string that looks like <code>'-1'</code>, <code>'1'</code>, <code>'5'</code></p>
 <p>The <strong>take parameter</strong> provides the ability to get the part of records from the records array.</p>
-<p><strong>Examples:</strong></p>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
 <ul>
 <li><code>'1'</code> - The first event</li>
 <li><code>'2'</code> - The first 2 events</li>
 <li><code>'-1'</code> - The last event</li>
 <li><code>'-4'</code> - The last 4 events</li>
 </ul>
-<hr />
-<p><strong>NOTE:</strong> the records that receive from the DB ordered by date created.</p>
-<hr />
+</div>
+<div class="admonition note">
+<p>the records that receive from the DB ordered by date created.</p>
+</div>
 <p>The order of the filters appling is following</p>
 <ol>
 <li>filtering by variable</li>
@@ -751,10 +778,12 @@ When the CRF was created each item of this CRF gets a unique variable that looks
 <li>filtering by 'take'</li>
 <li>filtering by 'value'</li>
 </ol>
-<hr />
-<p><strong>NOTE:</strong> if you don't need to use some parameter you can set null instead.</p>
-<hr />
-<p><strong>Usage examples:</strong></p>
+<div class="admonition note">
+<p>if you don't need to use some parameter you can set null instead.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Usage examples</p>
+</div>
 <ul>
 <li><code>filter($ELSE_ONE_VARIABLE)</code> - will return the number of records with variable $ELSE_ONE_VARIABLE for the all-time</li>
 <li><code>filter($ELSE_ONE_VARIABLE, '24 hours')</code> - will return the number of records with variable $ELSE_ONE_VARIABLE for the last 24 hours</li>
@@ -763,14 +792,18 @@ When the CRF was created each item of this CRF gets a unique variable that looks
 <li><code>filter($ELSE_ONE_VARIABLE, null, '&gt;=5', '2')</code> - at first, will find all records with variable $ELSE_ONE_VARIABLE for the all-time. The next step - will receive the first 2 members of this array. Finally - will return the number of the records from the array that received in step two that contains the value more or equal to '5'</li>
 </ul>
 <p>So, if you need to check did some subject has some critical value in his data  during of 24 hours you can use the following expression:</p>
-<p><code>filter($ELSE_ONE_VARIABLE, '24 hours', '&gt;10') &gt; '0';</code></p>
+<div class="highlight"><pre><span></span><code>    <span class="nx">filter</span><span class="p">(</span><span class="nx">$ELSE_ONE_VARIABLE</span><span class="p">,</span> <span class="s1">&#39;24 hours&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;10&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="s1">&#39;0&#39;</span><span class="p">;</span>
+</code></pre></div>
 <p>In this case, if some subject entered this critical value in the CRF that contains an item with the current variable during 24 hours the function </p>
-<p><code>filter($ELSE_ONE_VARIABLE, '24 hours', '&gt;10')</code> will return some value that will be more than 0. </p>
+<p><div class="highlight"><pre><span></span><code><span class="nx">filter</span><span class="p">(</span><span class="nx">$ELSE_ONE_VARIABLE</span><span class="p">,</span> <span class="s1">&#39;24 hours&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;10&#39;</span><span class="p">)</span>
+</code></pre></div>
+will return some value that will be more than 0. </p>
 <p>The entire expression <code>filter($ELSE_ONE_VARIABLE, '24 hours', '&gt;10') &gt; '0'</code> will return true, and you will get the alert.</p>
 <h4 id="simple-expressions">Simple expressions</h4>
 <p>In current implementation you can use the simple expressions like <code>$SOME_VARIABLE == '0'</code>.</p>
 <p>In this case this expression will be replaced to <code>filter($SOME_VARIABLE, null, '== 0') != 0</code></p>
-<p><strong>Examples:</strong></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <table>
 <thead>
 <tr>
@@ -793,6 +826,7 @@ When the CRF was created each item of this CRF gets a unique variable that looks
 </tr>
 </tbody>
 </table>
+</div>
 <h2 id="alert-action">Alert Action</h2>
 <p>You can define a few actions to alert definition by <strong>ADD ACTION</strong> green button.</p>
 <p><img alt="Screenshot" src="../img/alerts/alert_add_action.PNG" /></p>
@@ -810,7 +844,10 @@ When the CRF was created each item of this CRF gets a unique variable that looks
 <img alt="Screenshot" src="../img/alerts/forms_alert_red_bell.PNG" /></p>
 <p>To see alerts list - click on Study Alerts in hamburger menu.</p>
 <p>You can filter the alerts list.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>You can change status/ delete each alert in the list.</p>
+</div>
 <p><img alt="Screenshot" src="../img/alerts/alert_notifications.PNG" /></p>
                 
               
