@@ -1,7 +1,7 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
 
 #Define your study
-After signing up, the system will create your first study called ```default-XXX```.
+After signing up, the system will create your first study called `default-XXX`.
 
 ##Study Edit
 To edit the study - check it, in **ACTIONS** click on **Edit** option.

@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api_introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/api_introduction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/apiflows.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/apiflows.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/first_study.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/first_study.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/manage_forms.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_forms.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_queries.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_queries.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,7 @@
       <updated>1603104030438</updated>
       <workItem from="1603104031583" duration="1239000" />
       <workItem from="1603188656837" duration="30723000" />
-      <workItem from="1603870734963" duration="60375000" />
+      <workItem from="1603870734963" duration="66436000" />
     </task>
     <servers />
   </component>
@@ -70,17 +73,17 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="451" y="210" width="1084" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1603107114916" />
-    <state x="709" y="354" width="558" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603180594577">
+    <state x="709" y="354" width="711" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604556250850">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="709" y="354" width="558" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1603180594577" />
+    <state x="709" y="354" width="711" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1604556250850" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603714155786">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1603714155786" />
-    <state x="683" y="291" width="620" height="522" key="find.popup" timestamp="1604474556979">
+    <state x="683" y="291" width="620" height="522" key="find.popup" timestamp="1604560124160">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="683" y="291" width="620" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604474556979" />
+    <state x="683" y="291" width="620" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604560124160" />
   </component>
 </project>

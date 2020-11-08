@@ -100,14 +100,14 @@ Required, Disabled and Confirm parameters exist in each component.
 The fourth tab is the **Branching Logic**, In this tab you can write a simple logic for this item.
 
 ![Screenshot](img/forms/forms_crf_item_edit_branching_logic.PNG)
-```Branching logic expression for this item
+`Branching logic expression for this item
  To use the autocomplete service, 
  type "$" and select the variable of interest for you. 
  Use variables to make expression for hide current form control.
  The terminal supports any JavaScript expressions for the value of the available form variables. 
  For example:
    $ITEM_IMPORTANT_VAR == 'string_var_value'
-```
+`
 
 For example - Show/Hide method.
 Item that depends on another item.

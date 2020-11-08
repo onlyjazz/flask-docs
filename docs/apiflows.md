@@ -5,13 +5,13 @@ The API has 2 parts of APIs - EDC and Flask.
 * EDC - APIs are related to a ClinCapture EDC instance (extract EDC data etc.)
 * Flask - APIs are related to Flas data (extract data, insert data etc.)
 
-NOTES:
+**NOTES:**
 
-* Authorization parameter in the header request should be the token you had get before from you [authorization request](index.md#authorization).
+* Authorization parameter in the header request should be the token you had get before from you [authorization request](./api_introduction.md#authorization)
 
-* EDC parameter in the header request should be the EDC DB name.
+* EDC parameter in the header request should be the [EDC DB name](./manage_studies.md#add-study).
 
-In this document there are a few examples of FlaskData APIs - There are more EDC APIs, their description exists in swagger.
+In this document there are a few examples of FlaskData APIs - There are more APIs, their description exists in swagger.
 
 For more details and questions contact us by sending email to <a href="mailto:support@clearclinica.com">support@clearclinica.com</a>.
 
@@ -28,23 +28,29 @@ fromDate, toDate, sort, filters and inputVariables(if tableName is a function) a
 
 Filters and inputVariable json objects - the key is the column name/ input variable name in postgres, the json value is the compare value (like where site = XXX)/ input value in function (like schema.function(XXX)).
 
-For example:
+**For example:**
 
-```{
+`
+{
   "tableName": "cc_event_data",
   "fromDate": "2017-01-01T00:00:00.000Z",
   "toDate": "2019-02-01T00:00:00.000Z",
   "sort": "subject"
-}```
+}
+`
 
-Another example:
+**Another example:**
 
-```{
+`
+{
   "tableName": "cross_event_crf_data"
-}```
+}
+`
 
 #### /edc/study/download-csvs-data
-This API downloads a zip folder includes EDC study data. Each csv is an event CRF data.
+This API downloads a zip folder includes EDC study data. 
+
+Each csv is an event CRF data.
 
 #### /edc/study/extract-study-data-at-crf-level
 This API extracts EDC data at CRF level and returns the data as a json object.
@@ -70,7 +76,7 @@ This API extracts data from flask tables and views for your customer.
 
 The table/ view should have customer_id column for this process.
 
-For example: studies table, audit_user_login, billing_reports_customer and etc.
+**For example:** studies table, audit_user_login, billing_reports_customer and etc.
 
 studyIds and filters are optional.
 
@@ -79,7 +85,7 @@ This API downloads a billing reports folder for the month of the billingDate par
 
 The billing report zip folder includes all the billing report files for your customer.
 
-NOTE - This process will download files only if the billing reports features turn on in your customer account.
+**NOTE** - This process will download files only if the billing reports features turn on in your customer account.
 
 ### /flask/device/get-logs
 This API returns device logs of a study.
@@ -98,7 +104,7 @@ This API creates/updates site in FlaskData.
 ### /flask/study/create-update-flask-study-users
 This API creates User if not exists and assigned Users to study.
 
-NOTE - This API deletes the Users that were assigned to this study and assigned the new Users.
+**NOTE** - This API deletes the Users that were assigned to this study and assigned the new Users.
 
 ### /flask/subject/extract-study-event-data-to-CSV
 This API extracts all study data (from FlaskForms) based on study id and download CSV files.
@@ -106,7 +112,7 @@ This API extracts all study data (from FlaskForms) based on study id and downloa
 ### /flask/crf/create-CRF-and-insert-data
 This API creates CRF in existing event and insert data
 
-Example - Creates a new AE (adverse event) CRF in existing event.
+**Example** - Creates a new AE (adverse event) CRF in existing event.
 
 ### /flask/crf/create-event-CRF-and-insert-data
 This API creates event and CRF and inserts data.
@@ -121,7 +127,7 @@ This API updates CRF data by crf data id.
 
 ## Use Cases
 
-NOTE: The following examples require jQuery later version
+**NOTE:** The following examples require jQuery later version
 
 ### General example of extract data using JS:
     var xhrcall = $.ajax({
@@ -223,19 +229,13 @@ Your application should call insertDataIntoFlaskFormsCRF function with the follo
 
 * User email - Your customer API User email address for authorization.
 * User password - Your customer API User password for authorization.
-* studyId - Your study Id parameter, You can take it from study dashboard URL.
-![Screenshot](img/studyId.PNG)
-* Subject label - Subject label from flaskdata, for example:
-![Screenshot](img/subjectLabel.PNG)
-* Event name for creating CRF, for example:
-![Screenshot](img/eventName.PNG)
-* CRF name for creating CRF, for example (in flask forms):
-![Screenshot](img/crfName.PNG)
-* CRF data - for saving CRF data, Json structure, key value pair, The key is the item's variable (as it's defined in flask forms) and the value is the data for this variable.
+* studyId - Your study Id parameter, You can take it from [study dashboard](./study_dashboard.md#study-dashboard) URL.
+* Subject label - [Subject label](./manage_subjects.md) from FlaskData
+* [Event](./manage_forms.md#event-definitions) name for creating CRF
+* [CRF](./manage_forms.md#crfs) name for creating CRF.
+* CRF data - for saving CRF data, Json structure, key value pair, The key is the [item's variable](./manage_forms.md#crf-items) (as it's defined in flask forms) and the value is the data for this variable.
 for example: `{"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2}`
-![Screenshot](img/itemVariables.PNG)
-The output should be new CRF for the subject with the correct data, for example:
-![Screenshot](img/crfData.PNG)
+The output should be new CRF for the subject with the correct data.
 
 ### Example of calling FlaskData API using jQuery older version
       var http = new XMLHttpRequest();
