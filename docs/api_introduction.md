@@ -30,13 +30,13 @@ Config/ change header and body request as needed and click on "Execute" button.
 ![Screenshot](img/api/execute_api.PNG)
 
 ### ClinCapture EDC
-ClinCapture EDC is a database includes all study data (events, crfs, items, sites, subjects, data and etc.)
+ClinCapture EDC is a 21 CFR Part 11 compliant EDC system that is integrated into Flask Collect.
+The ClinCapture database uses a proven clinical data model (Visits, CRF, Items, Sites, Subjects, Queries, SDV, Audit log and data extracts)
 
-Some studies use EDC data and UI to insert/update/delete/extract the study data.
+Users can work directly in ClinCapture to manage a study.   Automated ETL processes
+extract the data to Flask Detect and Act for analytics and alerts.
 
-FlaskData and EDC are related, there are ETLs to load EDC data to FlaskData, FlaskData uses the data for analytics, alerts and etc.
-
-FlaskData APIs extract data from EDC.
+You can use FlaskData APIs to extract / insert data to ClinCapture on demand.
 
 ### Flask Forms
 Flask Forms is a platform to save study CRFs data ( events, crfs, items and the data), This is a tool developed by FlaskData team, easy to use!
