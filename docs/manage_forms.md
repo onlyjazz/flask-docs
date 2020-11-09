@@ -100,14 +100,16 @@ Required, Disabled and Confirm parameters exist in each component.
 The fourth tab is the **Branching Logic**, In this tab you can write a simple logic for this item.
 
 ![Screenshot](img/forms/forms_crf_item_edit_branching_logic.PNG)
-```Branching logic expression for this item
- To use the autocomplete service, 
- type "$" and select the variable of interest for you. 
- Use variables to make expression for hide current form control.
- The terminal supports any JavaScript expressions for the value of the available form variables. 
- For example:
-   $ITEM_IMPORTANT_VAR == 'string_var_value'
-```
+!!!quote
+
+    Branching logic expression for this item
+    To use the autocomplete service, 
+    type "$" and select the variable of interest for you. 
+    Use variables to make expression for hide current form control.
+    The terminal supports any JavaScript expressions for the value of the available form variables. 
+    For example:
+    $ITEM_IMPORTANT_VAR == 'string_var_value'
+
 
 For example - Show/Hide method.
 Item that depends on another item.
@@ -241,7 +243,9 @@ By standing with the mouse on the hamburger a list of options opens.
 * **Restore Study CRFs** - Put backup of study CRFs and restore it here (in the current study)
     ![Screenshot](img/forms/forms_restore_crf.PNG)
     
-    **NOTE** - Restore study CRFs restores json file.
+    !!! note "" 
+        
+        Restore study CRFs restores json file.
     
 * **Create a dump of study CRFs** Create a backup of this study's CRFs.
     ![Screenshot](img/forms/forms_dump_crfs.PNG)
@@ -252,12 +256,11 @@ By standing with the mouse on the hamburger a list of options opens.
     
 * **Logout** - Logout from FlaskData
 
----
-**NOTE** to return to flask application click on FlaskData logo
-
- ![Screenshot](img/forms/forms_flaskdata_logo.PNG)
+!!! note "Return to FlaskData App" 
  
----
+    to return to flask application click on FlaskData logo
+
+    ![Screenshot](img/forms/forms_flaskdata_logo.PNG)
 
 
 

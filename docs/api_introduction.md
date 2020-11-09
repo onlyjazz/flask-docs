@@ -1,5 +1,5 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
-# API Introduction
+#API Introduction
 
 ### Audience
 Developers who want to use the Flask API.
@@ -56,11 +56,12 @@ A CRF you design in Forms is designed once and can be rendered on Desktop or Mob
 
 You can use the FlaskData API to extract and insert Forms data.
 
-# Getting started API
+##Getting started API
 
 ### Authorization
 In order to use the FlaskData APIs you need to first get aa JWT token with the  auth/authorize API.
 
+<<<<<<< HEAD
 For example - in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a>
 
 In the body request (JSON)  set your API User's email and password, like this:
@@ -78,3 +79,30 @@ In the response body you get an access token, like:
 }```
 
 NOTE: The expired time is UTC time.
+=======
+!!!example
+
+    in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a>
+    
+    In the body request (JSON) you need to set your API User's email and password, like:
+    
+    ```json
+    {
+      "email": "xxx@gmail.com",
+      "password": "12345678"
+    }
+    ```
+
+    In the response body you get an access token, like:
+    
+    ```json
+    {
+      "token": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k",
+      "expired": "2019-10-28T15:23:10.407Z"
+    }
+    ```
+
+!!! info
+
+    The expired time is UTC time.
+>>>>>>> c34f0e2d6e0e9c0d8915225687ddbf64fde8ee73

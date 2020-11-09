@@ -8,7 +8,6 @@ nav:
     - Manage Sites: manage_sites.md
     - Manage Users: manage_users.md
     - Manage Forms: manage_forms.md
-    - Manage Queries: manage_queries.md
     - Manage Subjects: manage_subjects.md
     - Manage Data: manage_data.md
   - Extras:
@@ -16,14 +15,20 @@ nav:
     - Alerts Definitions: manage_alerts_definitions.md
     - Tools: tools.md
     - Features: manage_features.md
+    - Manage Queries: manage_queries.md
   - FlaskData API:
     - API Introduction: api_introduction.md
     - API Flows: apiflows.md
+  - ePRO : epro.md
 theme:
   name: 'material'
   logo: 'img/logo.PNG'
-  favicon: 'img/logo.PNG'
+  favicon: 'img/favicon.PNG'
 markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list

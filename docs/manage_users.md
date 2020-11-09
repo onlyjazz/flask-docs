@@ -32,17 +32,16 @@ After you create a new User or modify their email, you can send them an email to
 
 You don't have to do it - your Users can log in with their Google account.
 
----
-**NOTES:**
-In edit User Profile action you can change a few User's parameters
+!!! note "User properties"
 
-1. *Role* There are 3 roles
-    * Customer Admin - User has all customer permissions - add/edit studis, Users, sites, alerts and etc.
-    * Study Role - User has study permissions - to see all study data (of all the sites)
-    * Site Role - User has site level permissions - to see his site data, add subject to his site, create events and crfs to subject.  
-2. *Form designer*: define if User has Forms permissions - add/edit/delete Events and CRFs from the system (by default only customer admin Users can do it).
-3. *Subscribe to Alerts*: define if ths User will get alerts from this study (according to alert rules).
----
+    In edit User Profile action you can change a few User's parameters
+    
+    1. *Role* There are 3 roles
+        * Customer Admin - User has all customer permissions - add/edit studis, Users, sites, alerts and etc.
+        * Study Role - User has study permissions - to see all study data (of all the sites)
+        * Site Role - User has site level permissions - to see his site data, add subject to his site, create events and crfs to subject.  
+    2. *Form designer*: define if User has Forms permissions - add/edit/delete Events and CRFs from the system (by default only customer admin Users can do it).
+    3. *Subscribe to Alerts*: define if ths User will get alerts from this study (according to alert rules).
 
 ###Studies
 In **Studies card** you can see the User's studies
@@ -65,10 +64,10 @@ In User profile page you have an option to manage User sites.
 
 ![Screenshot](img/user/user_profile_actions_button.PNG)
 
----
-**NOTE:** You have this option just if the User is a site role User, otherwise the User has permissions to all study's sites
+!!! note
+ 
+    You have this option just if the User is a site role User, otherwise the User has permissions to all study's sites
 
----
 In manage User sites page you can add/remove sites from User privileges.
 
 ![Screenshot](img/user/user_manage_user_sites.PNG)
@@ -92,16 +91,14 @@ The User will be added to the selected study that appears in the title.
 
 ![Screenshot](img/study/study_in_title.PNG)
 
----
-**NOTES:**
+!!! note "User properties"
 
-1. **Email** should be unique for each User.
-2. **Role** There are 3 optional roles:
-    2.1 Customer Admin - Administrator of the customer - who has all permissions of this account, like - create User, create site, build CRFs etc.
-    2.2 Study role - who has all study permissions - see, extract etc. all study data.
-    2.3 Site role - who has specific site/s permissions - add subject to his site, fill CRFs, see site's data etc.
-3. **EDC Role** - more specific role from Role (number 2), it's more relevant for customers that have EDC db.
----
+    1. **Email** should be unique for each User.
+    2. **Role** There are 3 optional roles:
+        2.1 Customer Admin - Administrator of the customer - who has all permissions of this account, like - create User, create site, build CRFs etc.
+        2.2 Study role - who has all study permissions - see, extract etc. all study data.
+        2.3 Site role - who has specific site/s permissions - add subject to his site, fill CRFs, see site's data etc.
+    3. **EDC Role** - more specific role from Role (number 2), it's more relevant for customers that have EDC db.
 
 Click on **SAVE** green button.
 

@@ -51,18 +51,18 @@ In current implementation you can use the simple expressions like `$SOME_VARIABL
 
 Also, you can combine these expressions using logical operators like `&&`(AND) or `||`(OR).
 
-**Examples:**
+!!!example "Examples"
  
-* `$SOME_VARIABLE == '0' && count($ELSE_ONE_VARIABLE) > '0'`
-* `$SOME_VARIABLE != 'some string value' || $ELSE_ONE_VARIABLE >= '0'`
-* `filter($SOME_VARIABLE) <= '4' && count($ELSE_ONE_VARIABLE) != '5'`
+    *  `$SOME_VARIABLE == '0' && count($ELSE_ONE_VARIABLE) > '0'`
+    * `$SOME_VARIABLE != 'some string value' || $ELSE_ONE_VARIABLE >= '0'`
+    * `filter($SOME_VARIABLE) <= '4' && count($ELSE_ONE_VARIABLE) != '5'`
 
 Logical operator !(NOT) also supporting in the current implementation
 
-**Examples:**
+!!!example "Examples"
  
-* `!($SOME_VARIABLE == '5') && count($ELSE_ONE_VARIABLE) > '0'`
-* `!($SOME_VARIABLE == 'some string value')`
+    * `!($SOME_VARIABLE == '5') && count($ELSE_ONE_VARIABLE) > '0'`
+    * `!($SOME_VARIABLE == 'some string value')`
 
 
 ###Functions
@@ -79,26 +79,30 @@ The count function receives the two arguments:
 
 The value of the period parameter must be the string that looks like `24 hours`
 
-You can use the following time units:
+!!info
 
-* milliseconds
-* seconds
-* minutes
-* hours
-* days
-* weeks
-* months
-* years
+    You can use the following time units:
+    
+    * milliseconds
+    * seconds
+    * minutes
+    * hours
+    * days
+    * weeks
+    * months
+    * years
 
-**Usage examples:**
-
-* `count($ELSE_ONE_VARIABLE)` - will return the number of records with variable $ELSE_ONE_VARIABLE for the all-time
-* `count($ELSE_ONE_VARIABLE, '24 hours')` - will return the number of records with variable $ELSE_ONE_VARIABLE for the last 24 hours
-* `count($ELSE_ONE_VARIABLE, '7 days')` - will return the number of records with variable $ELSE_ONE_VARIABLE for the last week
+!!!example "Usage examples:"
+    
+    * `count($ELSE_ONE_VARIABLE)` - will return the number of records with variable $ELSE_ONE_VARIABLE for the all-time
+    * `count($ELSE_ONE_VARIABLE, '24 hours')` - will return the number of records with variable $ELSE_ONE_VARIABLE for the last 24 hours
+    * `count($ELSE_ONE_VARIABLE, '7 days')` - will return the number of records with variable $ELSE_ONE_VARIABLE for the last week
 
 So, if you need to check did some subject fill some CRF during of 24 hours you can use the following expression:
 
-`count($ELSE_ONE_VARIABLE, '24 hours') == '0';`
+```JavaScript
+count($ELSE_ONE_VARIABLE, '24 hours') == '0';
+```
 
 In this case, if some subject didn't fill the CRF that contains an item with the current variable during 24 hours the function `count($ELSE_ONE_VARIABLE, '24 hours')` will return 0. The entire expression `count($ELSE_ONE_VARIABLE, '24 hours') == '0'` will return true and you will get the alert.
 
@@ -107,7 +111,7 @@ In this case, if some subject didn't fill the CRF that contains an item with the
 
 The filter function will return the number of records in the DB marked with this variable.
 
-The count function receives the two arguments:
+The count function receives the following arguments:
 
 * variable - the unique variable of the CRF item.
 * period(not required) - the time period for filtering the subject's data by the date of creating the record.
@@ -118,38 +122,39 @@ The period parameter works similarly to the period parameter in the [count](mana
 
 The value of the value parameter must be the string that looks like `>2`, `yes`, `==5`
 
-You can use the following operators:
+!!!info
+    You can use the following operators:
+    
+    * `==`
+    * `!=`
+    * `>=`
+    * `<=`
+    * `>`
+    * `<`
 
-* `==`
-* `!=`
-* `>=`
-* `<=`
-* `>`
-* `<`
+!!!example
 
-**Examples:** 
+    * `==2`
+    * `some string value`
+    * `>=5`
 
-* `==2`
-* `some string value`
-* `>=5`
----
-**NOTE:** the expression `==2` and `2` or  `==yes` and `yes` are equals!
+!!!note ""
 
----
+    the expression `==2` and `2` or  `==yes` and `yes` are equals!
+
 The value of the **take parameter** must be the string that looks like `'-1'`, `'1'`, `'5'`
 
 The **take parameter** provides the ability to get the part of records from the records array.
 
-**Examples:**
+!!!example "Examples"
 
-* `'1'` - The first event
-* `'2'` - The first 2 events
-* `'-1'` - The last event
-* `'-4'` - The last 4 events
----
-**NOTE:** the records that receive from the DB ordered by date created.
+    * `'1'` - The first event
+    * `'2'` - The first 2 events
+    * `'-1'` - The last event
+    * `'-4'` - The last 4 events
 
----
+!!! note ""
+    the records that receive from the DB ordered by date created.
 
 The order of the filters appling is following
 
@@ -158,12 +163,12 @@ The order of the filters appling is following
 3. filtering by 'take'
 4. filtering by 'value'
 
----
-**NOTE:** if you don't need to use some parameter you can set null instead.
 
----
+!!! note ""
 
-**Usage examples:**
+    if you don't need to use some parameter you can set null instead.
+
+!!!example "Usage examples"
 
 * `filter($ELSE_ONE_VARIABLE)` - will return the number of records with variable $ELSE_ONE_VARIABLE for the all-time
 * `filter($ELSE_ONE_VARIABLE, '24 hours')` - will return the number of records with variable $ELSE_ONE_VARIABLE for the last 24 hours
@@ -173,11 +178,16 @@ The order of the filters appling is following
 
 So, if you need to check did some subject has some critical value in his data  during of 24 hours you can use the following expression:
 
-`filter($ELSE_ONE_VARIABLE, '24 hours', '>10') > '0';`
+```JavaScript
+    filter($ELSE_ONE_VARIABLE, '24 hours', '>10') > '0';
+```
 
 In this case, if some subject entered this critical value in the CRF that contains an item with the current variable during 24 hours the function 
 
-`filter($ELSE_ONE_VARIABLE, '24 hours', '>10')` will return some value that will be more than 0. 
+```JavaScript
+filter($ELSE_ONE_VARIABLE, '24 hours', '>10')
+```
+will return some value that will be more than 0. 
 
 The entire expression `filter($ELSE_ONE_VARIABLE, '24 hours', '>10') > '0'` will return true, and you will get the alert.
 
@@ -186,13 +196,13 @@ In current implementation you can use the simple expressions like `$SOME_VARIABL
 
 In this case this expression will be replaced to `filter($SOME_VARIABLE, null, '== 0') != 0`
 
-**Examples:**
-
-| Input                            |  Output             |
-| --------------------------------| ---------------------|
-| `$SOME_VARIABLE == '0'`         | `filter($SOME_VARIABLE, null, '== 0') != 0` |
-| `$SOME_VARIABLE`                | `filter($SOME_VARIABLE, null, null) != 0`|
-| `$SOME_VARIABLE == '3'&& $ELSE_ONE_VARIABLE > '2'` |  `filter($SOME_VARIABLE, null, '== 3') != 0 && filter($ELSE_ONE_VARIABLE, null, '>2') != 0`  | 
+!!!example
+    
+    | Input                            |  Output             |
+    | --------------------------------| ---------------------|
+    | `$SOME_VARIABLE == '0'`         | `filter($SOME_VARIABLE, null, '== 0') != 0` |
+    | `$SOME_VARIABLE`                | `filter($SOME_VARIABLE, null, null) != 0`|
+    | `$SOME_VARIABLE == '3'&& $ELSE_ONE_VARIABLE > '2'` |  `filter($SOME_VARIABLE, null, '== 3') != 0 && filter($ELSE_ONE_VARIABLE, null, '>2') != 0`  | 
 
 ##Alert Action
 You can define a few actions to alert definition by **ADD ACTION** green button.
@@ -219,7 +229,9 @@ To see alerts list - click on Study Alerts in hamburger menu.
 
 You can filter the alerts list.
 
-You can change status/ delete each alert in the list.
+!!!tip
+
+    You can change status/ delete each alert in the list.
 
 ![Screenshot](img/alerts/alert_notifications.PNG)
 

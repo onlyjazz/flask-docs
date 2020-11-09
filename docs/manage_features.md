@@ -16,10 +16,9 @@ If this feature is turn on, **Form designer** field will be added to [user edit]
 
 If you mark **Form designer** option, this user can enter to [Flask Forms](./manage_forms.md#manage-forms) and modify CRFs, Events etc.
 
----
-**NOTE** By default only Customer admin users can enter to Flask Forms.
+!!! note ""
 
--- 
+    By default only Customer admin users can enter to Flask Forms.
 
 ##Create user in EDC
 This feature related to study with EDC DB.
@@ -54,21 +53,25 @@ This feature adds subject with an automatic label number.
 * **Prefix** Subject label can be defined to start with [study unique protocol id](./manage_studies.md#study-profile) or [site unique identifier](./manage_sites.md#site-profile)
 * **Prefix mask** number of numbers after the Prefix
 
-**Example** Prefix = Site unique identifier, Prefix mask = NNN, subjects label seems like site01-001, site1-002 etc.
+!!! example
 
----
-**NOTE** If you have existing study, Go to [study edit](./manage_studies.md#study-edit) to define the subject prefix calculation node.
+    Prefix = Site unique identifier, Prefix mask = NNN, subjects label seems like site01-001, site1-002 etc.
 
----
-You can change the subject numerator to specific [site](./manage_sites.md#edit-site)/[study](./manage_studies.md#study-edit).
+!!! important
 
-**Example** If you define your study subject prefix to "site unique identifier",
+    If you have existing study, Go to [study edit](./manage_studies.md#study-edit) to define the subject prefix calculation node.
 
-You can go to [site edit](./manage_sites.md#edit-site) or [site add](./manage_sites.md#add-a-new-site) and change the **Starting subject ID** to the desired number.
+!!!info
 
-The next patient label will be with this number (SHEBA-024).
+    You can change the subject numerator to specific [site](./manage_sites.md#edit-site)/[study](./manage_studies.md#study-edit).
 
-![Screenshot](img/features/subject_label_site_edit.PNG)
+    If you define your study subject prefix to "site unique identifier",
+    
+    You can go to [site edit](./manage_sites.md#edit-site) or [site add](./manage_sites.md#add-a-new-site) and change the **Starting subject ID** to the desired number.
+    
+    The next patient label will be with this number (SHEBA-024).
+    
+    ![Screenshot](img/features/subject_label_site_edit.PNG)
 
 
 ##Subject Personal Information

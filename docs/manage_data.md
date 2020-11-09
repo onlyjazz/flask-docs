@@ -59,7 +59,6 @@ In the end on the event's CRFs list there are 2 buttons:
   
 ![Screenshot](img/subjects/flask_events_delete_event.PNG)
   
----
-**NOTE** If subject has PRO all PRO events are generated when the subject created.
-  
-___
+!!! info
+ 
+    If subject has PRO all PRO events are generated when the subject created.

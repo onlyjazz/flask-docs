@@ -4,7 +4,9 @@ In left menu bar there is a **Tools** option.
 
 There is a list of default tools, each customer has.
 
-**NOTE** If you need special tool open a [support request](./index.md#request-support).
+!!! note ""
+ 
+    If you need special tool open a [support request](./index.md#request-support).
 
 ##Audit Report
 In the Audit Report tool, there are a few filter options:
