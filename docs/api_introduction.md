@@ -29,34 +29,41 @@ Config/ change header and body request as needed and click on "Execute" button.
 
 ![Screenshot](img/api/execute_api.PNG)
 
-### ClinCapture EDC
+### EDC
 ClinCapture EDC is a 21 CFR Part 11 compliant EDC system that is integrated into Flask Collect.
-The ClinCapture database uses a proven clinical data model (Visits, CRF, Items, Sites, Subjects, Queries, SDV, Audit log and data extracts)
+The ClinCapture database uses a standard clinical trial data model (Events  (aka Visits), CRF, Items, Sites, Subjects, Queries, SDV, Audit log and data extracts)
 
-Users can work directly in ClinCapture to manage a study.   Automated ETL processes
-extract the data to Flask Detect and Act for analytics and alerts.
+Users and sites management is performed using the FlaskData UX; the FlaskData API updates/inserts entities into the
+ClinCapture PostgreSQL database.
 
-You can use FlaskData APIs to extract / insert data to ClinCapture on demand.
+There are 3 paths for data capture:
+1. Direct data capture to EDC
+Direct data capture in ClinCapture or data entry from paper source (the traditional way of doing things).
 
-### Flask Forms
-Flask Forms is a platform to save study CRFs data ( events, crfs, items and the data), This is a tool developed by FlaskData team, easy to use!
+2. eSource with Flask Forms expand inline update to EDC
+You can design CRFs using Forms - site coordinators (and patients using the Flask ePRO app). Forms will update
+the EDC inline and synchronize CRF fields/metadata and item values.
 
-Some studies use FlaskForms, The customer can build/ edit his study or FlaskData can do it for him.
+3. Direct data capture with Flask Forms
 
-FlaskData and FlaskForms are related and there's a perfect User experience.
+Automated ETL processes extract  data to Flask Detect and Act for analytics and
+alerts, or you can use FlaskData APIs to extract / insert data in JSON format on
+demand, for your own analytics processing.
 
-FlaskData API extract data from FlaskForms data.
+### Flask Forms eSource
+Flask Forms is an eSource platform that includes a visual Forms designer.
+A CRF you design in Forms is designed once and can be rendered on Desktop or Mobile for a native Android app.
+
+You can use the FlaskData API to extract and insert Forms data.
 
 # Getting started API
 
 ### Authorization
-For using FlaskData APIs you need to get token first.
-
-For getting FlaskData token use auth/authorize API.
+In order to use the FlaskData APIs you need to first get aa JWT token with the  auth/authorize API.
 
 For example - in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a>
 
-In the body request (JSON) you need to set your API User's email and password, like:
+In the body request (JSON)  set your API User's email and password, like this:
 
 ```{
   "email": "xxx@gmail.com",
