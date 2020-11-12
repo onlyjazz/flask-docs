@@ -3,22 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/api_introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/api_introduction.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/apiflows.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/apiflows.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/epro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/epro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/first_study.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/first_study.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/favicon.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_alerts_definitions.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_alerts_definitions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_data.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_data.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_features.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_features.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_forms.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_forms.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_studies.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_studies.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_subjects.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_subjects.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_users.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_users.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/study_dashboard.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/study_dashboard.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tools.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tools.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +53,8 @@
       <workItem from="1603104031583" duration="1239000" />
       <workItem from="1603188656837" duration="30723000" />
       <workItem from="1603870734963" duration="66436000" />
-      <workItem from="1604574581101" duration="6342000" />
+      <workItem from="1604574581101" duration="8455000" />
+      <workItem from="1604992065837" duration="1811000" />
     </task>
     <servers />
   </component>
