@@ -12,7 +12,7 @@ To edit the study - check it, in **ACTIONS** click on **Edit** option.
 
  ![Screenshot](img/study/edit_study.PNG)
 
-!!! Some notes on  "Study definition values"
+!!! note "Study definition values"
 
     1. Fill out the *Database* and the *EDC URL* fields if you are using an external EDC like ClinCapture.
     2. *Enable patient reported outcome module?* Click this checkbox if your study uses Flask ePRO desktop / Mobile edition.
