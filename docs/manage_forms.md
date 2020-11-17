@@ -262,12 +262,10 @@ By standing with the mouse on the hamburger a list of options opens.
 
     ![Screenshot](img/forms/forms_flaskdata_logo.PNG)
     
-##Relationship between EDC and Forms
+##Relationship between Forms and EDC
 If your study uses [ClinCapture Database](./manage_studies.md#add-study) you can connect the two.
 
-
-###import/export CRFs and Events
-####Import CRF From EDC
+###Import CRF From EDC
 You can import CRF From EDC to Forms by click on **IMPORT CRF FROM EDC** blue button
 
 ![Screenshot](img/forms/forms_import_crf_from_edc.PNG)
@@ -291,7 +289,7 @@ You can export CRF to EDC by click on **ACTIONS**->**EXPORT** option
 
  ![Screenshot](img/forms/export_crf.PNG)
  
- !!!example
+!!!example
  
      Study uses Flask PRO and EDC DB, You can export study PRO CRFs to EDC.
      
