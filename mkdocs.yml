@@ -16,6 +16,7 @@ nav:
     - Tools: tools.md
     - Features: manage_features.md
     - Manage Queries: manage_queries.md
+    - Flask and EDC: forms_and_edc.md
   - FlaskData API:
     - API Introduction: api_introduction.md
     - API Flows: apiflows.md
