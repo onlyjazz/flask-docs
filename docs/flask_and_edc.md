@@ -1,6 +1,6 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
-#Forms and EDC
-You can use [Forms](./manage_forms.md#manage-forms) and [ClinCapture Database](./manage_studies.md#add-study) in parallel for your study.
+#Flask and EDC
+You can use FlaskData and [ClinCapture Database](./manage_studies.md#add-study) in parallel for your study.
 
 There are a few functions to connect them:
 
@@ -11,7 +11,7 @@ There are a few functions to connect them:
 5. Create [Alert Definition](./manage_alerts_definitions.md#add-alerts-definition) on EDC data.
 6. See EDC Queries in [tools](./tools.md).
 7. [Download EDC data](./tools.md#download-study-data-csvs) (CSV files)
-8. [Connect Forms data and EDC data.](./forms_and_edc.md#relationship-between-forms-and-edc)
+8. [Connect Forms data and EDC data.](flask_and_edc.md#relationship-between-forms-and-edc)
    
 ##Relationship between Forms and EDC
 If your study uses [ClinCapture Database](./manage_studies.md#add-study) you can connect the two.
