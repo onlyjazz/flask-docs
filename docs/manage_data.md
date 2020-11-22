@@ -61,4 +61,6 @@ In the end on the event's CRFs list there are 2 buttons:
   
 !!! info
  
-    If subject has PRO all PRO events are generated when the subject created.
+    If subject has PRO all first period PRO events are generated when the subject created.
+    
+   ![Screenshot](img/subjects/flask_events_pro.PNG)

@@ -201,8 +201,8 @@ There are a few definitions of study schedule:
     * Period Length - Period length in days
     * Name - the name of this period
     * Description - description of this period
-    * Allow expanding this period - continue this period until another period begin to the subject.
-    * For randomized subjects - Begin this period for randomized subject (CRC should define it to each subject)
+    * Allow expanding this period - continue this period until another period begin to the subject OR until study has been completed (study completion date value).
+    * For [randomized subjects](./manage_subjects.md#randomize) - Begin this period for randomized subject (CRC should define it to each subject)
     * Event Definitions - Define the [event](#event-definitions) to this period PRO
          Click on Event Definitions, Event Definitions list will be opened, choose one event.
          ![Screenshot](img/forms/forms_period_events.PNG)
