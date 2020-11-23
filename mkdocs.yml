@@ -20,7 +20,10 @@ nav:
   - FlaskData API:
     - API Introduction: api_introduction.md
     - API Flows: apiflows.md
-  - ePRO : epro.md
+  - ePRO :
+      - Flask ePRO: epro.md
+      - ePRO Mobile: epro_mobile.md
+      - ePRO Desktop: epro_desktop.md
 theme:
   name: 'material'
   logo: 'img/logo.PNG'

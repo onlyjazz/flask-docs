@@ -4,8 +4,9 @@
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/epro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/epro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_data.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_data.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_forms.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_forms.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/first_study.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/first_study.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_subjects.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_subjects.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +39,11 @@
       <recent name="$PROJECT_DIR$/flaskdata-api/docs/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/docs/videos" />
       <recent name="$PROJECT_DIR$/docs/img/forms" />
       <recent name="$PROJECT_DIR$/docs/img/api" />
       <recent name="$PROJECT_DIR$/docs/img/site" />
-      <recent name="$PROJECT_DIR$/docs/img/user" />
-      <recent name="$PROJECT_DIR$/docs/img/study" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -58,7 +59,7 @@
       <workItem from="1603870734963" duration="66436000" />
       <workItem from="1604574581101" duration="8455000" />
       <workItem from="1604992065837" duration="11555000" />
-      <workItem from="1605613639953" duration="17064000" />
+      <workItem from="1605613639953" duration="28249000" />
     </task>
     <servers />
   </component>
@@ -74,17 +75,21 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="451" y="210" width="1084" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1603107114916" />
-    <state x="709" y="354" width="711" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604556250850">
+    <state x="709" y="354" width="711" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606117838209">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="709" y="354" width="711" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1604556250850" />
+    <state x="709" y="354" width="711" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1606117838209" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1605613668005">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1605613668005" />
-    <state x="683" y="291" width="620" height="522" key="find.popup" timestamp="1604837509503">
+    <state x="852" y="255" width="272" height="595" key="RollbackChangesDialog" timestamp="1606117802323">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="683" y="291" width="620" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604837509503" />
+    <state x="852" y="255" width="272" height="595" key="RollbackChangesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1606117802323" />
+    <state x="683" y="291" width="620" height="522" key="find.popup" timestamp="1606118557671">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="683" y="291" width="620" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1606118557671" />
   </component>
 </project>

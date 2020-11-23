@@ -80,7 +80,7 @@ After patient install Flask ePRO application he will see the Flask ePRO icon
 Just click on the application and login to ePRO, Enjoy :smile:
 
 ###Login to Flask ePRO
-Open Flask ePRO application and login to your diary by email and password.
+Open Flask ePRO application and login to your diary. (To login by email and password you should create the password first by [reset password](./epro_mobile.md#first-login-with-email-and-password) option)
 
 ![Screenshot](img/epro/app_login.PNG)
 
@@ -156,6 +156,8 @@ The patient can see details of the study he is participating in by clicking on t
 If subject cannot use [Flask ePRO](#android-application) android application he/she can use FlaskData application to enter his/her diary.
 
 It's less beautiful but works great. :+1:
+
+In any case in such a case that the phone does not support Android it is better for the patient to use his desktop.
 
 ###Login
 Patient should login to FlaskData ePRO URL (https://epro.flaskdata.io)

@@ -32,6 +32,10 @@ Click on **ADD SUBJECT** green button adds a new subject
 
 ![Screenshot](img/subjects/subjeects_add_one_click.PNG)
 
+If study has ePRO, CRC should define subject's email and phone number
+
+<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/cvTWk8Bjtl8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 In Subjects index page there is **Actions** blue button with Edit and Profile options.
 
 By check a subject and click Edit/Profile you open Profile page.

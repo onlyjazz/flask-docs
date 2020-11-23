@@ -15,7 +15,7 @@ To edit the study - check it, in **ACTIONS** click on **Edit** option.
 !!! note "Study definition values"
 
     1. Fill out the *Database* and the *EDC URL* fields if you are using an external EDC like ClinCapture.
-    2. *Enable patient reported outcome module?* Click this checkbox if your study uses Flask ePRO desktop / Mobile edition.
+    2. *Enable patient reported outcome module?* Click this checkbox if your study uses Flask ePRO [desktop](./epro.md#flaskdata-application) / [Mobile](/epro.md#android-application) edition.
     3. *PRO URL*: Enter the *PRO URL* field with the Website address of your ePRO system - if your'e using Flask ePRO, then the default will be <a href="https://epro.flaskdata.io">Flask ePRO </a>.
     4. *Package*: There are 3 available packages, Start, Submit and Validate.
         * Start - The study uses Flask Subject management and Flask Forms for data Collect.
