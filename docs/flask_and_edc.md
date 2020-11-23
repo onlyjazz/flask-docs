@@ -5,14 +5,20 @@ You can use FlaskData and [ClinCapture Database](./manage_studies.md#add-study) 
 There are a few functions to connect them:
 
 1. [Create user in EDC feature](./manage_features.md#create-user-in-edc) - Create user in flask and he/she will be created in EDC.
-2. [Create site in Flask](./manage_sites.md#add-a-new-site) - The site will be created in EDC.
+2. [Create site in Flask](./manage_sites.md#add-a-new-site) - The site will be created in EDC.     
 3. [Add subject in Flask](./manage_subjects.md#add-subject) - The subject will be added in EDC.
 4. [EDC button](./study_dashboard.md#edc) - Opens the ClinCupture in a new window.
 5. Create [Alert Definition](./manage_alerts_definitions.md#add-alerts-definition) on EDC data.
 6. See EDC Queries in [tools](./tools.md).
 7. [Download EDC data](./tools.md#download-study-data-csvs) (CSV files)
 8. [Connect Forms data and EDC data.](flask_and_edc.md#relationship-between-forms-and-edc)
-   
+  
+!!!important "Create site"
+       
+       EDC has a lot of connectivity, After you add a site in Flask you must go to EDC and "edit" the site.
+        
+       Just Click edit and save without edit anything.
+        
 ##Relationship between Forms and EDC
 If your study uses [ClinCapture Database](./manage_studies.md#add-study) you can connect the two.
 
