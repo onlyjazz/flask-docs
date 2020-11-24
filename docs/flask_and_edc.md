@@ -7,7 +7,7 @@ There are a few functions to connect them:
 1. [Create user in EDC feature](./manage_features.md#create-user-in-edc) - Create user in flask and he/she will be created in EDC.
 2. [Create site in Flask](./manage_sites.md#add-a-new-site) - The site will be created in EDC.     
 3. [Add subject in Flask](./manage_subjects.md#add-subject) - The subject will be added in EDC.
-4. [EDC button](./study_dashboard.md#edc) - Opens the ClinCupture in a new window.
+4. [EDC button](./study_dashboard.md#edc) - Opens the clincapture in a new window.
 5. Create [Alert Definition](./manage_alerts_definitions.md#add-alerts-definition) on EDC data.
 6. See EDC Queries in [tools](./tools.md).
 7. [Download EDC data](./tools.md#download-study-data-csvs) (CSV files)

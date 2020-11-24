@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/epro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/epro.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/flask_and_edc.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/flask_and_edc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/dashboard/all_alerts_page.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/dashboard/all_alerts_page.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/epro/flaskdata_enter_data.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/epro/flaskdata_enter_data.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/epro/subject_invite.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/epro/subject_invite.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/epro/welcome_back.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/epro/welcome_back.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/forms/import_event_from_edc.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/forms/import_event_from_edc.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/queries/queries_deatails.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/docs/img/queries/queries_deatails.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,23 +32,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/img/edc" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/img/edc" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/docs/img/forms" />
       <recent name="$PROJECT_DIR$/docs/img" />
       <recent name="$PROJECT_DIR$/flaskdata-api/docs/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/img/edc" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/docs/videos" />
       <recent name="$PROJECT_DIR$/docs/img/forms" />
       <recent name="$PROJECT_DIR$/docs/img/api" />
-      <recent name="$PROJECT_DIR$/docs/img/site" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -56,7 +65,7 @@
       <workItem from="1603870734963" duration="66436000" />
       <workItem from="1604574581101" duration="8455000" />
       <workItem from="1604992065837" duration="11555000" />
-      <workItem from="1605613639953" duration="31340000" />
+      <workItem from="1605613639953" duration="39653000" />
     </task>
     <servers />
   </component>
@@ -84,9 +93,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="852" y="255" width="272" height="595" key="RollbackChangesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1606117802323" />
-    <state x="683" y="291" width="620" height="522" key="find.popup" timestamp="1606118557671">
+    <state x="683" y="291" width="620" height="580" key="find.popup" timestamp="1606205651062">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="683" y="291" width="620" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1606118557671" />
+    <state x="683" y="291" width="620" height="580" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1606205651062" />
   </component>
 </project>

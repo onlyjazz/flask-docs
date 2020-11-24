@@ -16,6 +16,7 @@ nav:
     - Tools: tools.md
     - Features: manage_features.md
     - Manage Queries: manage_queries.md
+    - EDC: edc.md
     - Flask and EDC: flask_and_edc.md
   - FlaskData API:
     - API Introduction: api_introduction.md
@@ -24,6 +25,7 @@ nav:
       - Flask ePRO: epro.md
       - ePRO Mobile: epro_mobile.md
       - ePRO Desktop: epro_desktop.md
+      - Instructions for patient diary: epro_patient_instructions.md
 theme:
   name: 'material'
   logo: 'img/logo.PNG'

@@ -1,7 +1,6 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
 #ePRO
-This is patient's diary.
-
+This is a patient's diary.
 
 ##What is Flask PRO?
 * Flask PRO is an online ePRO app
@@ -35,14 +34,14 @@ If patient forgets his password [site role user](./manage_users.md#profile) (lik
 
 Patient will get a welcome email again.
 
-![Screenshot](img/epro/welcome_back.PNG)
+![Screenshot](img/epro/inbox_email_invite.PNG)
 
 ##Subject invited
 When patient gets a welcome emil/SMS
  
- ![Screenshot](img/epro/inbox_email_invite.PNG)
+![Screenshot](img/epro/welcome_back.PNG)
  
- He/she should click on the link.
+He/she should click on the link.
 
 ![Screenshot](img/epro/subject_invite.PNG)
 
