@@ -231,7 +231,7 @@ You can make a form on your Mobile app with the field and when the user saves th
 you save the data in Flask.    Alternatively, if your app does sleep tracking, you can take hours
 of sleep you tracked and save it to Flask every day at 10:00.
 
-3. Your app sends the data to the Flask API as key-value pairs. See below.
+Your app then sends the data to the Flask API as key-value pairs. See below.
 
 TIP:  Flask Forms automatically names the item variables; you will probably want to reset
 variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
