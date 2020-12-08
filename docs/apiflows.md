@@ -211,8 +211,10 @@ This API updates CRF data by crf data id.
 Use case: You have a mobile app that collects data from a device or person,
 and you want to save the data to the Flask data model.
 
-Pre-requisites:  You will have already create necessary entities in the Flask data model:
+Pre-requisites:  
+1. You  have previously created  entities in the Flask data model:
 Study, Site, Event, Form (CRF), Form items.
+2. You have 'customer admin' role user credentials in your Flask customer account 
 
 The data items you send via the API correspond to data items in a Form.
 
@@ -301,3 +303,6 @@ Your application should call insertDataIntoFlaskFormsCRF function with the follo
 The output will be a new CRF for the subject with the  data you provided in the API call.
 
 You can see the data after the update in the /subjects/flask-events/<subjectID> page
+
+
+## -- End of page
