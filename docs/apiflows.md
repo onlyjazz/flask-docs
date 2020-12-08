@@ -218,27 +218,36 @@ and you want to save some data to Flask.
 
 
 Pre-requisites:  
-1. You  have previously created  entities in the Flask data model:
-Study, Site, Event, Form (CRF), Form items.
+In order to insert data you wil have previously created  entities in the Flask data model:
+Study, Site, Event, Form (CRF).    
 
-2. You have a Form (for example, a daily Quality of life diary) or a connected wearable that
-uses the phone app to send data (for example hours of sleep) to Flask.
+1. You have a Form (for example, a daily Quality of life diary) or a connected wearable that
+uses the phone app to send data (for example hours of sleep) to Flask. Items in the Form you use correspond to the the data items
+that you want to save from your app. 
 
-3. You have a 'customer admin' role user credentials in your Flask customer account;
+2. You have a 'customer admin' role user credentials in your Flask customer account;
 (Your Flask customer admin can set you up with one of these). The credentials are an email and password.
 
-4. Your app sends The data items you send via the API correspond to data items in a Form.
+3. Your app sends The data items you send via the API populating the Form data items  as key-value pairs. See below.
+
+TIP:  Flask Forms automatically names the item variables; you will probably want to reset
+variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
+
+TIP:  If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
+pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
+then make sure you pass 1 or 2 (and not 0 or 1).
+
 
 #### Code example
-The following client-side code example uses JavaScript and can be run inside the Chrome debugger
-or embedded in a test HTML page. The client-side code uses Jquery to perform Ajax calls.
+The following code example uses is a client-side JavaScript and can be run inside the Chrome debugger
+or embedded in a test HTML page for testing. The client-side code uses Jquery to perform Ajax calls.
 
 #### Input parameters to the API
 In the below code example, we have a cover function called saveData that gets a token (JWT)
 and then calls another cover function called createCRFandInsertData 
 that makes the RESTful API call to /flask/crf/create-CRF-and-insert-data.
 
-The createCRFandInsertData  function gets the following aarguments:
+The createCRFandInsertData  function takes the following arguments:
 
 * uEmail - Your customer API User email address for authorization.
 * uPass - Your customer API User password for authorization.
@@ -250,10 +259,10 @@ The createCRFandInsertData  function gets the following aarguments:
     The key is the [item's variable](./manage_forms.md#crf-items) (as it's defined in Flask Forms) 
     and the value is the data for this variable; for example:  
         ```json 
-        {"ITEM_AGE":30, "ITEM_GENDER_CODE":2}
+        {"PATIENT_AGE":30, "PATIENT_GENDER_CODE":2}
         ```
         
-* The RESTful API call creates new CRF in the Flask data model for the subject with the  data you provided.
+* The RESTful API creates a new CRF in the Flask data model for the subject with the  data you provided.
 * You can see the data after the update in the /subjects/flask-events/<subjectID> page
 
 
