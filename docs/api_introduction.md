@@ -1,10 +1,10 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
 #API Introduction
 
-### Audience
+## Audience
 Developers who want to use the Flask API.
 
-### Concepts and terms
+## Concepts and terms
 A developer will need credentials to a User account with an API role.
 This User can be created by customer admin role.
 
@@ -86,3 +86,23 @@ In order to use the FlaskData APIs you need to first get aa JWT token with the  
 !!! info
 
     The expired time is UTC time.
+
+## Additional Urls
+There are additional swaggers for additional functionality.
+
+### Date Server
+By Data server APIs you can get [Forms](./manage_forms.md) data in csv/json format with include/exclude criteria.
+
+<a href="https://api.flaskdata.io/data-server/swagger/">api.flaskdata.io/data-server</a>
+
+### FlaskData Features
+By Features APIs you can process a few additional flaskdata features, like create subject etc.
+
+<a href="https://api.flaskdata.io/features/swagger/">api.flaskdata.io/features</a>
+
+### Alerts Server
+By Alerts Server APIs you enable to run functions related to [alerts definitions](./manage_alerts_definitions.md)
+
+<a href="https://api.flaskdata.io/alerts-server/swagger/">api.flaskdata.io/alerts-server</a>
+
+

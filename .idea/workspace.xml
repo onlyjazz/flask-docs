@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/api_introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/api_introduction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +25,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/img/edc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/img/edc" />
       <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/docs/img/edc" />
       <recent name="$PROJECT_DIR$/docs/img/forms" />
       <recent name="$PROJECT_DIR$/docs/img" />
       <recent name="$PROJECT_DIR$/flaskdata-api/docs/img" />
@@ -58,7 +60,7 @@
       <workItem from="1604992065837" duration="11555000" />
       <workItem from="1605613639953" duration="40889000" />
       <workItem from="1606390174833" duration="1197000" />
-      <workItem from="1607232763344" duration="609000" />
+      <workItem from="1607232763344" duration="3385000" />
     </task>
     <servers />
   </component>

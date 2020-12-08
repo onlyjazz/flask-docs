@@ -26,6 +26,7 @@ nav:
       - ePRO Mobile: epro_mobile.md
       - ePRO Desktop: epro_desktop.md
       - Instructions for patient diary: epro_patient_instructions.md
+  - RiskGraph: riskgraph_api.md
 theme:
   name: 'material'
   logo: 'img/logo.PNG'
