@@ -2,8 +2,8 @@
 
 The API has 2 parts of APIs - EDC and Flask.
 
-* EDC - APIs are related to a ClinCapture EDC instance (extract EDC data etc.)
-* Flask - APIs are related to Flas data (extract data, insert data etc.)
+* EDC - APIs are related to an external EDC instance (extract EDC data etc.)
+* Flask - APIs are related to the internal Flask data model (extract data, insert data etc.)
 
 !!! note "Request header"
 
@@ -18,15 +18,15 @@ For more details and questions contact us by sending email to <a href="mailto:su
 ## EDC
 
 ### Extract EDC Data
-There are a few APIs you can use to extract your ClinCapture EDC data.
+There are a few APIs you can use to extract  EDC data.
 
 For example:
 #### /edc/study/extract-data
-This API extract EDC data of each table/view/function (like functionName()) and return json.
+This API extracts EDC data of each table/view/function (like functionName()) and returns a json structure.
 
 fromDate, toDate, sort, filters and inputVariables(if tableName is a function) are optional values.
 
-Filters and inputVariable json objects - the key is the column name/ input variable name in postgres, the json value is the compare value (like where site = XXX)/ input value in function (like schema.function(XXX)).
+Filters and inputVariable json objects: The key is the column name/input variable name in the EDC PostgreSQL database, the json value is the corresponding value (like where site = XXX)/ input value in function (like schema.function(XXX)).
 
 !!!example
 
@@ -48,9 +48,9 @@ Filters and inputVariable json objects - the key is the column name/ input varia
     ```
 
 #### /edc/study/download-csvs-data
-This API downloads a zip folder includes EDC study data. 
+This API downloads a zip folder of CSV files with EDC study data.
 
-Each csv is an event CRF data.
+Each CSV file contains EDC Event-CRF data (Event is often called a Visit in an EDC)
 
 #### /edc/study/extract-study-data-at-crf-level
 This API extracts EDC data at CRF level and returns the data as a json object.
@@ -206,13 +206,19 @@ This API updates CRF data by crf data id.
           });
 ```
 
-### Save data in CRF JS Example.
+### Save data to the Flask data model -  code example
 
-Your study uses FlaskForms application.
+Use case: You have a mobile app that collects data from a device or person,
+and you want to save the data to the Flask data model.
 
-You have a mobile app and you want to collect data and save it to a Flask Forms Event/CRF
+Pre-requisites:  You will have already create necessary entities in the Flask data model:
+Study, Site, Event, Form (CRF), Form items.
 
-This JS code is an example to create CRF and save its data into existing event.
+The data items you send via the API correspond to data items in a Form.
+
+The following client-side code example uses JavaScript and can be run inside the Chrome debugger
+or embedded in a test HTML page. The client-side code uses Jquery to perform Ajax calls.
+
 ```JavaScript
         $(document).ready(function() {
               // Call insertDataIntoFlaskFormsCRF function to assign new CRF and save data.
@@ -292,22 +298,6 @@ Your application should call insertDataIntoFlaskFormsCRF function with the follo
         {"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2}
         ```
         
-The output should be new CRF for the subject with the correct data.
+The output will be a new CRF for the subject with the  data you provided in the API call.
 
-### Example of calling FlaskData API using jQuery older version
-```JavaScript
-      var http = new XMLHttpRequest();
-      var url = 'https://dev-api.flaskdata.io/auth/authorize';
-      var params = '{"email":"xxx@gmail.com","password":"123456"}';
-      http.open('POST', url, true);
-
-      //Send the proper header information along with the request
-      http.setRequestHeader('Content-type', 'application/json');
-
-      http.onreadystatechange = function() {//Call a function when the state changes.
-          if(http.readyState == 4 && http.status == 200) {
-              alert(http.responseText);
-          }
-      }
-      http.send(params);
-```
+You can see the data after the update in the /subjects/flask-events/<subjectID> page
