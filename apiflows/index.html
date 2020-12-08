@@ -648,15 +648,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#save-data-in-crf-js-example" class="md-nav__link">
-    Save data in CRF JS Example.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-of-calling-flaskdata-api-using-jquery-older-version" class="md-nav__link">
-    Example of calling FlaskData API using jQuery older version
+  <a href="#save-data-to-the-flask-data-model-code-example" class="md-nav__link">
+    Save data to the Flask data model -  code example
   </a>
   
 </li>
@@ -968,15 +961,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#save-data-in-crf-js-example" class="md-nav__link">
-    Save data in CRF JS Example.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-of-calling-flaskdata-api-using-jquery-older-version" class="md-nav__link">
-    Example of calling FlaskData API using jQuery older version
+  <a href="#save-data-to-the-flask-data-model-code-example" class="md-nav__link">
+    Save data to the Flask data model -  code example
   </a>
   
 </li>
@@ -1002,8 +988,8 @@
                 <h1 id="api-flows">API flows</h1>
 <p>The API has 2 parts of APIs - EDC and Flask.</p>
 <ul>
-<li>EDC - APIs are related to a ClinCapture EDC instance (extract EDC data etc.)</li>
-<li>Flask - APIs are related to Flas data (extract data, insert data etc.)</li>
+<li>EDC - APIs are related to an external EDC instance (extract EDC data etc.)</li>
+<li>Flask - APIs are related to the internal Flask data model (extract data, insert data etc.)</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Request header</p>
@@ -1020,12 +1006,12 @@
 <p>For more details and questions contact us by sending email to <a href="mailto:support@clearclinica.com">support@clearclinica.com</a>.</p>
 <h2 id="edc">EDC</h2>
 <h3 id="extract-edc-data">Extract EDC Data</h3>
-<p>There are a few APIs you can use to extract your ClinCapture EDC data.</p>
+<p>There are a few APIs you can use to extract  EDC data.</p>
 <p>For example:</p>
 <h4 id="edcstudyextract-data">/edc/study/extract-data</h4>
-<p>This API extract EDC data of each table/view/function (like functionName()) and return json.</p>
+<p>This API extracts EDC data of each table/view/function (like functionName()) and returns a json structure.</p>
 <p>fromDate, toDate, sort, filters and inputVariables(if tableName is a function) are optional values.</p>
-<p>Filters and inputVariable json objects - the key is the column name/ input variable name in postgres, the json value is the compare value (like where site = XXX)/ input value in function (like schema.function(XXX)).</p>
+<p>Filters and inputVariable json objects: The key is the column name/input variable name in the EDC PostgreSQL database, the json value is the corresponding value (like where site = XXX)/ input value in function (like schema.function(XXX)).</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1044,8 +1030,8 @@
 </code></pre></div>
 </div>
 <h4 id="edcstudydownload-csvs-data">/edc/study/download-csvs-data</h4>
-<p>This API downloads a zip folder includes EDC study data. </p>
-<p>Each csv is an event CRF data.</p>
+<p>This API downloads a zip folder of CSV files with EDC study data.</p>
+<p>Each CSV file contains EDC Event-CRF data (Event is often called a Visit in an EDC)</p>
 <h4 id="edcstudyextract-study-data-at-crf-level">/edc/study/extract-study-data-at-crf-level</h4>
 <p>This API extracts EDC data at CRF level and returns the data as a json object.</p>
 <p>This API returns only CRFs with data.</p>
@@ -1163,10 +1149,14 @@
                     <span class="p">}</span>
           <span class="p">});</span>
 </code></pre></div>
-<h3 id="save-data-in-crf-js-example">Save data in CRF JS Example.</h3>
-<p>Your study uses FlaskForms application.</p>
-<p>You have a mobile app and you want to collect data and save it to a Flask Forms Event/CRF</p>
-<p>This JS code is an example to create CRF and save its data into existing event.
+<h3 id="save-data-to-the-flask-data-model-code-example">Save data to the Flask data model -  code example</h3>
+<p>Use case: You have a mobile app that collects data from a device or person,
+and you want to save the data to the Flask data model.</p>
+<p>Pre-requisites:  You will have already create necessary entities in the Flask data model:
+Study, Site, Event, Form (CRF), Form items.</p>
+<p>The data items you send via the API correspond to data items in a Form.</p>
+<p>The following client-side code example uses JavaScript and can be run inside the Chrome debugger
+or embedded in a test HTML page. The client-side code uses Jquery to perform Ajax calls.</p>
 <div class="highlight"><pre><span></span><code>        <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
               <span class="c1">// Call insertDataIntoFlaskFormsCRF function to assign new CRF and save data.</span>
               <span class="c1">// Input values : User email, User password, study id, subject label, event name, CRF name, CRF data.</span>
@@ -1230,7 +1220,7 @@
                               <span class="p">}</span>
                     <span class="p">});</span>
           <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Your application should call insertDataIntoFlaskFormsCRF function with the following input parameters:</p>
 <ul>
 <li>User email - Your customer API User email address for authorization.</li>
@@ -1243,23 +1233,8 @@
         <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;ITEM_SP_AGE_WR6NP&quot;</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;ITEM_SP_MANWOMAN_HDNAO&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
 </code></pre></div></li>
 </ul>
-<p>The output should be new CRF for the subject with the correct data.</p>
-<h3 id="example-of-calling-flaskdata-api-using-jquery-older-version">Example of calling FlaskData API using jQuery older version</h3>
-<div class="highlight"><pre><span></span><code>      <span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-      <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;https://dev-api.flaskdata.io/auth/authorize&#39;</span><span class="p">;</span>
-      <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="s1">&#39;{&quot;email&quot;:&quot;xxx@gmail.com&quot;,&quot;password&quot;:&quot;123456&quot;}&#39;</span><span class="p">;</span>
-      <span class="nx">http</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-
-      <span class="c1">//Send the proper header information along with the request</span>
-      <span class="nx">http</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">);</span>
-
-      <span class="nx">http</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="c1">//Call a function when the state changes.</span>
-          <span class="k">if</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mf">4</span> <span class="o">&amp;&amp;</span> <span class="nx">http</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mf">200</span><span class="p">)</span> <span class="p">{</span>
-              <span class="nx">alert</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
-          <span class="p">}</span>
-      <span class="p">}</span>
-      <span class="nx">http</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span>
-</code></pre></div>
+<p>The output will be a new CRF for the subject with the  data you provided in the API call.</p>
+<p>You can see the data after the update in the /subjects/flask-events/<subjectID> page</p>
                 
               
               
