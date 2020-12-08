@@ -208,101 +208,123 @@ This API updates CRF data by crf data id.
 
 ### Save data to the Flask data model -  code example
 
-Use case: You have a mobile app that collects data from a device or person,
+Use cases: 
+
+1. You have a mobile app that collects data from a device or person,
 and you want to save the data to the Flask data model.
+
+2. You have a connected wearable device that connects to your phone app with BLE
+and you want to save some data to Flask.
+
 
 Pre-requisites:  
 1. You  have previously created  entities in the Flask data model:
 Study, Site, Event, Form (CRF), Form items.
-2. You have 'customer admin' role user credentials in your Flask customer account 
 
-The data items you send via the API correspond to data items in a Form.
+2. You have a Form (for example, a daily Quality of life diary) or a connected wearable that
+uses the phone app to send data (for example hours of sleep) to Flask.
 
+3. You have a 'customer admin' role user credentials in your Flask customer account;
+(Your Flask customer admin can set you up with one of these). The credentials are an email and password.
+
+4. Your app sends The data items you send via the API correspond to data items in a Form.
+
+#### Code example
 The following client-side code example uses JavaScript and can be run inside the Chrome debugger
 or embedded in a test HTML page. The client-side code uses Jquery to perform Ajax calls.
 
-```JavaScript
-        $(document).ready(function() {
-              // Call insertDataIntoFlaskFormsCRF function to assign new CRF and save data.
-              // Input values : User email, User password, study id, subject label, event name, CRF name, CRF data.
-              insertDataIntoFlaskFormsCRF("mongositerole@clearclinica.com", "123456", 145858, 'mongo_test_site_1-03', 'Screening', 'Subject properties', {"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2});
-         });
-        var insertDataIntoFlaskFormsCRF = function(uEmail, uPass, studyId, subjectLabel, eventName, crfName, crfData){
-            // Get token
-            getFlaskDataToken(uEmail, uPass, function(userToken){
-                var token = UserToken;
-                // Create new CRF in existin event and insert data
-                createCRFandInsertData(token, studyId, subjectLabel, eventName, crfName, crfData, function(crfDataId){
-                    console.log(crfDataId);
-                    // Save this crfDataId if you will need to update this CRF data                    
-                });
-            });
-        }
+#### Input parameters to the API
+In the below code example, we have a cover function called saveData that gets a token (JWT)
+and then calls another cover function called createCRFandInsertData 
+that makes the RESTful API call to /flask/crf/create-CRF-and-insert-data.
 
-        var getFlaskDataToken = function(email, password, cb) {
-              // Get JWT token
-              var xhrcall = $.ajax({
-                                      url: 'https://dev-api.flaskdata.io/auth/authorize',
-                                      type: 'POST',
-                                      data: '{"email":"' + email + '","password":"' + password +'"}',
-                                        contentType: 'application/json'
-                                    });
-                //promise syntax to render after xhr completes
-                xhrcall
-                    .done(function(data){
-                            // Enter your code here
-                            cb(data.token);
-                    })
-                    .fail(function(error) {
-                              if(error) {
-                                  // Enter your code here
-                                  console.log('Failed to get token ' + error);
-                              }
-                    });
-          }
+The createCRFandInsertData  function gets the following aarguments:
 
-          // Create new CRF and insert data
-          // /flask/crf/create-CRF-and-insert-data
-          var createCRFandInsertData = function(token, study_id, subject_label, event_name, crf_name, crf_data, cb) {
-              var xhrcall = $.ajax({
-                                      url: 'https://dev-api.flaskdata.io/flask/crf/create-CRF-and-insert-data',
-                                      type: 'POST',
-                                      headers: {
-                                          'Authorization': token},
-                                      data: '{"study_id": '+study_id+',"subject_label": "'+subject_label+'","event_name": "'+event_name+'","crf_name": "'+crf_name+'","crf_data": '+ JSON.stringify(crf_data) +' }',
-                                      contentType: 'application/json'
-                                    });
-                //promise syntax to render after xhr completes
-                xhrcall
-                    .done(function(data){
-                            // Enter your code here                            
-                            cb(data.crfDataId);
-                    })
-                    .fail(function(error) {
-                              if(error) {
-                                  // Enter your code here
-                                  console.log('Failed to create CRF and insert data :' + JSON.stringify(error));
-                              }
-                    });
-          }
-```
-
-Your application should call insertDataIntoFlaskFormsCRF function with the following input parameters:
-
-* User email - Your customer API User email address for authorization.
-* User password - Your customer API User password for authorization.
+* uEmail - Your customer API User email address for authorization.
+* uPass - Your customer API User password for authorization.
 * studyId - Your study Id parameter, You can take it from [study dashboard](./study_dashboard.md#study-dashboard) URL.
-* Subject label - [Subject label](./manage_subjects.md) from FlaskData
-* [Event](./manage_forms.md#event-definitions) name for creating CRF
-* [CRF](./manage_forms.md#crfs) name for creating CRF.
-* CRF data - for saving CRF data, Json structure, key value pair, The key is the [item's variable](./manage_forms.md#crf-items) (as it's defined in flask forms) and the value is the data for this variable.  
+* subjectLabel - [Subject label](./manage_subjects.md) from FlaskData
+* eventName - [Event](./manage_forms.md#event-definitions) name for creating CRF
+* crfName - [CRF](./manage_forms.md#crfs) name for creating CRF.
+* crfData - A JSON structure with Form items key value pairs. 
+    The key is the [item's variable](./manage_forms.md#crf-items) (as it's defined in Flask Forms) 
+    and the value is the data for this variable; for example:  
         ```json 
-        {"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2}
+        {"ITEM_AGE":30, "ITEM_GENDER_CODE":2}
         ```
         
-The output will be a new CRF for the subject with the  data you provided in the API call.
+* The RESTful API call creates new CRF in the Flask data model for the subject with the  data you provided.
+* You can see the data after the update in the /subjects/flask-events/<subjectID> page
 
-You can see the data after the update in the /subjects/flask-events/<subjectID> page
+
+```JavaScript
+    $(document).ready(function() {
+        // Create a new CRF and save data.
+        // Input values : User email, User password, study id, subject label, event name, CRF name, CRF data.
+        saveData("mongositerole@clearclinica.com", "123456", 145858, 'mongo_test_site_1-03', 'Screening', 'Subject properties', {"ITEM_SP_AGE_WR6NP":30, "ITEM_SP_MANWOMAN_HDNAO":2});
+    });
+    var saveData = function(uEmail, uPass, studyId, subjectLabel, eventName, crfName, crfData){
+        // First we get a JWT
+        getFlaskDataToken(uEmail, uPass, function(userToken){
+        var token = UserToken;
+        // Then we create a new instance of a CRF in an existing event and save data to the CRF.
+        // Save the crfDataId if you need to come back later and update the data                    
+        createCRFandInsertData(token, studyId, subjectLabel, eventName, crfName, crfData, 
+        function(crfDataId){
+        console.log(crfDataId);
+    });
+    });
+    }
+
+    var getFlaskDataToken = function(email, password, cb) {
+    // Get JWT token
+    var xhrcall = $.ajax({
+        url: 'https://dev-api.flaskdata.io/auth/authorize',
+        type: 'POST',
+        data: '{"email":"' + email + '","password":"' + password +'"}',
+        contentType: 'application/json'
+    });
+    
+    //promise syntax to render after xhr completes
+    xhrcall
+        .done(function(data){
+    // Enter your code here
+        cb(data.token);
+    })
+        .fail(function(error) {
+        if(error) {
+    // Enter your code here
+        console.log('Failed to get token ' + error);
+        }
+    });
+    }
+
+    // Create new CRF and insert data
+    // /flask/crf/create-CRF-and-insert-data
+    var createCRFandInsertData = function(token, study_id, subject_label, event_name, crf_name, crf_data, cb) {
+        var xhrcall = $.ajax({
+            url: 'https://dev-api.flaskdata.io/flask/crf/create-CRF-and-insert-data',
+            type: 'POST',
+            headers: {
+                'Authorization': token},
+            data: '{"study_id": '+study_id+',"subject_label": "'+subject_label+'","event_name": "'+event_name+'","crf_name": "'+crf_name+'","crf_data": '+ JSON.stringify(crf_data) +' }',
+            contentType: 'application/json'
+        });
+        //promise syntax to render after xhr completes
+        xhrcall
+            .done(function(data){
+                // Enter your code here                            
+                cb(data.crfDataId);
+            })
+            .fail(function(error) {
+                if(error) {
+                    // Enter your code here
+                    console.log('Failed to create CRF and insert data :' + JSON.stringify(error));
+                }
+            });
+    }
+```
+
 
 
 ## -- End of page
