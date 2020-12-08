@@ -1,15 +1,15 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
 
 #Studies
-You can run a few studies in parallel.
-You can add/edit your studies properties, Users, sites etc.
+You can manage all your studies on Flask.
+You can add/edit your Study properties, assign Users, assign Sites and more.
 
 ##Add study
-To add studies go to studies index page by clicking on studies in the left bar.
-Click on **ADD STUDY** green button.
+To add a new Study go to /studies index page by clicking on Studies in the left side-bar.
+Click on  the green **ADD STUDY**  button.
 
 ![Screenshot](img/study/studies_index_add_study.PNG)
-Fill your study properties and click **SAVE** mange Users page will be opened.
+Fill in your study properties and click **SAVE**. The Manage Users page will open.
 
 !!! note "Study values"
 
