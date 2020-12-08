@@ -78,7 +78,7 @@ The table/ view should have customer_id column for this process.
 
 !!!example "Examples"
  
-    studies table, audit_user_login, billing_reports_customer and etc.
+    studies table, audit_user_login, billing_reports_customer etc.
 
 studyIds and filters are optional.
 
@@ -110,8 +110,52 @@ This API creates User if not exists and assigned Users to study.
 !!! note
     This API deletes the Users that were assigned to this study and assigned the new Users.
 
-### /flask/subject/extract-study-event-data-to-CSV
+### /data-server/data/extract/extract-study-event-data-to-CSV
 This API extracts all study data (from FlaskForms) based on study id and download CSV files.
+
+### /data-server/data/extract/partial-extract-study-event-data-to-json
+This API extracts all events data and CRFs data to json with results of data entry.
+
+The min needed request body is: `{ "study_id": 7253541 }`
+
+Please choose the shape of the result object using the **columns** field in your request body.
+
+!!!example ""
+
+    For example, if you need only **crf**, **event** and **value** fields use:
+    ```json
+    "columns": {
+    "_id": 0,
+    "crf": 1,
+    "event": 1,
+    "value": 1
+    }
+    ```
+
+You need to set 0 only for the **_id** column - other columns will not be returned if you just don’t point them.
+
+The full entity will be returned if you don’t point the columns field or if you point the full entire list of fields.
+
+The filters field can receive any field of an entity and it will be used as a filter.
+
+Also, there are additional filters like date_from, date_to.
+
+All filters will be applied at the same time.
+
+!!!example "Example"
+
+    ```json
+        "filters": {
+        "date_from": "2020-12-01T16:26:54.461Z",
+        "date_to": "2020-12-31T16:26:54.461Z",
+        "crf": "demographic",
+        "item_type": “INPUT”
+        }
+    ```
+
+!!!note
+
+    If you don’t point the filters field you will get all records.
 
 ### /flask/crf/create-CRF-and-insert-data
 This API creates CRF in existing event and insert data

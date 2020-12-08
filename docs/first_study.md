@@ -8,7 +8,7 @@ To edit the study - check it, in **ACTIONS** click on **Edit** option.
 
 ![Screenshot](img/study/studies_index_actions.PNG)
 
- In edit study window you can define your study profile, definitions and etc.
+ In edit study window you can define your study profile, definitions etc.
 
  ![Screenshot](img/study/edit_study.PNG)
 

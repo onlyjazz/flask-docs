@@ -37,7 +37,7 @@ You don't have to do it - your Users can log in with their Google account.
     In edit User Profile action you can change a few User's parameters
     
     1. *Role* There are 3 roles
-        * Customer Admin - User has all customer permissions - add/edit studis, Users, sites, alerts and etc.
+        * Customer Admin - User has all customer permissions - add/edit studis, Users, sites, alerts etc.
         * Study Role - User has study permissions - to see all study data (of all the sites)
         * Site Role - User has site level permissions - to see his site data, add subject to his site, create events and crfs to subject.  
     2. *Form designer*: define if User has Forms permissions - add/edit/delete Events and CRFs from the system (by default only customer admin Users can do it).

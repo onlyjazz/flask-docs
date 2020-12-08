@@ -89,3 +89,28 @@ There is a **Comments** card that you can write all free text comments about you
 ![Screenshot](img/study/study_comment.PNG)
 
 There is an **ACTIONS** green button with Manage Users and Manage Sites options.
+
+###Study Metadata
+In study profile there is a **Study Metadta** card.
+
+In this table you can add/edt/delete free data about your study.
+
+!!!example "Example"
+
+    device versions.
+
+![Screenshot](img/study/study_metadata.PNG)
+
+!!!note "Extract study_metadata by API"
+
+    You can get this table data from the [generic API](./apiflows.md#flaskcustomerextract-data-to-json).
+    
+    Body request should be something like:
+    
+    ```json
+        {
+          "tableName": "study_metadata",
+          "fromDate": "2018-03-29T11:44:12.511Z",
+          "toDate": "2020-12-29T11:44:12.511Z"
+        }
+    ```
