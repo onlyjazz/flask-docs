@@ -586,8 +586,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#flasksubjectextract-study-event-data-to-csv" class="md-nav__link">
-    /flask/subject/extract-study-event-data-to-CSV
+  <a href="#data-serverdataextractextract-study-event-data-to-csv" class="md-nav__link">
+    /data-server/data/extract/extract-study-event-data-to-CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-serverdataextractpartial-extract-study-event-data-to-json" class="md-nav__link">
+    /data-server/data/extract/partial-extract-study-event-data-to-json
   </a>
   
 </li>
@@ -899,8 +906,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#flasksubjectextract-study-event-data-to-csv" class="md-nav__link">
-    /flask/subject/extract-study-event-data-to-CSV
+  <a href="#data-serverdataextractextract-study-event-data-to-csv" class="md-nav__link">
+    /data-server/data/extract/extract-study-event-data-to-CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-serverdataextractpartial-extract-study-event-data-to-json" class="md-nav__link">
+    /data-server/data/extract/partial-extract-study-event-data-to-json
   </a>
   
 </li>
@@ -1048,7 +1062,7 @@
 <p>The table/ view should have customer_id column for this process.</p>
 <div class="admonition example">
 <p class="admonition-title">Examples</p>
-<p>studies table, audit_user_login, billing_reports_customer and etc.</p>
+<p>studies table, audit_user_login, billing_reports_customer etc.</p>
 </div>
 <p>studyIds and filters are optional.</p>
 <h3 id="flaskcustomerdownload-billing-reports">/flask/customer/download-billing-reports</h3>
@@ -1073,8 +1087,41 @@
 <p class="admonition-title">Note</p>
 <p>This API deletes the Users that were assigned to this study and assigned the new Users.</p>
 </div>
-<h3 id="flasksubjectextract-study-event-data-to-csv">/flask/subject/extract-study-event-data-to-CSV</h3>
+<h3 id="data-serverdataextractextract-study-event-data-to-csv">/data-server/data/extract/extract-study-event-data-to-CSV</h3>
 <p>This API extracts all study data (from FlaskForms) based on study id and download CSV files.</p>
+<h3 id="data-serverdataextractpartial-extract-study-event-data-to-json">/data-server/data/extract/partial-extract-study-event-data-to-json</h3>
+<p>This API extracts all events data and CRFs data to json with results of data entry.</p>
+<p>The min needed request body is: <code>{ "study_id": 7253541 }</code></p>
+<p>Please choose the shape of the result object using the <strong>columns</strong> field in your request body.</p>
+<div class="admonition example">
+<p>For example, if you need only <strong>crf</strong>, <strong>event</strong> and <strong>value</strong> fields use:
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;columns&quot;</span><span class="err">:</span> <span class="p">{</span>
+<span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="nt">&quot;event&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<p>You need to set 0 only for the <strong>_id</strong> column - other columns will not be returned if you just don’t point them.</p>
+<p>The full entity will be returned if you don’t point the columns field or if you point the full entire list of fields.</p>
+<p>The filters field can receive any field of an entity and it will be used as a filter.</p>
+<p>Also, there are additional filters like date_from, date_to.</p>
+<p>All filters will be applied at the same time.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;filters&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;date_from&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-01T16:26:54.461Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;date_to&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-31T16:26:54.461Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="s2">&quot;demographic&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;item_type&quot;</span><span class="p">:</span> <span class="err">“INPUT”</span>
+    <span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don’t point the filters field you will get all records.</p>
+</div>
 <h3 id="flaskcrfcreate-crf-and-insert-data">/flask/crf/create-CRF-and-insert-data</h3>
 <p>This API creates CRF in existing event and insert data</p>
 <div class="admonition example">

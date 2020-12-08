@@ -293,6 +293,19 @@
     Study Profile
   </a>
   
+    <nav class="md-nav" aria-label="Study Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#study-metadata" class="md-nav__link">
+    Study Metadata
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -682,6 +695,19 @@
     Study Profile
   </a>
   
+    <nav class="md-nav" aria-label="Study Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#study-metadata" class="md-nav__link">
+    Study Metadata
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -764,6 +790,25 @@ Fill your study properties and click <strong>SAVE</strong> mange Users page will
 <p>There is a <strong>Comments</strong> card that you can write all free text comments about your study.</p>
 <p><img alt="Screenshot" src="../img/study/study_comment.PNG" /></p>
 <p>There is an <strong>ACTIONS</strong> green button with Manage Users and Manage Sites options.</p>
+<h3 id="study-metadata">Study Metadata</h3>
+<p>In study profile there is a <strong>Study Metadta</strong> card.</p>
+<p>In this table you can add/edt/delete free data about your study.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>device versions.</p>
+</div>
+<p><img alt="Screenshot" src="../img/study/study_metadata.PNG" /></p>
+<div class="admonition note">
+<p class="admonition-title">Extract study_metadata by API</p>
+<p>You can get this table data from the <a href="../apiflows/#flaskcustomerextract-data-to-json">generic API</a>.</p>
+<p>Body request should be something like:</p>
+<div class="highlight"><pre><span></span><code>    <span class="p">{</span>
+      <span class="nt">&quot;tableName&quot;</span><span class="p">:</span> <span class="s2">&quot;study_metadata&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;fromDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-03-29T11:44:12.511Z&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;toDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-29T11:44:12.511Z&quot;</span>
+    <span class="p">}</span>
+</code></pre></div>
+</div>
                 
               
               
