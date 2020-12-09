@@ -236,10 +236,10 @@ Your app then sends the data to the Flask API as key-value pairs. See below.
 
 !!! tip "TIPS"
     
-    Flask Forms automatically names the item variables; you will probably want to reset
+    * Flask Forms automatically names the item variables; you will probably want to reset
     variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
 
-    If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
+    * If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
     pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
     then make sure you pass 1 or 2 (and not 0 or 1).
 
