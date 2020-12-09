@@ -217,7 +217,8 @@ and you want to save the data to the Flask data model.
 and you want to save some data to Flask.
 
 
-Pre-requisites:  
+Pre-requisites:
+
 In order to insert data you wil have previously created  entities in the Flask data model:
 Study, Site, Event, Form (CRF).    
 
@@ -230,12 +231,14 @@ that you want to save from your app.
 
 3. Your app sends The data items you send via the API populating the Form data items  as key-value pairs. See below.
 
-TIP:  Flask Forms automatically names the item variables; you will probably want to reset
-variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
+!!! tip "TIPS"
+    
+    Flask Forms automatically names the item variables; you will probably want to reset
+    variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
 
-TIP:  If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
-pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
-then make sure you pass 1 or 2 (and not 0 or 1).
+    If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
+    pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
+    then make sure you pass 1 or 2 (and not 0 or 1).
 
 
 #### Code example
@@ -333,7 +336,3 @@ The createCRFandInsertData  function takes the following arguments:
             });
     }
 ```
-
-
-
-## -- End of page
