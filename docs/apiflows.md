@@ -114,11 +114,15 @@ This API creates User if not exists and assigned Users to study.
 This API extracts all study data (from FlaskForms) based on study id and download CSV files.
 
 ### /data-server/data/extract/partial-extract-study-event-data-to-json
-This API extracts all events data and CRFs data to json with results of data entry.
+This API extracts all study events and CRF data to JSON using a number of optional filters.
 
-The min needed request body is: `{ "study_id": 7253541 }`
+You can extract all the data from a study with a simple request body like this: `{ "study_id": 7253541 }`
 
-Please choose the shape of the result object using the **columns** field in your request body.
+Let's look at some of the options:
+
+#### Choose what columns you want to select 
+You can control the shape of the result object by using the **columns** field in your request body.
+This is like an SQL SELECT col1, col2, col3 FROM statement
 
 !!!example ""
 
@@ -132,15 +136,19 @@ Please choose the shape of the result object using the **columns** field in your
     }
     ```
 
-You need to set 0 only for the **_id** column - other columns will not be returned if you just don’t point them.
+Set the **_id** column to 0 (like in the above example). The API will selectively return the fields you 
+set in the request body.
 
-The full entity will be returned if you don’t point the columns field or if you point the full entire list of fields.
+To get all the fields, don't set fields or specify the entire list of fields.
+This is like a SELECT * FROM statement.
 
-The filters field can receive any field of an entity and it will be used as a filter.
+#### Filter records by date and/or column value
 
-Also, there are additional filters like date_from, date_to.
+You can refine record selection by the API with the date_from, date_to filters and setting values for
+fields.
 
-All filters will be applied at the same time.
+This is like an SQL  WHERE clause - WHERE crf='Demographics' and eventDate between date_from AND date_to.
+
 
 !!!example "Example"
 
@@ -148,14 +156,14 @@ All filters will be applied at the same time.
         "filters": {
         "date_from": "2020-12-01T16:26:54.461Z",
         "date_to": "2020-12-31T16:26:54.461Z",
-        "crf": "demographic",
+        "crf": "Demographics",
         "item_type": “INPUT”
         }
     ```
 
 !!!note
 
-    If you don’t point the filters field you will get all records.
+    Reminder! If you don’t set any filters field you will get all records.
 
 ### /flask/crf/create-CRF-and-insert-data
 This API creates CRF in existing event and insert data
@@ -183,18 +191,18 @@ This API updates CRF data by crf data id.
 ### General example of extract data using JS:
 ```JavaScript
     var xhrcall = $.ajax({
-                            url: 'https://dev-api.flaskdata.io/flask/customer/extract-data-to-json',
-                            type: 'POST',
-                            headers: {
-                                'Authorization': jwt},
-                            data: '{
-                                    "tableName": "studies",
-                                    "fromDate": "2018-03-29T11:44:12.511Z",
-                                    "toDate": "2019-03-29T11:44:12.511Z"                                    
-                                  }',
-                              contentType: 'application/json'
-                          });
-      //promise syntax to render after xhr completes
+        url: 'https://dev-api.flaskdata.io/flask/customer/extract-data-to-json',
+        type: 'POST',
+        headers: {
+            'Authorization': jwt},
+        data: '{
+                "tableName": "studies",
+                "fromDate": "2018-03-29T11:44:12.511Z",
+                "toDate": "2019-03-29T11:44:12.511Z"                                    
+                }',
+            contentType: 'application/json'
+        });
+//promise syntax to render after xhr completes
       xhrcall
           .done(function(data){
                   // Enter your code here
@@ -226,9 +234,15 @@ Study, Site, Event, Form (CRF).
 
 2. You then create a Form. Items in the Form  correspond to the data items that you want to save from your app. 
 
-Let's say you have a daily Quality of life Form with a field for hours of sleep. 
-You can make a form on your Mobile app with the field and when the user saves the form on the app,
-you save the data in Flask.    Alternatively, if your app does sleep tracking, you can take hours
+*Application flow*  
+
+Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to
+collect on your mobile app.
+
+The 
+
+You implement a form on your app with the field and when the user saves the form on the app,
+you save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours
 of sleep you tracked and save it to Flask every day at 10:00.
 
 Your app then sends the data to the Flask API as key-value pairs. See below.
@@ -241,7 +255,7 @@ pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 -
 then make sure you pass 1 or 2 (and not 0 or 1).
 
 
-#### Code example
+#### Client-side JavaScript code example
 The following code example uses is client-side JavaScript that can be run inside the Chrome debugger
 or embedded in a static HTML page for testing. The code uses JQuery to perform Ajax calls.
 
