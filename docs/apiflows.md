@@ -116,9 +116,11 @@ This API extracts all study data (from FlaskForms) based on study id and downloa
 ### /data-server/data/extract/partial-extract-study-event-data-to-json
 This API extracts all study events and CRF data to JSON using a number of optional filters.
 
-You can extract all the data from a study with a simple request body like this: `{ "study_id": 7253541 }`
+You can extract all the data from a study with a simple request body like this: `{ "study_id": 7253541 }`.
 
-Let's look at some of the options:
+This is like SQL SELECT * FROM clinicalData;   
+
+Now let's look at our options:
 
 #### Choose what columns you want to select 
 You can control the shape of the result object by using the **columns** field in your request body.
@@ -137,7 +139,7 @@ This is like an SQL SELECT col1, col2, col3 FROM statement
     ```
 
 Set the **_id** column to 0 (like in the above example). The API will selectively return the fields you 
-set in the request body.
+set in the request body when you set them to 1.
 
 To get all the fields, don't set fields or specify the entire list of fields.
 This is like a SELECT * FROM statement.
@@ -147,7 +149,7 @@ This is like a SELECT * FROM statement.
 You can refine record selection by the API with the date_from, date_to filters and setting values for
 fields.
 
-This is like an SQL  WHERE clause - WHERE crf='Demographics' and eventDate between date_from AND date_to.
+This is like the SQL WHERE clause - WHERE crf='Demographics' and eventDate between date_from AND date_to.
 
 
 !!!example "Example"
