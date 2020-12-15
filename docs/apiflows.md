@@ -227,6 +227,7 @@ and you want to save some data to Flask.
 
 *Pre-requisites:*  
 In order to insert data you wil have already created  entities in the Flask data model:
+
 Study, Site, Event, Form (CRF).    
 
 1. You will need a 'customer admin' role user in your Flask customer account;
@@ -247,12 +248,14 @@ of sleep you tracked and save it to Flask every day at 10:00.
 
 Your app then sends the data to the Flask API as key-value pairs. See below.
 
-TIP:  Flask Forms automatically names the item variables; you will probably want to reset
-variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
+!!! tip "TIPS"
+    
+    * Flask Forms automatically names the item variables; you will probably want to reset
+    variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
 
-TIP:  If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
-pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
-then make sure you pass 1 or 2 (and not 0 or 1).
+    * If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
+    pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
+    then make sure you pass 1 or 2 (and not 0 or 1).
 
 
 #### Client-side JavaScript code example
@@ -352,7 +355,3 @@ saveData takes the following arguments:
             });
     }
 ```
-
-
-
-## -- End of page
