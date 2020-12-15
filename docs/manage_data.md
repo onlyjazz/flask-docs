@@ -64,3 +64,8 @@ In the end on the event's CRFs list there are 2 buttons:
     If subject has PRO all first period PRO events are generated when the subject created.
     
    ![Screenshot](img/subjects/flask_events_pro.PNG)
+
+##Short video of add subject and insert data
+
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/C4Um970oNHc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
