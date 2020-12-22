@@ -168,7 +168,7 @@ This is like the SQL WHERE clause - WHERE crf='Demographics' and eventDate betwe
     Reminder! If you don’t set any filters field you will get all records.
 
 ### /flask/crf/create-CRF-and-insert-data
-This API creates CRF in existing event and insert data
+This API creates a CRF in an existing event and inserts data into the CRF.
 
 !!!example ""
     
@@ -228,24 +228,24 @@ and you want to save some data to Flask.
 
 
 *Pre-requisites:*  
-In order to insert data you wil have already created  entities in the Flask data model:
+In order to insert data you wil have already created the Study, Site, Event and Form (CRF) entities in the Flask data model:    
 
-Study, Site, Event, Form (CRF).    
-
-1. You will need a 'customer admin' role user in your Flask customer account;
+1. You will need a 'customer admin' role user in your Flask customer account to call the API.
 (Your Flask customer admin can set you up with one of these). The credentials are an email and password.
 
-2. You then create a Form. Items in the Form  correspond to the data items that you want to save from your app. 
+2. When you have ePRO (electronic patient reported outcomes), then the user credentials will be for the patient.
+When a site coordinator screens a patient, the Add Subject page automatically sends a Welcome email to the patient.
+The patient then clicks and sets a password. (Alternatively you can enable the patient to authenticate with their Google account)
+
+2. When you design a Form (CRF), the items in the Form map 1:1 to the data items that you want to save from your app. 
 
 *Application flow*  
 
 Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to
 collect on your mobile app.
 
-The 
-
-You implement a form on your app with the field and when the user saves the form on the app,
-you save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours
+You implement the form on your app with the input field and when the user saves the form on the app,
+you then save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours
 of sleep you tracked and save it to Flask every day at 10:00.
 
 Your app then sends the data to the Flask API as key-value pairs. See below.
@@ -259,101 +259,37 @@ Your app then sends the data to the Flask API as key-value pairs. See below.
     pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
     then make sure you pass 1 or 2 (and not 0 or 1).
 
+    * When you pass a numeric field - pass it like:  "AGE": 25 not "AGE": "25". In JSON, strings are not integers.
 
-#### Client-side JavaScript code example
-The following code example uses is client-side JavaScript that can be run inside the Chrome debugger
-or embedded in a static HTML page for testing. The code uses JQuery to perform Ajax calls.
+    * Radio buttons receive True or False values - pass it like: "SUBJECT_IS_A_REDHEAD": true.
 
-#### Input parameters to the API
-In the below code example, we have a function called saveData.
-
-The saveData function gets a JWT and calls the createCRFandInsertData function which makes a 
-RESTful API call to /flask/crf/create-CRF-and-insert-data.
-
-saveData takes the following arguments:
-
-* uEmail - Your customer API User email address for authorization.
-* uPass - Your customer API User password for authorization.
-* studyId - Your study Id parameter, You can take it from [study dashboard](./study_dashboard.md#study-dashboard) URL.
-* subjectLabel - [Subject label](./manage_subjects.md) from FlaskData
-* eventName - [Event](./manage_forms.md#event-definitions) name for creating CRF
-* crfName - [CRF](./manage_forms.md#crfs) name for creating CRF.
-* crfData - A JSON structure with Form items key value pairs. 
-    The key is the [item's variable](./manage_forms.md#crf-items) (as it's defined in Flask Forms) 
-    and the value is the data for this variable; for example:  
-        ```json 
-        {"PATIENT_AGE":30, "PATIENT_GENDER_CODE":2}
-        ```
-        
-* The RESTful API creates a new CRF in the Flask data model for the subject with the  data you provided.
-* You can see the data you saved in the /subjects/flask-events/<subjectID> page
+    * Dates have the usual timestamp format - pass it like: "DATE_OF_ADMISSION": "2020-12-21 10:10:00.000Z"
 
 
-```JavaScript
-    $(document).ready(function() {
-        // Create a new CRF and save data.
-        // Input values : User email, User password, study id, subject label, event name, CRF name, CRF data.
-        saveData("api-user@yourmail.com", "password-string", 145858, '001-021', 'Screening', 'InformedConsent', 
-        {"PATIENT_AGE":30, "PATIENT_GENDER_CODE":2});
-    });
-    var saveData = function(uEmail, uPass, studyId, subjectLabel, eventName, crfName, crfData){
-        // First we get a JWT
-        getFlaskDataToken(uEmail, uPass, function(userToken){
-        var token = UserToken;
-        // Then we create a new instance of a CRF in an existing event and save data to the CRF.
-        // Save the crfDataId if you need to come back later and update the data                    
-        createCRFandInsertData(token, studyId, subjectLabel, eventName, crfName, crfData, 
-        function(crfDataId){
-        console.log(crfDataId);
-    });
-    });
-    }
+#### Code generator - ePRO (Electronic patient reported outcomes)
 
-    var getFlaskDataToken = function(email, password, cb) {
-    // Get JWT token
-    var xhrcall = $.ajax({
-        url: 'https://dev-api.flaskdata.io/auth/authorize',
-        type: 'POST',
-        data: '{"email":"' + email + '","password":"' + password +'"}',
-        contentType: 'application/json'
-    });
-    
-    //promise syntax to render after xhr completes
-    xhrcall
-        .done(function(data){
-    // Enter your code here
-        cb(data.token);
-    })
-        .fail(function(error) {
-        if(error) {
-    // Enter your code here
-        console.log('Failed to get token ' + error);
-        }
-    });
-    }
+All this probably seems a little abstract, so lets see some working code.    Surf over to https://dev-api.flaskdata.io/code/
 
-    // Create new CRF and insert data
-    // /flask/crf/create-CRF-and-insert-data
-    var createCRFandInsertData = function(token, study_id, subject_label, event_name, crf_name, crf_data, cb) {
-        var xhrcall = $.ajax({
-            url: 'https://dev-api.flaskdata.io/flask/crf/create-CRF-and-insert-data',
-            type: 'POST',
-            headers: {
-                'Authorization': token},
-            data: '{"study_id": '+study_id+',"subject_label": "'+subject_label+'","event_name": "'+event_name+'","crf_name": "'+crf_name+'","crf_data": '+ JSON.stringify(crf_data) +' }',
-            contentType: 'application/json'
-        });
-        //promise syntax to render after xhr completes
-        xhrcall
-            .done(function(data){
-                // Enter your code here                            
-                cb(data.crfDataId);
-            })
-            .fail(function(error) {
-                if(error) {
-                    // Enter your code here
-                    console.log('Failed to create CRF and insert data :' + JSON.stringify(error));
-                }
-            });
-    }
+The /code page is a React application that generates working NodeJS code; showing you the API call  
+with proper arguments.  You can copy and past the code and run it on the command line with nodejs.
+
+When you hit the green Run Function button - you will see the results from the API call on the page.
+
+As we mentioned before, the patient (AKA Subject) will have already been screened to the study and have credentials;
+we'll be using the Subject credentials in this API flow.
+
+The following sequence will show how to authorize the subject, get his user id and study subject label and insert some data.
+
+1. Authorization - pass the credentials of the subject (email and password). You'll authorize the Subject after she logs in to your app
+with the credentials she set on her Welcome to Flask email.
+
+2. Get User profile - pass the JWT token and get the Subject ID and Subject label (and a bunch of other fields)
+
+3. Get studies of subject - pass the JWT token with the Subject ID and get the Study ID of the study where the Subject is enrolled
+
+4. Create CRF and insert data - pass the JWT token with Study ID, Subject ID and the CRF payload and voila - you've inserted data!
+
+
+
+
 ```
