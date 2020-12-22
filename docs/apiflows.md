@@ -268,7 +268,9 @@ Your app then sends the data to the Flask API as key-value pairs. See below.
 
 #### Code generator - ePRO (Electronic patient reported outcomes)
 
-All this probably seems a little abstract, so lets see some working code.    Surf over to <a href="https://dev-api.flaskdata.io/code/">Flask API Example code generator</a>
+All this probably seems a little abstract, so lets see some working code.    
+
+Surf over to the <a href="https://dev-api.flaskdata.io/code/">Flask API Example code generator</a>
 
 The /code page is a React application that generates working NodeJS code; showing you the API call  
 with proper arguments.  You can copy and past the code and run it on the command line with nodejs.
