@@ -230,10 +230,8 @@ and you want to save some data to Flask.
 *Pre-requisites:*  
 In order to insert data you wil have already created the Study, Site, Event and Form (CRF) entities in the Flask data model:    
 
-1. You will need a 'customer admin' role user in your Flask customer account to call the API.
-(Your Flask customer admin can set you up with one of these). The credentials are an email and password.
 
-2. When you have ePRO (electronic patient reported outcomes), then the user credentials will be for the patient.
+1. When you have ePRO (electronic patient reported outcomes), then the user credentials you pass to the API will be for the patient.
 When a site coordinator screens a patient, the Add Subject page automatically sends a Welcome email to the patient.
 The patient then clicks and sets a password. (Alternatively you can enable the patient to authenticate with their Google account)
 
@@ -272,8 +270,7 @@ All this probably seems a little abstract, so lets see some working code.
 
 Surf over to the <a href="https://dev-api.flaskdata.io/code/">Flask API Example code generator</a>
 
-The /code page is a React application that generates working NodeJS code; showing you the API call  
-with proper arguments.  You can copy and past the code and run it on the command line with nodejs.
+The Code generator page is a React application that generates working NodeJS code; showing you the API call  with proper arguments.  You can copy and past the code and run it on the command line with nodejs.
 
 When you hit the green Run Function button - you will see the results from the API call on the page.
 
@@ -282,14 +279,14 @@ we'll be using the Subject credentials in this API flow.
 
 The following sequence will show how to authorize the subject, get his user id and study subject label and insert some data.
 
-1. Authorization - pass the credentials of the subject (email and password). You'll authorize the Subject after she logs in to your app
+1. **Authorization** - pass the credentials of the subject (email and password). You'll authorize the Subject after she logs in to your app
 with the credentials she set on her Welcome to Flask email.
 
-2. Get User profile - pass the JWT token and get the Subject ID and Subject label (and a bunch of other fields)
+2. **Get User profile** - pass the JWT token and get the Subject ID and Subject label (and a bunch of other fields)
 
-3. Get studies of subject - pass the JWT token with the Subject ID and get the Study ID of the study where the Subject is enrolled
+3. **Get studies of subject** - pass the JWT token with the Subject ID and get the Study ID of the study where the Subject is enrolled
 
-4. Create CRF and insert data - pass the JWT token with Study ID, Subject ID and the CRF payload and voila - you've inserted data!
+4. **Create CRF and insert data** - pass the JWT token with Study ID, Subject ID and the CRF payload and voila - you've inserted data!
 
 
 
