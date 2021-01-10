@@ -45,7 +45,7 @@ Read more about the Flaskdata software architecture here:  [Flaskdata software a
 * Navigation buttons – Submit, Back etc…
 
 ###Roles – who can do what?
-| Flask Role         | Customer Admin Role  | Study Role      |  Site Role     |
+| Flask Role         | Customer Admin Role (2) | Study Role (3)     |  Site Role (4)    |
 | -------------------| ---------------------|-----------------|----------------|
 | `Users`            | :material-check:     | :material-close:|:material-close:|
 | `Subjects`         | :material-close:     | :material-check:|:material-check:|

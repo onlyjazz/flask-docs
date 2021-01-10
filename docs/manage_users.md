@@ -94,11 +94,28 @@ The User will be added to the selected study that appears in the title.
 !!! note "User properties"
 
     1. **Email** should be unique for each User.
-    2. **Role** There are 3 optional roles:
-        2.1 Customer Admin - Administrator of the customer - who has all permissions of this account, like - create User, create site, build CRFs etc.
-        2.2 Study role - who has all study permissions - see, extract etc. all study data.
-        2.3 Site role - who has specific site/s permissions - add subject to his site, fill CRFs, see site's data etc.
+    2. [**Role**](./index.md#roles--who-can-do-what) There are 3 optional roles:
+
+         2.1 Customer Admin (2)- Administrator of the customer - who has all permissions of this account, like - create User, create site, build CRFs etc.
+         
+         2.2 Study role (3)- who has all study permissions - see, extract etc. all study data.
+         
+         2.3 Site role (4)- who has specific site/s permissions - add subject to his site, fill CRFs, see site's data etc.
+
     3. **EDC Role** - more specific role from Role (number 2), it's more relevant for customers that have EDC db.
+
+      | EDC Role ID | Flask Role ID|    EDC Role Name  |        
+      |-------------|---------|------------------------|
+      |1            |       2 | System Administrator   |
+      |2            |       3 | Study Administrator    | 
+      |3            |       3 | Study Director         |
+      |6            |       3 | Study Monitor          |
+      |7            |       3 | Study Coder            |
+      |5            |       4 | Site coordinator       |
+      |4            |       4 | Principal investigator |
+      |8            |       5 | Subject                |
+      |9            |       2 | API role               |
+      |77           |      2 | RiskGraph role        |
 
 Click on **SAVE** green button.
 

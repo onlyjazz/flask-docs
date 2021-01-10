@@ -93,7 +93,7 @@ There is an **ACTIONS** green button with Manage Users and Manage Sites options.
 ###Study Metadata
 In study profile there is a **Study Metadata** card.
 
-In this table you can add/edit/delete free text meta-data strings describing your study. 
+In this table customer admin user can add/edit/delete free text meta-data strings describing your study. 
 
 For example, you can use Study MetaData to store the URL of a mobile app.
 
