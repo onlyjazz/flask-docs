@@ -134,6 +134,11 @@ Go to Hide/Show item branching logic and write your logic.
 
 ![Screenshot](img/forms/forms_show_hide_logic.PNG)
 
+!!!note
+    In branching logic that related to checkbox item, the branching logic should be like
+    `$CHECKBOX_ITEM_NAME == true`
+    
+
 ####CRF Actions
 There are a few available actions for each CRF.
 

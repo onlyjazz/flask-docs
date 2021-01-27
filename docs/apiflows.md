@@ -268,7 +268,7 @@ Your app then sends the data to the Flask API as key-value pairs. See below.
 
 All this probably seems a little abstract, so lets see some working code.    
 
-Surf over to the <a href="https://dev-api.flaskdata.io/code/">Flask API Example code generator</a>
+Surf over to the <a href="https://api.flaskdata.io/code/">Flask API Example code generator</a>
 
 The Code generator page is a React application that generates working NodeJS code; showing you the API call  with proper arguments.  You can copy and past the code and run it on the command line with nodejs.
 
