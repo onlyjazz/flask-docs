@@ -264,7 +264,7 @@ Your app then sends the data to the Flask API as key-value pairs. See below.
 #### Create an Event, CRF and insert data items
 
 You can save data to 1 or more CRFS in a single API call
- <a href="https://dev-api.flaskdata.io/code/#/event-crfs-data-creation">Create Event, CRF and insert data/a>
+ <a href="https://dev-api.flaskdata.io/code/#/event-crfs-data-creation">Create Event, CRF and insert data</a>
 
  /data/create/create-event-crf-and-insert-data creates a new event with CRFs and insert CRFs data for one subject
 
