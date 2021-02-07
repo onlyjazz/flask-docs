@@ -268,7 +268,8 @@ You can save data to 1 or more CRFS in a single API call
 
  /data/create/create-event-crf-and-insert-data creates a new event with CRFs and insert CRFs data for one subject
 
-Important:
+**Important:**
+
  If subject role token is used to call the APIs, then the request body doesn't need to include the subjectLabel or subjectId parameters.
 
  If CRC role token is used, then the request body must include subjectLabel or subjectId.
