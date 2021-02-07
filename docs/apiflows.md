@@ -8,11 +8,11 @@ The API has 2 parts of APIs - EDC and Flask.
 !!! note "Request header"
 
     * Authorization parameter in the header request should be the token you had get before from you [authorization request](./api_introduction.md#authorization)
-    
+
     * EDC parameter in the header request should be the [EDC DB name](./manage_studies.md#add-study).
-    
+
 In this document there are a few examples of FlaskData APIs - There are more APIs, their description exists in swagger.
-    
+
 For more details and questions contact us by sending email to <a href="mailto:support@clearclinica.com">support@clearclinica.com</a>.
 
 ## EDC
@@ -77,7 +77,7 @@ This API extracts data from flask tables and views for your customer.
 The table/ view should have customer_id column for this process.
 
 !!!example "Examples"
- 
+
     studies table, audit_user_login, billing_reports_customer etc.
 
 studyIds and filters are optional.
@@ -122,7 +122,7 @@ This is like SQL SELECT * FROM clinicalData;
 
 Now let's look at our options:
 
-#### Choose what columns you want to select 
+#### Choose what columns you want to select
 You can control the shape of the result object by using the **columns** field in your request body.
 This is like an SQL SELECT col1, col2, col3 FROM statement
 
@@ -138,7 +138,7 @@ This is like an SQL SELECT col1, col2, col3 FROM statement
     }
     ```
 
-Set the **_id** column to 0 (like in the above example). The API will selectively return the fields you 
+Set the **_id** column to 0 (like in the above example). The API will selectively return the fields you
 set in the request body when you set them to 1.
 
 To get all the fields, don't set fields or specify the entire list of fields.
@@ -171,7 +171,7 @@ This is like the SQL WHERE clause - WHERE crf='Demographics' and eventDate betwe
 This API creates a CRF in an existing event and inserts data into the CRF.
 
 !!!example ""
-    
+
     Creates a new AE (adverse event) CRF in existing event.
 
 ### /flask/crf/create-event-CRF-and-insert-data
@@ -185,12 +185,11 @@ This API returns subject's crf data Id (unique for each CRF) for specific crf na
 ### /flask/crf/update-CRF-data
 This API updates CRF data by crf data id.
 
-## Use Cases
 
+### Example of how to extract data using client-side JS code:
 !!! note
-    The following examples require jQuery later version
+    The following code example should use the latest version of jQuery
 
-### General example of extract data using JS:
 ```JavaScript
     var xhrcall = $.ajax({
         url: 'https://dev-api.flaskdata.io/flask/customer/extract-data-to-json',
@@ -216,9 +215,9 @@ This API updates CRF data by crf data id.
           });
 ```
 
-### Save data to the Flask data model -  code example
+### Save data to the Flask data model
 
-Use cases: 
+#### Use cases:
 
 1. You have a mobile app that collects data from a device or person,
 and you want to save the data to the Flask data model.
@@ -228,14 +227,13 @@ and you want to save some data to Flask.
 
 
 *Pre-requisites:*  
-In order to insert data you wil have already created the Study, Site, Event and Form (CRF) entities in the Flask data model:    
-
+In order to insert data you will have already created the Study, Site, Event and Form (CRF) entities in the Flask data model:    
 
 1. When you have ePRO (electronic patient reported outcomes), then the user credentials you pass to the API will be for the patient.
 When a site coordinator screens a patient, the Add Subject page automatically sends a Welcome email to the patient.
 The patient then clicks and sets a password. (Alternatively you can enable the patient to authenticate with their Google account)
 
-2. When you design a Form (CRF), the items in the Form map 1:1 to the data items that you want to save from your app. 
+2. When you design a Form (CRF), the items in the Form map 1:1 to the data items that you want to save from your app.
 
 *Application flow*  
 
@@ -249,7 +247,7 @@ of sleep you tracked and save it to Flask every day at 10:00.
 Your app then sends the data to the Flask API as key-value pairs. See below.
 
 !!! tip "TIPS"
-    
+
     * Flask Forms automatically names the item variables; you will probably want to reset
     variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
 
@@ -263,8 +261,50 @@ Your app then sends the data to the Flask API as key-value pairs. See below.
 
     * Dates have the usual timestamp format - pass it like: "DATE_OF_ADMISSION": "2020-12-21 10:10:00.000Z"
 
+#### Create an Event, CRF and insert data items
 
-#### Code generator - ePRO (Electronic patient reported outcomes)
+You can save data to 1 or more CRFS in a single API call
+ <a href="https://dev-api.flaskdata.io/code/#/event-crfs-data-creation">Create Event, CRF and insert data/a>
+
+ /data/create/create-event-crf-and-insert-data creates a new event with CRFs and insert CRFs data for one subject
+
+Important:
+ If subject role token is used to call the APIs, then the request body doesn't need to include the subjectLabel or subjectId parameters.
+
+ If CRC role token is used, then the request body must include subjectLabel or subjectId.
+
+ In the below example, the API sends values of selected checkbox/select box items in the CRF. For example: Outcome: 1: 'Ongoing'
+```json
+    {
+          "study_id": 6670398,
+          "eventName": "Common",
+          "CRFs": {
+            "Adverse Events":
+            {
+              "Description": "Patient developed a temperature",
+              "Anticipated": "0",
+              "Serious": "0",
+              "StartDate": "01-Mar-2021",
+              "StopDate": "03-Mar-2021",
+              "Outcome": "1",
+              "Severity": "1",
+              "RelatedTo": "3",
+              "ActionTaken": "1"
+            },
+            "ConMeds":
+              {
+                "GenericName": "Aspirin",
+                "Dose": "500",
+                "Units": "mg",
+                "Route": "1",
+                "RelatedToAE": "1"
+              }
+
+          }
+    }
+```    
+
+#### Under the hood - Code generator - ePRO (Electronic patient reported outcomes)
 
 All this probably seems a little abstract, so lets see some working code.    
 
