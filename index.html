@@ -415,13 +415,13 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     <label class="md-nav__link" for="nav-3">
-      Extras
+      Running your study
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Extras" data-md-level="1">
+    <nav class="md-nav" aria-label="Running your study" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         <span class="md-nav__icon md-icon"></span>
-        Extras
+        Running your study
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -444,8 +444,8 @@
 
 
   <li class="md-nav__item">
-    <a href="manage_alerts_definitions/" class="md-nav__link">
-      Alerts Definitions
+    <a href="metrics/" class="md-nav__link">
+      Metrics
     </a>
   </li>
 
@@ -481,7 +481,7 @@
 
   <li class="md-nav__item">
     <a href="manage_queries/" class="md-nav__link">
-      Manage Queries
+      Queries
     </a>
   </li>
 
@@ -505,7 +505,7 @@
 
   <li class="md-nav__item">
     <a href="flask_and_edc/" class="md-nav__link">
-      Flask and EDC
+      EDC integration
     </a>
   </li>
 
@@ -524,13 +524,13 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
-      FlaskData API
+      Flask API
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="FlaskData API" data-md-level="1">
+    <nav class="md-nav" aria-label="Flask API" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon"></span>
-        FlaskData API
+        Flask API
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -542,7 +542,7 @@
 
   <li class="md-nav__item">
     <a href="api_introduction/" class="md-nav__link">
-      API Introduction
+      Introduction
     </a>
   </li>
 
@@ -554,7 +554,7 @@
 
   <li class="md-nav__item">
     <a href="apiflows/" class="md-nav__link">
-      API Flows
+      Flows
     </a>
   </li>
 
@@ -777,13 +777,16 @@
                 <p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="img/flaskdata_logo.PNG" /></a></p>
 <h1 id="flaskdata">FlaskData</h1>
 <p><strong>Collect, Detect and Act</strong></p>
-<p>FlaskData is a cloud API platform to collect and monitor clinical data.</p>
-<p>FlaskData helps you achieve high levels of protocol compliance and save time and money by automating the manual work of compliance monitoring in clinical trials.  </p>
-<p>The FlaskData platform provides real-time data collection and automated detection and response. An open <a href="https://api.flaskdata.io/swagger">API</a>  architecture fits easily into any digital health, digital therapeutics or eClinical software.  Flask collects data from any combination of sources – investigators, patients, mobile, wearables, passive monitoring, connected medical devices and code.</p>
-<p>Collect provides you with desktop, mobile and RESTful Flask Data <a href="https://api.flaskdata.io/swagger/">API</a> services to collect data directly from patients, investigators and connected medical devices.</p>
-<p>Detect  provides you with the capability to automated deviation monitoring of all your clinical data continuously. This is based on techniques used widely in cyber security – read more here about
-<a href="https://www.flaskdata.io/an-attack-modeling-approach-for-remote-monitoring-of-clinical-trials/">An attack modeling approach for monitoring clinical data</a></p>
-<p>Act  provides you with the capability to automate response to patients and clinical operations teams with push notifications triggered by computed protocol compliance metrics over threshold.</p>
+<p>FlaskData is a cloud API platform to collect and monitor data in clinical trials.</p>
+<p>The FlaskData platform provides mobile, desktop and API services to collect clinical data.
+The Flask  <a href="https://api.flaskdata.io/swagger">API</a>  can be integrated into any code that can call a RESTful API.  </p>
+<p>There are 3 main sub-systems in Flask - Collect, Detect and Act.</p>
+<p>Collect provides desktop, mobile and RESTful Flask  <a href="https://api.flaskdata.io/swagger/">API</a> services to collect data directly from patients, investigators and connected medical devices.   Collect includes the visual Flask Forms designer
+to design eCRFs and publish as eSource and ePRO desktop and native Android mobile apps.</p>
+<p>Detect  provides a capability to automate monitoring of clinical data quality, efficacy and safety using rules
+and thresholds to detect protocol deviations and missing data on the patient journey.</p>
+<p>Act  provides the capability to automate delivery of alerts to patients and clinical operations teams when triggered
+by Detect metrics over/under threshold.</p>
 <p>Read more about the Flaskdata software architecture here:  <a href="https://www.flaskdata.io/flaskdata-software-architecture-white-paper/">Flaskdata software architecture white paper</a></p>
 <h2 id="introduction">Introduction</h2>
 <h3 id="learning-objectives">Learning objectives</h3>
@@ -797,7 +800,7 @@
 <li>Study – a clinical trial or research study.</li>
 <li>Site – hospital or clinic</li>
 <li>Study event – a visit of a study subject at a site during a study. A study event contains 1 or more eCRFs</li>
-<li>eCRF – electronic case report form. </li>
+<li>eCRF – electronic case report form.</li>
 <li>Item – a question on an eCRF</li>
 </ul>
 <h4 id="user-interface-ui">User interface (UI)</h4>
@@ -864,8 +867,8 @@
 </table>
 <h3 id="user-profile">User profile</h3>
 <ul>
-<li>Top line always shows User Name and Role </li>
-<li>Currently logged-in user and role </li>
+<li>Top line always shows User Name and Role</li>
+<li>Currently logged-in user and role</li>
 <li>Click on here at any time to access and change your User Profile – including changing your password.</li>
 </ul>
 <p><img alt="Screenshot" src="img/forms/hamburger.PNG" /></p>
@@ -886,7 +889,7 @@
 <li>This will leave open sessions on the server and potentially cause problems</li>
 </ul>
 <h3 id="languages">Languages</h3>
-<p>You can change your app language, by press on the languages' symbol. </p>
+<p>You can change your app language, by press on the languages' symbol.</p>
 <p><img alt="Screenshot" src="img/customer/flask_languages.PNG" /></p>
 <h3 id="flaskdata-logo">FlaskData Logo</h3>
 <p>Clicking on FlaskData logo opens <a href="study_dashboard/#study-dashboard">Study Dashboard</a> page.</p>
