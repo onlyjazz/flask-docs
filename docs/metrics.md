@@ -1,9 +1,9 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
 
 #Metrics Definitions
-Flask enables you to create metrics to measure study performance and progress.
+Flask enables you to create patient-level metrics to measure study performance and progress.
 
-Metrics can be computed using a pattern language using data variables in your study.
+Metrics can be computed using a pattern language referencing data variables in your study.
 
 ##The Metrics pattern language
 The pattern language was designed to enable you to create metrics of performance, exceptions, missing data, or critical values on the patient timeline.
