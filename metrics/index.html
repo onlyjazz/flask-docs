@@ -759,14 +759,14 @@ The logical operator !(NOT) can also be used.</p>
 <h3 id="functions">Functions</h3>
 <h4 id="counting-things">Counting things</h4>
 <p><strong>count(variable, period)</strong>- the count function counts a variable entered in a time period.</p>
-<p>The count function will return the number of records in the DB where the variable has any value.
+<p>The count function will return the number of records in the dataset where the variable has any value.
 If the count is 0 then the data is missing.</p>
 <p>The count function takes 2 arguments:</p>
 <ul>
 <li>variable - the unique variable name of the CRF item.</li>
-<li>period(not required) - the time period for examining if data was entered for/by a patient for this variable.</li>
+<li>period - an optional time period counting data for each patient.</li>
 </ul>
-<p>The period parameter is a time interval like <code>24 hours</code></p>
+<p>Period is a time interval like <code>24 hours</code></p>
 <p>!!info</p>
 <pre><code>You can use the following time units:
 
@@ -798,9 +798,9 @@ on the patient journey.</p>
 <p>Arguments:</p>
 <ul>
 <li>variable - the unique variable of the CRF item</li>
-<li>period(not required) - the time period for filtering patient data according to CRF create date.</li>
-<li>value(not required) - filter on a value using a string with a comparison operator like <code>&gt;2</code>, <code>yes</code>, <code>==5</code></li>
-<li>take(not required) -  take the first N records or last N records.</li>
+<li>period - an optional time period for filtering patient data according to CRF create date.</li>
+<li>value - an optional filter using a comparison operator like <code>&gt;2</code>, <code>yes</code>, <code>==5</code></li>
+<li>take -  an optional argument to take the first N records or last N records in the dataset for each patient.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
