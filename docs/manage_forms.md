@@ -4,7 +4,7 @@ In the left menu bar click on FORMS.
 
 ##What is Flask Forms?
 * Flask Forms is an online eSource app
-* Forms features unlimited subjects, forms and data. 
+* Forms features unlimited subjects, forms and data.
 * You can create the eCRFs yourself using a super friendly interface.  
 * Includes a library of ready-to-go eCRF templates.
 * Runs on desktops, notebooks, tablets and phones.
@@ -20,13 +20,13 @@ In order to create a new CRF click on **ADD CRF** green button
 ####CRF Properties
 In CRF card you need to define the CRF properties (You can also edit it after the saving).
 * Queries status - Turn on/off CRF queries option (See [manage queries](./manage_queries.md#manage-queries)).
-  
+
   When CRF queries is Turn on - each item in this CRF has queries dialog - add query by click on the question mark.
-  
+
   ![Screenshot](img/forms/forms_crf_query.PNG)
-  
+
 * Layout - Layout of CRF, There are several layouts:
-    - Default (question after question vertically) 
+    - Default (question after question vertically)
     - Grid
     - Cards on grid
 * Columns - If the layout is grid or Cards on grid choose the number of fields in each row.
@@ -54,7 +54,7 @@ Click **YES** to create this CRF
 ####CRF Sections
 In Section card define CRF's section, You can also edit it after the saving.
  (One CRF can include more than one section)
- 
+
 * Name
 * Description
 
@@ -68,7 +68,7 @@ You can add sections to CRF by click on **ADD SECTION** button
 You can define items in each CRF.
 By click on component the component is added to the CRF (in the end of the list)
 
-![Screenshot](img/forms/forms_add_crf_item.PNG) 
+![Screenshot](img/forms/forms_add_crf_item.PNG)
 
 After adding item you should define the new item properties by click on **EDIT** option
 
@@ -103,10 +103,10 @@ The fourth tab is the **Branching Logic**, In this tab you can write a simple lo
 !!!quote
 
     Branching logic expression for this item
-    To use the autocomplete service, 
-    type "$" and select the variable of interest for you. 
+    To use the autocomplete service,
+    type "$" and select the variable of interest for you.
     Use variables to make expression for hide current form control.
-    The terminal supports any JavaScript expressions for the value of the available form variables. 
+    The terminal supports any JavaScript expressions for the value of the available form variables.
     For example:
     $ITEM_IMPORTANT_VAR == 'string_var_value'
 
@@ -119,9 +119,9 @@ A radio button item has 2 options - Man or Female (required question)
 If user check female -> Another item 'Number of children' is opened.
 
 For do it - you need to create the basic item (man/female) first,
- 
+
 Then save it by click on **SAVE** button in the top of the page.
- 
+
 ![Screenshot](img/forms/forms_crf_item_save.PNG)
 
 By save option the system generates variables to the CRF items, and you can use them for the branching logic.
@@ -137,7 +137,7 @@ Go to Hide/Show item branching logic and write your logic.
 !!!note
     In branching logic that related to checkbox item, the branching logic should be like
     `$CHECKBOX_ITEM_NAME == true`
-    
+
 
 ####CRF Actions
 There are a few available actions for each CRF.
@@ -180,7 +180,7 @@ There are a few properties of event:
 * Attached Rules list, You can create rules and add them to this event.
   Event rule generates an error when CRC save the event with error.
   * When user try to save the last CRF inside the event this rule will be checked and user will get an error if this expression returns false.
-  
+
 
 Click **SAVE** blue button to save your changes OR **BACK TO LIST**/**CLEAR CHANGES** to unsave your changes.
 
@@ -212,18 +212,18 @@ There are a few definitions of study schedule:
          Click on Event Definitions, Event Definitions list will be opened, choose one event.
          ![Screenshot](img/forms/forms_period_events.PNG)
          Click on **ADD EVENT DEFINITIONS** green button (You can add a few events).
-         
+
          The selected event will be added to the list with Scheduled time and Scheduled days.
-         
+
          * **Scheduled time** You can choose the time of available this event to PRO of subject
          * **Scheduled days** You can choose the days of this PRO event.
-         
+
          By default, Scheduled time is 10:00 and Scheduled days are all the days of week.
-         
+
 Save you Study Schedule by click on **SAVE** button
-    
-###Alert Definitions
-See [Alert Definitions](manage_alerts_definitions.md#alert-definitions)
+
+###Metrics Definitions
+See [Metrics Definitions](metrics.md#alert-definitions)
 
 ###Languages
 You can switch between languages by click on Languages tab and select the desired language.
@@ -240,29 +240,28 @@ By standing with the mouse on the hamburger a list of options opens.
 ![Screenshot](img/forms/forms_hamburger.PNG)
 
 * **Signed in as** - The login user (It's you :smile: )
-* **Study Alerts** - Open [study alerts list](manage_alerts_definitions.md#study-alerts)
 * **Database Audit Log** - Open the data audit log (create/update/delete CRF/Events/Data etc.)
 
     ![Screenshot](img/forms/forms_database_audit_log.PNG)
 
 * **Restore Study CRFs** - Put backup of study CRFs and restore it here (in the current study)
     ![Screenshot](img/forms/forms_restore_crf.PNG)
-    
-    !!! note "" 
-        
+
+    !!! note ""
+
         Restore study CRFs restores json file.
-    
+
 * **Create a dump of study CRFs** Create a backup of this study's CRFs.
     ![Screenshot](img/forms/forms_dump_crfs.PNG)
-    
+
     **NOTE** - You can create a dump includes/excludes events definitions, You can dump a few CRFs you choose.
-    
+
     This option downloads CRFsDump.zip folder includes json file. Extract the file to restore it.
-    
+
 * **Logout** - Logout from FlaskData
 
-!!! note "Return to FlaskData App" 
- 
+!!! note "Return to FlaskData App"
+
     to return to flask application click on FlaskData logo
 
     ![Screenshot](img/forms/forms_flaskdata_logo.PNG)
