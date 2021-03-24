@@ -10,17 +10,17 @@ nav:
     - Manage Forms: manage_forms.md
     - Manage Subjects: manage_subjects.md
     - Manage Data: manage_data.md
-  - Extras:
+  - Running your study:
     - Study Dashboard: study_dashboard.md
-    - Alerts Definitions: manage_alerts_definitions.md
+    - Metrics: metrics.md
     - Tools: tools.md
     - Features: manage_features.md
-    - Manage Queries: manage_queries.md
+    - Queries: manage_queries.md
     - EDC: edc.md
-    - Flask and EDC: flask_and_edc.md
-  - FlaskData API:
-    - API Introduction: api_introduction.md
-    - API Flows: apiflows.md
+    - EDC integration: flask_and_edc.md
+  - Flask API:
+    - Introduction: api_introduction.md
+    - Flows: apiflows.md
   - ePRO :
       - Flask ePRO: epro.md
       - ePRO Mobile: epro_mobile.md
