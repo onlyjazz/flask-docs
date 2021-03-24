@@ -31,15 +31,15 @@ The logical operator !(NOT) can also be used.
 ####Counting things
 **count(variable, period)**- the count function counts a variable entered in a time period.
 
-The count function will return the number of records in the DB where the variable has any value.
+The count function will return the number of records in the dataset where the variable has any value.
 If the count is 0 then the data is missing.
 
 The count function takes 2 arguments:
 
 * variable - the unique variable name of the CRF item.
-* period(not required) - the time period for examining if data was entered for/by a patient for this variable.
+* period - an optional time period counting data for each patient.
 
-The period parameter is a time interval like `24 hours`
+Period is a time interval like `24 hours`
 
 !!info
 
@@ -76,9 +76,9 @@ Like count, filter returns the number of records entered into the database for t
 Arguments:
 
 * variable - the unique variable of the CRF item
-* period(not required) - the time period for filtering patient data according to CRF create date.
-* value(not required) - filter on a value using a string with a comparison operator like `>2`, `yes`, `==5`
-* take(not required) -  take the first N records or last N records.
+* period - an optional time period for filtering patient data according to CRF create date.
+* value - an optional filter using a comparison operator like `>2`, `yes`, `==5`
+* take -  an optional argument to take the first N records or last N records in the dataset for each patient.
 
 !!!info
     You can use the following operators:
