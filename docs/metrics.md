@@ -6,16 +6,15 @@ Flask enables you to create metrics to measure study performance and progress.
 Metrics can be computed using a pattern language using data variables in your study.
 
 ##The Metrics pattern language
-The pattern language was designed to enable you to create rules to find exceptions, missing data, or critical values in the subject's data.
+The pattern language was designed to enable you to create metrics of performance, exceptions, missing data, or critical values on the patient timeline.
 
-This language is based on the CRF items variables.
-When the CRF was created each item of this CRF gets a unique variable that looks like "ITEM_AT_NAME_2WOMR".
+The language uses item variable names - like $CHANGE_IN_SEVERITY.
 
 ### Simple single variable expressions
-You can use a simple expressions like `$SOME_VARIABLE == '0'`,
+You can use a simple expressions like `$CHANGE_IN_SEVERITY  == '0'`,
 
 ### Count things
-You can count things using COUNT and FILTER `count($SOME_VARIABLE) == '0'` or `filter($SOME_VARIABLE) == '0'`.
+You can count things using COUNT and FILTER `count($CHANGE_IN_SEVERITY ) == '0'` or `filter($PATIENT_REPORTED_RESTLESSNESS) == '0'`.
 
 ### Compound expressions
 You can combine  expressions using logical operators like `&&`(AND) or `||`(OR).
