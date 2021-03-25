@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/metrics.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/api_introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/api_introduction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/apiflows.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/apiflows.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/epro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/epro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/flask_and_edc.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/flask_and_edc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_alerts_definitions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_forms.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_forms.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manage_metrics.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_metrics.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +82,7 @@
       <workItem from="1614673775563" duration="3725000" />
       <workItem from="1615455165296" duration="598000" />
       <workItem from="1616310426329" duration="1183000" />
-      <workItem from="1616581653725" duration="3263000" />
+      <workItem from="1616581653725" duration="3674000" />
     </task>
     <servers />
   </component>

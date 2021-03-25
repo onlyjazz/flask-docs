@@ -63,9 +63,9 @@ In order to use the FlaskData APIs you need to first get aa JWT token with the  
 !!!example
 
     in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a>
-    
+
     In the body request (JSON) you need to set your API User's email and password, like:
-    
+
     ```json
     {
       "email": "xxx@gmail.com",
@@ -74,7 +74,7 @@ In order to use the FlaskData APIs you need to first get aa JWT token with the  
     ```
 
     In the response body you get an access token, like:
-    
+
     ```json
     {
       "token": "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k",
@@ -98,10 +98,3 @@ By Data server APIs you can get [Forms](./manage_forms.md) data in csv/json form
 By Features APIs you can process a few additional flaskdata features, like create subject etc.
 
 <a href="https://api.flaskdata.io/features/swagger/">api.flaskdata.io/features</a>
-
-### Alerts Server
-By Alerts Server APIs you enable to run functions related to [alerts definitions](./manage_alerts_definitions.md)
-
-<a href="https://api.flaskdata.io/alerts-server/swagger/">api.flaskdata.io/alerts-server</a>
-
-

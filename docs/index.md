@@ -2,18 +2,21 @@
 #FlaskData
 **Collect, Detect and Act**
 
-FlaskData is a cloud API platform to collect and monitor clinical data.
+FlaskData is a cloud API platform to collect and monitor data in clinical trials.
 
-FlaskData helps you achieve high levels of protocol compliance and save time and money by automating the manual work of compliance monitoring in clinical trials.  
+The FlaskData platform provides mobile, desktop and API services to collect clinical data.
+The Flask  [API](https://api.flaskdata.io/swagger)  can be integrated into any code that can call a RESTful API.  
 
-The FlaskData platform provides real-time data collection and automated detection and response. An open [API](https://api.flaskdata.io/swagger)  architecture fits easily into any digital health, digital therapeutics or eClinical software.  Flask collects data from any combination of sources – investigators, patients, mobile, wearables, passive monitoring, connected medical devices and code.
+There are 3 main sub-systems in Flask - Collect, Detect and Act.
 
-Collect provides you with desktop, mobile and RESTful Flask Data [API](https://api.flaskdata.io/swagger/) services to collect data directly from patients, investigators and connected medical devices.
+Collect provides desktop, mobile and RESTful Flask  [API](https://api.flaskdata.io/swagger/) services to collect data directly from patients, investigators and connected medical devices.   Collect includes the visual Flask Forms designer
+to design eCRFs and publish as eSource and ePRO desktop and native Android mobile apps.
 
-Detect  provides you with the capability to automated deviation monitoring of all your clinical data continuously. This is based on techniques used widely in cyber security – read more here about
-[An attack modeling approach for monitoring clinical data](https://www.flaskdata.io/an-attack-modeling-approach-for-remote-monitoring-of-clinical-trials/)
+Detect  provides a capability to automate monitoring of clinical data quality, efficacy and safety using rules
+and thresholds to detect protocol deviations and missing data on the patient journey.
 
-Act  provides you with the capability to automate response to patients and clinical operations teams with push notifications triggered by computed protocol compliance metrics over threshold.
+Act  provides the capability to automate delivery of alerts to patients and clinical operations teams when triggered
+by Detect metrics over/under threshold.
 
 Read more about the Flaskdata software architecture here:  [Flaskdata software architecture white paper](https://www.flaskdata.io/flaskdata-software-architecture-white-paper/)
 
@@ -29,7 +32,7 @@ Read more about the Flaskdata software architecture here:  [Flaskdata software a
 * Study – a clinical trial or research study.
 * Site – hospital or clinic
 * Study event – a visit of a study subject at a site during a study. A study event contains 1 or more eCRFs
-* eCRF – electronic case report form. 
+* eCRF – electronic case report form.
 * Item – a question on an eCRF
 
 ####User interface (UI)
@@ -55,12 +58,12 @@ Read more about the Flaskdata software architecture here:  [Flaskdata software a
 | `Forms data entry` | :material-close:     | :material-check:|:material-check:|
 
 ###User profile
-* Top line always shows User Name and Role 
-  - Currently logged-in user and role 
+* Top line always shows User Name and Role
+  - Currently logged-in user and role
   - Click on here at any time to access and change your User Profile – including changing your password.
-  
+
 ![Screenshot](img/forms/hamburger.PNG)
-  
+
 ###Change password
 Change password allows you to change your password when you want,
 
@@ -78,14 +81,14 @@ Write your request, you can upload file.
 ![Screenshot](img/customer/request_support.PNG)
 
 **Every effort will be made to get back to you soon.**
-  
+
 ###Logout
 * Logout – use the logout button
 * Don’t just close the browser
   - This will leave open sessions on the server and potentially cause problems
-  
+
 ###Languages
-You can change your app language, by press on the languages' symbol. 
+You can change your app language, by press on the languages' symbol.
 
 ![Screenshot](img/customer/flask_languages.PNG)
 

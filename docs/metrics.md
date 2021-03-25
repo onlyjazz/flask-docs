@@ -81,7 +81,7 @@ Arguments:
 * take -  an optional argument to take the first N records or last N records in the dataset for each patient.
 
 !!!info
-You can use the following operators:
+    You can use the following operators:
 
     * `==`
     * `!=`
@@ -112,7 +112,7 @@ The **take parameter** enables you to take events from the beginning or end of t
     * `'-4'` - The last 4 events
 
 !!! note ""
-the records returned from the database are ordered by date created.
+    the records returned from the database are ordered by date created.
 
 Filter arguments are evaluated in this order:
 
@@ -123,7 +123,7 @@ Filter arguments are evaluated in this order:
 
 
 !!! note ""
-if you don't need to use some parameter you can set null instead.
+    if you don't need to use some parameter you can set null instead.
 
 !!!example "Usage examples"
 
@@ -157,43 +157,3 @@ In this case this expression will be replaced to `filter($AGE, null, '== 77') !=
     | `$SOME_VARIABLE == '0'`         | `filter($SOME_VARIABLE, null, '== 0') != 0` |
     | `$SOME_VARIABLE`                | `filter($SOME_VARIABLE, null, null) != 0`|
     | `$SOME_VARIABLE == '3'&& $ELSE_ONE_VARIABLE > '2'` |  `filter($SOME_VARIABLE, null, '== 3') != 0 && filter($ELSE_ONE_VARIABLE, null, '>2') != 0`  |
-
-
-##Add Metric
-In order to add a metric click on **ADD METRIC** green button.
-
-![Screenshot](img/metrics/metrics_add_metric.PNG)
-
-There are few properties of metric:
-
-* **Name** - the name of the new metric.
-* **Trigger time** - optional field, time of metric values generation. If this field is empty - metric values will generate in real time.
-* **Expression** - see [Expression](manage_metrics.md#the-metrics-pattern-language)
-
-##RUN
-
-In the **RUN** option you can run your study metrics.
-
-Click **RUN** green button to run your study metrics.
-
-A success/error message will appear.
-
-![Screenshot](img/metrics/metrics_run.PNG)
-
-For view the result click on **VIEW METRICS VALUE** blue button.
-
-##Study Metric Values
-
-In the **VIEW METRICS VALUE** option you can view your study metric values.
-
-!!!tip
-
-    You can filter the metric values table by any string, ordering by each column and export the table to COPY/CSV/PDF/PRINT/EXCEL.
-
-![Screenshot](img/metrics/metrics_metric_values.PNG)
-
-
-
-
-
-
