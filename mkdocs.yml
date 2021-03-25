@@ -12,7 +12,7 @@ nav:
     - Manage Data: manage_data.md
   - Extras:
     - Study Dashboard: study_dashboard.md
-    - Alerts Definitions: manage_alerts_definitions.md
+    - Metrics: manage_metrics.md
     - Tools: tools.md
     - Features: manage_features.md
     - Manage Queries: manage_queries.md
@@ -26,7 +26,6 @@ nav:
       - ePRO Mobile: epro_mobile.md
       - ePRO Desktop: epro_desktop.md
       - Instructions for patient diary: epro_patient_instructions.md
-  - RiskGraph: riskgraph_api.md
 theme:
   name: 'material'
   logo: 'img/logo.PNG'
