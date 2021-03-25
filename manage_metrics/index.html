@@ -433,8 +433,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    RUN
+  <a href="#run-the-study-metrics" class="md-nav__link">
+    Run the study metrics
   </a>
   
 </li>
@@ -741,8 +741,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    RUN
+  <a href="#run-the-study-metrics" class="md-nav__link">
+    Run the study metrics
   </a>
   
 </li>
@@ -800,18 +800,20 @@ If the count is 0 then the data is missing.</p>
 <li>period - an optional time period counting data for each patient.</li>
 </ul>
 <p>Period is a time interval like <code>24 hours</code></p>
-<p>!!info</p>
-<pre><code>You can use the following time units:
-
-* milliseconds
-* seconds
-* minutes
-* hours
-* days
-* weeks
-* months
-* years
-</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can use the following time units:</p>
+<ul>
+<li>milliseconds</li>
+<li>seconds</li>
+<li>minutes</li>
+<li>hours</li>
+<li>days</li>
+<li>weeks</li>
+<li>months</li>
+<li>years</li>
+</ul>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Usage examples:</p>
 <ul>
@@ -837,7 +839,6 @@ on the patient journey.</p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-</div>
 <p>You can use the following operators:</p>
 <pre><code>* `==`
 * `!=`
@@ -846,6 +847,7 @@ on the patient journey.</p>
 * `&gt;`
 * `&lt;`
 </code></pre>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <ul>
@@ -932,7 +934,7 @@ on the patient journey.</p>
 <li><strong>Trigger time</strong> - optional field, time of metric values generation. If this field is empty - metric values will generate in real time.</li>
 <li><strong>Expression</strong> - see <a href="./#the-metrics-pattern-language">Expression</a></li>
 </ul>
-<h2 id="run">RUN</h2>
+<h2 id="run-the-study-metrics">Run the study metrics</h2>
 <p>In the <strong>RUN</strong> option you can run your study metrics.</p>
 <p>Click <strong>RUN</strong> green button to run your study metrics.</p>
 <p>A success/error message will appear.</p>
