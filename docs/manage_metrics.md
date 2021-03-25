@@ -41,7 +41,7 @@ The count function takes 2 arguments:
 
 Period is a time interval like `24 hours`
 
-!!info
+!!!info
 
     You can use the following time units:
 
@@ -81,14 +81,15 @@ Arguments:
 * take -  an optional argument to take the first N records or last N records in the dataset for each patient.
 
 !!!info
-You can use the following operators:
 
-    * `==`
-    * `!=`
-    * `>=`
-    * `<=`
-    * `>`
-    * `<`
+    You can use the following operators:
+    
+        * `==`
+        * `!=`
+        * `>=`
+        * `<=`
+        * `>`
+        * `<`
 
 !!!example
 
@@ -170,7 +171,7 @@ There are few properties of metric:
 * **Trigger time** - optional field, time of metric values generation. If this field is empty - metric values will generate in real time.
 * **Expression** - see [Expression](manage_metrics.md#the-metrics-pattern-language)
 
-##RUN
+##Run the study metrics
 
 In the **RUN** option you can run your study metrics.
 
