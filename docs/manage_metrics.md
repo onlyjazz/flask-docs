@@ -158,28 +158,28 @@ In this case this expression will be replaced to `filter($AGE, null, '== 77') !=
     | `$SOME_VARIABLE`                | `filter($SOME_VARIABLE, null, null) != 0`|
     | `$SOME_VARIABLE == '3'&& $ELSE_ONE_VARIABLE > '2'` |  `filter($SOME_VARIABLE, null, '== 3') != 0 && filter($ELSE_ONE_VARIABLE, null, '>2') != 0`  |
 
-### Examples of the various components
+### Examples of expression to the various components
 
-    | component      |  Expression                              |
-    | ---------------| -----------------------------------------|
-    | INPUT        | $ITEM_AT2_COMPONENT_INPUT == 'test' |
-    | NUMBER       | $ITEM_AT2_COMPONENT_NUMBER == '5'|
-    | BIPOLAR NUMBER |  $ITEM_AT2_COMPONENT_BIPOLAR_NUMBER['0'] == '3'  |
-    | TEXTAREA |  $ITEM_AT2_COMPONENT_TEXTAREA == 'test'  |
-    | CHECKBOX |  $ITEM_AT2_COMPONENT_CHECKBOX == 'true'  |
-    | RADIO |  $ITEM_AT2_COMPONENT_RADIO == '0'  |
-    | BIPOLAR RADIO |  $ITEM_AT2_COMPONENT_RADIO == '0'  |
-    | MULTIPLE SELECT |  $ITEM_AT2_COMPONENT_MULTIPLE_SELECT == '0'  |
-    | SINGLE SELECT |  $ITEM_AT2_COMPONENT_SINGLE_SELECT == '1'  |
-    | PASSWORD |  $ITEM_AT2_COMPONENT_PASSWORD == '12345678'  |
-    | CHECKBO GROUP |  $ITEM_AT2_COMPONENT_CHECKBOX_GROUP['0'] == 'true'  |
-    | EMAIL |  $ITEM_AT2_COMPONENT_EMAIL == 'some.mail@gmail.com'  |
-    | PHONE NUMBER |  $ITEM_AT2_COMPONENT_PHONE_NUMBER == '380973768485'  |
-    | DATE |  $ITEM_AT2_COMPONENT_DATE == '2021-03-19T00:00:00.000Z'  |
-    | DATE TIME |  $ITEM_AT2_COMPONENT_DATE_TIME == '2021-03-19T13:15:00.000Z'  |
-    | BIPOLAR DATE |  $ITEM_AT2_COMPONENT_BIPOLAR_DATE['0'] == '2021-03-19T00:00:00.000Z'  |
-    | TIME |  $ITEM_AT2_COMPONENT_TIME =='2021-03-19T22:00:02.882Z'  |
-    | FILE |  $ITEM_AT2_COMPONENT_FILE == '1617024475170_rr.jpg'  |
+| Component      |  Expression                              |
+| ---------------| -----------------------------------------|
+| INPUT          | $ITEM_AT2_COMPONENT_INPUT == 'test' |
+| NUMBER         | $ITEM_AT2_COMPONENT_NUMBER == '5'|
+| BIPOLAR NUMBER |  $ITEM_AT2_COMPONENT_BIPOLAR_NUMBER['0'] == '3'  |
+| TEXTAREA |  $ITEM_AT2_COMPONENT_TEXTAREA == 'test'  |
+| CHECKBOX |  $ITEM_AT2_COMPONENT_CHECKBOX == 'true'  |
+| RADIO |  $ITEM_AT2_COMPONENT_RADIO == '0'  |
+| BIPOLAR RADIO |  $ITEM_AT2_COMPONENT_RADIO == '0'  |
+| MULTIPLE SELECT |  $ITEM_AT2_COMPONENT_MULTIPLE_SELECT == '0'  |
+| SINGLE SELECT |  $ITEM_AT2_COMPONENT_SINGLE_SELECT == '1'  |
+| PASSWORD |  $ITEM_AT2_COMPONENT_PASSWORD == '12345678'  |
+| CHECKBO GROUP |  $ITEM_AT2_COMPONENT_CHECKBOX_GROUP['0'] == 'true'  |
+| EMAIL |  $ITEM_AT2_COMPONENT_EMAIL == 'some.mail@gmail.com'  |
+| PHONE NUMBER |  $ITEM_AT2_COMPONENT_PHONE_NUMBER == '380973768485'  |
+| DATE |  $ITEM_AT2_COMPONENT_DATE == '2021-03-19T00:00:00.000Z'  |
+| DATE TIME |  $ITEM_AT2_COMPONENT_DATE_TIME == '2021-03-19T13:15:00.000Z'  |
+| BIPOLAR DATE |  $ITEM_AT2_COMPONENT_BIPOLAR_DATE['0'] == '2021-03-19T00:00:00.000Z'  |
+| TIME |  $ITEM_AT2_COMPONENT_TIME =='2021-03-19T22:00:02.882Z'  |
+| FILE |  $ITEM_AT2_COMPONENT_FILE == '1617024475170_rr.jpg'  |
 
 ##Add Metric
 In order to add a metric click on **ADD METRIC** green button.
