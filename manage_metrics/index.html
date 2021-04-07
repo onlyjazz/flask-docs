@@ -420,6 +420,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#examples-of-the-various-components" class="md-nav__link">
+    Examples of the various components
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -728,6 +735,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#examples-of-the-various-components" class="md-nav__link">
+    Examples of the various components
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -779,8 +793,7 @@
 <h3 id="count-things">Count things</h3>
 <p>You can count things using COUNT and FILTER <code>count($CHANGE_IN_SEVERITY ) == '0'</code> or <code>filter($PATIENT_REPORTED_RESTLESSNESS) == '0'</code>.</p>
 <h3 id="compound-expressions">Compound expressions</h3>
-<p>You can combine  expressions using logical operators like <code>&amp;&amp;</code>(AND) or <code>||</code>(OR).
-The logical operator !(NOT) can also be used.</p>
+<p>You can combine  expressions using logical operators like <code>&amp;&amp;</code>(AND) or <code>||</code>(OR).</p>
 <div class="admonition example">
 <p class="admonition-title">Examples</p>
 <ul>
@@ -925,6 +938,28 @@ on the patient journey.</p>
 </tbody>
 </table>
 </div>
+<h3 id="examples-of-the-various-components">Examples of the various components</h3>
+<pre><code>| component      |  Expression                              |
+| ---------------| -----------------------------------------|
+| INPUT        | $ITEM_AT2_COMPONENT_INPUT == 'test' |
+| NUMBER       | $ITEM_AT2_COMPONENT_NUMBER == '5'|
+| BIPOLAR NUMBER |  $ITEM_AT2_COMPONENT_BIPOLAR_NUMBER['0'] == '3'  |
+| TEXTAREA |  $ITEM_AT2_COMPONENT_TEXTAREA == 'test'  |
+| CHECKBOX |  $ITEM_AT2_COMPONENT_CHECKBOX == 'true'  |
+| RADIO |  $ITEM_AT2_COMPONENT_RADIO == '0'  |
+| BIPOLAR RADIO |  $ITEM_AT2_COMPONENT_RADIO == '0'  |
+| MULTIPLE SELECT |  $ITEM_AT2_COMPONENT_MULTIPLE_SELECT == '0'  |
+| SINGLE SELECT |  $ITEM_AT2_COMPONENT_SINGLE_SELECT == '1'  |
+| PASSWORD |  $ITEM_AT2_COMPONENT_PASSWORD == '12345678'  |
+| CHECKBO GROUP |  $ITEM_AT2_COMPONENT_CHECKBOX_GROUP['0'] == 'true'  |
+| EMAIL |  $ITEM_AT2_COMPONENT_EMAIL == 'some.mail@gmail.com'  |
+| PHONE NUMBER |  $ITEM_AT2_COMPONENT_PHONE_NUMBER == '380973768485'  |
+| DATE |  $ITEM_AT2_COMPONENT_DATE == '2021-03-19T00:00:00.000Z'  |
+| DATE TIME |  $ITEM_AT2_COMPONENT_DATE_TIME == '2021-03-19T13:15:00.000Z'  |
+| BIPOLAR DATE |  $ITEM_AT2_COMPONENT_BIPOLAR_DATE['0'] == '2021-03-19T00:00:00.000Z'  |
+| TIME |  $ITEM_AT2_COMPONENT_TIME =='2021-03-19T22:00:02.882Z'  |
+| FILE |  $ITEM_AT2_COMPONENT_FILE == '1617024475170_rr.jpg'  |
+</code></pre>
 <h2 id="add-metric">Add Metric</h2>
 <p>In order to add a metric click on <strong>ADD METRIC</strong> green button.</p>
 <p><img alt="Screenshot" src="../img/metrics/metrics_add_metric.PNG" /></p>
