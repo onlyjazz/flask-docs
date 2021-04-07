@@ -18,7 +18,6 @@ You can count things using COUNT and FILTER `count($CHANGE_IN_SEVERITY ) == '0'`
 
 ### Compound expressions
 You can combine  expressions using logical operators like `&&`(AND) or `||`(OR).
-The logical operator !(NOT) can also be used.
 
 !!!example "Examples"
 
