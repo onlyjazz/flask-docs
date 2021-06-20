@@ -77,11 +77,11 @@ By click on **EDIT** button of item an Edit card is opened.
 
 ######Labels
 In the first tab **LABELS** you should define item's name, description etc.
-![Screenshot](img/newForms/visitLabel.png)
+![Screenshot](img/newForm/visitLabel.png)
 
 ######Value
 The second tab is **VALUE** you can set a default value to this item
-![Screenshot](img/newForms/visitsValue.png)
+![Screenshot](img/newForm/visitsValue.png)
 
 ######Variable Assignment
 The third tab **VARIABLE ASSIGNMENT**, is used to place data in an item. 
@@ -90,8 +90,7 @@ To extract data from an external API, use the get() function.
 
 The Key entry functions as a data source configuration key to an external API, allowing secured access to certain data. 
 
-The customer can define a default external API in customer metadata
-[Expression](index.md), allowing the user to write get() without specifying a URL.
+The customer can define a default external API in [Customer Metadata](index.md), allowing the user to write get() without specifying a URL.
 To select specific data field, use commands similar to 'get()[rates]'. 
 
 
@@ -114,7 +113,7 @@ The fourth tab is **Validation**, each component has another validation options.
 
 For example - number component has the following validation tab:
 
-![Screenshot](img/newForms/visitValidation.png)
+![Screenshot](img/newForm/visitValidation.png)
 
 Required, Disabled and Confirm parameters exist in each component.
 
@@ -125,7 +124,7 @@ Required, Disabled and Confirm parameters exist in each component.
 ######Branching Logic
 The fifth tab is the **Branching Logic**, In this tab you can write a simple logic for this item.
 
-![Screenshot](img/newForms/childBranchingLogic.png)
+![Screenshot](img/newForm/childBranchingLogic.png)
 !!!quote
 
     Branching logic expression for this item
@@ -141,23 +140,23 @@ For example - Show/Hide method.
 Item that depends on another item.
 
 A radio button item has 2 options - Man or Female (required question)
-![Screenshot](img/newForms/mfValue.png)
+![Screenshot](img/newForm/mfValue.png)
 If user check female -> Another item 'Number of children' is opened.
 
 For do it - you need to create the basic item (man/female) first,
 
 Then save it by click on **SAVE** button in the top of the page.
-![Screenshot](img/newForms/crfItemsSave.png)
+![Screenshot](img/newForm/crfItemsSave.png)
 
 By save option the system generates variables to the CRF items, and you can use them for the branching logic.
 
-![Screenshot](img/newForms/mfLabel.png)
+![Screenshot](img/newForm/mfLabel.png)
 
 After you saved items CRF you can add branching logic to 'Number of children' item,
 
 Go to Hide/Show item branching logic and write your logic.
 
-![Screenshot](img/newForms/childBranchingLogic.png)
+![Screenshot](img/newForm/childBranchingLogic.png)
 
 !!!note
     In branching logic that related to checkbox item, the branching logic should be like
