@@ -1067,17 +1067,16 @@ By click on component the component is added to the CRF (in the end of the list)
 <p>By click on <strong>EDIT</strong> button of item an Edit card is opened.</p>
 <h6 id="labels">Labels</h6>
 <p>In the first tab <strong>LABELS</strong> you should define item's name, description etc.
-<img alt="Screenshot" src="img/newForms/visitLabel.png" /></p>
+<img alt="Screenshot" src="img/newForm/visitLabel.png" /></p>
 <h6 id="value">Value</h6>
 <p>The second tab is <strong>VALUE</strong> you can set a default value to this item
-<img alt="Screenshot" src="img/newForms/visitsValue.png" /></p>
+<img alt="Screenshot" src="img/newForm/visitsValue.png" /></p>
 <h6 id="variable-assignment">Variable Assignment</h6>
 <p>The third tab <strong>VARIABLE ASSIGNMENT</strong>, is used to place data in an item. 
 The data source can be another item in the CRF or from an external API.
 To extract data from an external API, use the get() function. </p>
 <p>The Key entry functions as a data source configuration key to an external API, allowing secured access to certain data. </p>
-<p>The customer can define a default external API in customer metadata
-<a href="index.html">Expression</a>, allowing the user to write get() without specifying a URL.
+<p>The customer can define a default external API in <a href="index.html">Customer Metadata</a>, allowing the user to write get() without specifying a URL.
 To select specific data field, use commands similar to 'get()[rates]'. </p>
 <p>For input values, the data type should be a single value.
 For get() the data type should be be a JSON object.
@@ -1093,7 +1092,7 @@ Example of get - 'get(/auth/self)[first_name] + ' ' + $ITEM_AT_EMAIL_MHGHT'
 <h6 id="validations">Validations</h6>
 <p>The fourth tab is <strong>Validation</strong>, each component has another validation options.</p>
 <p>For example - number component has the following validation tab:</p>
-<p><img alt="Screenshot" src="img/newForms/visitValidation.png" /></p>
+<p><img alt="Screenshot" src="img/newForm/visitValidation.png" /></p>
 <p>Required, Disabled and Confirm parameters exist in each component.</p>
 <ul>
 <li>Required - Check it if this item is a mandatory.</li>
@@ -1102,7 +1101,7 @@ Example of get - 'get(/auth/self)[first_name] + ' ' + $ITEM_AT_EMAIL_MHGHT'
 </ul>
 <h6 id="branching-logic">Branching Logic</h6>
 <p>The fifth tab is the <strong>Branching Logic</strong>, In this tab you can write a simple logic for this item.</p>
-<p><img alt="Screenshot" src="img/newForms/childBranchingLogic.png" /></p>
+<p><img alt="Screenshot" src="img/newForm/childBranchingLogic.png" /></p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>Branching logic expression for this item
@@ -1116,16 +1115,16 @@ $ITEM_IMPORTANT_VAR == 'string_var_value'</p>
 <p>For example - Show/Hide method.
 Item that depends on another item.</p>
 <p>A radio button item has 2 options - Man or Female (required question)
-<img alt="Screenshot" src="img/newForms/mfValue.png" />
+<img alt="Screenshot" src="img/newForm/mfValue.png" />
 If user check female -&gt; Another item 'Number of children' is opened.</p>
 <p>For do it - you need to create the basic item (man/female) first,</p>
 <p>Then save it by click on <strong>SAVE</strong> button in the top of the page.
-<img alt="Screenshot" src="img/newForms/crfItemsSave.png" /></p>
+<img alt="Screenshot" src="img/newForm/crfItemsSave.png" /></p>
 <p>By save option the system generates variables to the CRF items, and you can use them for the branching logic.</p>
-<p><img alt="Screenshot" src="img/newForms/mfLabel.png" /></p>
+<p><img alt="Screenshot" src="img/newForm/mfLabel.png" /></p>
 <p>After you saved items CRF you can add branching logic to 'Number of children' item,</p>
 <p>Go to Hide/Show item branching logic and write your logic.</p>
-<p><img alt="Screenshot" src="img/newForms/childBranchingLogic.png" /></p>
+<p><img alt="Screenshot" src="img/newForm/childBranchingLogic.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In branching logic that related to checkbox item, the branching logic should be like
