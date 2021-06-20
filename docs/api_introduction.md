@@ -18,7 +18,7 @@ There are 3 FlaskData API environments:
 
 Each API environments has its own swagger UI - like https://api.flaskdata.io/swagger/
 
-There are a few specs, Select the relevant spec for API using.
+There are a few specs, select the relevant spec for API using.
 
 For using FlaskData API by swagger you need to click on "Try it out" of the relevant API.
 
@@ -30,22 +30,21 @@ Config/ change header and body request as needed and click on "Execute" button.
 
 ### EDC
 ClinCapture EDC is a 21 CFR Part 11 compliant EDC system that is integrated into Flask Collect.
-The ClinCapture database uses a standard clinical trial data model (Events  (aka Visits), CRF, Items, Sites, Subjects, Queries, SDV, Audit log and data extracts)
+The ClinCapture database uses a standard clinical trial data model (Events or visits, CRF, Items, Sites, Subjects, Queries, SDV, Audit log and data extracts)
 
 Users and sites management is performed using the FlaskData UX; the FlaskData API updates/inserts entities into the
 ClinCapture PostgreSQL database.
 
 There are 3 paths for data capture:
-1. Direct data capture to EDC
-Direct data capture in ClinCapture or data entry from paper source (the traditional way of doing things).
+Direct data capture to EDC, direct data capture in ClinCapture, or data entry from paper source (the traditional way of doing things).
 
 2. eSource with Flask Forms expand inline update to EDC
 You can design CRFs using Forms - site coordinators (and patients using the Flask ePRO app). Forms will update
-the EDC inline and synchronize CRF fields/metadata and item values.
+the EDC online and synchronize CRF fields/metadata and item values.
 
 3. Direct data capture with Flask Forms
 
-Automated ETL processes extract  data to Flask Detect and Act for analytics and
+Automated ETL processes extract data to Flask Detect and Act for analytics and
 alerts, or you can use FlaskData APIs to extract / insert data in JSON format on
 demand, for your own analytics processing.
 
@@ -58,7 +57,7 @@ You can use the FlaskData API to extract and insert Forms data.
 ##Getting started API
 
 ### Authorization
-In order to use the FlaskData APIs you need to first get aa JWT token with the  auth/authorize API.
+In order to use the FlaskData APIs you need to first get a JWT token with the  auth/authorize API.
 
 !!!example
 
@@ -95,6 +94,6 @@ By Data server APIs you can get [Forms](./manage_forms.md) data in csv/json form
 <a href="https://api.flaskdata.io/data-server/swagger/">api.flaskdata.io/data-server</a>
 
 ### FlaskData Features
-By Features APIs you can process a few additional flaskdata features, like create subject etc.
+Using Features APIs you can process a few additional FlaskData features, such as, create subject etc.
 
 <a href="https://api.flaskdata.io/features/swagger/">api.flaskdata.io/features</a>

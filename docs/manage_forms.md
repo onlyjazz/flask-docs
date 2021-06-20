@@ -77,18 +77,44 @@ By click on **EDIT** button of item an Edit card is opened.
 
 ######Labels
 In the first tab **LABELS** you should define item's name, description etc.
-![Screenshot](img/forms/forms_crf_edit_item_labels.PNG)
+![Screenshot](img/newForms/visitLabel.png)
 
 ######Value
-Second tab is **VALUE** you can set a default value to this item
-![Screenshot](img/forms/forms_crf_item_edit_value.PNG)
+The second tab is **VALUE** you can set a default value to this item
+![Screenshot](img/newForms/visitsValue.png)
+
+######Variable Assignment
+The third tab **VARIABLE ASSIGNMENT**, is used to place data in an item. 
+The data source can be another item in the CRF or from an external API.
+To extract data from an external API, use the get() function. 
+
+The Key entry functions as a data source configuration key to an external API, allowing secured access to certain data. 
+
+The customer can define a default external API in customer metadata
+[Expression](index.md), allowing the user to write get() without specifying a URL.
+To select specific data field, use commands similar to 'get()[rates]'. 
+
+
+For input values, the data type should be a single value.
+For get() the data type should be be a JSON object.
+For example: {"aaa":1; "bbb":2} will output a list of aaa, bbb(values:1,2)
+
+To use the autocomplete feature, type '$' and select the variable of interest.
+Use variables to create expressions for calculating the value of an item based on other existing values. 
+Use the get() function to extract the value of the item from an external source. 
+Note: The terminal supports any JavaScript expressions for the value of the available form variables.
+
+Example of $ - '$HEIGHT / ( $WEIGHT * $WEIGHT )'
+![Screenshot](img/newForm/VariableAssignmentAuto.png)
+Example of get - 'get(/auth/self)[first_name] + ' ' + $ITEM_AT_EMAIL_MHGHT'
+![Screenshot](img/newForm/VariableAssignmentGet.png)
 
 ######Validations
-The third tab is **Validation**, each component has another validation options.
+The fourth tab is **Validation**, each component has another validation options.
 
 For example - number component has the following validation tab:
 
-![Screenshot](img/forms/forms_crf_edit_item_validations.PNG)
+![Screenshot](img/newForms/visitValidation.png)
 
 Required, Disabled and Confirm parameters exist in each component.
 
@@ -97,9 +123,9 @@ Required, Disabled and Confirm parameters exist in each component.
 * Confirm - This item popup a confirm dialog card.
 
 ######Branching Logic
-The fourth tab is the **Branching Logic**, In this tab you can write a simple logic for this item.
+The fifth tab is the **Branching Logic**, In this tab you can write a simple logic for this item.
 
-![Screenshot](img/forms/forms_crf_item_edit_branching_logic.PNG)
+![Screenshot](img/newForms/childBranchingLogic.png)
 !!!quote
 
     Branching logic expression for this item
@@ -115,24 +141,23 @@ For example - Show/Hide method.
 Item that depends on another item.
 
 A radio button item has 2 options - Man or Female (required question)
-![Screenshot](img/forms/forms_man_female_item.PNG)
+![Screenshot](img/newForms/mfValue.png)
 If user check female -> Another item 'Number of children' is opened.
 
 For do it - you need to create the basic item (man/female) first,
 
 Then save it by click on **SAVE** button in the top of the page.
-
-![Screenshot](img/forms/forms_crf_item_save.PNG)
+![Screenshot](img/newForms/crfItemsSave.png)
 
 By save option the system generates variables to the CRF items, and you can use them for the branching logic.
 
-![Screenshot](img/forms/forms_crf_item_variable.PNG)
+![Screenshot](img/newForms/mfLabel.png)
 
 After you saved items CRF you can add branching logic to 'Number of children' item,
 
 Go to Hide/Show item branching logic and write your logic.
 
-![Screenshot](img/forms/forms_show_hide_logic.PNG)
+![Screenshot](img/newForms/childBranchingLogic.png)
 
 !!!note
     In branching logic that related to checkbox item, the branching logic should be like

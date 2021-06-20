@@ -29,7 +29,7 @@ To edit the study - check it, in **ACTIONS** click on **Edit** option.
 When you click **SAVE** the profile study will be opened.
 
 ##Study Profile
-The Study Profile page shows your study's attributes, Alert rules, Analytic rules, Users, Sites and comments.
+The Study Profile page shows your study's attributes; Alert rules, Analytic rules, Users, Sites and comments.
 
   ![Screenshot](img/study/study_profile.PNG)
 

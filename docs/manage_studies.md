@@ -22,8 +22,17 @@ Fill in your study properties and click **SAVE**. The Manage Users page will ope
         * Validate - Flask+Forms+Tools+EDC. Limited to 3 sites.
     5. *Alert data source*: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL otherwise choose MongoDB).
 
+##Access Control Lists 
+ACL utilities:
+1. Users can create study roles
+2. Users can assign each event definitions to a study role
+3. Users can assign each user to a study role
+4. Manage research roles are availbale to customer admin and form designer users
+
 ##Study manage Users
-In manage Users page you can add/remove User from this study.
+Study Role users get assignmed studies from the customer admin and can only access studies, queries, and subjects. Study Role users can add comments and subscribe to alerts. If given permission, they can also be form designers.
+
+In the manage Users page you can add/remove User from this study.
 
 To add a new User to the study - you need to [create the User](./manage_users.md#add-user) first.
 

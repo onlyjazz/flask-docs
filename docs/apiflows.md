@@ -2,8 +2,8 @@
 
 The API has 2 parts of APIs - EDC and Flask.
 
-* EDC - APIs are related to an external EDC instance (extract EDC data etc.)
-* Flask - APIs are related to the internal Flask data model (extract data, insert data etc.)
+* EDC - APIs are related to an external EDC instance (extract EDC data, etc.)
+* Flask - APIs are related to the internal Flask data model (extract data, insert data, etc.)
 
 !!! note "Request header"
 
@@ -22,11 +22,11 @@ There are a few APIs you can use to extract  EDC data.
 
 For example:
 #### /edc/study/extract-data
-This API extracts EDC data of each table/view/function (like functionName()) and returns a json structure.
+This API extracts EDC data of each table/view/function (i.e. functionName()) and returns a json structure.
 
-fromDate, toDate, sort, filters and inputVariables(if tableName is a function) are optional values.
+fromDate, toDate, sort, filters and inputVariables are optional values if tableName is a function.
 
-Filters and inputVariable json objects: The key is the column name/input variable name in the EDC PostgreSQL database, the json value is the corresponding value (like where site = XXX)/ input value in function (like schema.function(XXX)).
+Filters and inputVariable json objects: The key is the column name/input variable name in the EDC PostgreSQL database, the json value is the corresponding value (like where site = XXX)/ input value in function (i.e. schema.function(XXX)).
 
 !!!example
 

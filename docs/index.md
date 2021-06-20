@@ -62,12 +62,15 @@ Read more about the Flaskdata software architecture here:  [Flaskdata software a
   - Currently logged-in user and role
   - Click on here at any time to access and change your User Profile – including changing your password.
 
-![Screenshot](img/forms/hamburger.PNG)
+![Screenshot](img/newForm/hamburger.PNG)
 
 ###Change password
 Change password allows you to change your password when you want,
 
 Just click on **Change password** option, a reset password email will send to you.
+
+###Customer Profile
+Customer Profile allows you to edit customer properities (by clicking on the pen in the top right corner of the Customer properties card). You are also able to add comments and entries into Customer MetaData. These entries will allow users to short cut get() commands in Forms, which allows data extraction while keeping external data secured.
 
 ###Request support
 If you need support from us, click on this option.

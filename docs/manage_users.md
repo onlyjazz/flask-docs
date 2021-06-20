@@ -3,7 +3,7 @@
 In the left menu bar click on Users.
 In this page - Users index you can add Users to your study, edit Users, assign User to site etc.
 
-You can filter Users by study, site or what you want by the **Search** filter and then click **APPLY**
+You can filter Users by study, site or by using the  **Search** filter and clicking **APPLY**
 
 ![Screenshot](img/user/users_index_filter.PNG)
 

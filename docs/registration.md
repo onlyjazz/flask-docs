@@ -38,9 +38,9 @@ Go to <a href="https://app.flaskdata.io/users/register">Registration</a>
 
 ![Screenshot](img/customer/registration_page.PNG)
 
-Fill your properties and click **CREATE AN ACCOUNT**
+Fill in your information  and click **CREATE AN ACCOUNT**
 
-Welcome email will be sent to you.
+A welcome email will be sent to you.
 
 You're welcome to [define your first study](./first_study.md#define-your-study)
 
