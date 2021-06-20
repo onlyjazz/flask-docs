@@ -104,9 +104,12 @@ Use the get() function to extract the value of the item from an external source.
 Note: The terminal supports any JavaScript expressions for the value of the available form variables.
 
 Example of $ - '$HEIGHT / ( $WEIGHT * $WEIGHT )'
+
 ![Screenshot](img/newForm/VariableAssignmentAuto.png)
+
 Example of get - 'get(/auth/self)[first_name] + ' ' + $ITEM_AT_EMAIL_MHGHT'
-![Screenshot](img/newForm/VariableAssignmentGet.png)
+
+![Screenshot](img/newForm/variableAssignmentGet.png)
 
 ######Validations
 The fourth tab is **Validation**, each component has another validation options.
