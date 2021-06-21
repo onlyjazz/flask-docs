@@ -24,7 +24,7 @@ This button open **Create event group** card with events list.
   
 Check the relevant event.
   
-![Screenshot](img/newManageData/subjectEventCreateEvent.png)
+![Screenshot](img/newManageData/subeventCreateEvent.png)
   
 The event will be added to subject's events list.
   
