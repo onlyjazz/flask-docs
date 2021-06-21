@@ -24,9 +24,13 @@ Fill in your study properties and click **SAVE**. The Manage Users page will ope
 
 ##Access Control Lists 
 ACL utilities:
+
 1. Users can create study roles
+
 2. Users can assign each event definitions to a study role
+
 3. Users can assign each user to a study role
+
 4. Manage research roles are availbale to customer admin and form designer users
 
 ##Study manage Users
