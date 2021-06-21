@@ -8,7 +8,7 @@ To edit the study - check it, in **ACTIONS** click on **Edit** option.
 
 ![Screenshot](img/study/studies_index_actions.PNG)
 
- In edit study window you can define your study profile, definitions etc.
+ In edit study window you can define your study profile, definitions, etc.
 
  ![Screenshot](img/study/edit_study.PNG)
 
@@ -41,7 +41,7 @@ The Study Profile page shows your study's attributes; Alert rules, Analytic rule
 
 In the Study Profile page you have a green **ACTIONS**  button with Manage users and Manage sites options.
 
-##Study > Manage Users
+##Study -> Manage Users
 In the Manage Users page you can add/remove User from this study.
 
 To add a new User to the study - click [create the User](./manage_users.md#add-user) .
@@ -52,9 +52,9 @@ Type any part of the User's name in the Select Users box and click the user you 
 
 ![Screenshot](img/study/study_mange_users_type.PNG)
 
-Click **NEXT STEP**, Welcome emails will be sent to the users.
+Click **NEXT STEP**, and welcome emails will be sent to the users.
 
-##Study > Manage sites
+##Study -> Manage sites
 In the Manage sites page you can add/remove site from this study.
 
 To add a new site to study - click [create the site](./manage_sites.md#add-a-new-site) first.

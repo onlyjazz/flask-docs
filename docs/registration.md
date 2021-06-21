@@ -20,9 +20,9 @@ FlaskData Collect provides a RESTful API, desktop and mobile apps  to manage
 research studies and to interact  with patients, investigators and devices in
 clinical trials.
 
-FlaskData Detect enables you to define patterns of protocol deviations and
-FlaskData Act automates alert notifications to patients and clinical teams on
-exceptions and missing data.
+FlaskData Detect enables you to define patterns of protocol deviations.
+
+FlaskData Act automates alert notifications to patients and clinical teams on exceptions and missing data.
 
 
 

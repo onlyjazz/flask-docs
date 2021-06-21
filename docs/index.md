@@ -16,7 +16,7 @@ Detect  provides a capability to automate monitoring of clinical data quality, e
 and thresholds to detect protocol deviations and missing data on the patient journey.
 
 Act  provides the capability to automate delivery of alerts to patients and clinical operations teams when triggered
-by Detect metrics over/under threshold.
+by the detect metrics over/under threshold.
 
 Read more about the Flaskdata software architecture here:  [Flaskdata software architecture white paper](https://www.flaskdata.io/flaskdata-software-architecture-white-paper/)
 
@@ -34,6 +34,7 @@ Read more about the Flaskdata software architecture here:  [Flaskdata software a
 * Study event – a visit of a study subject at a site during a study. A study event contains 1 or more eCRFs
 * eCRF – electronic case report form.
 * Item – a question on an eCRF
+* EDC - Electronic Data Capture
 
 ####User interface (UI)
 * Web application that runs in your browser

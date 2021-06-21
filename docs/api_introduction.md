@@ -12,9 +12,9 @@ The API User has access to data of the customer account and EDC databases that d
 
 There are 3 FlaskData API environments:
 
-* development environment : <a href="https://dev-api.flaskdata.io">dev-api.flaskdata.io</a>
-* staging environment : <a href="https://staging-api.flaskdata.io">staging-api.flaskdata.io</a>
-* production environment : <a href="https://api.flaskdata.io">api.flaskdata.io</a>
+* development environment : <a href="dev-api.flaskdata.io/swagger">dev-api.flaskdata.io</a>
+* staging environment : <a href="https://staging-api.flaskdata.io/swagger">staging-api.flaskdata.io</a>
+* production environment : <a href="https://api.flaskdata.io/swagger">api.flaskdata.io</a>
 
 Each API environments has its own swagger UI - like https://api.flaskdata.io/swagger/
 
