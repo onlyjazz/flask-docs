@@ -13,18 +13,18 @@
 For additional information [how to add subject](./manage_subjects.md#add-subject).
 
 ##Scheduling events
-* Events can be scheduled before data entry
+* Events can be scheduled before a data entry
 * Scheduling an event simply means entering the (planned) start date of that event for that subject. 
   You can schedule a number of events at once, or just schedule them when you wish to start data entry for the eCRFs.
   
 ###Create event by CRF
-In s ubject Flask Events page there is a green button **CREATE EVENT BY CRF**
+In the subject page, after selecting a subject, there is a green button **CREATE EVENT**
   
 This button open **Create event group** card with events list.
   
 Check the relevant event.
   
-![Screenshot](img/subjects/flask_events_create_event.PNG)
+![Screenshot](img/newManageData/subjectEventCreateEvent.png)
   
 The event will be added to subject's events list.
   
