@@ -63,7 +63,7 @@ Read more about the Flaskdata software architecture here:  [Flaskdata software a
   - Currently logged-in user and role
   - Click on here at any time to access and change your User Profile – including changing your password.
 
-![Screenshot](img/newForm/hamburgerMenu.png){: style="height:300px;width:150px"}
+![Screenshot](img/newForm/hamburgerMenu.png){: style="height:300px;width:200px"}
 
 ###Change password
 Change password allows you to change your password when you want,
