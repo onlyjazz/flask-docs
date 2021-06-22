@@ -9,13 +9,9 @@ Upon joining the study, you will have access to the electronic diary system desi
 ##First login for using desktop
 Before the first entry, you will receive a welcome email from Flask Data.
  
-Upon receiving the email, you can enter and set a personal password for the system.
+Upon receiving the email, you can enter and set a personal password for the system using the create password email. 
 
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/kVuR0Zh3_D0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-
-Set a password by the reset password email
-
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/FTbWHSwk4yM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/F50fZ4qGQak" frameborder="0" allowfullscreen></iframe>
 
 !!!note
     
@@ -26,7 +22,7 @@ Set a password by the reset password email
 ##First login for using Android mobile
 This is a short video of diary using mobile.
 
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/ck9cpRyDxi0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/7umr_V9knDw" frameborder="0" allowfullscreen></iframe>
 
 ##Diary Options
 This is a short video with example of patient's diary options.
@@ -39,7 +35,7 @@ This is a short video with example of patient's diary options.
 4. Change display mode
 5. See study details.
 
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/AQ82yyIu8N0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/pupcJzPTaa8" frameborder="0" allowfullscreen></iframe>
 
 !!!important
 

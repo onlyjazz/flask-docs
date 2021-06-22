@@ -108,6 +108,8 @@ Use the get() function to extract the value of the item from an external source.
 
 ![Screenshot](img/newForm/variableAssignmentGet.png)
 
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/xbaxnRgyg8I" frameborder="0" allowfullscreen></iframe>
+
 ######Validations
 The fourth tab is **Validation**, each component has another validation options.
 

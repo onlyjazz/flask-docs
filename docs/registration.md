@@ -46,5 +46,5 @@ You're welcome to [define your first study](./first_study.md#define-your-study)
 
 ##Short video Example of registration
 
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/92tOXKCqvVc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/UI2KRY2W56k" frameborder="0" allowfullscreen></iframe>
 

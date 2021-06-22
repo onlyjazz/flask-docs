@@ -67,5 +67,5 @@ In the end on the event's CRFs list there are 2 buttons:
 
 ##Short video Example of adding subject and inserting data
 
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/C4Um970oNHc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/3PpnorMJuY4" frameborder="0" allowfullscreen></iframe>
 

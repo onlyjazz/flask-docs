@@ -9,12 +9,12 @@ After the CRC adds a subject, the patient will receive a welcome email.
  
 The patient should click on the email link and create a new password.
 
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/FTbWHSwk4yM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/F50fZ4qGQak" frameborder="0" allowfullscreen></iframe>
 
 ##Login to ePRO mobile and fill your diary
 This is a short video with example of patient's diary using mobile.
 
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/ck9cpRyDxi0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/7umr_V9knDw" frameborder="0" allowfullscreen></iframe>
 
 ##ePRO mobile Options
 This is a short video with example of patient's diary options.
@@ -27,4 +27,4 @@ This is a short video with example of patient's diary options.
 4. Change display mode
 5. See study details.
 
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/AQ82yyIu8N0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width: 100%;height: 450px;" src="https://youtu.be/pupcJzPTaa8" frameborder="0" allowfullscreen></iframe>
