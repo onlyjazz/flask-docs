@@ -7,11 +7,7 @@ Attached a few short videos with example of [ePRO Mobile](./epro.md#android-appl
 ##First login with email and password
 After the CRC adds a subject, the patient will receive a welcome email.
  
-The patient should click on the email link and reset their password.
-
-<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/kVuR0Zh3_D0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-
-Set a password using the reset password email
+The patient should click on the email link and create a new password.
 
 <iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/FTbWHSwk4yM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
