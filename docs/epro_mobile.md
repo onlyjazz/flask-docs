@@ -11,6 +11,7 @@ The patient should click on the email link and create a new password.
 
 <iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/watch?v=F50fZ4qGQak" frameborder="0" allowfullscreen></iframe>
 
+
 ##Login to ePRO mobile and fill your diary
 This is a short video with example of patient's diary using mobile.
 
