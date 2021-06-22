@@ -90,7 +90,7 @@ To extract data from an external API, use the get() function.
 
 The Key entry functions as a data source configuration key to an external API, allowing secured access to certain data. 
 
-The customer can define a default external API in [Customer Metadata](./index.md#Customer-Profile), allowing the user to write get() without specifying a URL.
+The customer can define a default external API in [Customer Metadata](index.md#customer-profile), allowing the user to write get() without specifying a URL.
 To select specific data field, use commands similar to 'get()[rates]'. 
 
 
