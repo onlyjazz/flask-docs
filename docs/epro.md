@@ -62,7 +62,7 @@ The patient is invited to login with their Google account OR to choose a passwor
 ##Android application
 
 ###Installation
-If patient has an Android phone, they can install the Flask ePRO application from the Google play store.
+If the patient has an Android phone, they can install the Flask ePRO application from the Google play store.
 
 ![Screenshot](img/epro/google_play.PNG)
 
