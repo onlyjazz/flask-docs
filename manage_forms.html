@@ -1076,15 +1076,18 @@ By click on component the component is added to the CRF (in the end of the list)
 The data source can be another item in the CRF or from an external API.
 To extract data from an external API, use the get() function. </p>
 <p>The Key entry functions as a data source configuration key to an external API, allowing secured access to certain data. </p>
-<p>The customer can define a default external API in <a href="index.html">Customer Metadata</a>, allowing the user to write get() without specifying a URL.
+<p>The customer can define a default external API in <a href="index.html#Customer-Profile">Customer Metadata</a>, allowing the user to write get() without specifying a URL.
 To select specific data field, use commands similar to 'get()[rates]'. </p>
 <p>For input values, the data type should be a single value.
 For get() the data type should be be a JSON object.
 For example: {"aaa":1; "bbb":2} will output a list of aaa, bbb(values:1,2)</p>
 <p>To use the autocomplete feature, type '$' and select the variable of interest.
 Use variables to create expressions for calculating the value of an item based on other existing values. 
-Use the get() function to extract the value of the item from an external source. 
-Note: The terminal supports any JavaScript expressions for the value of the available form variables.</p>
+Use the get() function to extract the value of the item from an external source. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The terminal supports any JavaScript expressions for the value of the available form variables.</p>
+</div>
 <p><img alt="Screenshot" src="img/newForm/VariableAssignmentAuto.png" /></p>
 <p><img alt="Screenshot" src="img/newForm/variableAssignmentGet.png" /></p>
 <h6 id="validations">Validations</h6>
