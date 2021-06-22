@@ -29,10 +29,12 @@ This is a short video of diary using mobile.
 <iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/ck9cpRyDxi0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 ##Diary Options
-This is a short video with example of your diary options.
+This is a short video with example of patient's diary options.
 
-1. See his diary data (cannot change diary data after saving)
-2. See his diary logs
+1. See their diary data 
+!!!note
+    Diary Data cannot be changed after saving.
+2. See their diary logs
 3. Change languages
 4. Change display mode
 5. See study details.

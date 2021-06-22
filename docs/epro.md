@@ -24,26 +24,26 @@ Second you need to create [Study Schedule](./manage_forms.md#study-schedules) wi
 ##Welcome Email and SMS
 When subject has been created the patient gets a welcome email and SMS with PRO link.
 
-He/She is invited entering and fill his/her diary.
+The patient is invited to enter their diary.
 
-If patient forgets his password [site role user](./manage_users.md#profile) (like CRC or PI) can go to [subject's profile](./manage_subjects.md#actions) page and send him Welcome back/Reset password email.
+If patient forgets their password [site role user](./manage_users.md#profile) (CRC or PI) can go to [subject's profile](./manage_subjects.md#actions) page and send them a Welcome Back- Reset password email.
 
 ![Screenshot](img/epro/subject_actions.PNG)
 
-Patient will get a welcome email again.
+Patient will get another welcome email.
 
 ![Screenshot](img/epro/inbox_email_invite.PNG)
 
 ##Subject invited
-When patient gets a welcome emil/SMS
+When patient gets a welcome email/SMS
 
 ![Screenshot](img/epro/welcome_back.PNG)
 
-He/she should click on the link.
+They should click on the link.
 
 ![Screenshot](img/epro/subject_invite.PNG)
 
-The patient is invited to login with his Google account OR to choose a password.
+The patient is invited to login with their Google account OR to choose a password.
 
 ![Screenshot](img/epro/login_google_account.PNG)
 
@@ -51,26 +51,26 @@ The patient is invited to login with his Google account OR to choose a password.
 
     To create a password or reset password - CRC user should reset subject's password by clicking on [Reset password](./manage_subjects.md#subject-profile) option.
 
-    The patient will get a reset password email
+    The patient will get a reset password email.
 
     ![Screenshot](img/epro/reset_pass.PNG)
 
-    After Subject set his/her password, He can login to ePRO by Google account or with FlaskData password
+    After Subject sets their password, they can login to ePRO by Google account or with FlaskData password.
 
     ![Screenshot](img/epro/login.PNG)
 
 ##Android application
 
 ###Installation
-If patient has an Android phone, he can install Flask ePRO application from Google play store.
+If patient has an Android phone, they can install the Flask ePRO application from the Google play store.
 
 ![Screenshot](img/epro/google_play.PNG)
 
-Search flask epro and install it
+Search "flask epro" and install it
 
 ![Screenshot](img/epro/flask_epro_application.PNG)
 
-After patient install Flask ePRO application he will see the Flask ePRO icon
+After the patient installs the Flask ePRO application they will see the Flask ePRO icon
 
 ![Screenshot](img/epro/flask_epro_app_flag.PNG)
 
@@ -83,45 +83,45 @@ Open Flask ePRO application and login to your diary. (To login by email and pass
 
 ###Enter diary
 
-While patient logins to ePRO, he see his diary for the current date.
+When the patient logins to ePRO, they see their diary for the current date.
 
-He should fill his diary and save.
+They should fill in the diary and save.
 
-If there are a few Forms in the diary the next form will be opened when he clicks **SAVE AND NEXT** button.
+If there are a few Forms in the diary the next form will be opened when the **SAVE AND NEXT** button is clicked.
 
 ![Screenshot](img/epro/app_enter_diary.PNG)
 
 !!!important
 
-    * If patient filed a part of his diary he can continue later.
-    * If patient forgot to fill his diary, He can fill it next 2 days (By [logs](./#logs) option)
+    * If the patient completed a part of their diary, they can continue later.
+    * If patient forgot to complete in their diary, they can still complete it within the next 2 days (By [logs](./#logs) option)
 
 Required fields are marked with a red asterisk.
 
 If patient try to save the diary with missing information, an error flag appears
 
-Clicking on the error flag opens the error message.
+Clicking on the error flag will open the error message.
 
 ![Screenshot](img/epro/app_error_message.PNG)
 
 ###Input Data
-Patient can click **Input Data** option and fill his diary for the current date.
+Patient can click the **Input Data** option and complete their diary for the current date.
 
-If he saved his data before, He just see his data and cannot change it.
+If they saved his data before, they will only see the data and cannot change it.
 
 ![Screenshot](img/epro/app_see_diary.PNG)
 
 ###Logs
-Patient can see / continue his diaries in **Logs** option
+Patients can view and continue adding to diaries in the **Logs** option
 
 ![Screenshot](img/epro/app_logs.PNG)
 
 ###My Account
-Patient can change his account definition by clicking on **My Account** option
+Patients can change their account definition by clicking on the **My Account** option
 
 ![Screenshot](img/epro/app_my_account.PNG)
 
-He can change his default language.
+They can change his default language.
 
 ![Screenshot](img/epro/app_languages.PNG)
 
@@ -131,101 +131,101 @@ He can change his default language.
 
     ![Screenshot](img/epro/app_hebrew_forms.PNG)
 
-Patient can change ePRO display mode by clicking on theme option.
+Patients can change ePRO display mode by clicking on theme option.
 
 ![Screenshot](img/epro/app_theme_option.PNG)
 
 ![Screenshot](img/epro/app_theme.PNG)
 
-If he sets the mode as **Dark** he will see something like this:
+If they sets the mode as **Dark** they will see something like this:
 
 ![Screenshot](img/epro/app_dark_mode.PNG)
 
 ###Study information
 
-The patient can see details of the study he is participating in by clicking on the exclamation mark
+The patient can see details of the study they are participating in by clicking on the exclamation mark
 
 ![Screenshot](img/epro/study_information_icon.PNG)
 
 ![Screenshot](img/epro/study_info.PNG)
 
 ##FlaskData application
-If subject cannot use [Flask ePRO](#android-application) android application he/she can use FlaskData application to enter his/her diary.
+If the subject cannot use [Flask ePRO](#android-application) android application they can use FlaskData application to enter their diary.
 
 It's less beautiful but works great. :+1:
 
-In any case in such a case that the phone does not support Android it is better for the patient to use his desktop.
+In the case that the patients phone does not support Android it is better for the patient to use their desktop.
 
 ###Login
-Patient should login to FlaskData ePRO URL (https://epro.flaskdata.io)
+The patient should login to FlaskData ePRO URL (https://epro.flaskdata.io)
 
 ![Screenshot](img/epro/flask_data_login.PNG)
 
 ###Input Data
 
-When patient login to his diary a diary for the current date opens.
+When the patient logs into their diary, a diary for the current date opens.
 
-He can start to fill the diary.
+They can start to fill the diary.
 
 ![Screenshot](img/epro/flaskdata_enter_data.PNG)
 
-If there are another Forms in the diary he should click **SAVE AND NEXT** button
+If there is another Form in the diary they should click **SAVE AND NEXT** button.
 
 ![Screenshot](img/epro/flaskdata_save_and_next.PNG)
 
-If he filled the last form he should click **FINISH** button
+If they completed the last form, they should click **FINISH** button.
 
 ![Screenshot](img/epro/flaskdata_finish_button.PNG)
 
-When patient finish fill diary a success message appears
+When the patient completes the diary, a success message appears.
 
 ![Screenshot](img/epro/flaskdata_success.PNG)
 
-To go back to **Input Data** click on the icon
+To go back to **Input Data** click on the icon.
 
 ![Screenshot](img/epro/flaskdata_inputdata_icon.PNG)
 
 ###Logs
 
-Patient can see his diaries by **Logs** option
+The patient can see their diaries using the **Logs** option.
 
 ![Screenshot](img/epro/flaskdata_logs_option.PNG)
 
 ![Screenshot](img/epro/flaskdata_logs.PNG)
 
-By logs option patient cannot change his diaries, just see them
+Using the logs option, the patient cannot change their diaries, only view them.
 
 ![Screenshot](img/epro/flaskdata_view_mode.PNG)
 
 !!!note "Forget Option"
 
-    1. If patient filled diary but didn't finish all his diary forms he can continue from Logs option
+    1. If the patient filled their diary but didn't finish, they can continue using Logs option
 
-        He can continue filling data for yesterday's diary and for the diary of two days ago.
+        They can continue filling in data from yesterday's diary, as well as, from the diaries of two days ago.
 
-    2. If patient forgot to fill his diary he can enter data for yesterday's diary and for the diary of two days ago.
+    2. If the patient forgots to fill their diary, they can enter data for yesterday's diary and for the diary of two days ago.
 
 ###My Account
 
-To see account definition click on **My Account** icon
+To see account definition click on the **My Account** icon
 
 ![Screenshot](img/epro/flaskdata_my_account.PNG)
 
 !!!note Change language
 
-    Patient can change the language by click on Languages icon - this option change the language for this login but it doesn't change patient account definitions, So in the next login the language will be the default language again.    
+    Patient can change the language by click on the languages icon - this option change the language for this login but it doesn't change patient account definitions. In the next login the language will be set to the default language again.    
     ![Screenshot](img/epro/langauges_icon.PNG)
 
-Save patient's account information after changing.
+Be sure to save the patient's account information after changing.
 
 ![Screenshot](img/epro/flaskdata_update_my_account.PNG)
 
 ###Study information
-The patient can see details of the study he is participating in by clicking on the exclamation mark
+The patient can see details of the study they are participating in by clicking on the exclamation mark.
 
 ![Screenshot](img/epro/flaskdata_study_info.PNG)
 
 ![Screenshot](img/epro/flaskdata_study_information.PNG)
 
 ###Logout
-After patient finish filling his diary he can logout from the system by clicking **Logout** icon.
+After the patient finish completing their diary, they can logout from the system by clicking the **Logout** icon.
