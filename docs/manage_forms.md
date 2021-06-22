@@ -90,7 +90,7 @@ To extract data from an external API, use the get() function.
 
 The Key entry functions as a data source configuration key to an external API, allowing secured access to certain data. 
 
-The customer can define a default external API in [Customer Metadata](index.md), allowing the user to write get() without specifying a URL.
+The customer can define a default external API in [Customer Metadata](./index.md#Customer-Profile), allowing the user to write get() without specifying a URL.
 To select specific data field, use commands similar to 'get()[rates]'. 
 
 
@@ -101,7 +101,8 @@ For example: {"aaa":1; "bbb":2} will output a list of aaa, bbb(values:1,2)
 To use the autocomplete feature, type '$' and select the variable of interest.
 Use variables to create expressions for calculating the value of an item based on other existing values. 
 Use the get() function to extract the value of the item from an external source. 
-Note: The terminal supports any JavaScript expressions for the value of the available form variables.
+!!!note
+    The terminal supports any JavaScript expressions for the value of the available form variables.
 
 ![Screenshot](img/newForm/VariableAssignmentAuto.png)
 
