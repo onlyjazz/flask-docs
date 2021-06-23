@@ -16,17 +16,17 @@ There are a few functions to connect them:
 
        EDC has a lot of connectivity, After you add a site in Flask you must go to EDC and "edit" the site.
 
-       Just click edit and save without edit anything.
+       Just click edit and save without editing anything.
 
 ##Relationship between Forms and EDC
-If your study uses [ClinCapture Database](./manage_studies.md#add-study) you can connect the two.
+If your study uses [ClinCapture Database](./manage_studies.md#add-study), you can connect the two.
 
 ###Import CRF from EDC
-You can import CRF from EDC to Forms by click on the blue **IMPORT CRF FROM EDC** button
+You can import CRF from EDC to Forms by click on the blue **IMPORT CRF FROM EDC** button.
 
 ![Screenshot](img/forms/forms_import_crf_from_edc.PNG)
 
-CRF list opens and you can import each CRF needed.
+The CRF list opens and you can import each CRF needed.
 
 ![Screenshot](img/forms/import_crf_list.PNG)
 
@@ -47,7 +47,7 @@ You can export CRF to EDC by clicking on the **ACTIONS**->**EXPORT** option
 
 !!!example
 
-     The study uses Flask PRO and EDC DB- You can export the study PRO CRFs to EDC.
+     If the study uses Flask PRO and EDC DB, you can export the study PRO CRFs to EDC.
 
      When the subject inserts data in ePRO, the data is inserted into EDC as well.
 
@@ -55,7 +55,7 @@ You can export CRF to EDC by clicking on the **ACTIONS**->**EXPORT** option
 ###Import Event from EDC
 You can import event from EDC, including all it's CRFs.
 
-In the Event Definition tab click on the blue **IMPORT EVENT DEFITION FROM EDC** button
+In the Event Definition tab, click on the blue **IMPORT EVENT DEFITION FROM EDC** button.
 
 ![Screenshot](img/forms/import_event_from_edc.PNG)
 

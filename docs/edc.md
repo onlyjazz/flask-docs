@@ -4,7 +4,7 @@ FlaskData team support ClinCapture system.
 
 You can use ClinCapture for your study.
 
-You can use just EDC OR use EDC with Flask (see the [relationship between FlaskData and EDC](./flask_and_edc.md#flask-and-edc))
+You can use just EDC, OR use EDC with Flask (see the [relationship between FlaskData and EDC](./flask_and_edc.md#flask-and-edc))
 
 EDC is a data collection system for clinical trials.
 

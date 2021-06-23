@@ -2,47 +2,47 @@
 
 #Study Dashboard
 
-Study Dashboard show your study monitoring.
+Study Dashboard shows your study monitoring.
 
-In [studies index](./manage_studies.md#studies) page, click on your study, now you see your study dashboard.
+On the [studies index](./manage_studies.md#studies) page, click on your study to view your study dashboard.
 
 !!!important
  
-    By press on study the study name appear in title bar and all the actions will be related to this study (like add user, add site etc.)
+    By pressing on study, the study name appear in the title bar and all of the actions will be related to this study (i.e. add user, add site, etc.)
 
 ![Screenshot](img/dashboard/study_dashboard.PNG)
 
-To see your data monitoring in the dashboard you should define it first in monitoring option.
+To see your data monitoring in the dashboard, you should define it first with the monitoring option.
 
 ##Monitoring
-In the monitoring section there is a slick with analytics of your study data.
+In the monitoring section there is a slick analytics of your study data.
 
-The graphs can be as bar, pie, table etc. With different colors (red, green or blue)
+The graphs can be viewed as a bar graph, pie graph, table, etc. Graphs can be customized to have different colors (red, green or blue)
 
 ##Alerts
-In alerts card there is a table withe the last 10 active alerts.
+In the alerts card, there is a table with the last 10 active alerts.
 
-If there are active alerts to this study a bell appears in title bar with the number of alerts.
+If there are active alerts for this study, a bell appears in title bar with the number of alerts.
 
 ![Screenshot](img/dashboard/alerts_bell.PNG)
 
-You can click on each alert to see more properties, add comments or change its status.
+You can click on each alert to see more properties, add comments, or change its status.
 
 ![Screenshot](img/dashboard/study_alert_profile.PNG)
 
-To see all alerts of this study click on **All alerts** blue link
+To see all alerts from this study click on the blue **All alerts** link.
 
 ![Screenshot](img/dashboard/all_alerts_link.PNG)
 
 ###All Alerts
-In study All Alerts page you can see all alerts of this study.
+On the Study->All Alerts page, you can see all alerts from this study.
 
-You can filter the alerts, export them to CSV file and update alert status by press on alert.
+You can filter the alerts, export them to CSV file, and update the alert status by pressing on alert.
 
 ![Screenshot](img/dashboard/all_alerts_page.PNG)
 
 ##Filters
-In study dashboard page there is a filter option.
+On the study dashboard page there is a filter option.
 
 * Period - alert date <= this select date
 * Sites
@@ -51,9 +51,9 @@ In study dashboard page there is a filter option.
 This filter filters graphs and alerts accordingly.
 
 ##EDC
-If this study has [EDC DB](./manage_studies.md#add-study) **EDC** blue button appears.
+If this study has [EDC DB](./manage_studies.md#add-study), the blue **EDC** button appears.
 
-Click it opens a new window with study ClinCapture app.
+Clicking it opens a new window with the study ClinCapture app.
 
 ![Screenshot](img/dashboard/edc_button.PNG)
 
@@ -62,11 +62,11 @@ There is option to add tools to your study.
 
 The optional tools exist in [Tools](./tools.md#tools).
 
-If you want other users (study role and site role users) to see tools you need to add them to specific study.
+If you want other users (study role and site role users) to see tools, you need to add them to the specific study.
 
-Click on **ADDITIONAL TOOLS** blue button, Study tools page opens.
+Click on the blue **ADDITIONAL TOOLS** button, and the study tools page opens.
 
-You can add/remove tool from this study by click on **ADD A TOOL** green button.
+You can add/remove tool from this study by click on the green **ADD A TOOL** button.
 
 ![Screenshot](img/dashboard/add_tool.PNG)
 
@@ -76,6 +76,6 @@ Manage tools page opens:
 
 Study tools page available to all research users.
 
-By pressing tool you enter that tool and see the data (Of course site role users can only see their site data).
+By pressing tool, you enter that tool and see the data (Of course site role users can only see their site data).
 
 

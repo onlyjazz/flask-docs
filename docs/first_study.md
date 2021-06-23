@@ -4,11 +4,11 @@
 After signing up, the system will create your first study called `default-XXX`.
 
 ##Study Edit
-To edit the study - check it, in **ACTIONS** click on **Edit** option.
+To edit the study- check it and in **ACTIONS** click on the **Edit** option.
 
 ![Screenshot](img/study/studies_index_actions.PNG)
 
- In edit study window you can define your study profile, definitions, etc.
+ In the edit study window you can define your study profile, definitions, etc.
 
  ![Screenshot](img/study/edit_study.PNG)
 
@@ -26,7 +26,7 @@ To edit the study - check it, in **ACTIONS** click on **Edit** option.
     7. *Subject’s IDPs settings*: Enable Subjects to login with their Google Account or enable Subjects to login
     with multiple identity providers.
 
-When you click **SAVE** the profile study will be opened.
+When you click **SAVE**, the profile study will be opened.
 
 ##Study Profile
 The Study Profile page shows your study's attributes; Alert rules, Analytic rules, Users, Sites and comments.
@@ -42,13 +42,13 @@ The Study Profile page shows your study's attributes; Alert rules, Analytic rule
 In the Study Profile page you have a green **ACTIONS**  button with Manage users and Manage sites options.
 
 ##Study -> Manage Users
-In the Manage Users page you can add/remove User from this study.
+In the Manage Users page you can add/remove users from this study.
 
-To add a new User to the study - click [create the User](./manage_users.md#add-user) .
+To add a new user to the study - click [create the User](./manage_users.md#add-user) .
 
 ![Screenshot](img/study/study_manage_users.PNG)
 
-Type any part of the User's name in the Select Users box and click the user you want to add to the study.
+Type any part of the user's name in the Select Users box, and click the user you want to add to the study.
 
 ![Screenshot](img/study/study_mange_users_type.PNG)
 
@@ -61,6 +61,6 @@ To add a new site to study - click [create the site](./manage_sites.md#add-a-new
 
 ![Screenshot](img/study/study_manage_sites.PNG)
 
-Type any part of the site's name in the Select sites box and click the site you want to add to the study.
+Type any part of the site's name in the select sites box and click the site you want to add to the study.
 
 Click **NEXT STEP**

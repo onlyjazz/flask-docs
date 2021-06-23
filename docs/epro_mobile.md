@@ -12,12 +12,12 @@ The patient should click on the email link and create a new password.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F50fZ4qGQak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ##Login to ePRO mobile and fill your diary
-This is a short video with example of patient's diary using mobile.
+This is a short video with an example of a patient's diary using a mobile device.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7umr_V9knDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ##ePRO mobile Options
-This is a short video with example of patient's diary options.
+This is a short video with an example of patient's diary options.
 
 1. See their diary data 
 !!!note

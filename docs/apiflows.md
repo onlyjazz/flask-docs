@@ -18,7 +18,7 @@ For more details and questions contact us by sending email to <a href="mailto:su
 ## EDC
 
 ### Extract EDC Data
-There are a few APIs you can use to extract  EDC data.
+There are a few APIs you can use to extract EDC data.
 
 For example:
 #### /edc/study/extract-data
@@ -53,7 +53,7 @@ This API downloads a zip folder of CSV files with EDC study data.
 Each CSV file contains EDC Event-CRF data (Event is often called a Visit in an EDC)
 
 #### /edc/study/extract-study-data-at-crf-level
-This API extracts EDC data at CRF level and returns the data as a json object.
+This API extracts EDC data at the CRF level and returns the data as a json object.
 
 This API returns only CRFs with data.
 
@@ -67,18 +67,18 @@ This API returns only CRFs with data.
 This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).
 
 #### /edc/subjects/create-subject
-This API creates a subject in EDC DB and returns the study_subject_id value.
+This API creates a subject in the EDC DB and returns the study_subject_id value.
 
 ## Flask
 
 ### /flask/customer/extract-data-to-json
 This API extracts data from flask tables and views for your customer.
 
-The table/ view should have customer_id column for this process.
+The table/ view should have a customer_id column for this process.
 
 !!!example "Examples"
 
-    studies table, audit_user_login, billing_reports_customer etc.
+    studies table, audit_user_login, billing_reports_customer, etc.
 
 studyIds and filters are optional.
 
@@ -94,9 +94,9 @@ The billing report zip folder includes all the billing report files for your cus
 This API returns device logs of a study.
 
 ### /flask/device/insert-log
-This API inserts device log into flaskData with correct study_id according to EDC.
+This API inserts device log into flaskData with the correct study_id according to EDC.
 
-payload parameter is optional and can include each key value pairs.
+The payload parameter is optional and can include each key value pair.
 
 ### /flask/study/create-update-flask-study
 This API creates/updates study in FlaskData.
@@ -105,7 +105,7 @@ This API creates/updates study in FlaskData.
 This API creates/updates site in FlaskData.
 
 ### /flask/study/create-update-flask-study-users
-This API creates User if not exists and assigned Users to study.
+This API creates Users (if they do not exists) and assigned Users to the study.
 
 !!! note
     This API deletes the Users that were assigned to this study and assigned the new Users.
@@ -128,7 +128,7 @@ This is like an SQL SELECT col1, col2, col3 FROM statement
 
 !!!example ""
 
-    For example, if you need only **crf**, **event** and **value** fields use:
+    For example: if you need only **crf**, **event** and **value** fields use:
     ```json
     "columns": {
     "_id": 0,
@@ -146,8 +146,7 @@ This is like a SELECT * FROM statement.
 
 #### Filter records by date and/or column value
 
-You can refine record selection by the API with the date_from, date_to filters and setting values for
-fields.
+You can refine record selection from the API with the date_from, date_to filters and setting values for fields.
 
 This is like the SQL WHERE clause - WHERE crf='Demographics' and eventDate between date_from AND date_to.
 
@@ -165,7 +164,7 @@ This is like the SQL WHERE clause - WHERE crf='Demographics' and eventDate betwe
 
 !!!note
 
-    Reminder! If you don’t set any filters field you will get all records.
+    Reminder: if you don’t set any filters field you will get all records.
 
 ### /flask/crf/create-CRF-and-insert-data
 This API creates a CRF in an existing event and inserts data into the CRF.
@@ -177,13 +176,13 @@ This API creates a CRF in an existing event and inserts data into the CRF.
 ### /flask/crf/create-event-CRF-and-insert-data
 This API creates event and CRF and inserts data.
 
-Example - Creates a new Medication event with CRF and inserts data.
+Example - Create a new Medication event with CRF and inserts data.
 
 ### /flask/crf/get-CRF-data-ids
-This API returns subject's crf data Id (unique for each CRF) for specific crf name.
+This API returns subject's CRF data ID (unique for each CRF) for specific CRF name.
 
 ### /flask/crf/update-CRF-data
-This API updates CRF data by crf data id.
+This API updates CRF data by CRF data ID.
 
 
 ### Example of how to extract data using client-side JS code:
@@ -222,12 +221,11 @@ This API updates CRF data by crf data id.
 1. You have a mobile app that collects data from a device or person,
 and you want to save the data to the Flask data model.
 
-2. You have a connected wearable device that connects to your phone app with BLE
-and you want to save some data to Flask.
+2. You have a connected wearable device that connects to your phone app with BLE and you want to save some data to Flask.
 
 
 *Pre-requisites:*  
-In order to insert data you will have already created the Study, Site, Event and Form (CRF) entities in the Flask data model:    
+In order to insert data, you will have already created the Study, Site, Event, and Form (CRF) entities in the Flask data model:    
 
 1. When you have ePRO (electronic patient reported outcomes), then the user credentials you pass to the API will be for the patient.
 When a site coordinator screens a patient, the Add Subject page automatically sends a Welcome email to the patient.
@@ -237,22 +235,20 @@ The patient then clicks and sets a password. (Alternatively you can enable the p
 
 *Application flow*  
 
-Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to
-collect on your mobile app.
+Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to collect on your mobile app.
 
-You implement the form on your app with the input field and when the user saves the form on the app,
-you then save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours
-of sleep you tracked and save it to Flask every day at 10:00.
+You implement the form on your app with the input field and when the user saves the form on the app, you then save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours of sleep you tracked and save it to Flask every day at 10:00.
 
 Your app then sends the data to the Flask API as key-value pairs. See below.
 
 !!! tip "TIPS"
 
-    * Flask Forms automatically names the item variables; you will probably want to reset
-    variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
+    * Flask Forms automatically names the item variables; you will probably want to reset variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.
 
-    * If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
-    pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
+    * If you are using radio buttons, check, or select boxes in your mobile app - make sure that the values you
+    pass are not offset by 1 by mistake.
+    
+    For example: if PATIENT_GENDER_CODE is (1 - female, 2 - male)
     then make sure you pass 1 or 2 (and not 0 or 1).
 
     * When you pass a numeric field - pass it like:  "AGE": 25 not "AGE": "25". In JSON, strings are not integers.
@@ -272,9 +268,11 @@ You can save data to 1 or more CRFS in a single API call
 
  If subject role token is used to call the APIs, then the request body doesn't need to include the subjectLabel or subjectId parameters.
 
- If CRC role token is used, then the request body must include subjectLabel or subjectId.
+ If the CRC role token is used, then the request body must include subjectLabel or subjectId.
 
- In the below example, the API sends values of selected checkbox/select box items in the CRF. For example: Outcome: 1: 'Ongoing'
+ In the below example, the API sends values of selected checkbox/select box items in the CRF. 
+ 
+ For example: Outcome: 1: 'Ongoing'
 ```json
     {
           "study_id": 6670398,
@@ -307,7 +305,7 @@ You can save data to 1 or more CRFS in a single API call
 
 #### Under the hood - Code generator - ePRO (Electronic patient reported outcomes)
 
-All this probably seems a little abstract, so lets see some working code.    
+All of this probably seems a little abstract, so lets see some working code.    
 
 Surf over to the <a href="https://api.flaskdata.io/code/">Flask API Example code generator</a>
 
@@ -315,19 +313,17 @@ The Code generator page is a React application that generates working NodeJS cod
 
 When you hit the green Run Function button - you will see the results from the API call on the page.
 
-As we mentioned before, the patient (AKA Subject) will have already been screened to the study and have credentials;
-we'll be using the Subject credentials in this API flow.
+As we mentioned before, the patient (AKA Subject) will have already been screened to the study and have credentials; we'll be using the Subject credentials in this API flow.
 
-The following sequence will show how to authorize the subject, get his user id and study subject label and insert some data.
+The following sequence will show how to authorize the subject, get his user id an study subject label, and insert some data.
 
-1. **Authorization** - pass the credentials of the subject (email and password). You'll authorize the Subject after she logs in to your app
-with the credentials she set on her Welcome to Flask email.
+1. **Authorization** - pass in the credentials of the subject (email and password). You'll authorize the Subject after they logs in to your app with the credentials they set on their Welcome to Flask email.
 
-2. **Get User profile** - pass the JWT token and get the Subject ID and Subject label (and a bunch of other fields)
+2. **Get User profile** - pass the JWT token and get the Subject ID and Subject label (along with a number of other fields)
 
 3. **Get studies of subject** - pass the JWT token with the Subject ID and get the Study ID of the study where the Subject is enrolled
 
-4. **Create CRF and insert data** - pass the JWT token with Study ID, Subject ID and the CRF payload and voila - you've inserted data!
+4. **Create CRF and insert data** - pass the JWT token with Study ID, Subject ID, and the CRF payload and voila - you've inserted data!
 
 
 

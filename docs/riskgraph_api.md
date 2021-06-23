@@ -10,7 +10,7 @@ Developers who want to use the RiskGraph API.
 ## Concepts and terms
 A developer will need credentials to a [User account](./registration.md) with a RiskGraph role.
 
-This User can be [created](./manage_users.md#add-user) by customer admin role.
+This User can be [created](./manage_users.md#add-user) by the customer admin role.
 
 The RiskGraph User has access to call RiskGraph APIs.
 
@@ -23,7 +23,7 @@ For more information about Swagger and Authorization go to [API Introduction](./
 ## V0.1
 Single dimensional case.
 
-Algorithm for anomaly detection: Distance based. Single variable
+Algorithm for anomaly detection: Distance based, Single variable
 
 ###Description
 Client calls API function with an array of `{ts: Timestamp,  key:value}` where value is a positive integer
@@ -79,4 +79,4 @@ RiskGraph UI is available to RiskGraph user.
 
 Login to <a href="https://app.flaskdata.io">FlaskData</a>
 
-Click on RiskGraph option in the left bar.
+Click on the RiskGraph option in the left bar.

@@ -8,7 +8,7 @@ Metrics can be computed using a pattern language referencing data variables in y
 ##The Metrics pattern language
 The pattern language was designed to enable you to create metrics of performance, exceptions, missing data, or critical values on the patient timeline.
 
-The language uses item variable names - like $CHANGE_IN_SEVERITY.
+The language uses item variable names, i.e. $CHANGE_IN_SEVERITY.
 
 ### Simple single variable expressions
 You can use a simple expressions like `$CHANGE_IN_SEVERITY  == '0'`,
@@ -28,7 +28,7 @@ You can combine  expressions using logical operators like `&&`(AND) or `||`(OR).
 ###Functions
 
 ####Counting things
-**count(variable, period)**- the count function counts a variable entered in a time period.
+**count(variable, period)** - the count function counts a variable entered in a time period.
 
 The count function will return the number of records in the dataset where the variable has any value.
 If the count is 0 then the data is missing.
@@ -112,7 +112,7 @@ The **take parameter** enables you to take events from the beginning or end of t
     * `'-4'` - The last 4 events
 
 !!! note ""
-the records returned from the database are ordered by date created.
+    the records returned from the database are ordered by date created.
 
 Filter arguments are evaluated in this order:
 
@@ -123,11 +123,11 @@ Filter arguments are evaluated in this order:
 
 
 !!! note ""
-if you don't need to use some parameter you can set null instead.
+    If you don't need to use some parameter, you can set it to null instead.
 
 !!!example "Usage examples"
 
-* `filter($SCREENED)` -  count the  $SCREENED variable for each patient.
+* `filter($SCREENED)` -  count the $SCREENED variable for each patient.
 * `filter($EPRO_DIARY, '24 hours')` - count 1 if any diaries were entered by each patient in the last 24 hours
 * `filter($TOOK_ANALGESICS, '24 hours', '>2')` -  count 1 for each patient who took pain analgesics more than twice in the past 24 hours
 * `filter($TOOK_ANALGESICS, null, '>2')` - count 1 for each patient who took pain analgesics more than twice in the study
@@ -182,31 +182,31 @@ In this case this expression will be replaced to `filter($AGE, null, '== 77') !=
 | FILE |  $ITEM_AT2_COMPONENT_FILE == '1617024475170_rr.jpg'  |
 
 ##Add Metric
-In order to add a metric click on **ADD METRIC** green button.
+In order to add a metric click on the green **ADD METRIC** button.
 
 ![Screenshot](img/metrics/metrics_add_metric.PNG)
 
 There are few properties of metric:
 
-* **Name** - the name of the new metric.
-* **Trigger time** - optional field, time of metric values generation. If this field is empty - metric values will generate in real time.
+* **Name** - The name of the new metric.
+* **Trigger time** - This is an optional field, representing time of metric values generation. If this field is empty, the metric values will generate in real time.
 * **Expression** - see [Expression](manage_metrics.md#the-metrics-pattern-language)
 
 ##Run the study metrics
 
 In the **RUN** option you can run your study metrics.
 
-Click **RUN** green button to run your study metrics.
+Click on the green **RUN** button to run your study metrics.
 
 A success/error message will appear.
 
 ![Screenshot](img/metrics/metrics_run.PNG)
 
-For view the result click on **VIEW METRICS VALUE** blue button.
+To view the result click on the blue **VIEW METRICS VALUE** button.
 
 ##Study Metric Values
 
-In the **VIEW METRICS VALUE** option you can view your study metric values.
+On the **VIEW METRICS VALUE** option you can view your study metric values.
 
 !!!tip
 
