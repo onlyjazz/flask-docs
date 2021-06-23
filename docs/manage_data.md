@@ -65,7 +65,7 @@ In the end on the event's CRFs list there are 2 buttons:
     
    ![Screenshot](img/subjects/flask_events_pro.PNG)
 
-##Short video Example of adding subject and inserting data
+##Short video example of adding subject and inserting data
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NVOpTfqu-eQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

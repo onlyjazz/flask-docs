@@ -44,7 +44,6 @@ A welcome email will be sent to you.
 
 You're welcome to [define your first study](./first_study.md#define-your-study)
 
-##Short video Example of registration
+##Short video example of registration
 
-<iframe style="width: 100%;height: 450px;" src="https://youtu.be/UI2KRY2W56k" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UI2KRY2W56k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
