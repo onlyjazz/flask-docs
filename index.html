@@ -815,27 +815,24 @@
 <h1 id="flaskdata">FlaskData</h1>
 <p><strong>Collect, Detect and Act</strong></p>
 <p>FlaskData is a cloud API platform to collect and monitor data in clinical trials.</p>
-<p>The FlaskData platform provides mobile, desktop and API services to collect clinical data.
+<p>The FlaskData platform provides mobile, desktop, and API services to collect clinical data.
 The Flask  <a href="https://api.flaskdata.io/swagger">API</a>  can be integrated into any code that can call a RESTful API.  </p>
-<p>There are 3 main sub-systems in Flask - Collect, Detect and Act.</p>
-<p>Collect provides desktop, mobile and RESTful Flask  <a href="https://api.flaskdata.io/swagger/">API</a> services to collect data directly from patients, investigators and connected medical devices.   Collect includes the visual Flask Forms designer
-to design eCRFs and publish as eSource and ePRO desktop and native Android mobile apps.</p>
-<p>Detect  provides a capability to automate monitoring of clinical data quality, efficacy and safety using rules
-and thresholds to detect protocol deviations and missing data on the patient journey.</p>
-<p>Act  provides the capability to automate delivery of alerts to patients and clinical operations teams when triggered
-by the detect metrics over/under threshold.</p>
+<p>There are 3 main sub-systems in Flask - Collect, Detect, and Act.</p>
+<p>Collect provides desktop, mobile, and RESTful Flask  <a href="https://api.flaskdata.io/swagger/">API</a> services to collect data directly from patients, investigators, and connected medical devices.   Collect includes the visual Flask Form designers. Form designers design eCRFs and publish them as eSource and ePRO desktop and native Android mobile apps.</p>
+<p>Detect  provides a capability to automate monitoring of clinical data quality, efficacy, and safety. Protocol deviations and missing patient data is detected uses rules and thresholds.</p>
+<p>Act  provides the capability to automate delivery of alerts to both patients and clinical operations teams. It is triggered when the detect metrics are over or under the set threshold.</p>
 <p>Read more about the Flaskdata software architecture here:  <a href="https://www.flaskdata.io/flaskdata-software-architecture-white-paper/">Flaskdata software architecture white paper</a></p>
 <h2 id="introduction">Introduction</h2>
 <h3 id="learning-objectives">Learning objectives</h3>
 <ul>
-<li>What is Flask Data ?</li>
+<li>What is Flask Data?</li>
 <li>Understand concepts</li>
 <li>Use basic functions</li>
 </ul>
 <h4 id="basic-concepts">Basic concepts</h4>
 <ul>
-<li>Study – a clinical trial or research study.</li>
-<li>Site – hospital or clinic</li>
+<li>Study – a clinical trial or research study</li>
+<li>Site – a hospital or clinic</li>
 <li>Study event – a visit of a study subject at a site during a study. A study event contains 1 or more eCRFs</li>
 <li>eCRF – electronic case report form.</li>
 <li>Item – a question on an eCRF</li>
@@ -843,16 +840,16 @@ by the detect metrics over/under threshold.</p>
 </ul>
 <h4 id="user-interface-ui">User interface (UI)</h4>
 <ul>
-<li>Web application that runs in your browser</li>
-<li>All modern browsers including Chrome and on Windows</li>
-<li>Windows, Linux and Mac</li>
+<li>Web application that runs on your browser</li>
+<li>All modern browsers, including Chrome and Windows</li>
+<li>Windows, Linux, and Mac</li>
 <li>Basic UI after login</li>
 <li>Top level status info with Change <a href="manage_sites.html#Edit Site">Site</a>/<a href="manage_studies.html#Study Edit">Study</a></li>
-<li>To navigation  bar</li>
+<li>Top navigation  bar</li>
 <li>Left side bar</li>
 <li>Body</li>
-<li>Plus(+)/minus(-) signs to expand/contract content</li>
-<li>Navigation buttons – Submit, Back etc…</li>
+<li>Plus(+)/minus(-) signs to expand/minimize content</li>
+<li>Navigation buttons – Submit, Back, etc…</li>
 </ul>
 <h3 id="roles-who-can-do-what">Roles – who can do what?</h3>
 <table>
@@ -907,7 +904,7 @@ by the detect metrics over/under threshold.</p>
 <ul>
 <li>Top line always shows User Name and Role</li>
 <li>Currently logged-in user and role</li>
-<li>Click on here at any time to access and change your User Profile – including changing your password.</li>
+<li>Click on here at any time to access and change your user profile, including changing your password.</li>
 </ul>
 <p><img alt="Screenshot" src="img/newForm/hamburgerMenu.png" style="height:300px;width:200px" /></p>
 <h3 id="change-password">Change password</h3>
@@ -915,25 +912,23 @@ by the detect metrics over/under threshold.</p>
 <p>Just click on <strong>Change password</strong> option, a reset password email will send to you.</p>
 <h3 id="customer-profile">Customer Profile</h3>
 <p>Customer Profile allows you to edit customer properities (by clicking on the pen in the top right corner of the Customer properties card). 
-You are also able to add comments and entries into Customer MetaData. These entries will allow users to short cut get() commands in Forms, which allows data extraction while keeping external data secured.</p>
+You are also able to add comments and entries into Customer MetaData. These entries will allow users to short cut get() commands in Forms, which allows for data extraction while keeping external data secured.</p>
 <h3 id="request-support">Request support</h3>
-<p>If you need support from us, click on this option.</p>
-<p>A request support page will be opened.</p>
-<p>Write your request, you can upload file.</p>
-<p><strong>Please detail your request as much as possible</strong></p>
+<p>If you need support from us, click on this option, and a request support page will be opened.</p>
+<p>Write your request and you can upload a file.</p>
+<p><strong>Please detail your request as much as possible.</strong></p>
 <p><img alt="Screenshot" src="img/customer/request_support.PNG" /></p>
 <p><strong>Every effort will be made to get back to you soon.</strong></p>
 <h3 id="logout">Logout</h3>
 <ul>
 <li>Logout – use the logout button</li>
-<li>Don’t just close the browser</li>
-<li>This will leave open sessions on the server and potentially cause problems</li>
+<li>Do not just close the browser, this will leave open sessions on the server and can potentially cause problems.</li>
 </ul>
 <h3 id="languages">Languages</h3>
-<p>You can change your app language, by press on the languages' symbol.</p>
+<p>You can change your app language, by press on the language symbol.</p>
 <p><img alt="Screenshot" src="img/customer/flask_languages.PNG" /></p>
 <h3 id="flaskdata-logo">FlaskData Logo</h3>
-<p>Clicking on FlaskData logo opens <a href="study_dashboard.html#study-dashboard">Study Dashboard</a> page.</p>
+<p>Clicking on FlaskData logo opens the <a href="study_dashboard.html#study-dashboard">Study Dashboard</a> page.</p>
 <p><img alt="Screenshot" loading="lazy" src="img/customer/flaskdata_logo_go_to_dashboard.PNG" /></p>
                 
               

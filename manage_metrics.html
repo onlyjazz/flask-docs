@@ -819,7 +819,7 @@
 <p>Metrics can be computed using a pattern language referencing data variables in your study.</p>
 <h2 id="the-metrics-pattern-language">The Metrics pattern language</h2>
 <p>The pattern language was designed to enable you to create metrics of performance, exceptions, missing data, or critical values on the patient timeline.</p>
-<p>The language uses item variable names - like $CHANGE_IN_SEVERITY.</p>
+<p>The language uses item variable names, i.e. $CHANGE_IN_SEVERITY.</p>
 <h3 id="simple-single-variable-expressions">Simple single variable expressions</h3>
 <p>You can use a simple expressions like <code>$CHANGE_IN_SEVERITY  == '0'</code>,</p>
 <h3 id="count-things">Count things</h3>
@@ -836,7 +836,7 @@
 </div>
 <h3 id="functions">Functions</h3>
 <h4 id="counting-things">Counting things</h4>
-<p><strong>count(variable, period)</strong>- the count function counts a variable entered in a time period.</p>
+<p><strong>count(variable, period)</strong> - the count function counts a variable entered in a time period.</p>
 <p>The count function will return the number of records in the dataset where the variable has any value.
 If the count is 0 then the data is missing.</p>
 <p>The count function takes 2 arguments:</p>
@@ -915,8 +915,9 @@ on the patient journey.</p>
 <li><code>'-4'</code> - The last 4 events</li>
 </ul>
 </div>
-<div class="admonition note"></div>
+<div class="admonition note">
 <p>the records returned from the database are ordered by date created.</p>
+</div>
 <p>Filter arguments are evaluated in this order:</p>
 <ol>
 <li>filtering by variable</li>
@@ -924,13 +925,14 @@ on the patient journey.</p>
 <li>filtering by 'take'</li>
 <li>filtering by 'value'</li>
 </ol>
-<div class="admonition note"></div>
-<p>if you don't need to use some parameter you can set null instead.</p>
+<div class="admonition note">
+<p>If you don't need to use some parameter, you can set it to null instead.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Usage examples</p>
 </div>
 <ul>
-<li><code>filter($SCREENED)</code> -  count the  $SCREENED variable for each patient.</li>
+<li><code>filter($SCREENED)</code> -  count the $SCREENED variable for each patient.</li>
 <li><code>filter($EPRO_DIARY, '24 hours')</code> - count 1 if any diaries were entered by each patient in the last 24 hours</li>
 <li><code>filter($TOOK_ANALGESICS, '24 hours', '&gt;2')</code> -  count 1 for each patient who took pain analgesics more than twice in the past 24 hours</li>
 <li><code>filter($TOOK_ANALGESICS, null, '&gt;2')</code> - count 1 for each patient who took pain analgesics more than twice in the study</li>
@@ -1054,22 +1056,22 @@ on the patient journey.</p>
 </tbody>
 </table>
 <h2 id="add-metric">Add Metric</h2>
-<p>In order to add a metric click on <strong>ADD METRIC</strong> green button.</p>
+<p>In order to add a metric click on the green <strong>ADD METRIC</strong> button.</p>
 <p><img alt="Screenshot" src="img/metrics/metrics_add_metric.PNG" /></p>
 <p>There are few properties of metric:</p>
 <ul>
-<li><strong>Name</strong> - the name of the new metric.</li>
-<li><strong>Trigger time</strong> - optional field, time of metric values generation. If this field is empty - metric values will generate in real time.</li>
+<li><strong>Name</strong> - The name of the new metric.</li>
+<li><strong>Trigger time</strong> - This is an optional field, representing time of metric values generation. If this field is empty, the metric values will generate in real time.</li>
 <li><strong>Expression</strong> - see <a href="manage_metrics.html#the-metrics-pattern-language">Expression</a></li>
 </ul>
 <h2 id="run-the-study-metrics">Run the study metrics</h2>
 <p>In the <strong>RUN</strong> option you can run your study metrics.</p>
-<p>Click <strong>RUN</strong> green button to run your study metrics.</p>
+<p>Click on the green <strong>RUN</strong> button to run your study metrics.</p>
 <p>A success/error message will appear.</p>
 <p><img alt="Screenshot" src="img/metrics/metrics_run.PNG" /></p>
-<p>For view the result click on <strong>VIEW METRICS VALUE</strong> blue button.</p>
+<p>To view the result click on the blue <strong>VIEW METRICS VALUE</strong> button.</p>
 <h2 id="study-metric-values">Study Metric Values</h2>
-<p>In the <strong>VIEW METRICS VALUE</strong> option you can view your study metric values.</p>
+<p>On the <strong>VIEW METRICS VALUE</strong> option you can view your study metric values.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can filter the metric values table by any string, ordering by each column and export the table to COPY/CSV/PDF/PRINT/EXCEL.</p>

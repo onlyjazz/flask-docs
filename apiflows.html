@@ -1094,7 +1094,7 @@
 <p>For more details and questions contact us by sending email to <a href="mailto:support@clearclinica.com">support@clearclinica.com</a>.</p>
 <h2 id="edc">EDC</h2>
 <h3 id="extract-edc-data">Extract EDC Data</h3>
-<p>There are a few APIs you can use to extract  EDC data.</p>
+<p>There are a few APIs you can use to extract EDC data.</p>
 <p>For example:</p>
 <h4 id="edcstudyextract-data">/edc/study/extract-data</h4>
 <p>This API extracts EDC data of each table/view/function (i.e. functionName()) and returns a json structure.</p>
@@ -1121,7 +1121,7 @@
 <p>This API downloads a zip folder of CSV files with EDC study data.</p>
 <p>Each CSV file contains EDC Event-CRF data (Event is often called a Visit in an EDC)</p>
 <h4 id="edcstudyextract-study-data-at-crf-level">/edc/study/extract-study-data-at-crf-level</h4>
-<p>This API extracts EDC data at CRF level and returns the data as a json object.</p>
+<p>This API extracts EDC data at the CRF level and returns the data as a json object.</p>
 <p>This API returns only CRFs with data.</p>
 <p>This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).</p>
 <h4 id="edcstudyextract-study-data-at-crf-level-to-csvs">/edc/study/extract-study-data-at-crf-level-to-csvs</h4>
@@ -1129,14 +1129,14 @@
 <p>This API returns only CRFs with data.</p>
 <p>This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).</p>
 <h4 id="edcsubjectscreate-subject">/edc/subjects/create-subject</h4>
-<p>This API creates a subject in EDC DB and returns the study_subject_id value.</p>
+<p>This API creates a subject in the EDC DB and returns the study_subject_id value.</p>
 <h2 id="flask">Flask</h2>
 <h3 id="flaskcustomerextract-data-to-json">/flask/customer/extract-data-to-json</h3>
 <p>This API extracts data from flask tables and views for your customer.</p>
-<p>The table/ view should have customer_id column for this process.</p>
+<p>The table/ view should have a customer_id column for this process.</p>
 <div class="admonition example">
 <p class="admonition-title">Examples</p>
-<p>studies table, audit_user_login, billing_reports_customer etc.</p>
+<p>studies table, audit_user_login, billing_reports_customer, etc.</p>
 </div>
 <p>studyIds and filters are optional.</p>
 <h3 id="flaskcustomerdownload-billing-reports">/flask/customer/download-billing-reports</h3>
@@ -1149,14 +1149,14 @@
 <h3 id="flaskdeviceget-logs">/flask/device/get-logs</h3>
 <p>This API returns device logs of a study.</p>
 <h3 id="flaskdeviceinsert-log">/flask/device/insert-log</h3>
-<p>This API inserts device log into flaskData with correct study_id according to EDC.</p>
-<p>payload parameter is optional and can include each key value pairs.</p>
+<p>This API inserts device log into flaskData with the correct study_id according to EDC.</p>
+<p>The payload parameter is optional and can include each key value pair.</p>
 <h3 id="flaskstudycreate-update-flask-study">/flask/study/create-update-flask-study</h3>
 <p>This API creates/updates study in FlaskData.</p>
 <h3 id="flasksitecreate-update-flask-site">/flask/site/create-update-flask-site</h3>
 <p>This API creates/updates site in FlaskData.</p>
 <h3 id="flaskstudycreate-update-flask-study-users">/flask/study/create-update-flask-study-users</h3>
-<p>This API creates User if not exists and assigned Users to study.</p>
+<p>This API creates Users (if they do not exists) and assigned Users to the study.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This API deletes the Users that were assigned to this study and assigned the new Users.</p>
@@ -1172,7 +1172,7 @@
 <p>You can control the shape of the result object by using the <strong>columns</strong> field in your request body.
 This is like an SQL SELECT col1, col2, col3 FROM statement</p>
 <div class="admonition example">
-<p>For example, if you need only <strong>crf</strong>, <strong>event</strong> and <strong>value</strong> fields use:
+<p>For example: if you need only <strong>crf</strong>, <strong>event</strong> and <strong>value</strong> fields use:
 <div class="highlight"><pre><span></span><code><span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
 <span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -1186,8 +1186,7 @@ set in the request body when you set them to 1.</p>
 <p>To get all the fields, don't set fields or specify the entire list of fields.
 This is like a SELECT * FROM statement.</p>
 <h4 id="filter-records-by-date-andor-column-value">Filter records by date and/or column value</h4>
-<p>You can refine record selection by the API with the date_from, date_to filters and setting values for
-fields.</p>
+<p>You can refine record selection from the API with the date_from, date_to filters and setting values for fields.</p>
 <p>This is like the SQL WHERE clause - WHERE crf='Demographics' and eventDate between date_from AND date_to.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -1201,7 +1200,7 @@ fields.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Reminder! If you don’t set any filters field you will get all records.</p>
+<p>Reminder: if you don’t set any filters field you will get all records.</p>
 </div>
 <h3 id="flaskcrfcreate-crf-and-insert-data">/flask/crf/create-CRF-and-insert-data</h3>
 <p>This API creates a CRF in an existing event and inserts data into the CRF.</p>
@@ -1210,11 +1209,11 @@ fields.</p>
 </div>
 <h3 id="flaskcrfcreate-event-crf-and-insert-data">/flask/crf/create-event-CRF-and-insert-data</h3>
 <p>This API creates event and CRF and inserts data.</p>
-<p>Example - Creates a new Medication event with CRF and inserts data.</p>
+<p>Example - Create a new Medication event with CRF and inserts data.</p>
 <h3 id="flaskcrfget-crf-data-ids">/flask/crf/get-CRF-data-ids</h3>
-<p>This API returns subject's crf data Id (unique for each CRF) for specific crf name.</p>
+<p>This API returns subject's CRF data ID (unique for each CRF) for specific CRF name.</p>
 <h3 id="flaskcrfupdate-crf-data">/flask/crf/update-CRF-data</h3>
-<p>This API updates CRF data by crf data id.</p>
+<p>This API updates CRF data by CRF data ID.</p>
 <h3 id="example-of-how-to-extract-data-using-client-side-js-code">Example of how to extract data using client-side JS code:</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1251,12 +1250,11 @@ fields.</p>
 and you want to save the data to the Flask data model.</p>
 </li>
 <li>
-<p>You have a connected wearable device that connects to your phone app with BLE
-and you want to save some data to Flask.</p>
+<p>You have a connected wearable device that connects to your phone app with BLE and you want to save some data to Flask.</p>
 </li>
 </ol>
 <p><em>Pre-requisites:</em><br />
-In order to insert data you will have already created the Study, Site, Event and Form (CRF) entities in the Flask data model:    </p>
+In order to insert data, you will have already created the Study, Site, Event, and Form (CRF) entities in the Flask data model:    </p>
 <ol>
 <li>
 <p>When you have ePRO (electronic patient reported outcomes), then the user credentials you pass to the API will be for the patient.
@@ -1268,24 +1266,23 @@ The patient then clicks and sets a password. (Alternatively you can enable the p
 </li>
 </ol>
 <p><em>Application flow</em>  </p>
-<p>Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to
-collect on your mobile app.</p>
-<p>You implement the form on your app with the input field and when the user saves the form on the app,
-you then save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours
-of sleep you tracked and save it to Flask every day at 10:00.</p>
+<p>Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to collect on your mobile app.</p>
+<p>You implement the form on your app with the input field and when the user saves the form on the app, you then save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours of sleep you tracked and save it to Flask every day at 10:00.</p>
 <p>Your app then sends the data to the Flask API as key-value pairs. See below.</p>
 <div class="admonition tip">
 <p class="admonition-title">TIPS</p>
 <ul>
 <li>
-<p>Flask Forms automatically names the item variables; you will probably want to reset
-variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.</p>
+<p>Flask Forms automatically names the item variables; you will probably want to reset variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.</p>
 </li>
 <li>
-<p>If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
-pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
-then make sure you pass 1 or 2 (and not 0 or 1).</p>
+<p>If you are using radio buttons, check, or select boxes in your mobile app - make sure that the values you
+pass are not offset by 1 by mistake.</p>
 </li>
+</ul>
+<p>For example: if PATIENT_GENDER_CODE is (1 - female, 2 - male)
+then make sure you pass 1 or 2 (and not 0 or 1).</p>
+<ul>
 <li>
 <p>When you pass a numeric field - pass it like:  "AGE": 25 not "AGE": "25". In JSON, strings are not integers.</p>
 </li>
@@ -1303,8 +1300,9 @@ then make sure you pass 1 or 2 (and not 0 or 1).</p>
 <p>/data/create/create-event-crf-and-insert-data creates a new event with CRFs and insert CRFs data for one subject</p>
 <p><strong>Important:</strong></p>
 <p>If subject role token is used to call the APIs, then the request body doesn't need to include the subjectLabel or subjectId parameters.</p>
-<p>If CRC role token is used, then the request body must include subjectLabel or subjectId.</p>
-<p>In the below example, the API sends values of selected checkbox/select box items in the CRF. For example: Outcome: 1: 'Ongoing'
+<p>If the CRC role token is used, then the request body must include subjectLabel or subjectId.</p>
+<p>In the below example, the API sends values of selected checkbox/select box items in the CRF. </p>
+<p>For example: Outcome: 1: 'Ongoing'
 <div class="highlight"><pre><span></span><code>    <span class="p">{</span>
           <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">6670398</span><span class="p">,</span>
           <span class="nt">&quot;eventName&quot;</span><span class="p">:</span> <span class="s2">&quot;Common&quot;</span><span class="p">,</span>
@@ -1334,26 +1332,24 @@ then make sure you pass 1 or 2 (and not 0 or 1).</p>
     <span class="p">}</span>
 </code></pre></div></p>
 <h4 id="under-the-hood-code-generator-epro-electronic-patient-reported-outcomes">Under the hood - Code generator - ePRO (Electronic patient reported outcomes)</h4>
-<p>All this probably seems a little abstract, so lets see some working code.    </p>
+<p>All of this probably seems a little abstract, so lets see some working code.    </p>
 <p>Surf over to the <a href="https://api.flaskdata.io/code/">Flask API Example code generator</a></p>
 <p>The Code generator page is a React application that generates working NodeJS code; showing you the API call  with proper arguments.  You can copy and past the code and run it on the command line with nodejs.</p>
 <p>When you hit the green Run Function button - you will see the results from the API call on the page.</p>
-<p>As we mentioned before, the patient (AKA Subject) will have already been screened to the study and have credentials;
-we'll be using the Subject credentials in this API flow.</p>
-<p>The following sequence will show how to authorize the subject, get his user id and study subject label and insert some data.</p>
+<p>As we mentioned before, the patient (AKA Subject) will have already been screened to the study and have credentials; we'll be using the Subject credentials in this API flow.</p>
+<p>The following sequence will show how to authorize the subject, get his user id an study subject label, and insert some data.</p>
 <ol>
 <li>
-<p><strong>Authorization</strong> - pass the credentials of the subject (email and password). You'll authorize the Subject after she logs in to your app
-with the credentials she set on her Welcome to Flask email.</p>
+<p><strong>Authorization</strong> - pass in the credentials of the subject (email and password). You'll authorize the Subject after they logs in to your app with the credentials they set on their Welcome to Flask email.</p>
 </li>
 <li>
-<p><strong>Get User profile</strong> - pass the JWT token and get the Subject ID and Subject label (and a bunch of other fields)</p>
+<p><strong>Get User profile</strong> - pass the JWT token and get the Subject ID and Subject label (along with a number of other fields)</p>
 </li>
 <li>
 <p><strong>Get studies of subject</strong> - pass the JWT token with the Subject ID and get the Study ID of the study where the Subject is enrolled</p>
 </li>
 <li>
-<p><strong>Create CRF and insert data</strong> - pass the JWT token with Study ID, Subject ID and the CRF payload and voila - you've inserted data!</p>
+<p><strong>Create CRF and insert data</strong> - pass the JWT token with Study ID, Subject ID, and the CRF payload and voila - you've inserted data!</p>
 </li>
 </ol>
 <p>```</p>
