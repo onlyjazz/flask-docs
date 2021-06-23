@@ -7,9 +7,9 @@ Attached are a few short videos with example of [ePRO desktop](./epro.md#flaskda
 ##Login to ePRO desktop
 This is a short video with examples of patient's diary using a desktop.
 
-<iframe style="width: 100%;height: 450px;" src="https://youtu.be/NVOpTfqu-eQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NVOpTfqu-eQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ##ePRO desktop Options
 This is a short video with examples of patient's diary options.
 
-<iframe style="width: 100%;height: 450px;" src="https://youtu.be/onlKSBhHeOw" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/onlKSBhHeOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
