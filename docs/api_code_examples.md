@@ -127,15 +127,14 @@ function callback(error, response, body) {
 }
 
 request(options, callback);
-
++ -->
 
 2. Read data from FlaskData CRF
 
 Curl:
 !!!example
 	curl -X POST "https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json" -H "accept: application/json" -H "Authorization: JWT eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJncW1yUzVUTnpwbW5nM0Q3U0VtenF1d3F3SFBPSncwUSIsImV4cCI6MTY0MDMzOTk0MzExNCwiaWF0IjoxNjI0NTI4NzQzfQ.9iypqofDb_81xFr8Tr-OofkY9C4uZc8HhnhKVxuYFUAXQR9jrDC5-PgPBo7aobPO" -H "Content-Type: application/json" -d "{ \"study_id\": 1511357, \"from_last_extract\": false, \"CRFs\": [ \"60c9ac9ced17f75845cca3ab\" ], \"include_deactivated_crfs\": false, \"include_started_crfs\": true, \"include_closed_crfs\": true, \"group_by\": \"subject\", \"values_as_object\": false, \"include_all_crf_versions\": false}"
-
-
+<!--
 Java:
 
 Python:
