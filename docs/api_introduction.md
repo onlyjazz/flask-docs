@@ -38,6 +38,7 @@ Config/change header and body request as needed and click on the "Execute" butto
 
 ![Screenshot](img/newSwagger/execute.png)
 
+
 ### EDC
 ClinCapture EDC is a 21 CFR Part 11 compliant EDC system that is integrated into Flask Collect.
 The ClinCapture database uses a standard clinical trial data model (Events or visits, CRFs, Items, Sites, Subjects, Queries, SDV, Audit logs, and data extracts)
