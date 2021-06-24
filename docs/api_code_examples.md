@@ -14,7 +14,7 @@ curl -X POST "https://dev-idp.flaskdata.io/auth/mobile-form-authorization"
 -H "Content-Type: application/json" 
 -d "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}"
 
-<
+<!--
 Java:
 !!!example
 Request request = Request.Post("https://dev-idp.flaskdata.io/auth/mobile-form-authorization");
@@ -157,4 +157,5 @@ Python:
 Swift:
 
 NodeJS:
->
+
++ -->
