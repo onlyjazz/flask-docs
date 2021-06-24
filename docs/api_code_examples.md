@@ -8,11 +8,7 @@ In this example, we create a new mobile user token.
 
 Curl:
 !!!example
-curl -X POST "https://dev-idp.flaskdata.io/auth/mobile-form-authorization" 
--H "accept: application/json" 
--H "Authorization: JWT eyJ0eXAiOiJKV" 
--H "Content-Type: application/json" 
--d "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}"
+	curl -X POST "https://dev-idp.flaskdata.io/auth/mobile-form-authorization" -H "accept: application/json" -H "Authorization: JWT eyJ0eXAiOiJKV" -H "Content-Type: application/json" -d "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}"
 
 <!--
 Java:
