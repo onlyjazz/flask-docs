@@ -2,7 +2,7 @@
 
 API Code Examples
 
-1. Get Subject/Site Role User Authorization 
+Get Subject/Site Role User Authorization 
 
 In this example, we create a new mobile user token. 
 
@@ -129,7 +129,7 @@ function callback(error, response, body) {
 request(options, callback);
 + -->
 
-2. Read data from FlaskData CRF
+Read data from FlaskData CRF
 
 Curl:
 !!!example
@@ -144,7 +144,7 @@ Swift:
 NodeJS:
 
 
-3. Create an event, CRFs, and data
+Create an event, CRFs, and data
 
 Curl:
 
