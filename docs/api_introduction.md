@@ -32,7 +32,7 @@ There are a few specs, select the relevant spec for the API you are using. Optio
 
 For using the FlaskData API with swagger, you need to click on "Try it out" for the relevant API.
 
-![Screenshot](img/newSwagger/tryIt.PNG)
+![Screenshot](img/newSwagger/tryIt.png)
 
 Config/change header and body request as needed and click on the "Execute" button.
 
