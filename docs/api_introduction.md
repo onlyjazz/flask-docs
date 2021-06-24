@@ -19,10 +19,15 @@ There are 3 FlaskData API environments:
 Each API environments has its own swagger UI (i.e. https://api.flaskdata.io/swagger/ )
 
 There are a few specs, select the relevant spec for the API you are using. Options for specs include:
+
  * General APIs (i.e. study logs, user ID, etc.)
+
  * Features (i.e. exporting CRFs to excel)
+ 
  * Forms Data (i.e. create event with CRF, update existing event, etc.)
+ 
  * Alerts (i.e. alert definition, notification list, metic values, etc.)
+ 
  * IDP (i.e. create new mobile user token, logout)
 
 For using the FlaskData API with swagger, you need to click on "Try it out" for the relevant API.
