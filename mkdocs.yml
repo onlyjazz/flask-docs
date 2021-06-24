@@ -21,6 +21,7 @@ nav:
   - Flask API:
     - Introduction: api_introduction.md
     - Flows: apiflows.md
+    - API Code Examples: api_code_examples.md
   - ePRO :
       - Flask ePRO: epro.md
       - ePRO Mobile: epro_mobile.md
