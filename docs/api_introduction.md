@@ -32,11 +32,11 @@ There are a few specs, select the relevant spec for the API you are using. Optio
 
 For using the FlaskData API with swagger, you need to click on "Try it out" for the relevant API.
 
-![Screenshot](img/api/try_it_out.PNG)
+![Screenshot](img/newSwagger/tryIt.PNG)
 
 Config/change header and body request as needed and click on the "Execute" button.
 
-![Screenshot](img/api/execute_api.PNG)
+![Screenshot](img/newSwagger/execute.PNG)
 
 ### EDC
 ClinCapture EDC is a 21 CFR Part 11 compliant EDC system that is integrated into Flask Collect.
