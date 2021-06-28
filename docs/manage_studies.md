@@ -23,19 +23,6 @@ Fill in your study properties and click **SAVE**. The Manage Users page will ope
         * Validate - Flask+Forms+Tools+EDC. Limited to 3 sites.
     5. *Alert data source*: Data for alert definitions (If study uses clinCapture you should choose PostgreSQL, otherwise choose MongoDB).
 
-##Access Control Lists 
-ACL utilities:
-
-1. Users can create study roles
-
-2. Users can assign each event definitions to a study role
-
-3. Users can assign each user to a study role
-
-4. Manage research roles are availbale to customer admin and form designer users
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/caPqj0Pwiy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ##Study manage Users
 Study Role users get assignmed studies from the customer admin and can only access studies, queries, and subjects. Study Role users can add comments and subscribe to alerts. If given permission, they can also be form designers.
 
@@ -103,6 +90,20 @@ There is a **Comments** card that you can write all free text comments about you
 ![Screenshot](img/study/study_comment.PNG)
 
 There is an **ACTIONS** green button with Manage Users and Manage Sites options.
+
+##Access Control Lists 
+ACL utilities:
+
+1. Users can create study roles
+
+2. Users can assign each event definitions to a study role
+
+3. Users can assign each user to a study role
+
+4. Manage research roles are available to customer admin and form designer users
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/caPqj0Pwiy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ###Study Metadata
 In study profile there is a **Study Metadata** card.
