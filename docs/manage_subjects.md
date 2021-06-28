@@ -20,9 +20,18 @@ You can see all subject's events list.
 
 By click on event - list of this event CRFs opens.
 
-You can view the data by click on the **View** option.
+You can view the data by click on the subject.
 
-![Screenshot](img/subjects/flask_events_ca_view.PNG)
+![Screenshot](img/newSubjects/subjectSelection.png)
+
+You can now input into the CRF.
+
+![Screenshot](img/newSubjects/subjectData.png)
+
+Now you can see the change indicated by the highlighted box.
+
+![Screenshot](img/newSubjects/subjectEdited.png)
+
 
 The customer admin user has permissions to re-open the closed CRFs.
 
