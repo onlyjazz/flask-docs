@@ -89,9 +89,9 @@ There is a **Comments** card that you can write all free text comments about you
 
 ![Screenshot](img/study/study_comment.PNG)
 
-There is an **ACTIONS** green button with Manage Users and Manage Sites options.
+There is an **ACTIONS** green button with Manage Users, Manage Sites options and Manage research roles.
 
-##Access Control Lists 
+###Access Control Lists 
 ACL utilities:
 
 1. Users can create study roles
