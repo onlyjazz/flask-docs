@@ -89,7 +89,19 @@ In **Generate events by treatment plan period** you should define the start peri
 ![Screenshot](img/subjects/flask_events_randomized.PNG)
 
 
+##Forget Subject
 
+Super Admin can define a Customer Admin user as a "DPO user". 
+![Screenshot](img/DPOuser/dpo.png)
 
+This will generate a PIN that the DPO users can use to delete a subject using the forget option.
+![Screenshot](img/DPOuser/code.png)
 
+To forget a subject, navigate to your study subjects using the left bar. Next check the subject you want to forget and click on the blue pull down **Action** button and select forget. A verification message will pop up.
+![Screenshot](img/DPOuser/forget.png)
 
+After you select yes, you will be prompted to enter the PIN.
+![Screenshot](img/DPOuser/pin.png)
+
+Lastly you will see the success message. 
+![Screenshot](img/DPOuser/success.png)
