@@ -24,14 +24,9 @@ You can view the data by click on the subject.
 
 ![Screenshot](img/newSubject/subjectSelection.png)
 
-You can now input into the CRF.
+You can now input into the CRF. This data is displayed, however entered data is not saved. 
 
 ![Screenshot](img/newSubject/subjectData.png)
-
-Now you can see the change indicated by the highlighted box.
-
-![Screenshot](img/newSubject/subjectEdited.png)
-
 
 The customer admin user has permissions to re-open the closed CRFs.
 
