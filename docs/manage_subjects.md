@@ -103,14 +103,14 @@ This will generate a PIN that the DPO users can use to delete a subject using th
 
 To forget a subject, navigate to your study subjects using the left bar. Next check the subject you want to forget and click on the blue pull down **Action** button and select forget. A verification message will pop up.
 
-![Screenshot](img/DPOuser/forget.png){: style="height:300px;width:500px"}
+![Screenshot](img/DPOuser/forget.png){: style="height:200px;width:400px"}
 
 
 After you select yes, you will be prompted to enter the PIN.
 
-![Screenshot](img/DPOuser/pin.png)
+![Screenshot](img/DPOuser/pin.png) {: style="height:200px;width:400px"}
 
 
 Lastly, you will see the success message. 
 
-![Screenshot](img/DPOuser/success.png){: style="height:300px;width:500px"}
+![Screenshot](img/DPOuser/success.png){: style="height:200px;width:400px"}
