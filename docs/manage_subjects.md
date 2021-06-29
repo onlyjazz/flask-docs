@@ -18,7 +18,7 @@ On the flask events page you see all of the subject's events, CRFs and data.
 
 You can see all subject's events list.
 
-By click on event - list of this event CRFs opens.
+By clicking on an event, a list of this event's CRFs opens.
 
 You can view the data by click on the subject.
 
@@ -77,11 +77,11 @@ Clicking on this button open a page with option to send Email/SMS to the subject
 ###Randomize
 If a study has PRO with [Randomized option](./manage_forms.md#study-schedules)
 
-An additional button will appear - **RANDOMIZED**
+An additional check box will appear - **RANDOMIZED**
 
-In **Generate events by treatment plan period** you should define the start period and choose the period for this subject.
+In **Study Schedule by period** you should define the start period and choose the period for this subject. If this is used for randomized subjects, check the box.
 
-![Screenshot](img/subjects/flask_events_randomized.PNG)
+![Screenshot](img/newSubject/randomizeSub.png)
 
 
 ##Forget Subject
