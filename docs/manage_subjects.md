@@ -108,7 +108,7 @@ To forget a subject, navigate to your study subjects using the left bar. Next ch
 
 After you select yes, you will be prompted to enter the PIN.
 
-![Screenshot](img/DPOuser/pin.png){: style="height:200px;width:400px"}
+![Screenshot](img/DPOuser/pin.png){: style="height:300px;width:450px"}
 
 
 Lastly, you will see the success message. 
