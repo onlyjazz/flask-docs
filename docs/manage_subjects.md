@@ -68,11 +68,19 @@ By clicking on subject on the Subjects Index page, the Flask Events page opens.
 In this page site role user can [create events, add CRFs, enter data, deactivate CRF, etc.](./manage_data.md#create-event-by-crf)
 
 ###Send Message
-In subject's Flask Events page there is a green **SEND MESSAGE** button.
+To navigate to the send message feature, the site role user should locate the Subject Flask-Events page.
+
+![Screenshot](img/newSubject/subjectEvent.png)
+
+
+After selecting a subject, there is a blue **SEND MESSAGE** button.
+
+![Screenshot](img/newSubject/sendMessage.png)
 
 Clicking on this button open a page with option to send Email/SMS to the subject.
 
-![Screenshot](img/subjects/subject_send_message.PNG)
+![Screenshot](img/newSubject/message.png)
+
 
 ###Randomize
 If a study has PRO with [Randomized option](./manage_forms.md#study-schedules)
