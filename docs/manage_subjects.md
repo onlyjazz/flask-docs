@@ -75,11 +75,11 @@ To navigate to the send message feature, the site role user should locate the Su
 
 After selecting a subject, there is a blue **SEND MESSAGE** button.
 
-![Screenshot](img/newSubject/sendMessage.png){: style="height:300px;width:450px"}
+![Screenshot](img/newSubject/sendMessage.png){: style="height:500px;width:700px"}
 
 Clicking on this button open a page with option to send Email/SMS to the subject.
 
-![Screenshot](img/newSubject/message.png){: style="height:300px;width:450px"}
+![Screenshot](img/newSubject/message.png){: style="height:500px;width:700px"}
 
 
 ###Randomize
