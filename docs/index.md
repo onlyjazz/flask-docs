@@ -82,6 +82,11 @@ Write your request and you can upload a file.
 
 **Every effort will be made to get back to you soon.**
 
+###Login
+* Login using your email and password or with your google account
+
+![Screenshot](img/login.png)
+
 ###Logout
 * Logout – use the logout button
 * Do not just close the browser, this will leave open sessions on the server and can potentially cause problems.
