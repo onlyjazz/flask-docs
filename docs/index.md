@@ -70,19 +70,19 @@ Just click on **Change password** option, a reset password email will send to yo
 ###Forgot password
 If you forgot your password, simply select forgot password, 
 
-![Screenshot](img/forgotPass/forgotPassword.png)
+![Screenshot](img/forgotPass/forgotPassword.png){: style="height:400px;width:600"}
 
 and enter your email.
 
-![Screenshot](img/forgotPass/newPasswordEmail.png)
+![Screenshot](img/forgotPass/newPasswordEmail.png){: style="height:400px;width:600"}
 
 You will receive this confirmation message, prompting you to check your email.
 
-![Screenshot](img/forgotPass/email.png)
+![Screenshot](img/forgotPass/email.png){: style="height:300px;width:500"}
 
 Using the link provided in the email, enter your new password and login!
 
-![Screenshot](img/forgotPass/createNew.png)
+![Screenshot](img/forgotPass/createNew.png){: style="height:400px;width:600"}
 
 
 ###Customer Profile
