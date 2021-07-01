@@ -85,7 +85,7 @@ Write your request and you can upload a file.
 ###Login
 * Login using your email and password or with your google account
 
-![Screenshot](img/login.png)
+![Screenshot](img/login.png){: style="height:646px;width:932px"}
 
 ###Logout
 * Logout – use the logout button
