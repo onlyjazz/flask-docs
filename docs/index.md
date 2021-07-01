@@ -67,6 +67,24 @@ Change password allows you to change your password when you want,
 
 Just click on **Change password** option, a reset password email will send to you.
 
+###Forgot password
+If you forgot your password, simply select forgot password, 
+
+![Screenshot](img/forgotPass/forgotPassword.png)
+
+and enter your email.
+
+![Screenshot](img/forgotPass/newPasswordEmail.png)
+
+You will receive this confirmation message, prompting you to check your email.
+
+![Screenshot](img/forgotPass/email.png)
+
+Using the link provided in the email, enter your new password and login!
+
+![Screenshot](img/forgotPass/createNew.png)
+
+
 ###Customer Profile
 Customer Profile allows you to edit customer properities (by clicking on the pen in the top right corner of the Customer properties card). 
 You are also able to add comments and entries into Customer MetaData. These entries will allow users to short cut get() commands in Forms, which allows for data extraction while keeping external data secured.
