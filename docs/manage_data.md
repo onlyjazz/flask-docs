@@ -69,3 +69,5 @@ In the end on the event's CRFs list there are 2 buttons:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tTwSPX_E6co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/inO37AKVM5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
