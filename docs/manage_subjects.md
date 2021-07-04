@@ -39,7 +39,7 @@ Click on the green **ADD SUBJECT** button to add a new subject
 
 If the study has ePRO, CRC should define the subject's email and phone number.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NVOpTfqu-eQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tTwSPX_E6co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 On the subjects index page there is a blue **Actions** button with Edit and Profile options.
 

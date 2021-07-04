@@ -11,7 +11,7 @@ Before the first entry, you will receive a welcome email from Flask Data.
  
 Upon receiving the email, you can enter and set a personal password for the system using the create password email. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F50fZ4qGQak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iMm8yWfrq3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 !!!note
     
@@ -22,7 +22,7 @@ Upon receiving the email, you can enter and set a personal password for the syst
 ##First login for using Android mobile
 This is a short video of diary using mobile.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7umr_V9knDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Dc2eiE3pmXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ##Diary Options
 This is a short video with example of patient's diary options.
@@ -35,7 +35,7 @@ This is a short video with example of patient's diary options.
 4. Change display mode
 5. See study details.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pupcJzPTaa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YqS_zx6vHuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 !!!important
 
