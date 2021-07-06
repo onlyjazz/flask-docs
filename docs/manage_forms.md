@@ -85,29 +85,51 @@ The second tab is **VALUE**, you can set a default value to this item.
 ![Screenshot](img/newForm/visitsValue.png)
 
 ######Variable Assignment
-The third tab **VARIABLE ASSIGNMENT**, is used to place data in an item. 
-The data source can be another item in the CRF or from an external API.
-To extract data from an external API, use the get() function. 
+The third tab VARIABLE ASSIGNMENT, is used to assign values to a Form item. 
 
-The Key entry functions as a data source configuration key to an external API, allowing secured access to certain data. 
+You can assign variables, computed expressions or data from an external API call.
 
-The customer can define a default external API in [Customer Metadata](index.md#customer-profile), allowing the user to write get() without specifying a URL.
-To select specific data field, use commands similar to 'get()[rates]'. 
+#######Autocomplete
+Forms variable assignment provides an autocomplete feature. Just type '$' and select the variable(s)
+you want in your expression.
 
+Let's see a couple of examples:
 
-For input values, the data type should be a single value.
-For get() the data type should be be a JSON object.
-For example: {"aaa":1; "bbb":2} will output a list of aaa, bbb(values:1,2)
+Simple variable assignment:
+To assign a variable from another Form - just type:
+$cat = $cat_in_the_hat
 
-To use the autocomplete feature, type '$' and select the variable of interest.
-Use variables to create expressions for calculating the value of an item based on other existing values. 
-Use the get() function to extract the value of the item from an external source. 
-!!!note
-    The terminal supports any JavaScript expressions for the value of the available form variables.
+#######Computed variable assignment 
+To assign a computation based on several Form variables - try this:
 
-![Screenshot](img/newForm/VariableAssignmentAuto.png)
+$force = $mass * $acceleration
 
-![Screenshot](img/newForm/variableAssignmentGet.png)
+#######Populating a form from an external API
+To populate a Form item from an external API call, you can use the get() function.
+You can write calls like:
+
+get()   - this calls the external_data_source specified in the Customer Profile>Customer MetaData
+get(/auth/self)[first_name] + ' ' + $CAT_HAIR_COLOR - Pass a variable value from the form
+get(/some/endpoint) - just call an endpoint
+get(/some/endpoint?first=with&second=query&third=params) - call an endpoint with a query string
+
+#######Item data types
+For an INPUT or DATE field - the API must return a single value.
+
+For a SELECT box field - the API must return a JSON object like {"blond": 1, "brunette": 2}.
+This will populate a select box with 2 options - Blond and Brunette with values 1 and 2 respectively.
+
+#######Configuring External API services
+Click on the hamburger icon > Customer Profile > Customer MetaData
+To set a default URL for the external API - set external_data_source like this:
+external_data_source	https://my-api.service.com My API
+
+To access a service with oAuth authentication - -  provide external_data_source_config_key and the external_data_source_authentication_method key-value pairs like in this example:
+external_data_source_config_key	flask	Flask source key
+external_data_source_authentication_method	oAuth	external data source authentication method
+
+#######Testing
+The TEST button enables you to preview the results of the variable assignment.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDAzjUgpbds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
