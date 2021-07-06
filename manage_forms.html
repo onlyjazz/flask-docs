@@ -387,6 +387,48 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#autocomplete" class="md-nav__link">
+    #Autocomplete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-variable-assignment" class="md-nav__link">
+    #Computed variable assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populating-a-form-from-an-external-api" class="md-nav__link">
+    #Populating a form from an external API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#item-data-types" class="md-nav__link">
+    #Item data types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-external-api-services" class="md-nav__link">
+    #Configuring External API services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    #Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#validations" class="md-nav__link">
     Validations
   </a>
@@ -898,6 +940,48 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#autocomplete" class="md-nav__link">
+    #Autocomplete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-variable-assignment" class="md-nav__link">
+    #Computed variable assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populating-a-form-from-an-external-api" class="md-nav__link">
+    #Populating a form from an external API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#item-data-types" class="md-nav__link">
+    #Item data types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-external-api-services" class="md-nav__link">
+    #Configuring External API services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    #Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#validations" class="md-nav__link">
     Validations
   </a>
@@ -1087,24 +1171,38 @@ By click on component, the component is added to the CRF (at the end of the list
 <p>The second tab is <strong>VALUE</strong>, you can set a default value to this item. 
 <img alt="Screenshot" src="img/newForm/visitsValue.png" /></p>
 <h6 id="variable-assignment">Variable Assignment</h6>
-<p>The third tab <strong>VARIABLE ASSIGNMENT</strong>, is used to place data in an item. 
-The data source can be another item in the CRF or from an external API.
-To extract data from an external API, use the get() function. </p>
-<p>The Key entry functions as a data source configuration key to an external API, allowing secured access to certain data. </p>
-<p>The customer can define a default external API in <a href="index.html#customer-profile">Customer Metadata</a>, allowing the user to write get() without specifying a URL.
-To select specific data field, use commands similar to 'get()[rates]'. </p>
-<p>For input values, the data type should be a single value.
-For get() the data type should be be a JSON object.
-For example: {"aaa":1; "bbb":2} will output a list of aaa, bbb(values:1,2)</p>
-<p>To use the autocomplete feature, type '$' and select the variable of interest.
-Use variables to create expressions for calculating the value of an item based on other existing values. 
-Use the get() function to extract the value of the item from an external source. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The terminal supports any JavaScript expressions for the value of the available form variables.</p>
-</div>
-<p><img alt="Screenshot" src="img/newForm/VariableAssignmentAuto.png" /></p>
-<p><img alt="Screenshot" src="img/newForm/variableAssignmentGet.png" /></p>
+<p>The third tab VARIABLE ASSIGNMENT, is used to assign values to a Form item. </p>
+<p>You can assign variables, computed expressions or data from an external API call.</p>
+<h6 id="autocomplete">#Autocomplete</h6>
+<p>Forms variable assignment provides an autocomplete feature. Just type '$' and select the variable(s)
+you want in your expression.</p>
+<p>Let's see a couple of examples:</p>
+<p>Simple variable assignment:
+To assign a variable from another Form - just type:
+$cat = $cat_in_the_hat</p>
+<h6 id="computed-variable-assignment">#Computed variable assignment</h6>
+<p>To assign a computation based on several Form variables - try this:</p>
+<p>$force = $mass * $acceleration</p>
+<h6 id="populating-a-form-from-an-external-api">#Populating a form from an external API</h6>
+<p>To populate a Form item from an external API call, you can use the get() function.
+You can write calls like:</p>
+<p>get()   - this calls the external_data_source specified in the Customer Profile&gt;Customer MetaData
+get(/auth/self)[first_name] + ' ' + $CAT_HAIR_COLOR - Pass a variable value from the form
+get(/some/endpoint) - just call an endpoint
+get(/some/endpoint?first=with&amp;second=query&amp;third=params) - call an endpoint with a query string</p>
+<h6 id="item-data-types">#Item data types</h6>
+<p>For an INPUT or DATE field - the API must return a single value.</p>
+<p>For a SELECT box field - the API must return a JSON object like {"blond": 1, "brunette": 2}.
+This will populate a select box with 2 options - Blond and Brunette with values 1 and 2 respectively.</p>
+<h6 id="configuring-external-api-services">#Configuring External API services</h6>
+<p>Click on the hamburger icon &gt; Customer Profile &gt; Customer MetaData
+To set a default URL for the external API - set external_data_source like this:
+external_data_source    https://my-api.service.com My API</p>
+<p>To access a service with oAuth authentication - -  provide external_data_source_config_key and the external_data_source_authentication_method key-value pairs like in this example:
+external_data_source_config_key flask   Flask source key
+external_data_source_authentication_method  oAuth   external data source authentication method</p>
+<h6 id="testing">#Testing</h6>
+<p>The TEST button enables you to preview the results of the variable assignment.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDAzjUgpbds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h6 id="validations">Validations</h6>
