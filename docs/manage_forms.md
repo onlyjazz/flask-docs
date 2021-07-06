@@ -91,7 +91,6 @@ The third tab VARIABLE ASSIGNMENT, is used to assign values to a Form item.
 You can assign variables, computed expressions or data from an external API call.
 
 Autocomplete:
-
 Forms variable assignment provides an autocomplete feature. Just type '$' and select the variable(s)
 you want in your expression.
 
@@ -99,19 +98,16 @@ you want in your expression.
 Let's see a couple of examples-
 
 Simple variable assignment:
-
 To assign a variable from another Form - just type:
 $cat = $cat_in_the_hat
 
 
 Computed variable assignment:
-
 To assign a computation based on several Form variables - try this:
 
 $force = $mass * $acceleration
 
 Populating a form from an external API:
-
 To populate a Form item from an external API call, you can use the get() function.
 You can write calls like:
 
@@ -121,14 +117,12 @@ get(/some/endpoint) - just call an endpoint
 get(/some/endpoint?first=with&second=query&third=params) - call an endpoint with a query string
 
 Item data types:
-
 For an INPUT or DATE field - the API must return a single value.
 
 For a SELECT box field - the API must return a JSON object like {"blond": 1, "brunette": 2}.
 This will populate a select box with 2 options - Blond and Brunette with values 1 and 2 respectively.
 
 Configuring External API services:
-
 Click on the hamburger icon > Customer Profile > Customer MetaData
 To set a default URL for the external API - set external_data_source like this:
 external_data_source	https://my-api.service.com My API
@@ -138,7 +132,6 @@ external_data_source_config_key	flask	Flask source key
 external_data_source_authentication_method	oAuth	external data source authentication method
 
 Testing:
-
 The TEST button enables you to preview the results of the variable assignment.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDAzjUgpbds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
