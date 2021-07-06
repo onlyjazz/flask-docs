@@ -387,43 +387,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#autocomplete" class="md-nav__link">
-    #Autocomplete
+  <a href="#variable-assignment-autocomplete" class="md-nav__link">
+    Variable Assignment- Autocomplete
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#computed-variable-assignment" class="md-nav__link">
-    #Computed variable assignment
+  <a href="#variable-assignment-computed-variable-assignment" class="md-nav__link">
+    Variable Assignment- Computed variable assignment
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#populating-a-form-from-an-external-api" class="md-nav__link">
-    #Populating a form from an external API
+  <a href="#variable-assignment-populating-a-form-from-an-external-api" class="md-nav__link">
+    Variable Assignment- Populating a form from an external API
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#item-data-types" class="md-nav__link">
-    #Item data types
+  <a href="#variable-assignment-item-data-types" class="md-nav__link">
+    Variable Assignment- Item data types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-external-api-services" class="md-nav__link">
-    #Configuring External API services
+  <a href="#variable-assignment-configuring-external-api-services" class="md-nav__link">
+    Variable Assignment- Configuring External API services
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    #Testing
+  <a href="#variable-assignment-testing" class="md-nav__link">
+    Variable Assignment- Testing
   </a>
   
 </li>
@@ -940,43 +940,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#autocomplete" class="md-nav__link">
-    #Autocomplete
+  <a href="#variable-assignment-autocomplete" class="md-nav__link">
+    Variable Assignment- Autocomplete
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#computed-variable-assignment" class="md-nav__link">
-    #Computed variable assignment
+  <a href="#variable-assignment-computed-variable-assignment" class="md-nav__link">
+    Variable Assignment- Computed variable assignment
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#populating-a-form-from-an-external-api" class="md-nav__link">
-    #Populating a form from an external API
+  <a href="#variable-assignment-populating-a-form-from-an-external-api" class="md-nav__link">
+    Variable Assignment- Populating a form from an external API
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#item-data-types" class="md-nav__link">
-    #Item data types
+  <a href="#variable-assignment-item-data-types" class="md-nav__link">
+    Variable Assignment- Item data types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-external-api-services" class="md-nav__link">
-    #Configuring External API services
+  <a href="#variable-assignment-configuring-external-api-services" class="md-nav__link">
+    Variable Assignment- Configuring External API services
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    #Testing
+  <a href="#variable-assignment-testing" class="md-nav__link">
+    Variable Assignment- Testing
   </a>
   
 </li>
@@ -1173,35 +1173,35 @@ By click on component, the component is added to the CRF (at the end of the list
 <h6 id="variable-assignment">Variable Assignment</h6>
 <p>The third tab VARIABLE ASSIGNMENT, is used to assign values to a Form item. </p>
 <p>You can assign variables, computed expressions or data from an external API call.</p>
-<h6 id="autocomplete">#Autocomplete</h6>
+<h6 id="variable-assignment-autocomplete">Variable Assignment- Autocomplete</h6>
 <p>Forms variable assignment provides an autocomplete feature. Just type '$' and select the variable(s)
 you want in your expression.</p>
 <p>Let's see a couple of examples:</p>
 <p>Simple variable assignment:
 To assign a variable from another Form - just type:
 $cat = $cat_in_the_hat</p>
-<h6 id="computed-variable-assignment">#Computed variable assignment</h6>
+<h6 id="variable-assignment-computed-variable-assignment">Variable Assignment- Computed variable assignment</h6>
 <p>To assign a computation based on several Form variables - try this:</p>
 <p>$force = $mass * $acceleration</p>
-<h6 id="populating-a-form-from-an-external-api">#Populating a form from an external API</h6>
+<h6 id="variable-assignment-populating-a-form-from-an-external-api">Variable Assignment- Populating a form from an external API</h6>
 <p>To populate a Form item from an external API call, you can use the get() function.
 You can write calls like:</p>
 <p>get()   - this calls the external_data_source specified in the Customer Profile&gt;Customer MetaData
 get(/auth/self)[first_name] + ' ' + $CAT_HAIR_COLOR - Pass a variable value from the form
 get(/some/endpoint) - just call an endpoint
 get(/some/endpoint?first=with&amp;second=query&amp;third=params) - call an endpoint with a query string</p>
-<h6 id="item-data-types">#Item data types</h6>
+<h6 id="variable-assignment-item-data-types">Variable Assignment- Item data types</h6>
 <p>For an INPUT or DATE field - the API must return a single value.</p>
 <p>For a SELECT box field - the API must return a JSON object like {"blond": 1, "brunette": 2}.
 This will populate a select box with 2 options - Blond and Brunette with values 1 and 2 respectively.</p>
-<h6 id="configuring-external-api-services">#Configuring External API services</h6>
+<h6 id="variable-assignment-configuring-external-api-services">Variable Assignment- Configuring External API services</h6>
 <p>Click on the hamburger icon &gt; Customer Profile &gt; Customer MetaData
 To set a default URL for the external API - set external_data_source like this:
 external_data_source    https://my-api.service.com My API</p>
 <p>To access a service with oAuth authentication - -  provide external_data_source_config_key and the external_data_source_authentication_method key-value pairs like in this example:
 external_data_source_config_key flask   Flask source key
 external_data_source_authentication_method  oAuth   external data source authentication method</p>
-<h6 id="testing">#Testing</h6>
+<h6 id="variable-assignment-testing">Variable Assignment- Testing</h6>
 <p>The TEST button enables you to preview the results of the variable assignment.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDAzjUgpbds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
