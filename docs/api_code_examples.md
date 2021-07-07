@@ -116,6 +116,7 @@ NodeJS:
     request(options, callback);
 
 
+
 ####Read data from CRF
 Now, an example to read data from FlaskData CRF using the token created above.
 
@@ -211,8 +212,7 @@ Swift:
         } catch let error1 {
             completion("", error1.localizedDescription)
         }
-    }
-
+    } 
     API URL:  https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
 
     API params:  {
@@ -244,6 +244,7 @@ NodeJS:
     }
     request(options, callback);
     
+
 
 ####Create an event, CRFs, and data
 The following is to create an event, CRFs, and data, also using the token outputted from the first example.
@@ -341,18 +342,16 @@ Swift:
                 completion("", error1.localizedDescription)
             }
         }
-
-    API URL:  https://dev-api.flaskdata.io/swagger/#/USAGE/post_data_create_create_event_crfs_and_insert_data
-
-    API params:  {
-        CRFs =     {
-            "SampleCRF" =         {
-                "NUMSAMP" = 2;
+        API URL:  https://dev-api.flaskdata.io/swagger/#/USAGE/post_data_create_create_event_crfs_and_insert_data 
+        API params:  {
+            CRFs =     {
+                "SampleCRF" =         {
+                    "NUMSAMP" = 2;
+                };
             };
-        };
-        eventName = Sample;
-        "study_id" = 1511357;
-    }
+            eventName = Sample;
+            "study_id" = 1511357;
+        }
 
 
 NodeJS:
