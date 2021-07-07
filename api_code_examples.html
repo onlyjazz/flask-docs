@@ -480,9 +480,53 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API Code Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="api_code_examples.html" class="md-nav__link md-nav__link--active">
         API Code Examples
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-subjectsite-role-user-authorization" class="md-nav__link">
+    Get Subject/Site Role User Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-data-from-crf" class="md-nav__link">
+    Read data from CRF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-event-crfs-and-data" class="md-nav__link">
+    Create an event, CRFs, and data
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -591,6 +635,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-subjectsite-role-user-authorization" class="md-nav__link">
+    Get Subject/Site Role User Authorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-data-from-crf" class="md-nav__link">
+    Read data from CRF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-event-crfs-and-data" class="md-nav__link">
+    Create an event, CRFs, and data
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -603,7 +676,7 @@
                 
                 
                 <h1 id="api-code-examples">API Code Examples</h1>
-<p>Get Subject/Site Role User Authorization </p>
+<h4 id="get-subjectsite-role-user-authorization">Get Subject/Site Role User Authorization</h4>
 <p>In this example, we create a new mobile user token first. </p>
 <p>Curl:</p>
 <div class="admonition example">
@@ -718,6 +791,7 @@ function callback(error, response, body) {
 }
 request(options, callback);</p>
 </div>
+<h4 id="read-data-from-crf">Read data from CRF</h4>
 <p>Now, an example to read data from FlaskData CRF using the token created above.</p>
 <p>Curl:</p>
 <div class="admonition example">
@@ -755,72 +829,71 @@ headers = {
 <p>Swift:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-</div>
 <p>func tryToReadData(params: NSMutableDictionary, completion: @escaping (String, String) -&gt; ())
-    {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate</p>
-<pre><code>    let headers = [
-        "Content-Type": "application/json",
-        "cache-control": "no-cache",
-        "accept": "application/json",
-        "Authorization": "JWT "+appDelegate.token,
-    ]
+{
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate</p>
+<pre><code>let headers = [
+    "Content-Type": "application/json",
+    "cache-control": "no-cache",
+    "accept": "application/json",
+    "Authorization": "JWT "+appDelegate.token,
+]
 
-    do {
-        let url = flaskApiURL()+Constants.flaskReadDataCommand
-        // https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
-        if (Constants.LOG_WEB_EVENTS) { print("###\n### ReadData URL: ",url) }
-        if (Constants.LOG_WEB_EVENTS) { print("### params: ",params) }
+do {
+    let url = flaskApiURL()+Constants.flaskReadDataCommand
+    // https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
+    if (Constants.LOG_WEB_EVENTS) { print("###\n### ReadData URL: ",url) }
+    if (Constants.LOG_WEB_EVENTS) { print("### params: ",params) }
 
-        let postData = try JSONSerialization.data(withJSONObject: params, options: [])
-        if (Constants.LOG_WEB_EVENTS) { print("### data: ",postData) }
+    let postData = try JSONSerialization.data(withJSONObject: params, options: [])
+    if (Constants.LOG_WEB_EVENTS) { print("### data: ",postData) }
 
+    let request = NSMutableURLRequest(url: NSURL(string: url)! as URL, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
+    request.httpMethod = "POST"
+    request.allHTTPHeaderFields = headers
+    request.httpBody = postData as Data
 
-        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = headers
-        request.httpBody = postData as Data
+    let session = URLSession.shared
+    let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -&gt; Void in
 
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -&gt; Void in
+        if (Constants.LOG_WEB_EVENTS) { print("### Error: ",error) }
 
-            if (Constants.LOG_WEB_EVENTS) { print("### Error: ",error) }
+        if (error != nil) {
+            completion("", error!.localizedDescription)
+        } else {
+            // Convert HTTP Response Data to a String
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
 
-            if (error != nil) {
-                completion("", error!.localizedDescription)
-            } else {
-                // Convert HTTP Response Data to a String
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                if (Constants.LOG_WEB_EVENTS) { print("### RESP: ",dataString) }
 
-                    if (Constants.LOG_WEB_EVENTS) { print("### RESP: ",dataString) }
-
-                    let httpResponse = response as? HTTPURLResponse
-                    if (httpResponse?.statusCode==200)
-                    {
-                        //print("email: ",email)
-                        //print("dbg: ",dataString)
-                        completion(dataString, "")
-                    } else {
-                        completion("", dataString)
-                    }
-                    return
+                let httpResponse = response as? HTTPURLResponse
+                if (httpResponse?.statusCode==200)
+                {
+                    //print("email: ",email)
+                    //print("dbg: ",dataString)
+                    completion(dataString, "")
+                } else {
+                    completion("", dataString)
                 }
-                completion("", "Error parsing response")
+                return
             }
-        })
-        dataTask.resume()
-    } catch let error1 {
-        completion("", error1.localizedDescription)
-    }
+            completion("", "Error parsing response")
+        }
+    })
+    dataTask.resume()
+} catch let error1 {
+    completion("", error1.localizedDescription)
 }
 </code></pre>
+<p>}</p>
 <p>API URL:  https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json</p>
 <p>API params:  {
     CRFs =     {
         "CRFs"= "60c9ac9ced17f75845cca3ab" 
     };
     "study_id" = 1511357;
-}</p>
+}`</p>
+</div>
 <p>NodeJS:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -844,7 +917,8 @@ function callback(error, response, body) {
 }
 request(options, callback);</p>
 </div>
-<p>The following is to creat an event, CRFs, and data, also using the token outputted from the first example.</p>
+<h4 id="create-an-event-crfs-and-data">Create an event, CRFs, and data</h4>
+<p>The following is to create an event, CRFs, and data, also using the token outputted from the first example.</p>
 <p>Curl:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
