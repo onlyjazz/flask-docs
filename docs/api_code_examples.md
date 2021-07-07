@@ -1,7 +1,6 @@
 #API Code Examples
 
-Get Subject/Site Role User Authorization 
-
+####Get Subject/Site Role User Authorization 
 In this example, we create a new mobile user token first. 
 
 Curl:
@@ -32,10 +31,11 @@ Python:
         'Authorization': 'JWT eyJ0eXAiOiJKV',
         'Content-Type': 'application/json',
     }
-
+    
     data = '{ "email": "taliafeldman@yahoo.com", "password": "123456"}'
-
+    
     response = requests.post('https://dev-idp.flaskdata.io/auth/mobile-form-authorization', headers=headers, data=data)
+
 
 Swift:
 !!!example
@@ -116,6 +116,7 @@ NodeJS:
     request(options, callback);
 
 
+####Read data from CRF
 Now, an example to read data from FlaskData CRF using the token created above.
 
 Curl:
@@ -154,7 +155,7 @@ response = requests.post('https://dev-api.flaskdata.io/data-server/data/extract/
 
 Swift:
 !!!example
-func tryToReadData(params: NSMutableDictionary, completion: @escaping (String, String) -> ())
+    func tryToReadData(params: NSMutableDictionary, completion: @escaping (String, String) -> ())
     {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -213,14 +214,14 @@ func tryToReadData(params: NSMutableDictionary, completion: @escaping (String, S
         }
     }
 
-API URL:  https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
+    API URL:  https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
 
-API params:  {
-    CRFs =     {
-        "CRFs"= "60c9ac9ced17f75845cca3ab" 
-    };
-    "study_id" = 1511357;
-}
+    API params:  {
+        CRFs =     {
+            "CRFs"= "60c9ac9ced17f75845cca3ab" 
+        };
+        "study_id" = 1511357;
+    }`
 
 NodeJS:
 !!!example
@@ -245,7 +246,8 @@ NodeJS:
     request(options, callback);
     
 
-The following is to creat an event, CRFs, and data, also using the token outputted from the first example.
+####Create an event, CRFs, and data
+The following is to create an event, CRFs, and data, also using the token outputted from the first example.
 
 Curl:
 !!!example
