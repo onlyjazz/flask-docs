@@ -109,6 +109,8 @@ $force = $mass * $acceleration
 
 Populating a form from an external API:
 To populate a Form item from an external API call, you can use the get() function.
+
+
 You can write calls like:
 
 get()   - this calls the external_data_source specified in the Customer Profile>Customer MetaData
