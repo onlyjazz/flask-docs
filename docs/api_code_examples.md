@@ -5,13 +5,13 @@ In this example, we create a new mobile user token first.
 
 Curl:
 !!!example
-    '''
+    ```
 	    curl -X POST "https://dev-idp.flaskdata.io/auth/mobile-form-authorization" -H "accept: application/json" -H "Authorization: JWT eyJ0eXAiOiJKV" -H "Content-Type: application/json" -d "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}"
-    '''
+    ```
 
 Java:
 !!!example
-    '''
+    ```
         Request request = Request.Post("https://dev-idp.flaskdata.io/auth/mobile-form-authorization");
         String body = "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}";
         request.bodyString(body,ContentType.APPLICATION_JSON);
@@ -24,11 +24,11 @@ Java:
             String html = EntityUtils.toString(httpResponse.getEntity());
             System.out.println(html);
         }
-    '''
+    ```
 
 Python:
 !!!example
-    '''
+    ```
         import requests
         headers = {
             'accept': 'application/json',
@@ -39,11 +39,11 @@ Python:
         data = '{ "email": "taliafeldman@yahoo.com", "password": "123456"}'
         
         response = requests.post('https://dev-idp.flaskdata.io/auth/mobile-form-authorization', headers=headers, data=data)
-    '''
+    ```
 
 Swift:
 !!!example
-    '''
+    ```
         func tryToCreateUserToken(params: NSMutableDictionary, completion: @escaping (String, String) -> ())
             {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -97,11 +97,11 @@ Swift:
         "email": "taliafeldman@yahoo.com",
         "password": "123456"
         }
-    '''
+    ```
 
 NodeJS:
 !!!example
-    '''
+    ```
         var request = require('request');
         var headers = {
             'accept': 'application/json',
@@ -121,7 +121,7 @@ NodeJS:
             }
         }
         request(options, callback);
-    '''
+    ```
 
 
 
@@ -130,13 +130,13 @@ Now, an example to read data from FlaskData CRF using the token created above.
 
 Curl:
 !!!example
-    '''
+    ```
 	    curl -X POST "https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json" -H "accept: application/json" -H "Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2" -H "Content-Type: application/json" -d "{ \"study_id\": 1511357, \"from_last_extract\": false, \"CRFs\": [ \"60c9ac9ced17f75845cca3ab\" ], \"include_deactivated_crfs\": false, \"include_started_crfs\": true, \"include_closed_crfs\": true, \"group_by\": \"subject\", \"values_as_object\": false, \"include_all_crf_versions\": false}"
-    '''
+    ```
     
 Java:
 !!!example
-    '''
+    ```
         Request request = Request.Post("https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json");
         String body = "{ \"study_id\": 1511357, \"from_last_extract\": false, \"CRFs\": [ \"60c9ac9ced17f75845cca3ab\" ], \"include_deactivated_crfs\": false, \"include_started_crfs\": true, \"include_closed_crfs\": true, \"group_by\": \"subject\", \"values_as_object\": false, \"include_all_crf_versions\": false}";
         request.bodyString(body,ContentType.APPLICATION_JSON);
@@ -149,12 +149,12 @@ Java:
             String html = EntityUtils.toString(httpResponse.getEntity());
             System.out.println(html);
         }
-    '''
+    ```
 
 
 Python:
 !!!example
-    '''
+    ```
         import requests
         headers = {
             'accept': 'application/json',
@@ -164,12 +164,12 @@ Python:
         data = '{ "study_id": 1511357, "from_last_extract": false, "CRFs": [ "60c9ac9ced17f75845cca3ab" ], "include_deactivated_crfs": false, "include_started_crfs": true, "include_closed_crfs": true, "group_by": "subject", "values_as_object": false, "include_all_crf_versions": false}'
 
         response = requests.post('https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json', headers=headers, data=data)
-    '''
+    ```
 
 
 Swift:
 !!!example
-    '''
+    ```
         func tryToReadData(params: NSMutableDictionary, completion: @escaping (String, String) -> ())
         {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -236,11 +236,11 @@ Swift:
             };
             "study_id" = 1511357;
         }`
-    '''
+    ```
 
 NodeJS:
 !!!example
-    '''
+    ```
         var request = require('request');
         var headers = {
             'accept': 'application/json',
@@ -260,7 +260,7 @@ NodeJS:
             }
         }
         request(options, callback);
-    '''
+    ```
     
 
 
@@ -269,13 +269,13 @@ The following is to create an event, CRFs, and data, also using the token output
 
 Curl:
 !!!example
-    '''
+    ```
         curl -X POST "https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data" -H "accept: application/json" -H "Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0" -H "Content-Type: application/json" -d "{ \"study_id\": 1511357, \"eventName\": \"Sample\", \"subjectLabel\": \"Default-Site-202106160633380638-004\", \"CRFs\": { \"SampleCRF\": { \"NUMSAMP\": \"2\" } }}"
-    '''
+    ```
 
 Java:
 !!!example
-    '''
+    ```
         Request request = Request.Post("https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data");
         String body = "{ \"study_id\": 1511357, \"eventName\": \"Sample\", \"subjectLabel\": \"Default-Site-202106160633380638-004\", \"CRFs\": { \"SampleCRF\": { \"NUMSAMP\": \"2\" } }}";
         request.bodyString(body,ContentType.APPLICATION_JSON);
@@ -288,11 +288,11 @@ Java:
             String html = EntityUtils.toString(httpResponse.getEntity());
             System.out.println(html);
         }
-    '''
+    ```
 
 Python:
 !!!example
-    '''
+    ```
         import requests
         headers = {
             'accept': 'application/json',
@@ -301,12 +301,12 @@ Python:
         }
         data = '{ "study_id": 1511357, "eventName": "Sample", "subjectLabel": "Default-Site-202106160633380638-004", "CRFs": { "SampleCRF": { "NUMSAMP": "2" } }}'
         response = requests.post('https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data', headers=headers, data=data)
-    '''
+    ```
 
 
 Swift:
 !!!example
-    '''
+    ```
         func tryToCreateEvent(params: NSMutableDictionary, completion: @escaping (String, String) -> ())
             {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -377,12 +377,12 @@ Swift:
                 eventName = Sample;
                 "study_id" = 1511357;
             }
-        '''
+        ```
 
 
 NodeJS:
 !!!example
-    '''
+    ```
         var request = require('request');
         var headers = {
             'accept': 'application/json',
@@ -402,4 +402,4 @@ NodeJS:
             }
         }
         request(options, callback);
-    '''
+    ```
