@@ -973,77 +973,77 @@
 <p>Swift:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>```
-    func tryToCreateEvent(params: NSMutableDictionary, completion: @escaping (String, String) -&gt; ())
+<div class="highlight"><pre><span></span><code>    func tryToCreateEvent(params: NSMutableDictionary, completion: @escaping (String, String) -&gt; ())
         {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate</p>
-<pre><code>        let headers = [
-            "Content-Type": "application/json",
-            "cache-control": "no-cache",
-            "accept": "application/json",
-            "Authorization": "JWT "+appDelegate.token,
-        ]
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
-        do {
-            let url = flaskApiURL()+Constants.flaskCreateEventCommand
-            // https://dev-api.flaskdata.io/swagger/#/USAGE/post_data_create_create_event_crfs_and_insert_data
-            if (Constants.LOG_WEB_EVENTS) { print("###\n### CreateEvent URL: ",url) }
-            if (Constants.LOG_WEB_EVENTS) { print("### params: ",params) }
+            let headers = [
+                &quot;Content-Type&quot;: &quot;application/json&quot;,
+                &quot;cache-control&quot;: &quot;no-cache&quot;,
+                &quot;accept&quot;: &quot;application/json&quot;,
+                &quot;Authorization&quot;: &quot;JWT &quot;+appDelegate.token,
+            ]
 
-            let postData = try JSONSerialization.data(withJSONObject: params, options: [])
-            if (Constants.LOG_WEB_EVENTS) { print("### data: ",postData) }
+            do {
+                let url = flaskApiURL()+Constants.flaskCreateEventCommand
+                // https://dev-api.flaskdata.io/swagger/#/USAGE/post_data_create_create_event_crfs_and_insert_data
+                if (Constants.LOG_WEB_EVENTS) { print(&quot;###\n### CreateEvent URL: &quot;,url) }
+                if (Constants.LOG_WEB_EVENTS) { print(&quot;### params: &quot;,params) }
 
-            let request = NSMutableURLRequest(url: NSURL(string: url)! as URL,
-                                                    cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
-                                                timeoutInterval: 10.0)
-            request.httpMethod = "POST"
-            request.allHTTPHeaderFields = headers
-            request.httpBody = postData as Data
+                let postData = try JSONSerialization.data(withJSONObject: params, options: [])
+                if (Constants.LOG_WEB_EVENTS) { print(&quot;### data: &quot;,postData) }
 
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -&gt; Void in
 
-                if (Constants.LOG_WEB_EVENTS) { print("### Error: ",error) }
+                let request = NSMutableURLRequest(url: NSURL(string: url)! as URL,
+                                                        cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                                                    timeoutInterval: 10.0)
+                request.httpMethod = &quot;POST&quot;
+                request.allHTTPHeaderFields = headers
+                request.httpBody = postData as Data
 
-                if (error != nil) {
-                    completion("", error!.localizedDescription)
-                } else {
-                    // Convert HTTP Response Data to a String
-                    if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                let session = URLSession.shared
+                let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -&gt; Void in
 
-                        if (Constants.LOG_WEB_EVENTS) { print("### RESP: ",dataString) }
+                    if (Constants.LOG_WEB_EVENTS) { print(&quot;### Error: &quot;,error) }
 
-                        let httpResponse = response as? HTTPURLResponse
-                        if (httpResponse?.statusCode==200)
-                        {
-                            //print("email: ",email)
-                            //print("dbg: ",dataString)
-                            completion(dataString, "")
-                        } else {
-                            completion("", dataString)
+                    if (error != nil) {
+                        completion(&quot;&quot;, error!.localizedDescription)
+                    } else {
+                        // Convert HTTP Response Data to a String
+                        if let data = data, let dataString = String(data: data, encoding: .utf8) {
+
+                            if (Constants.LOG_WEB_EVENTS) { print(&quot;### RESP: &quot;,dataString) }
+
+                            let httpResponse = response as? HTTPURLResponse
+                            if (httpResponse?.statusCode==200)
+                            {
+                                //print(&quot;email: &quot;,email)
+                                //print(&quot;dbg: &quot;,dataString)
+                                completion(dataString, &quot;&quot;)
+                            } else {
+                                completion(&quot;&quot;, dataString)
+                            }
+                            return
                         }
-                        return
+                        completion(&quot;&quot;, &quot;Error parsing response&quot;)
                     }
-                    completion("", "Error parsing response")
-                }
-            })
-            dataTask.resume()
-        } catch let error1 {
-            completion("", error1.localizedDescription)
+                })
+                dataTask.resume()
+            } catch let error1 {
+                completion(&quot;&quot;, error1.localizedDescription)
+            }
         }
-    }
-    API URL:  https://dev-api.flaskdata.io/swagger/#/USAGE/post_data_create_create_event_crfs_and_insert_data 
-    API params:  {
-        CRFs =     {
-            "SampleCRF" =         {
-                "NUMSAMP" = 2;
+        API URL:  https://dev-api.flaskdata.io/swagger/#/USAGE/post_data_create_create_event_crfs_and_insert_data 
+        API params:  {
+            CRFs =     {
+                &quot;SampleCRF&quot; =         {
+                    &quot;NUMSAMP&quot; = 2;
+                };
             };
-        };
-        eventName = Sample;
-        "study_id" = 1511357;
-    }
-```
-</code></pre>
+            eventName = Sample;
+            &quot;study_id&quot; = 1511357;
+        }
+</code></pre></div>
 </div>
 <p>NodeJS:</p>
 <div class="admonition example">
