@@ -681,117 +681,112 @@
 <p>Curl:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    curl -X POST "https://dev-idp.flaskdata.io/auth/mobile-form-authorization" -H "accept: application/json" -H "Authorization: JWT eyJ0eXAiOiJKV" -H "Content-Type: application/json" -d "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}"
-'''</p>
+<div class="highlight"><pre><span></span><code>    curl -X POST &quot;https://dev-idp.flaskdata.io/auth/mobile-form-authorization&quot; -H &quot;accept: application/json&quot; -H &quot;Authorization: JWT eyJ0eXAiOiJKV&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ \&quot;email\&quot;: \&quot;taliafeldman@yahoo.com\&quot;, \&quot;password\&quot;: \&quot;123456\&quot;}&quot;
+</code></pre></div>
 </div>
 <p>Java:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    Request request = Request.Post("https://dev-idp.flaskdata.io/auth/mobile-form-authorization");
-    String body = "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}";
+<div class="highlight"><pre><span></span><code>    Request request = Request.Post(&quot;https://dev-idp.flaskdata.io/auth/mobile-form-authorization&quot;);
+    String body = &quot;{ \&quot;email\&quot;: \&quot;taliafeldman@yahoo.com\&quot;, \&quot;password\&quot;: \&quot;123456\&quot;}&quot;;
     request.bodyString(body,ContentType.APPLICATION_JSON);
-    request.setHeader("Accept", "application/json");
-    request.setHeader("Authorization", "JWT eyJ0eXAiOiJKV");
-    request.setHeader("Content-Type", "application/json");
+    request.setHeader(&quot;Accept&quot;, &quot;application/json&quot;);
+    request.setHeader(&quot;Authorization&quot;, &quot;JWT eyJ0eXAiOiJKV&quot;);
+    request.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
     HttpResponse httpResponse = request.execute().returnResponse();
     System.out.println(httpResponse.getStatusLine());
     if (httpResponse.getEntity() != null) {
         String html = EntityUtils.toString(httpResponse.getEntity());
         System.out.println(html);
     }
-'''</p>
+</code></pre></div>
 </div>
 <p>Python:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    import requests
+<div class="highlight"><pre><span></span><code>    import requests
     headers = {
-        'accept': 'application/json',
-        'Authorization': 'JWT eyJ0eXAiOiJKV',
-        'Content-Type': 'application/json',
-    }</p>
-<pre><code>data = '{ "email": "taliafeldman@yahoo.com", "password": "123456"}'
+        &#39;accept&#39;: &#39;application/json&#39;,
+        &#39;Authorization&#39;: &#39;JWT eyJ0eXAiOiJKV&#39;,
+        &#39;Content-Type&#39;: &#39;application/json&#39;,
+    }
 
-response = requests.post('https://dev-idp.flaskdata.io/auth/mobile-form-authorization', headers=headers, data=data)
-</code></pre>
-<p>'''</p>
+    data = &#39;{ &quot;email&quot;: &quot;taliafeldman@yahoo.com&quot;, &quot;password&quot;: &quot;123456&quot;}&#39;
+
+    response = requests.post(&#39;https://dev-idp.flaskdata.io/auth/mobile-form-authorization&#39;, headers=headers, data=data)
+</code></pre></div>
 </div>
 <p>Swift:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    func tryToCreateUserToken(params: NSMutableDictionary, completion: @escaping (String, String) -&gt; ())
+<div class="highlight"><pre><span></span><code>    func tryToCreateUserToken(params: NSMutableDictionary, completion: @escaping (String, String) -&gt; ())
         {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let headers = [
-                "Content-Type": "application/json",
-                "cache-control": "no-cache",
-                "accept": "application/json",
-                "Authorization": "JWT "+appDelegate.token,
+                &quot;Content-Type&quot;: &quot;application/json&quot;,
+                &quot;cache-control&quot;: &quot;no-cache&quot;,
+                &quot;accept&quot;: &quot;application/json&quot;,
+                &quot;Authorization&quot;: &quot;JWT &quot;+appDelegate.token,
             ]
             do {
                 let url = flaskApiURL()+Constants.flaskCreateUserCommand
                 // https://dev-api.flaskdata.io/swagger/#/USAGE/post_auth_mobile_form_authorization
-                if (Constants.LOG_WEB_EVENTS) { print("###\n### CreateUser URL: ",url) }
-                if (Constants.LOG_WEB_EVENTS) { print("### params: ",params) }
+                if (Constants.LOG_WEB_EVENTS) { print(&quot;###\n### CreateUser URL: &quot;,url) }
+                if (Constants.LOG_WEB_EVENTS) { print(&quot;### params: &quot;,params) }
                 let postData = try JSONSerialization.data(withJSONObject: params, options: [])
-                if (Constants.LOG_WEB_EVENTS) { print("### data: ",postData) }
+                if (Constants.LOG_WEB_EVENTS) { print(&quot;### data: &quot;,postData) }
                 let request = NSMutableURLRequest(url: NSURL(string: url)! as URL, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
-                request.httpMethod = "POST"
+                request.httpMethod = &quot;POST&quot;
                 request.allHTTPHeaderFields = headers
                 request.httpBody = postData as Data
                 let session = URLSession.shared
                 let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -&gt; Void in
-                    if (Constants.LOG_WEB_EVENTS) { print("### Error: ",error) }
+                    if (Constants.LOG_WEB_EVENTS) { print(&quot;### Error: &quot;,error) }
                     if (error != nil) {
-                        completion("", error!.localizedDescription)
+                        completion(&quot;&quot;, error!.localizedDescription)
                     } else {
                         // Convert HTTP Response Data to a String
                         if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                            if (Constants.LOG_WEB_EVENTS) { print("### RESP: ",dataString) }
+                            if (Constants.LOG_WEB_EVENTS) { print(&quot;### RESP: &quot;,dataString) }
                             let httpResponse = response as? HTTPURLResponse
                             if (httpResponse?.statusCode==200)
                             {
-                                //print("email: ",email)
-                                //print("dbg: ",dataString)
-                                completion(dataString, "")
+                                //print(&quot;email: &quot;,email)
+                                //print(&quot;dbg: &quot;,dataString)
+                                completion(dataString, &quot;&quot;)
                             } else {
-                                completion("", dataString)
+                                completion(&quot;&quot;, dataString)
                             }
                             return
                         }
-                        completion("", "Error parsing response")
+                        completion(&quot;&quot;, &quot;Error parsing response&quot;)
                     }
                 })
                 dataTask.resume()
             } catch let error1 {
-                completion("", error1.localizedDescription)
+                completion(&quot;&quot;, error1.localizedDescription)
             }
         }
     API URL:  https://dev-api.flaskdata.io/swagger/#/USAGE/post_auth_mobile_form_authorization
     API params:  {
-    "email": "taliafeldman@yahoo.com",
-    "password": "123456"
+    &quot;email&quot;: &quot;taliafeldman@yahoo.com&quot;,
+    &quot;password&quot;: &quot;123456&quot;
     }
-'''</p>
+</code></pre></div>
 </div>
 <p>NodeJS:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    var request = require('request');
+<div class="highlight"><pre><span></span><code>    var request = require(&#39;request&#39;);
     var headers = {
-        'accept': 'application/json',
-        'Authorization': 'JWT eyJ0eXAiOiJKV',
-        'Content-Type': 'application/json'
+        &#39;accept&#39;: &#39;application/json&#39;,
+        &#39;Authorization&#39;: &#39;JWT eyJ0eXAiOiJKV&#39;,
+        &#39;Content-Type&#39;: &#39;application/json&#39;
     };
-    var dataString = '{ "email": "taliafeldman@yahoo.com", "password": "123456"}';
+    var dataString = &#39;{ &quot;email&quot;: &quot;taliafeldman@yahoo.com&quot;, &quot;password&quot;: &quot;123456&quot;}&#39;;
     var options = {
-        url: 'https://dev-idp.flaskdata.io/auth/mobile-form-authorization',
-        method: 'POST',
+        url: &#39;https://dev-idp.flaskdata.io/auth/mobile-form-authorization&#39;,
+        method: &#39;POST&#39;,
         headers: headers,
         body: dataString
     };
@@ -801,135 +796,131 @@ response = requests.post('https://dev-idp.flaskdata.io/auth/mobile-form-authoriz
         }
     }
     request(options, callback);
-'''</p>
+</code></pre></div>
 </div>
 <h4 id="read-data-from-crf">Read data from CRF</h4>
 <p>Now, an example to read data from FlaskData CRF using the token created above.</p>
 <p>Curl:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    curl -X POST "https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json" -H "accept: application/json" -H "Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2" -H "Content-Type: application/json" -d "{ \"study_id\": 1511357, \"from_last_extract\": false, \"CRFs\": [ \"60c9ac9ced17f75845cca3ab\" ], \"include_deactivated_crfs\": false, \"include_started_crfs\": true, \"include_closed_crfs\": true, \"group_by\": \"subject\", \"values_as_object\": false, \"include_all_crf_versions\": false}"
-'''</p>
+<div class="highlight"><pre><span></span><code>    curl -X POST &quot;https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json&quot; -H &quot;accept: application/json&quot; -H &quot;Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ \&quot;study_id\&quot;: 1511357, \&quot;from_last_extract\&quot;: false, \&quot;CRFs\&quot;: [ \&quot;60c9ac9ced17f75845cca3ab\&quot; ], \&quot;include_deactivated_crfs\&quot;: false, \&quot;include_started_crfs\&quot;: true, \&quot;include_closed_crfs\&quot;: true, \&quot;group_by\&quot;: \&quot;subject\&quot;, \&quot;values_as_object\&quot;: false, \&quot;include_all_crf_versions\&quot;: false}&quot;
+</code></pre></div>
 </div>
 <p>Java:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    Request request = Request.Post("https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json");
-    String body = "{ \"study_id\": 1511357, \"from_last_extract\": false, \"CRFs\": [ \"60c9ac9ced17f75845cca3ab\" ], \"include_deactivated_crfs\": false, \"include_started_crfs\": true, \"include_closed_crfs\": true, \"group_by\": \"subject\", \"values_as_object\": false, \"include_all_crf_versions\": false}";
+<div class="highlight"><pre><span></span><code>    Request request = Request.Post(&quot;https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json&quot;);
+    String body = &quot;{ \&quot;study_id\&quot;: 1511357, \&quot;from_last_extract\&quot;: false, \&quot;CRFs\&quot;: [ \&quot;60c9ac9ced17f75845cca3ab\&quot; ], \&quot;include_deactivated_crfs\&quot;: false, \&quot;include_started_crfs\&quot;: true, \&quot;include_closed_crfs\&quot;: true, \&quot;group_by\&quot;: \&quot;subject\&quot;, \&quot;values_as_object\&quot;: false, \&quot;include_all_crf_versions\&quot;: false}&quot;;
     request.bodyString(body,ContentType.APPLICATION_JSON);
-    request.setHeader("Accept", "application/json");
-    request.setHeader("Authorization", "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2");
-    request.setHeader("Content-Type", "application/json");
+    request.setHeader(&quot;Accept&quot;, &quot;application/json&quot;);
+    request.setHeader(&quot;Authorization&quot;, &quot;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2&quot;);
+    request.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
     HttpResponse httpResponse = request.execute().returnResponse();
     System.out.println(httpResponse.getStatusLine());
     if (httpResponse.getEntity() != null) {
         String html = EntityUtils.toString(httpResponse.getEntity());
         System.out.println(html);
     }
-'''</p>
+</code></pre></div>
 </div>
 <p>Python:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    import requests
+<div class="highlight"><pre><span></span><code>    import requests
     headers = {
-        'accept': 'application/json',
-        'Authorization': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2',
-        'Content-Type': 'application/json',
+        &#39;accept&#39;: &#39;application/json&#39;,
+        &#39;Authorization&#39;: &#39;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2&#39;,
+        &#39;Content-Type&#39;: &#39;application/json&#39;,
     }
-    data = '{ "study_id": 1511357, "from_last_extract": false, "CRFs": [ "60c9ac9ced17f75845cca3ab" ], "include_deactivated_crfs": false, "include_started_crfs": true, "include_closed_crfs": true, "group_by": "subject", "values_as_object": false, "include_all_crf_versions": false}'</p>
-<pre><code>response = requests.post('https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json', headers=headers, data=data)
-</code></pre>
-<p>'''</p>
+    data = &#39;{ &quot;study_id&quot;: 1511357, &quot;from_last_extract&quot;: false, &quot;CRFs&quot;: [ &quot;60c9ac9ced17f75845cca3ab&quot; ], &quot;include_deactivated_crfs&quot;: false, &quot;include_started_crfs&quot;: true, &quot;include_closed_crfs&quot;: true, &quot;group_by&quot;: &quot;subject&quot;, &quot;values_as_object&quot;: false, &quot;include_all_crf_versions&quot;: false}&#39;
+
+    response = requests.post(&#39;https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json&#39;, headers=headers, data=data)
+</code></pre></div>
 </div>
 <p>Swift:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    func tryToReadData(params: NSMutableDictionary, completion: @escaping (String, String) -&gt; ())
+<div class="highlight"><pre><span></span><code>    func tryToReadData(params: NSMutableDictionary, completion: @escaping (String, String) -&gt; ())
     {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate</p>
-<pre><code>    let headers = [
-        "Content-Type": "application/json",
-        "cache-control": "no-cache",
-        "accept": "application/json",
-        "Authorization": "JWT "+appDelegate.token,
-    ]
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
-    do {
-        let url = flaskApiURL()+Constants.flaskReadDataCommand
-        // https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
-        if (Constants.LOG_WEB_EVENTS) { print("###\n### ReadData URL: ",url) }
-        if (Constants.LOG_WEB_EVENTS) { print("### params: ",params) }
+        let headers = [
+            &quot;Content-Type&quot;: &quot;application/json&quot;,
+            &quot;cache-control&quot;: &quot;no-cache&quot;,
+            &quot;accept&quot;: &quot;application/json&quot;,
+            &quot;Authorization&quot;: &quot;JWT &quot;+appDelegate.token,
+        ]
 
-        let postData = try JSONSerialization.data(withJSONObject: params, options: [])
-        if (Constants.LOG_WEB_EVENTS) { print("### data: ",postData) }
+        do {
+            let url = flaskApiURL()+Constants.flaskReadDataCommand
+            // https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
+            if (Constants.LOG_WEB_EVENTS) { print(&quot;###\n### ReadData URL: &quot;,url) }
+            if (Constants.LOG_WEB_EVENTS) { print(&quot;### params: &quot;,params) }
 
-        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = headers
-        request.httpBody = postData as Data
+            let postData = try JSONSerialization.data(withJSONObject: params, options: [])
+            if (Constants.LOG_WEB_EVENTS) { print(&quot;### data: &quot;,postData) }
 
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -&gt; Void in
 
-            if (Constants.LOG_WEB_EVENTS) { print("### Error: ",error) }
+            let request = NSMutableURLRequest(url: NSURL(string: url)! as URL, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
+            request.httpMethod = &quot;POST&quot;
+            request.allHTTPHeaderFields = headers
+            request.httpBody = postData as Data
 
-            if (error != nil) {
-                completion("", error!.localizedDescription)
-            } else {
-                // Convert HTTP Response Data to a String
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -&gt; Void in
 
-                    if (Constants.LOG_WEB_EVENTS) { print("### RESP: ",dataString) }
+                if (Constants.LOG_WEB_EVENTS) { print(&quot;### Error: &quot;,error) }
 
-                    let httpResponse = response as? HTTPURLResponse
-                    if (httpResponse?.statusCode==200)
-                    {
-                        //print("email: ",email)
-                        //print("dbg: ",dataString)
-                        completion(dataString, "")
-                    } else {
-                        completion("", dataString)
+                if (error != nil) {
+                    completion(&quot;&quot;, error!.localizedDescription)
+                } else {
+                    // Convert HTTP Response Data to a String
+                    if let data = data, let dataString = String(data: data, encoding: .utf8) {
+
+                        if (Constants.LOG_WEB_EVENTS) { print(&quot;### RESP: &quot;,dataString) }
+
+                        let httpResponse = response as? HTTPURLResponse
+                        if (httpResponse?.statusCode==200)
+                        {
+                            //print(&quot;email: &quot;,email)
+                            //print(&quot;dbg: &quot;,dataString)
+                            completion(dataString, &quot;&quot;)
+                        } else {
+                            completion(&quot;&quot;, dataString)
+                        }
+                        return
                     }
-                    return
+                    completion(&quot;&quot;, &quot;Error parsing response&quot;)
                 }
-                completion("", "Error parsing response")
-            }
-        })
-        dataTask.resume()
-    } catch let error1 {
-        completion("", error1.localizedDescription)
-    }
-} 
-API URL:  https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
+            })
+            dataTask.resume()
+        } catch let error1 {
+            completion(&quot;&quot;, error1.localizedDescription)
+        }
+    } 
+    API URL:  https://dev-api.flaskdata.io/data-server/swagger/#/USAGE/post_data_extract_extract_grouped_study_event_data_to_json
 
-API params:  {
-    CRFs =     {
-        "CRFs"= "60c9ac9ced17f75845cca3ab" 
-    };
-    "study_id" = 1511357;
-}`
-</code></pre>
-<p>'''</p>
+    API params:  {
+        CRFs =     {
+            &quot;CRFs&quot;= &quot;60c9ac9ced17f75845cca3ab&quot; 
+        };
+        &quot;study_id&quot; = 1511357;
+    }`
+</code></pre></div>
 </div>
 <p>NodeJS:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    var request = require('request');
+<div class="highlight"><pre><span></span><code>    var request = require(&#39;request&#39;);
     var headers = {
-        'accept': 'application/json',
-        'Authorization': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2',
-        'Content-Type': 'application/json'
+        &#39;accept&#39;: &#39;application/json&#39;,
+        &#39;Authorization&#39;: &#39;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2&#39;,
+        &#39;Content-Type&#39;: &#39;application/json&#39;
     };
-    var dataString = '{ "study_id": 1511357, "from_last_extract": false, "CRFs": [ "60c9ac9ced17f75845cca3ab" ], "include_deactivated_crfs": false, "include_started_crfs": true, "include_closed_crfs": true, "group_by": "subject", "values_as_object": false, "include_all_crf_versions": false}';
+    var dataString = &#39;{ &quot;study_id&quot;: 1511357, &quot;from_last_extract&quot;: false, &quot;CRFs&quot;: [ &quot;60c9ac9ced17f75845cca3ab&quot; ], &quot;include_deactivated_crfs&quot;: false, &quot;include_started_crfs&quot;: true, &quot;include_closed_crfs&quot;: true, &quot;group_by&quot;: &quot;subject&quot;, &quot;values_as_object&quot;: false, &quot;include_all_crf_versions&quot;: false}&#39;;
     var options = {
-        url: 'https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json',
-        method: 'POST',
+        url: &#39;https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json&#39;,
+        method: &#39;POST&#39;,
         headers: headers,
         body: dataString
     };
@@ -939,53 +930,50 @@ API params:  {
         }
     }
     request(options, callback);
-'''</p>
+</code></pre></div>
 </div>
 <h4 id="create-an-event-crfs-and-data">Create an event, CRFs, and data</h4>
 <p>The following is to create an event, CRFs, and data, also using the token outputted from the first example.</p>
 <p>Curl:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    curl -X POST "https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data" -H "accept: application/json" -H "Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0" -H "Content-Type: application/json" -d "{ \"study_id\": 1511357, \"eventName\": \"Sample\", \"subjectLabel\": \"Default-Site-202106160633380638-004\", \"CRFs\": { \"SampleCRF\": { \"NUMSAMP\": \"2\" } }}"
-'''</p>
+<div class="highlight"><pre><span></span><code>    curl -X POST &quot;https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data&quot; -H &quot;accept: application/json&quot; -H &quot;Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ \&quot;study_id\&quot;: 1511357, \&quot;eventName\&quot;: \&quot;Sample\&quot;, \&quot;subjectLabel\&quot;: \&quot;Default-Site-202106160633380638-004\&quot;, \&quot;CRFs\&quot;: { \&quot;SampleCRF\&quot;: { \&quot;NUMSAMP\&quot;: \&quot;2\&quot; } }}&quot;
+</code></pre></div>
 </div>
 <p>Java:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    Request request = Request.Post("https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data");
-    String body = "{ \"study_id\": 1511357, \"eventName\": \"Sample\", \"subjectLabel\": \"Default-Site-202106160633380638-004\", \"CRFs\": { \"SampleCRF\": { \"NUMSAMP\": \"2\" } }}";
+<div class="highlight"><pre><span></span><code>    Request request = Request.Post(&quot;https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data&quot;);
+    String body = &quot;{ \&quot;study_id\&quot;: 1511357, \&quot;eventName\&quot;: \&quot;Sample\&quot;, \&quot;subjectLabel\&quot;: \&quot;Default-Site-202106160633380638-004\&quot;, \&quot;CRFs\&quot;: { \&quot;SampleCRF\&quot;: { \&quot;NUMSAMP\&quot;: \&quot;2\&quot; } }}&quot;;
     request.bodyString(body,ContentType.APPLICATION_JSON);
-    request.setHeader("Accept", "application/json");
-    request.setHeader("Authorization", "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0");
-    request.setHeader("Content-Type", "application/json");
+    request.setHeader(&quot;Accept&quot;, &quot;application/json&quot;);
+    request.setHeader(&quot;Authorization&quot;, &quot;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0&quot;);
+    request.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
     HttpResponse httpResponse = request.execute().returnResponse();
     System.out.println(httpResponse.getStatusLine());
     if (httpResponse.getEntity() != null) {
         String html = EntityUtils.toString(httpResponse.getEntity());
         System.out.println(html);
     }
-'''</p>
+</code></pre></div>
 </div>
 <p>Python:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    import requests
+<div class="highlight"><pre><span></span><code>    import requests
     headers = {
-        'accept': 'application/json',
-        'Authorization': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0',
-        'Content-Type': 'application/json',
+        &#39;accept&#39;: &#39;application/json&#39;,
+        &#39;Authorization&#39;: &#39;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0&#39;,
+        &#39;Content-Type&#39;: &#39;application/json&#39;,
     }
-    data = '{ "study_id": 1511357, "eventName": "Sample", "subjectLabel": "Default-Site-202106160633380638-004", "CRFs": { "SampleCRF": { "NUMSAMP": "2" } }}'
-    response = requests.post('https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data', headers=headers, data=data)
-'''</p>
+    data = &#39;{ &quot;study_id&quot;: 1511357, &quot;eventName&quot;: &quot;Sample&quot;, &quot;subjectLabel&quot;: &quot;Default-Site-202106160633380638-004&quot;, &quot;CRFs&quot;: { &quot;SampleCRF&quot;: { &quot;NUMSAMP&quot;: &quot;2&quot; } }}&#39;
+    response = requests.post(&#39;https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data&#39;, headers=headers, data=data)
+</code></pre></div>
 </div>
 <p>Swift:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
+<p>```
     func tryToCreateEvent(params: NSMutableDictionary, completion: @escaping (String, String) -&gt; ())
         {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate</p>
@@ -1054,23 +1042,22 @@ API params:  {
         eventName = Sample;
         "study_id" = 1511357;
     }
-'''
+```
 </code></pre>
 </div>
 <p>NodeJS:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>'''
-    var request = require('request');
+<div class="highlight"><pre><span></span><code>    var request = require(&#39;request&#39;);
     var headers = {
-        'accept': 'application/json',
-        'Authorization': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0',
-        'Content-Type': 'application/json'
+        &#39;accept&#39;: &#39;application/json&#39;,
+        &#39;Authorization&#39;: &#39;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0&#39;,
+        &#39;Content-Type&#39;: &#39;application/json&#39;
     };
-    var dataString = '{ "study_id": 1511357, "eventName": "Sample", "subjectLabel": "Default-Site-202106160633380638-004", "CRFs": { "SampleCRF": { "NUMSAMP": "2" } }}';
+    var dataString = &#39;{ &quot;study_id&quot;: 1511357, &quot;eventName&quot;: &quot;Sample&quot;, &quot;subjectLabel&quot;: &quot;Default-Site-202106160633380638-004&quot;, &quot;CRFs&quot;: { &quot;SampleCRF&quot;: { &quot;NUMSAMP&quot;: &quot;2&quot; } }}&#39;;
     var options = {
-        url: 'https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data',
-        method: 'POST',
+        url: &#39;https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data&#39;,
+        method: &#39;POST&#39;,
         headers: headers,
         body: dataString
     };
@@ -1080,7 +1067,7 @@ API params:  {
         }
     }
     request(options, callback);
-'''</p>
+</code></pre></div>
 </div>
                 
               
