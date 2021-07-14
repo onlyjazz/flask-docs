@@ -307,6 +307,7 @@ Python:
 Swift:
 !!!example
     ```
+
         func tryToCreateEvent(params: NSMutableDictionary, completion: @escaping (String, String) -> ())
             {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -377,7 +378,7 @@ Swift:
                 eventName = Sample;
                 "study_id" = 1511357;
             }
-        ```
+    ```
 
 
 NodeJS:
