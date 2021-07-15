@@ -53,8 +53,9 @@ Click **YES** to create this CRF
 
 ####CRF Sections
 In Section card define CRF's section, you can also edit it after saving.
-    !!!note
-        One CRF can include more than one section
+    
+!!!note
+    One CRF can include more than one section
 
 * Name
 * Description
@@ -269,8 +270,9 @@ There are a few definitions of a study schedule:
          Click on Event Definitions, the Event Definitions list will be opened, and choose one event.
          ![Screenshot](img/forms/forms_period_events.PNG)
          Click on the green **ADD EVENT DEFINITIONS** button 
-            !!!note
-                You are able add multiple events.
+    
+    !!!note
+        You are able add multiple events.
 
          The selected event will be added to the list with scheduled times and scheduled days.
 
