@@ -53,8 +53,8 @@ Click **YES** to create this CRF
 
 ####CRF Sections
 In Section card define CRF's section, you can also edit it after saving.
-!!!note
-    One CRF can include more than one section
+    !!! note
+        One CRF can include more than one section
 
 * Name
 * Description
