@@ -269,7 +269,7 @@ There are a few definitions of a study schedule:
          Click on Event Definitions, the Event Definitions list will be opened, and choose one event.
          ![Screenshot](img/forms/forms_period_events.PNG)
          Click on the green **ADD EVENT DEFINITIONS** button 
-         !!! note
+         !!!note
             You are able add multiple events.
 
          The selected event will be added to the list with scheduled times and scheduled days.
