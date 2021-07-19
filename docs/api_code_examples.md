@@ -26,19 +26,23 @@ Java:
         }
     ```
 
-Python:
+Python: 
 !!!example
     ```
         import requests
+        import json
+        url = "https://dev-idp.flaskdata.io/auth/mobile-form-authorization"
+        payload = json.dumps({
+        "email": "taliafeldman@yahoo.com",
+        "password": "123456"
+        })
         headers = {
-            'accept': 'application/json',
-            'Authorization': 'JWT eyJ0eXAiOiJKV',
-            'Content-Type': 'application/json',
+        'accept': 'application/json',
+        'Authorization': 'JWT eyJ0eXAiOiJKV',
+        'Content-Type': 'application/json'
         }
-        
-        data = '{ "email": "taliafeldman@yahoo.com", "password": "123456"}'
-        
-        response = requests.post('https://dev-idp.flaskdata.io/auth/mobile-form-authorization', headers=headers, data=data)
+        response = requests.get(url, headers=headers, data=payload)
+        print(response.text)
     ```
 
 Swift:
@@ -128,7 +132,7 @@ NodeJS:
 ####Read data from CRF
 Now, an example to read data from FlaskData CRF using the token created above.
 
-Curl:
+Curl: 
 !!!example
     ```
 	    curl -X POST "https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json" -H "accept: application/json" -H "Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2" -H "Content-Type: application/json" -d "{ \"study_id\": 1511357, \"from_last_extract\": false, \"CRFs\": [ \"60c9ac9ced17f75845cca3ab\" ], \"include_deactivated_crfs\": false, \"include_started_crfs\": true, \"include_closed_crfs\": true, \"group_by\": \"subject\", \"values_as_object\": false, \"include_all_crf_versions\": false}"
@@ -152,7 +156,7 @@ Java:
     ```
 
 
-Python:
+Python: 
 !!!example
     ```
         import requests
@@ -160,10 +164,11 @@ Python:
             'accept': 'application/json',
             'Authorization': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2',
             'Content-Type': 'application/json',
-        }
+            }
         data = '{ "study_id": 1511357, "from_last_extract": false, "CRFs": [ "60c9ac9ced17f75845cca3ab" ], "include_deactivated_crfs": false, "include_started_crfs": true, "include_closed_crfs": true, "group_by": "subject", "values_as_object": false, "include_all_crf_versions": false}'
 
         response = requests.post('https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json', headers=headers, data=data)
+        print(response.text)
     ```
 
 
@@ -267,7 +272,7 @@ NodeJS:
 ####Create an event, CRFs, and data
 The following is to create an event, CRFs, and data, also using the token outputted from the first example.
 
-Curl:
+Curl: 
 !!!example
     ```
         curl -X POST "https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data" -H "accept: application/json" -H "Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0" -H "Content-Type: application/json" -d "{ \"study_id\": 1511357, \"eventName\": \"Sample\", \"subjectLabel\": \"Default-Site-202106160633380638-004\", \"CRFs\": { \"SampleCRF\": { \"NUMSAMP\": \"2\" } }}"
@@ -298,9 +303,10 @@ Python:
             'accept': 'application/json',
             'Authorization': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0',
             'Content-Type': 'application/json',
-        }
-        data = '{ "study_id": 1511357, "eventName": "Sample", "subjectLabel": "Default-Site-202106160633380638-004", "CRFs": { "SampleCRF": { "NUMSAMP": "2" } }}'
+            }
+        data = '{ "study_id": 1511357, "eventName": "Sample", "subjectLabel": "Sample site-001", "CRFs": { "SampleCRF": { "NUMSAMP": "2" } }}'
         response = requests.post('https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data', headers=headers, data=data)
+        print(response.text)
     ```
 
 
