@@ -701,19 +701,23 @@
     }
 </code></pre></div>
 </div>
-<p>Python:</p>
+<p>Python: </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code>    import requests
+    import json
+    url = &quot;https://dev-idp.flaskdata.io/auth/mobile-form-authorization&quot;
+    payload = json.dumps({
+    &quot;email&quot;: &quot;taliafeldman@yahoo.com&quot;,
+    &quot;password&quot;: &quot;123456&quot;
+    })
     headers = {
-        &#39;accept&#39;: &#39;application/json&#39;,
-        &#39;Authorization&#39;: &#39;JWT eyJ0eXAiOiJKV&#39;,
-        &#39;Content-Type&#39;: &#39;application/json&#39;,
+    &#39;accept&#39;: &#39;application/json&#39;,
+    &#39;Authorization&#39;: &#39;JWT eyJ0eXAiOiJKV&#39;,
+    &#39;Content-Type&#39;: &#39;application/json&#39;
     }
-
-    data = &#39;{ &quot;email&quot;: &quot;taliafeldman@yahoo.com&quot;, &quot;password&quot;: &quot;123456&quot;}&#39;
-
-    response = requests.post(&#39;https://dev-idp.flaskdata.io/auth/mobile-form-authorization&#39;, headers=headers, data=data)
+    response = requests.get(url, headers=headers, data=payload)
+    print(response.text)
 </code></pre></div>
 </div>
 <p>Swift:</p>
@@ -800,7 +804,7 @@
 </div>
 <h4 id="read-data-from-crf">Read data from CRF</h4>
 <p>Now, an example to read data from FlaskData CRF using the token created above.</p>
-<p>Curl:</p>
+<p>Curl: </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code>    curl -X POST &quot;https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json&quot; -H &quot;accept: application/json&quot; -H &quot;Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ \&quot;study_id\&quot;: 1511357, \&quot;from_last_extract\&quot;: false, \&quot;CRFs\&quot;: [ \&quot;60c9ac9ced17f75845cca3ab\&quot; ], \&quot;include_deactivated_crfs\&quot;: false, \&quot;include_started_crfs\&quot;: true, \&quot;include_closed_crfs\&quot;: true, \&quot;group_by\&quot;: \&quot;subject\&quot;, \&quot;values_as_object\&quot;: false, \&quot;include_all_crf_versions\&quot;: false}&quot;
@@ -823,7 +827,7 @@
     }
 </code></pre></div>
 </div>
-<p>Python:</p>
+<p>Python: </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code>    import requests
@@ -831,10 +835,11 @@
         &#39;accept&#39;: &#39;application/json&#39;,
         &#39;Authorization&#39;: &#39;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyTVFsaDZ0TnZNc1lUYlhoWXZ1bFlXaXVnUDRtREJxRiIsImV4cCI6MTY0MDU4MzE0MDUxOSwiaWF0IjoxNjI0NzcxOTQwfQ.KOLgSK8Jj1YNAEKZk0GyHjz7YNQ3Y0yxrYB-RjRPbQGJ6xxLuUmx-rXeCF-XY_p2&#39;,
         &#39;Content-Type&#39;: &#39;application/json&#39;,
-    }
+        }
     data = &#39;{ &quot;study_id&quot;: 1511357, &quot;from_last_extract&quot;: false, &quot;CRFs&quot;: [ &quot;60c9ac9ced17f75845cca3ab&quot; ], &quot;include_deactivated_crfs&quot;: false, &quot;include_started_crfs&quot;: true, &quot;include_closed_crfs&quot;: true, &quot;group_by&quot;: &quot;subject&quot;, &quot;values_as_object&quot;: false, &quot;include_all_crf_versions&quot;: false}&#39;
 
     response = requests.post(&#39;https://dev-api.flaskdata.io/data-server/data/extract/extract-grouped-study-event-data-to-json&#39;, headers=headers, data=data)
+    print(response.text)
 </code></pre></div>
 </div>
 <p>Swift:</p>
@@ -934,7 +939,7 @@
 </div>
 <h4 id="create-an-event-crfs-and-data">Create an event, CRFs, and data</h4>
 <p>The following is to create an event, CRFs, and data, also using the token outputted from the first example.</p>
-<p>Curl:</p>
+<p>Curl: </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code>    curl -X POST &quot;https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data&quot; -H &quot;accept: application/json&quot; -H &quot;Authorization: eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ \&quot;study_id\&quot;: 1511357, \&quot;eventName\&quot;: \&quot;Sample\&quot;, \&quot;subjectLabel\&quot;: \&quot;Default-Site-202106160633380638-004\&quot;, \&quot;CRFs\&quot;: { \&quot;SampleCRF\&quot;: { \&quot;NUMSAMP\&quot;: \&quot;2\&quot; } }}&quot;
@@ -965,9 +970,10 @@
         &#39;accept&#39;: &#39;application/json&#39;,
         &#39;Authorization&#39;: &#39;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjcG1XbDZlTU9URHFGMWg3TVdnRVI3Uk1UTHozS0d1YSIsImV4cCI6MTY0MDU5OTcxNDk3NywiaWF0IjoxNjI0Nzg4NTE0fQ.na7cmxYl7XBwHbDwW6jVIdNBnufG1gl3TpimroxiDyumurCkfW-zZzVPYjwBlrn0&#39;,
         &#39;Content-Type&#39;: &#39;application/json&#39;,
-    }
-    data = &#39;{ &quot;study_id&quot;: 1511357, &quot;eventName&quot;: &quot;Sample&quot;, &quot;subjectLabel&quot;: &quot;Default-Site-202106160633380638-004&quot;, &quot;CRFs&quot;: { &quot;SampleCRF&quot;: { &quot;NUMSAMP&quot;: &quot;2&quot; } }}&#39;
+        }
+    data = &#39;{ &quot;study_id&quot;: 1511357, &quot;eventName&quot;: &quot;Sample&quot;, &quot;subjectLabel&quot;: &quot;Sample site-001&quot;, &quot;CRFs&quot;: { &quot;SampleCRF&quot;: { &quot;NUMSAMP&quot;: &quot;2&quot; } }}&#39;
     response = requests.post(&#39;https://dev-api.flaskdata.io/data-server/data/create/create-event-crfs-and-insert-data&#39;, headers=headers, data=data)
+    print(response.text)
 </code></pre></div>
 </div>
 <p>Swift:</p>
