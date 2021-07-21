@@ -12,4 +12,4 @@ This is a short video with examples of patient's diary using a desktop.
 ##ePRO desktop Options
 This is a short video with examples of patient's diary options.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RbRzgcJHG48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kmBg3_h-A14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
