@@ -12,18 +12,24 @@ Curl:
 Java:
 !!!example
     ```
-        Request request = Request.Post("https://dev-idp.flaskdata.io/auth/mobile-form-authorization");
-        String body = "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}";
-        request.bodyString(body,ContentType.APPLICATION_JSON);
-        request.setHeader("Accept", "application/json");
-        request.setHeader("Authorization", "JWT eyJ0eXAiOiJKV");
-        request.setHeader("Content-Type", "application/json");
-        HttpResponse httpResponse = request.execute().returnResponse();
-        System.out.println(httpResponse.getStatusLine());
-        if (httpResponse.getEntity() != null) {
-            String html = EntityUtils.toString(httpResponse.getEntity());
-            System.out.println(html);
-        }
+        URL url = new URL("https://dev-idp.flaskdata.io/auth/mobile-form-authorization");
+        HttpURLConnection http = (HttpURLConnection)url.openConnection();
+        http.setRequestMethod("POST");
+        http.setDoOutput(true);
+        http.setRequestProperty("accept", "application/json");
+        http.setRequestProperty("Authorization", "JWT eyJ0eXAiOiJKV");
+        http.setRequestProperty("Content-Type", "application/json");
+
+        String data = "{ \"email\": \"taliafeldman@yahoo.com\", \"password\": \"123456\"}";
+
+        byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+        OutputStream stream = http.getOutputStream();
+        stream.write(out);
+
+        System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+        http.disconnect();
+
     ```
 
 Python: 
