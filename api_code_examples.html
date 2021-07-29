@@ -687,18 +687,23 @@
 <p>Java:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>    Request request = Request.Post(&quot;https://dev-idp.flaskdata.io/auth/mobile-form-authorization&quot;);
-    String body = &quot;{ \&quot;email\&quot;: \&quot;taliafeldman@yahoo.com\&quot;, \&quot;password\&quot;: \&quot;123456\&quot;}&quot;;
-    request.bodyString(body,ContentType.APPLICATION_JSON);
-    request.setHeader(&quot;Accept&quot;, &quot;application/json&quot;);
-    request.setHeader(&quot;Authorization&quot;, &quot;JWT eyJ0eXAiOiJKV&quot;);
-    request.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);
-    HttpResponse httpResponse = request.execute().returnResponse();
-    System.out.println(httpResponse.getStatusLine());
-    if (httpResponse.getEntity() != null) {
-        String html = EntityUtils.toString(httpResponse.getEntity());
-        System.out.println(html);
-    }
+<div class="highlight"><pre><span></span><code>    URL url = new URL(&quot;https://dev-idp.flaskdata.io/auth/mobile-form-authorization&quot;);
+    HttpURLConnection http = (HttpURLConnection)url.openConnection();
+    http.setRequestMethod(&quot;POST&quot;);
+    http.setDoOutput(true);
+    http.setRequestProperty(&quot;accept&quot;, &quot;application/json&quot;);
+    http.setRequestProperty(&quot;Authorization&quot;, &quot;JWT eyJ0eXAiOiJKV&quot;);
+    http.setRequestProperty(&quot;Content-Type&quot;, &quot;application/json&quot;);
+
+    String data = &quot;{ \&quot;email\&quot;: \&quot;taliafeldman@yahoo.com\&quot;, \&quot;password\&quot;: \&quot;123456\&quot;}&quot;;
+
+    byte[] out = data.getBytes(StandardCharsets.UTF_8);
+
+    OutputStream stream = http.getOutputStream();
+    stream.write(out);
+
+    System.out.println(http.getResponseCode() + &quot; &quot; + http.getResponseMessage());
+    http.disconnect();
 </code></pre></div>
 </div>
 <p>Python: </p>
