@@ -35,7 +35,7 @@ Check the relevant event.
 The event will be added to the subject's events list.
   
 ###Enter Data
-Site role user can enter data in each CRF in the event.
+The Site Role user can enter data in each CRF in the event.
   
 ![Screenshot](img/subjects/subject_flask_events_enter_data.PNG)
 
@@ -52,7 +52,7 @@ After site role users (i.e. CRC) enters data, the last edited and status values 
 ![Screenshot](img/subjects/flask_event_last_edited.PNG)
 
 
-Subject can enter data via event diary. 
+The Subject can also enter data via event diary. 
 After the CRC invited the subject to log their data, the subject can follow this video tutorial. 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IlQ5TAJSjZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
