@@ -12,6 +12,8 @@
 * Study role- Administrator cannot add new subjects
 For additional information [how to add subject](./manage_subjects.md#add-subject).
 
+Video tutorial on how the send an event to a subject.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zTolyUgMM7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
