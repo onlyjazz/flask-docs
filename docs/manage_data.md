@@ -50,7 +50,13 @@ With the CRF opened, the user can enter the data. At the end of the CRF, there a
 After site role users (i.e. CRC) enters data, the last edited and status values are updated.
   
 ![Screenshot](img/subjects/flask_event_last_edited.PNG)
-   
+
+
+Subject can enter data via event diary. 
+After the CRC invited the subject to log their data, the subject can follow this video tutorial. 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IlQ5TAJSjZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ###Edit Data
 After user entered data he/she can edit data, as long as the CRF is not closed.
 
