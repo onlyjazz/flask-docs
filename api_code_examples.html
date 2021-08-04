@@ -776,11 +776,23 @@
                 completion(&quot;&quot;, error1.localizedDescription)
             }
         }
-    API URL:  https://dev-api.flaskdata.io/swagger/#/USAGE/post_auth_mobile_form_authorization
-    API params:  {
-    &quot;email&quot;: &quot;taliafeldman@yahoo.com&quot;,
-    &quot;password&quot;: &quot;123456&quot;
+        let url = URL(string: &quot;https://dev-api.flaskdata.io/swagger/#/USAGE/post_auth_mobile_form_authorization&quot;)!
+        var request = URLRequest(url: url)
+        request.httpMethod = &quot;POST&quot;
+
+        request.httpBody = jsonData
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in guard let data = {
+        &quot;email&quot;: &quot;taliafeldman@yahoo.com&quot;,
+        &quot;password&quot;: &quot;123456&quot;
+        }, error == nil else {
+        print(error?.localizedDescription ?? &quot;No data&quot;)
+        return
     }
+    let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+    if let responseJSON = responseJSON as? [String: Any] {
+        print(responseJSON)
+    }
+}
 </code></pre></div>
 </div>
 <p>NodeJS:</p>
