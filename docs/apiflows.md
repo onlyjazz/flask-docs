@@ -66,6 +66,70 @@ This API returns only CRFs with data.
 
 This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).
 
+#### /edc/study/send-email-with-study-data-csvs
+This API extracts EDC data at CRF level and sends email using a number of optional filters.
+
+The email includes a zip folder with EDC CSV files (each CRF as CSV file).
+
+You can extract all the data from a study with a simple request body (with emails list) like this: `{"emails":["alonan@flaskdata.io","rivkar@flaskdata.io"]}`.
+
+Now let's look at our options:
+
+##### Choose which data you want to select
+You can control the shape of the result object by using the **filters** field in your request body.
+
+This is like an SQL SELECT * FROM statement WHERE XXX
+
+!!!example ""
+
+    For example, if you need only **Adverse events crf** use:
+    ```json
+    "filters": {
+    "crf": "Adverse events"
+    },
+    ```
+
+Set the column name in the filters object to filter on it, like - crf, event, subject, site etc.
+
+##### Choose which data you don't want to select
+You can control the shape of the result object by using the **filtersNotIn** field in your request body.
+
+This is like an SQL SELECT * FROM statement WHERE XXX <> XXX
+
+!!!example ""
+
+    For example, if you need only **Adverse events crf** use:
+    ```json
+    "filtersNotIn": {
+    "site": "01B|02B"
+    },
+    ```
+
+Set the column name in the filtersNotIn object to filter the result without it, like - crf, event, subject, site etc.
+
+The filtersNotIn object can includes a list of values with | between the values.
+
+
+##### Filter records by date values
+
+You can refine record selection by the API with the fromDate and toDate filters.
+
+This is like the SQL WHERE clause - WHERE CRF updated between fromDate AND toDate.
+
+
+!!!example "Example"
+
+    ```json
+        {
+        "fromDate": "2020-01-01",
+        "toDate": "2021-01-01",
+        }
+    ```
+
+!!!note
+
+    Reminder! If you don’t set any filters field you will get all records.
+
 #### /edc/subjects/create-subject
 This API creates a subject in the EDC DB and returns the study_subject_id value.
 

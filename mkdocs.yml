@@ -12,7 +12,6 @@ nav:
     - Manage Data: manage_data.md
   - Running your study:
     - Study Dashboard: study_dashboard.md
-    - Metrics: manage_metrics.md
     - Tools: tools.md
     - Features: manage_features.md
     - Queries: manage_queries.md
