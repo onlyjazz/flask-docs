@@ -1170,14 +1170,14 @@
 <p>You can control the shape of the result object by using the <strong>filtersNotIn</strong> field in your request body.</p>
 <p>This is like an SQL SELECT * FROM statement WHERE XXX &lt;&gt; XXX</p>
 <div class="admonition example">
-<p>For example, if you need only <strong>Adverse events crf</strong> use:
+<p>For example, if you don't need <strong>01B and 02B sites</strong> use:
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;filtersNotIn&quot;</span><span class="err">:</span> <span class="p">{</span>
 <span class="nt">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;01B|02B&quot;</span>
 <span class="p">}</span><span class="err">,</span>
 </code></pre></div></p>
 </div>
-<p>Set the column name in the filtersNotIn object to filter the result without it, like - crf, event, subject, site etc.</p>
-<p>The filtersNotIn object can includes a list of values with | between the values.</p>
+<p>Set the column name in the filtersNotIn object to get the result without it, like - crf, event, subject, site etc.</p>
+<p>The filtersNotIn object can include a list of values with | between the values.</p>
 <h5 id="filter-records-by-date-values">Filter records by date values</h5>
 <p>You can refine record selection by the API with the fromDate and toDate filters.</p>
 <p>This is like the SQL WHERE clause - WHERE CRF updated between fromDate AND toDate.</p>
