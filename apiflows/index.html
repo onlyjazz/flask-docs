@@ -1,0 +1,1505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon.PNG">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Flows - FlaskData Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-flows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="FlaskData Documentations" class="md-header-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            FlaskData Documentations
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Flows
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FlaskData Documentations" class="md-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    FlaskData Documentations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../registration/" class="md-nav__link">
+      Registration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../first_study/" class="md-nav__link">
+      First Study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_studies/" class="md-nav__link">
+      Manage Studies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_sites/" class="md-nav__link">
+      Manage Sites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_users/" class="md-nav__link">
+      Manage Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_forms/" class="md-nav__link">
+      Manage Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_subjects/" class="md-nav__link">
+      Manage Subjects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_data/" class="md-nav__link">
+      Manage Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Running your study
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Running your study" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Running your study
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../study_dashboard/" class="md-nav__link">
+      Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/" class="md-nav__link">
+      Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_features/" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_queries/" class="md-nav__link">
+      Queries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../edc/" class="md-nav__link">
+      EDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flask_and_edc/" class="md-nav__link">
+      EDC integration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Flask API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Flask API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Flask API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_introduction/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Flows
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Flows
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edc" class="md-nav__link">
+    EDC
+  </a>
+  
+    <nav class="md-nav" aria-label="EDC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract-edc-data" class="md-nav__link">
+    Extract EDC Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract EDC Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-data" class="md-nav__link">
+    /edc/study/extract-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudydownload-csvs-data" class="md-nav__link">
+    /edc/study/download-csvs-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-study-data-at-crf-level" class="md-nav__link">
+    /edc/study/extract-study-data-at-crf-level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-study-data-at-crf-level-to-csvs" class="md-nav__link">
+    /edc/study/extract-study-data-at-crf-level-to-csvs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudysend-email-with-study-data-csvs" class="md-nav__link">
+    /edc/study/send-email-with-study-data-csvs
+  </a>
+  
+    <nav class="md-nav" aria-label="/edc/study/send-email-with-study-data-csvs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-which-data-you-want-to-select" class="md-nav__link">
+    Choose which data you want to select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choose-which-data-you-dont-want-to-select" class="md-nav__link">
+    Choose which data you don't want to select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-records-by-date-values" class="md-nav__link">
+    Filter records by date values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcsubjectscreate-subject" class="md-nav__link">
+    /edc/subjects/create-subject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    Flask
+  </a>
+  
+    <nav class="md-nav" aria-label="Flask">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flaskcustomerextract-data-to-json" class="md-nav__link">
+    /flask/customer/extract-data-to-json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcustomerdownload-billing-reports" class="md-nav__link">
+    /flask/customer/download-billing-reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskdeviceget-logs" class="md-nav__link">
+    /flask/device/get-logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskdeviceinsert-log" class="md-nav__link">
+    /flask/device/insert-log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskstudycreate-update-flask-study" class="md-nav__link">
+    /flask/study/create-update-flask-study
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flasksitecreate-update-flask-site" class="md-nav__link">
+    /flask/site/create-update-flask-site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskstudycreate-update-flask-study-users" class="md-nav__link">
+    /flask/study/create-update-flask-study-users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-serverdataextractextract-study-event-data-to-csv" class="md-nav__link">
+    /data-server/data/extract/extract-study-event-data-to-CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-serverdataextractpartial-extract-study-event-data-to-json" class="md-nav__link">
+    /data-server/data/extract/partial-extract-study-event-data-to-json
+  </a>
+  
+    <nav class="md-nav" aria-label="/data-server/data/extract/partial-extract-study-event-data-to-json">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-what-columns-you-want-to-select" class="md-nav__link">
+    Choose what columns you want to select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-records-by-date-andor-column-value" class="md-nav__link">
+    Filter records by date and/or column value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfcreate-crf-and-insert-data" class="md-nav__link">
+    /flask/crf/create-CRF-and-insert-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfcreate-event-crf-and-insert-data" class="md-nav__link">
+    /flask/crf/create-event-CRF-and-insert-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfget-crf-data-ids" class="md-nav__link">
+    /flask/crf/get-CRF-data-ids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfupdate-crf-data" class="md-nav__link">
+    /flask/crf/update-CRF-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-data-to-the-flask-data-model" class="md-nav__link">
+    Save data to the Flask data model
+  </a>
+  
+    <nav class="md-nav" aria-label="Save data to the Flask data model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use cases:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-event-crf-and-insert-data-items" class="md-nav__link">
+    Create an Event, CRF and insert data items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#under-the-hood-code-generator-epro-electronic-patient-reported-outcomes" class="md-nav__link">
+    Under the hood - Code generator - ePRO (Electronic patient reported outcomes)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      ePRO
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="ePRO" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        ePRO
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epro/" class="md-nav__link">
+      Flask ePRO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epro_mobile/" class="md-nav__link">
+      ePRO Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epro_desktop/" class="md-nav__link">
+      ePRO Desktop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epro_patient_instructions/" class="md-nav__link">
+      Instructions for patient diary
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edc" class="md-nav__link">
+    EDC
+  </a>
+  
+    <nav class="md-nav" aria-label="EDC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extract-edc-data" class="md-nav__link">
+    Extract EDC Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Extract EDC Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-data" class="md-nav__link">
+    /edc/study/extract-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudydownload-csvs-data" class="md-nav__link">
+    /edc/study/download-csvs-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-study-data-at-crf-level" class="md-nav__link">
+    /edc/study/extract-study-data-at-crf-level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudyextract-study-data-at-crf-level-to-csvs" class="md-nav__link">
+    /edc/study/extract-study-data-at-crf-level-to-csvs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcstudysend-email-with-study-data-csvs" class="md-nav__link">
+    /edc/study/send-email-with-study-data-csvs
+  </a>
+  
+    <nav class="md-nav" aria-label="/edc/study/send-email-with-study-data-csvs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-which-data-you-want-to-select" class="md-nav__link">
+    Choose which data you want to select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choose-which-data-you-dont-want-to-select" class="md-nav__link">
+    Choose which data you don't want to select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-records-by-date-values" class="md-nav__link">
+    Filter records by date values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edcsubjectscreate-subject" class="md-nav__link">
+    /edc/subjects/create-subject
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    Flask
+  </a>
+  
+    <nav class="md-nav" aria-label="Flask">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flaskcustomerextract-data-to-json" class="md-nav__link">
+    /flask/customer/extract-data-to-json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcustomerdownload-billing-reports" class="md-nav__link">
+    /flask/customer/download-billing-reports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskdeviceget-logs" class="md-nav__link">
+    /flask/device/get-logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskdeviceinsert-log" class="md-nav__link">
+    /flask/device/insert-log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskstudycreate-update-flask-study" class="md-nav__link">
+    /flask/study/create-update-flask-study
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flasksitecreate-update-flask-site" class="md-nav__link">
+    /flask/site/create-update-flask-site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskstudycreate-update-flask-study-users" class="md-nav__link">
+    /flask/study/create-update-flask-study-users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-serverdataextractextract-study-event-data-to-csv" class="md-nav__link">
+    /data-server/data/extract/extract-study-event-data-to-CSV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-serverdataextractpartial-extract-study-event-data-to-json" class="md-nav__link">
+    /data-server/data/extract/partial-extract-study-event-data-to-json
+  </a>
+  
+    <nav class="md-nav" aria-label="/data-server/data/extract/partial-extract-study-event-data-to-json">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choose-what-columns-you-want-to-select" class="md-nav__link">
+    Choose what columns you want to select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-records-by-date-andor-column-value" class="md-nav__link">
+    Filter records by date and/or column value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfcreate-crf-and-insert-data" class="md-nav__link">
+    /flask/crf/create-CRF-and-insert-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfcreate-event-crf-and-insert-data" class="md-nav__link">
+    /flask/crf/create-event-CRF-and-insert-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfget-crf-data-ids" class="md-nav__link">
+    /flask/crf/get-CRF-data-ids
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flaskcrfupdate-crf-data" class="md-nav__link">
+    /flask/crf/update-CRF-data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-data-to-the-flask-data-model" class="md-nav__link">
+    Save data to the Flask data model
+  </a>
+  
+    <nav class="md-nav" aria-label="Save data to the Flask data model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use cases:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-event-crf-and-insert-data-items" class="md-nav__link">
+    Create an Event, CRF and insert data items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#under-the-hood-code-generator-epro-electronic-patient-reported-outcomes" class="md-nav__link">
+    Under the hood - Code generator - ePRO (Electronic patient reported outcomes)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="api-flows">API flows</h1>
+<p>The API has 2 parts of APIs - EDC and Flask.</p>
+<ul>
+<li>EDC - APIs are related to an external EDC instance (extract EDC data etc.)</li>
+<li>Flask - APIs are related to the internal Flask data model (extract data, insert data etc.)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Request header</p>
+<ul>
+<li>
+<p>Authorization parameter in the header request should be the token you had get before from you <a href="../api_introduction/#authorization">authorization request</a></p>
+</li>
+<li>
+<p>EDC parameter in the header request should be the <a href="../manage_studies/#add-study">EDC DB name</a>.</p>
+</li>
+</ul>
+</div>
+<p>In this document there are a few examples of FlaskData APIs - There are more APIs, their description exists in swagger.</p>
+<p>For more details and questions contact us by sending email to <a href="mailto:support@clearclinica.com">support@clearclinica.com</a>.</p>
+<h2 id="edc">EDC</h2>
+<h3 id="extract-edc-data">Extract EDC Data</h3>
+<p>There are a few APIs you can use to extract  EDC data.</p>
+<p>For example:</p>
+<h4 id="edcstudyextract-data">/edc/study/extract-data</h4>
+<p>This API extracts EDC data of each table/view/function (like functionName()) and returns a json structure.</p>
+<p>fromDate, toDate, sort, filters and inputVariables(if tableName is a function) are optional values.</p>
+<p>Filters and inputVariable json objects: The key is the column name/input variable name in the EDC PostgreSQL database, the json value is the corresponding value (like where site = XXX)/ input value in function (like schema.function(XXX)).</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;tableName&quot;</span><span class="p">:</span> <span class="s2">&quot;cc_event_data&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;fromDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-01T00:00:00.000Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;toDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-01T00:00:00.000Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;subject&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Another example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;tableName&quot;</span><span class="p">:</span> <span class="s2">&quot;cross_event_crf_data&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h4 id="edcstudydownload-csvs-data">/edc/study/download-csvs-data</h4>
+<p>This API downloads a zip folder of CSV files with EDC study data.</p>
+<p>Each CSV file contains EDC Event-CRF data (Event is often called a Visit in an EDC)</p>
+<h4 id="edcstudyextract-study-data-at-crf-level">/edc/study/extract-study-data-at-crf-level</h4>
+<p>This API extracts EDC data at CRF level and returns the data as a json object.</p>
+<p>This API returns only CRFs with data.</p>
+<p>This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).</p>
+<h4 id="edcstudyextract-study-data-at-crf-level-to-csvs">/edc/study/extract-study-data-at-crf-level-to-csvs</h4>
+<p>This API extracts EDC data at CRF level and returns a zip folder includes CSV files (each CRF as CSV file).</p>
+<p>This API returns only CRFs with data.</p>
+<p>This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).</p>
+<h4 id="edcstudysend-email-with-study-data-csvs">/edc/study/send-email-with-study-data-csvs</h4>
+<p>This API extracts EDC data at CRF level and sends email using a number of optional filters.</p>
+<p>The email includes a zip folder with EDC CSV files (each CRF as CSV file).</p>
+<p>You can extract all the data from a study with a simple request body (with emails list) like this: <code>{"emails":["alonan@flaskdata.io","rivkar@flaskdata.io"]}</code>.</p>
+<p>Now let's look at our options:</p>
+<h5 id="choose-which-data-you-want-to-select">Choose which data you want to select</h5>
+<p>You can control the shape of the result object by using the <strong>filters</strong> field in your request body.</p>
+<p>This is like an SQL SELECT * FROM statement WHERE XXX</p>
+<div class="admonition example">
+<p>For example, if you need only <strong>Adverse events crf</strong> use:
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;filters&quot;</span><span class="err">:</span> <span class="p">{</span>
+<span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="s2">&quot;Adverse events&quot;</span>
+<span class="p">}</span><span class="err">,</span>
+</code></pre></div></p>
+</div>
+<p>Set the column name in the filters object to filter on it, like - crf, event, subject, site etc.</p>
+<h5 id="choose-which-data-you-dont-want-to-select">Choose which data you don't want to select</h5>
+<p>You can control the shape of the result object by using the <strong>filtersNotIn</strong> field in your request body.</p>
+<p>This is like an SQL SELECT * FROM statement WHERE XXX &lt;&gt; XXX</p>
+<div class="admonition example">
+<p>For example, if you need only <strong>Adverse events crf</strong> use:
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;filtersNotIn&quot;</span><span class="err">:</span> <span class="p">{</span>
+<span class="nt">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;01B|02B&quot;</span>
+<span class="p">}</span><span class="err">,</span>
+</code></pre></div></p>
+</div>
+<p>Set the column name in the filtersNotIn object to filter the result without it, like - crf, event, subject, site etc.</p>
+<p>The filtersNotIn object can includes a list of values with | between the values.</p>
+<h5 id="filter-records-by-date-values">Filter records by date values</h5>
+<p>You can refine record selection by the API with the fromDate and toDate filters.</p>
+<p>This is like the SQL WHERE clause - WHERE CRF updated between fromDate AND toDate.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>    <span class="p">{</span>
+    <span class="nt">&quot;fromDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-01&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;toDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-01-01&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reminder! If you don’t set any filters field you will get all records.</p>
+</div>
+<h4 id="edcsubjectscreate-subject">/edc/subjects/create-subject</h4>
+<p>This API creates a subject in EDC DB and returns the study_subject_id value.</p>
+<h2 id="flask">Flask</h2>
+<h3 id="flaskcustomerextract-data-to-json">/flask/customer/extract-data-to-json</h3>
+<p>This API extracts data from flask tables and views for your customer.</p>
+<p>The table/ view should have customer_id column for this process.</p>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
+<p>studies table, audit_user_login, billing_reports_customer etc.</p>
+</div>
+<p>studyIds and filters are optional.</p>
+<h3 id="flaskcustomerdownload-billing-reports">/flask/customer/download-billing-reports</h3>
+<p>This API downloads a billing reports folder for the month of the billingDate parameter.</p>
+<p>The billing report zip folder includes all the billing report files for your customer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This process will download files only if the billing reports features turn on in your customer account.</p>
+</div>
+<h3 id="flaskdeviceget-logs">/flask/device/get-logs</h3>
+<p>This API returns device logs of a study.</p>
+<h3 id="flaskdeviceinsert-log">/flask/device/insert-log</h3>
+<p>This API inserts device log into flaskData with correct study_id according to EDC.</p>
+<p>payload parameter is optional and can include each key value pairs.</p>
+<h3 id="flaskstudycreate-update-flask-study">/flask/study/create-update-flask-study</h3>
+<p>This API creates/updates study in FlaskData.</p>
+<h3 id="flasksitecreate-update-flask-site">/flask/site/create-update-flask-site</h3>
+<p>This API creates/updates site in FlaskData.</p>
+<h3 id="flaskstudycreate-update-flask-study-users">/flask/study/create-update-flask-study-users</h3>
+<p>This API creates User if not exists and assigned Users to study.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This API deletes the Users that were assigned to this study and assigned the new Users.</p>
+</div>
+<h3 id="data-serverdataextractextract-study-event-data-to-csv">/data-server/data/extract/extract-study-event-data-to-CSV</h3>
+<p>This API extracts all study data (from FlaskForms) based on study id and download CSV files.</p>
+<h3 id="data-serverdataextractpartial-extract-study-event-data-to-json">/data-server/data/extract/partial-extract-study-event-data-to-json</h3>
+<p>This API extracts all study events and CRF data to JSON using a number of optional filters.</p>
+<p>You can extract all the data from a study with a simple request body like this: <code>{ "study_id": 7253541 }</code>.</p>
+<p>This is like SQL SELECT * FROM clinicalData;   </p>
+<p>Now let's look at our options:</p>
+<h4 id="choose-what-columns-you-want-to-select">Choose what columns you want to select</h4>
+<p>You can control the shape of the result object by using the <strong>columns</strong> field in your request body.
+This is like an SQL SELECT col1, col2, col3 FROM statement</p>
+<div class="admonition example">
+<p>For example, if you need only <strong>crf</strong>, <strong>event</strong> and <strong>value</strong> fields use:
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;columns&quot;</span><span class="err">:</span> <span class="p">{</span>
+<span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="nt">&quot;event&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</div>
+<p>Set the <strong>_id</strong> column to 0 (like in the above example). The API will selectively return the fields you
+set in the request body when you set them to 1.</p>
+<p>To get all the fields, don't set fields or specify the entire list of fields.
+This is like a SELECT * FROM statement.</p>
+<h4 id="filter-records-by-date-andor-column-value">Filter records by date and/or column value</h4>
+<p>You can refine record selection by the API with the date_from, date_to filters and setting values for
+fields.</p>
+<p>This is like the SQL WHERE clause - WHERE crf='Demographics' and eventDate between date_from AND date_to.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;filters&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;date_from&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-01T16:26:54.461Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;date_to&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-31T16:26:54.461Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="s2">&quot;Demographics&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;item_type&quot;</span><span class="p">:</span> <span class="err">“INPUT”</span>
+    <span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reminder! If you don’t set any filters field you will get all records.</p>
+</div>
+<h3 id="flaskcrfcreate-crf-and-insert-data">/flask/crf/create-CRF-and-insert-data</h3>
+<p>This API creates a CRF in an existing event and inserts data into the CRF.</p>
+<div class="admonition example">
+<p>Creates a new AE (adverse event) CRF in existing event.</p>
+</div>
+<h3 id="flaskcrfcreate-event-crf-and-insert-data">/flask/crf/create-event-CRF-and-insert-data</h3>
+<p>This API creates event and CRF and inserts data.</p>
+<p>Example - Creates a new Medication event with CRF and inserts data.</p>
+<h3 id="flaskcrfget-crf-data-ids">/flask/crf/get-CRF-data-ids</h3>
+<p>This API returns subject's crf data Id (unique for each CRF) for specific crf name.</p>
+<h3 id="flaskcrfupdate-crf-data">/flask/crf/update-CRF-data</h3>
+<p>This API updates CRF data by crf data id.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following code example should use the latest version of jQuery</p>
+</div>
+<div class="highlight"><pre><span></span><code>    <span class="kd">var</span> <span class="nx">xhrcall</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+        <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://dev-api.flaskdata.io/flask/customer/extract-data-to-json&#39;</span><span class="p">,</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+        <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s1">&#39;Authorization&#39;</span><span class="o">:</span> <span class="nx">jwt</span><span class="p">},</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;{</span>
+<span class="s1">                &quot;tableName&quot;: &quot;studies&quot;,</span>
+<span class="s1">                &quot;fromDate&quot;: &quot;2018-03-29T11:44:12.511Z&quot;,</span>
+<span class="s1">                &quot;toDate&quot;: &quot;2019-03-29T11:44:12.511Z&quot;                                    </span>
+<span class="s1">                }&#39;</span><span class="p">,</span>
+            <span class="nx">contentType</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
+        <span class="p">});</span>
+<span class="c1">//promise syntax to render after xhr completes</span>
+      <span class="nx">xhrcall</span>
+          <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+                  <span class="c1">// Enter your code here</span>
+          <span class="p">})</span>
+          <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="c1">// Enter your code here  </span>
+                    <span class="p">}</span>
+          <span class="p">});</span>
+</code></pre></div>
+<h3 id="save-data-to-the-flask-data-model">Save data to the Flask data model</h3>
+<h4 id="use-cases">Use cases:</h4>
+<ol>
+<li>
+<p>You have a mobile app that collects data from a device or person,
+and you want to save the data to the Flask data model.</p>
+</li>
+<li>
+<p>You have a connected wearable device that connects to your phone app with BLE
+and you want to save some data to Flask.</p>
+</li>
+</ol>
+<p><em>Pre-requisites:</em><br />
+In order to insert data you will have already created the Study, Site, Event and Form (CRF) entities in the Flask data model:    </p>
+<ol>
+<li>
+<p>When you have ePRO (electronic patient reported outcomes), then the user credentials you pass to the API will be for the patient.
+When a site coordinator screens a patient, the Add Subject page automatically sends a Welcome email to the patient.
+The patient then clicks and sets a password. (Alternatively you can enable the patient to authenticate with their Google account)</p>
+</li>
+<li>
+<p>When you design a Form (CRF), the items in the Form map 1:1 to the data items that you want to save from your app.</p>
+</li>
+</ol>
+<p><em>Application flow</em>  </p>
+<p>Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to
+collect on your mobile app.</p>
+<p>You implement the form on your app with the input field and when the user saves the form on the app,
+you then save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours
+of sleep you tracked and save it to Flask every day at 10:00.</p>
+<p>Your app then sends the data to the Flask API as key-value pairs. See below.</p>
+<div class="admonition tip">
+<p class="admonition-title">TIPS</p>
+<ul>
+<li>
+<p>Flask Forms automatically names the item variables; you will probably want to reset
+variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.</p>
+</li>
+<li>
+<p>If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
+pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
+then make sure you pass 1 or 2 (and not 0 or 1).</p>
+</li>
+<li>
+<p>When you pass a numeric field - pass it like:  "AGE": 25 not "AGE": "25". In JSON, strings are not integers.</p>
+</li>
+<li>
+<p>Radio buttons receive True or False values - pass it like: "SUBJECT_IS_A_REDHEAD": true.</p>
+</li>
+<li>
+<p>Dates have the usual timestamp format - pass it like: "DATE_OF_ADMISSION": "2020-12-21 10:10:00.000Z"</p>
+</li>
+</ul>
+</div>
+<h4 id="create-an-event-crf-and-insert-data-items">Create an Event, CRF and insert data items</h4>
+<p>You can save data to 1 or more CRFS in a single API call
+ <a href="https://dev-api.flaskdata.io/code/#/event-crfs-data-creation">Create Event, CRF and insert data</a></p>
+<p>/data/create/create-event-crf-and-insert-data creates a new event with CRFs and insert CRFs data for one subject</p>
+<p><strong>Important:</strong></p>
+<p>If subject role token is used to call the APIs, then the request body doesn't need to include the subjectLabel or subjectId parameters.</p>
+<p>If CRC role token is used, then the request body must include subjectLabel or subjectId.</p>
+<p>In the below example, the API sends values of selected checkbox/select box items in the CRF. For example: Outcome: 1: 'Ongoing'
+<div class="highlight"><pre><span></span><code>    <span class="p">{</span>
+          <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">6670398</span><span class="p">,</span>
+          <span class="nt">&quot;eventName&quot;</span><span class="p">:</span> <span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;CRFs&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;Adverse Events&quot;</span><span class="p">:</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Patient developed a temperature&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Anticipated&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Serious&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;StartDate&quot;</span><span class="p">:</span> <span class="s2">&quot;01-Mar-2021&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;StopDate&quot;</span><span class="p">:</span> <span class="s2">&quot;03-Mar-2021&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Outcome&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;Severity&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;RelatedTo&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;ActionTaken&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;ConMeds&quot;</span><span class="p">:</span>
+              <span class="p">{</span>
+                <span class="nt">&quot;GenericName&quot;</span><span class="p">:</span> <span class="s2">&quot;Aspirin&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;Dose&quot;</span><span class="p">:</span> <span class="s2">&quot;500&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;Units&quot;</span><span class="p">:</span> <span class="s2">&quot;mg&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;Route&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;RelatedToAE&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+              <span class="p">}</span>
+
+          <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></p>
+<h4 id="under-the-hood-code-generator-epro-electronic-patient-reported-outcomes">Under the hood - Code generator - ePRO (Electronic patient reported outcomes)</h4>
+<p>All this probably seems a little abstract, so lets see some working code.    </p>
+<p>Surf over to the <a href="https://api.flaskdata.io/code/">Flask API Example code generator</a></p>
+<p>The Code generator page is a React application that generates working NodeJS code; showing you the API call  with proper arguments.  You can copy and past the code and run it on the command line with nodejs.</p>
+<p>When you hit the green Run Function button - you will see the results from the API call on the page.</p>
+<p>As we mentioned before, the patient (AKA Subject) will have already been screened to the study and have credentials;
+we'll be using the Subject credentials in this API flow.</p>
+<p>The following sequence will show how to authorize the subject, get his user id and study subject label and insert some data.</p>
+<ol>
+<li>
+<p><strong>Authorization</strong> - pass the credentials of the subject (email and password). You'll authorize the Subject after she logs in to your app
+with the credentials she set on her Welcome to Flask email.</p>
+</li>
+<li>
+<p><strong>Get User profile</strong> - pass the JWT token and get the Subject ID and Subject label (and a bunch of other fields)</p>
+</li>
+<li>
+<p><strong>Get studies of subject</strong> - pass the JWT token with the Subject ID and get the Study ID of the study where the Subject is enrolled</p>
+</li>
+<li>
+<p><strong>Create CRF and insert data</strong> - pass the JWT token with Study ID, Subject ID and the CRF payload and voila - you've inserted data!</p>
+</li>
+</ol>
+<p>```</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../api_introduction/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../epro/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Flask ePRO
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

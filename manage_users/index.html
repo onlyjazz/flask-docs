@@ -1,0 +1,963 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon.PNG">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Manage Users - FlaskData Documentations</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manage-users" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="FlaskData Documentations" class="md-header-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            FlaskData Documentations
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Manage Users
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FlaskData Documentations" class="md-nav__button md-logo" aria-label="FlaskData Documentations">
+      
+  <img src="../img/logo.PNG" alt="logo">
+
+    </a>
+    FlaskData Documentations
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../registration/" class="md-nav__link">
+      Registration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../first_study/" class="md-nav__link">
+      First Study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_studies/" class="md-nav__link">
+      Manage Studies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_sites/" class="md-nav__link">
+      Manage Sites
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Manage Users
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Manage Users
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-users" class="md-nav__link">
+    Default Users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-user" class="md-nav__link">
+    Edit User
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit User">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    Profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studies" class="md-nav__link">
+    Studies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sites" class="md-nav__link">
+    Sites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mange-user-sites" class="md-nav__link">
+    Mange User sites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-actions" class="md-nav__link">
+    User actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-user" class="md-nav__link">
+    Add User
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_forms/" class="md-nav__link">
+      Manage Forms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_subjects/" class="md-nav__link">
+      Manage Subjects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_data/" class="md-nav__link">
+      Manage Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Running your study
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Running your study" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Running your study
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../study_dashboard/" class="md-nav__link">
+      Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tools/" class="md-nav__link">
+      Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_features/" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_queries/" class="md-nav__link">
+      Queries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../edc/" class="md-nav__link">
+      EDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../flask_and_edc/" class="md-nav__link">
+      EDC integration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Flask API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Flask API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Flask API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_introduction/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apiflows/" class="md-nav__link">
+      Flows
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      ePRO
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="ePRO" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        ePRO
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epro/" class="md-nav__link">
+      Flask ePRO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epro_mobile/" class="md-nav__link">
+      ePRO Mobile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epro_desktop/" class="md-nav__link">
+      ePRO Desktop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../epro_patient_instructions/" class="md-nav__link">
+      Instructions for patient diary
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-users" class="md-nav__link">
+    Default Users
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-user" class="md-nav__link">
+    Edit User
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit User">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    Profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#studies" class="md-nav__link">
+    Studies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sites" class="md-nav__link">
+    Sites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mange-user-sites" class="md-nav__link">
+    Mange User sites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-actions" class="md-nav__link">
+    User actions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-user" class="md-nav__link">
+    Add User
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="../img/flaskdata_logo.PNG" /></a></p>
+<h1 id="manage-users">Manage Users</h1>
+<p>In the left menu bar click on Users.
+In this page - Users index you can add Users to your study, edit Users, assign User to site etc.</p>
+<p>You can filter Users by study, site or what you want by the <strong>Search</strong> filter and then click <strong>APPLY</strong></p>
+<p><img alt="Screenshot" src="../img/user/users_index_filter.PNG" /></p>
+<h2 id="default-users">Default Users</h2>
+<p>By default, you have 4 Users assigned to your study:</p>
+<pre><code>1.Customer admin User - This is your User!
+2.CRC Default - CRC User
+3.PI Default - PI User
+4.CRA Default - CRA User
+</code></pre>
+<p><img alt="Screenshot" src="../img/user/default_users.PNG" /></p>
+<p><strong>Each default User has another permissions.</strong></p>
+<h2 id="edit-user">Edit User</h2>
+<p>Edit the default Users to your right Users one by one, by <strong>ACTIONS</strong>-&gt; <strong>EDIT</strong> option</p>
+<p><img alt="Screenshot" src="../img/user/users_index_actions.PNG" /></p>
+<h3 id="profile">Profile</h3>
+<p>In the User profile page there is a pencil icon in the right corner of <strong>Profile card</strong>, click on it in order to edit the User properties.</p>
+<p><img alt="Screenshot" src="../img/user/user_edit.PNG" /></p>
+<p>After you create a new User or modify their email, you can send them an email to create password by clicking on <strong>Send create password</strong></p>
+<p>You don't have to do it - your Users can log in with their Google account.</p>
+<div class="admonition note">
+<p class="admonition-title">User properties</p>
+<p>In edit User Profile action you can change a few User's parameters</p>
+<ol>
+<li><em>Role</em> There are 3 roles<ul>
+<li>Customer Admin - User has all customer permissions - add/edit studis, Users, sites, alerts etc.</li>
+<li>Study Role - User has study permissions - to see all study data (of all the sites)</li>
+<li>Site Role - User has site level permissions - to see his site data, add subject to his site, create events and crfs to subject.  </li>
+</ul>
+</li>
+<li><em>Form designer</em>: define if User has Forms permissions - add/edit/delete Events and CRFs from the system (by default only customer admin Users can do it).</li>
+<li><em>Subscribe to Alerts</em>: define if ths User will get alerts from this study (according to alert rules).</li>
+</ol>
+</div>
+<h3 id="studies">Studies</h3>
+<p>In <strong>Studies card</strong> you can see the User's studies</p>
+<p><img alt="Screenshot" src="../img/user/user_profile_studies_card.PNG" /></p>
+<h3 id="sites">Sites</h3>
+<p>In <strong>Sites card</strong> you can see the User's sites (if the User is study role or customer admin he can see al study's sites)</p>
+<p><img alt="Screenshot" src="../img/user/user_profile_sites_card.PNG" /></p>
+<h3 id="comments">Comments</h3>
+<p>In <strong>Comments card</strong> you can add comments about this User.
+Write your comments and click on <strong>ADD COMMENT</strong> button</p>
+<p><img alt="Screenshot" src="../img/user/user_profile_comments.PNG" /></p>
+<h2 id="mange-user-sites">Mange User sites</h2>
+<p>In User profile page you have an option to manage User sites.</p>
+<p><img alt="Screenshot" src="../img/user/user_profile_actions_button.PNG" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You have this option just if the User is a site role User, otherwise the User has permissions to all study's sites</p>
+</div>
+<p>In manage User sites page you can add/remove sites from User privileges.</p>
+<p><img alt="Screenshot" src="../img/user/user_manage_user_sites.PNG" /></p>
+<h2 id="user-actions">User actions</h2>
+<p>In User profile page you have <strong>ACTIONS</strong> green button.
+In these actions button you have a few actions options:</p>
+<ol>
+<li><strong>Send create password</strong> - By clicking on this option you email the User with create a new password request.</li>
+<li><strong>Login as this User</strong> - By clicking on this option you login to the system like you are this User.</li>
+<li>
+<p><strong>Modify password</strong> - By clicking on this option you can modify the User password.</p>
+<p><img alt="Screenshot" src="../img/user/user_profile_modify_pass.PNG" /></p>
+</li>
+</ol>
+<h2 id="add-user">Add User</h2>
+<p>To add User click on <strong>ADD USER</strong> green button in Users index page</p>
+<p><img alt="Screenshot" src="../img/user/users_index_add_user.PNG" /></p>
+<p>The User will be added to the selected study that appears in the title.</p>
+<p><img alt="Screenshot" src="../img/study/study_in_title.PNG" /></p>
+<div class="admonition note">
+<p class="admonition-title">User properties</p>
+<ol>
+<li><strong>Email</strong> should be unique for each User.</li>
+<li>
+<p><a href="..#roles--who-can-do-what"><strong>Role</strong></a> There are 3 optional roles:</p>
+<p>2.1 Customer Admin (2)- Administrator of the customer - who has all permissions of this account, like - create User, create site, build CRFs etc.</p>
+<p>2.2 Study role (3)- who has all study permissions - see, extract etc. all study data.</p>
+<p>2.3 Site role (4)- who has specific site/s permissions - add subject to his site, fill CRFs, see site's data etc.</p>
+</li>
+<li>
+<p><strong>EDC Role</strong> - more specific role from Role (number 2), it's more relevant for customers that have EDC db.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>EDC Role ID</th>
+<th>Flask Role ID</th>
+<th>EDC Role Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>System Administrator</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>Study Administrator</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>Study Director</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td>Study Monitor</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3</td>
+<td>Study Coder</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+<td>Site coordinator</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>Principal investigator</td>
+</tr>
+<tr>
+<td>8</td>
+<td>5</td>
+<td>Subject</td>
+</tr>
+<tr>
+<td>9</td>
+<td>2</td>
+<td>API role</td>
+</tr>
+<tr>
+<td>77</td>
+<td>2</td>
+<td>RiskGraph role</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Click on <strong>SAVE</strong> green button.</p>
+<p><img alt="Screenshot" src="../img/user/user_create_new_user.PNG" /></p>
+<p>The User will get a Welcome message in their email.</p>
+<p><img alt="Screenshot" src="../img/user/user_create_success.PNG" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../manage_sites/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Manage Sites
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../manage_forms/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Manage Forms
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
