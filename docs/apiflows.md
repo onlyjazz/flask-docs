@@ -98,16 +98,16 @@ This is like an SQL SELECT * FROM statement WHERE XXX <> XXX
 
 !!!example ""
 
-    For example, if you need only **Adverse events crf** use:
+    For example, if you don't need **01B and 02B sites** use:
     ```json
     "filtersNotIn": {
     "site": "01B|02B"
     },
     ```
 
-Set the column name in the filtersNotIn object to filter the result without it, like - crf, event, subject, site etc.
+Set the column name in the filtersNotIn object to get the result without it, like - crf, event, subject, site etc.
 
-The filtersNotIn object can includes a list of values with | between the values.
+The filtersNotIn object can include a list of values with | between the values.
 
 
 ##### Filter records by date values
