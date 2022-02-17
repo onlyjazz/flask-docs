@@ -327,18 +327,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../manage_metrics/" class="md-nav__link">
-      Metrics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../tools/" class="md-nav__link">
       Tools
     </a>
@@ -522,6 +510,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_code_examples/" class="md-nav__link">
+      API Code Examples
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -690,7 +690,7 @@
 <p>You can use FlaskData and <a href="../manage_studies/#add-study">ClinCapture Database</a> in parallel for your study.</p>
 <p>There are a few functions to connect them:</p>
 <ol>
-<li><a href="../manage_features/#create-user-in-edc">Create user in EDC feature</a> - Create user in flask and he/she will be created in EDC.</li>
+<li><a href="../manage_features/#create-user-in-edc">Create user in EDC feature</a> - Create a user in flask and they will be created in EDC.</li>
 <li><a href="../manage_sites/#add-a-new-site">Create site in Flask</a> - The site will be created in EDC.     </li>
 <li><a href="../manage_subjects/#add-subject">Add subject in Flask</a> - The subject will be added in EDC.</li>
 <li><a href="../study_dashboard/#edc">EDC button</a> - Opens the clincapture in a new window.</li>
@@ -701,40 +701,40 @@
 <div class="admonition important">
 <p class="admonition-title">Create site</p>
 <p>EDC has a lot of connectivity, After you add a site in Flask you must go to EDC and "edit" the site.</p>
-<p>Just Click edit and save without edit anything.</p>
+<p>Just click edit and save without editing anything.</p>
 </div>
 <h2 id="relationship-between-forms-and-edc">Relationship between Forms and EDC</h2>
-<p>If your study uses <a href="../manage_studies/#add-study">ClinCapture Database</a> you can connect the two.</p>
+<p>If your study uses <a href="../manage_studies/#add-study">ClinCapture Database</a>, you can connect the two.</p>
 <h3 id="import-crf-from-edc">Import CRF from EDC</h3>
-<p>You can import CRF From EDC to Forms by click on <strong>IMPORT CRF FROM EDC</strong> blue button</p>
+<p>You can import CRF from EDC to Forms by click on the blue <strong>IMPORT CRF FROM EDC</strong> button.</p>
 <p><img alt="Screenshot" src="../img/forms/forms_import_crf_from_edc.PNG" /></p>
-<p>CRF list opens, You can import each CRF you need.</p>
+<p>The CRF list opens and you can import each CRF needed.</p>
 <p><img alt="Screenshot" src="../img/forms/import_crf_list.PNG" /></p>
-<p>After you imported, you can <a href="../manage_forms/#edit-crf-item">edit the CRF</a>.</p>
+<p>After imported, you can <a href="../manage_forms/#edit-crf-item">edit the CRF</a>.</p>
 <p>Now - You have CRF in Forms related to EDC CRF.</p>
-<p>Each CRF data you enter or edit for specific subject in Forms will update the EDC CRF data.</p>
-<p>For detach the CRF from EDC CRF, Go to CRF list <strong>ACTIONS</strong>-&gt;<strong>DETACH CRF</strong></p>
+<p>Each CRF data you enter or edit for specific subject in forms will update the EDC CRF data.</p>
+<p>To detach the CRF from EDC CRF, go to the CRF list <strong>ACTIONS</strong>-&gt;<strong>DETACH CRF</strong></p>
 <p><img alt="Screenshot" src="../img/forms/detach_crf.PNG" /></p>
 <h3 id="export-crf-to-edc">Export CRF to EDC</h3>
-<p>You can export CRF to EDC by click on <strong>ACTIONS</strong>-&gt;<strong>EXPORT</strong> option</p>
+<p>You can export CRF to EDC by clicking on the <strong>ACTIONS</strong>-&gt;<strong>EXPORT</strong> option</p>
 <p><img alt="Screenshot" src="../img/forms/export_crf.PNG" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Study uses Flask PRO and EDC DB, You can export study PRO CRFs to EDC.</p>
-<p>When subject inserts data in ePRO the data is inserted into EDC as well.</p>
+<p>If the study uses Flask PRO and EDC DB, you can export the study PRO CRFs to EDC.</p>
+<p>When the subject inserts data in ePRO, the data is inserted into EDC as well.</p>
 </div>
 <h3 id="import-event-from-edc">Import Event from EDC</h3>
-<p>You can import event from EDC includes all it's CRFs.</p>
-<p>In Event Definition tab click on <strong>IMPORT EVENT DEFITION FROM EDC</strong> blue button</p>
+<p>You can import event from EDC, including all it's CRFs.</p>
+<p>In the Event Definition tab, click on the blue <strong>IMPORT EVENT DEFITION FROM EDC</strong> button.</p>
 <p><img alt="Screenshot" src="../img/forms/import_event_from_edc.PNG" /></p>
-<p>Events list appears, you can import each event from there, edit the imported event, and it's CRFs.</p>
+<p>Event lists appear and you can import each event from there, edit the imported event, and it's CRFs.</p>
 <h3 id="export-event-to-edc">Export Event to EDC</h3>
-<p>You can export Event to EDC by click on <strong>ACTIONS</strong>-&gt;<strong>EXPORT</strong> option</p>
+<p>You can export Event to EDC by click on the <strong>ACTIONS</strong>-&gt;<strong>EXPORT</strong> option</p>
 <p><img alt="Screenshot" src="../img/forms/export_event.PNG" /></p>
 <p>The export window <strong>Difference between Flask Event Definition and EDC Event Definition preview</strong> shows the event's different definitions between Forms and EDC.</p>
 <p>You can export or cancel the export process.</p>
 <h3 id="export-study">Export study</h3>
-<p>By click on <strong>Export study</strong> <a href="../manage_forms/#hamburger">Hamburger</a> option, You can export to EDC DB all the Events and CRFs of ths study.</p>
+<p>By click on the <strong>Export study</strong> <a href="../manage_forms/#hamburger">Hamburger</a> option, you can export all the Events and CRFs of the study to EDC DB.</p>
 <p><img alt="Screenshot" src="../img/forms/export_study_to_edc.PNG" /></p>
                 
               

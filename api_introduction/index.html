@@ -325,18 +325,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../manage_metrics/" class="md-nav__link">
-      Metrics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../tools/" class="md-nav__link">
       Tools
     </a>
@@ -555,6 +543,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_code_examples/" class="md-nav__link">
+      API Code Examples
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -756,59 +756,71 @@
 <h2 id="audience">Audience</h2>
 <p>Developers who want to use the Flask API.</p>
 <h2 id="concepts-and-terms">Concepts and terms</h2>
-<p>A developer will need credentials to a User account with an API role.
-This User can be created by customer admin role.</p>
+<p>A developer will need credentials for a User account with an API role.
+This User can be created by the customer admin role.</p>
 <p>The API User has access to data of the customer account and EDC databases that defined in the study EDC dbname.</p>
 <p>There are 3 FlaskData API environments:</p>
 <ul>
-<li>development environment : <a href="https://dev-api.flaskdata.io">dev-api.flaskdata.io</a></li>
-<li>staging environment : <a href="https://staging-api.flaskdata.io">staging-api.flaskdata.io</a></li>
-<li>production environment : <a href="https://api.flaskdata.io">api.flaskdata.io</a></li>
+<li>development environment : <a href="dev-api.flaskdata.io/swagger">dev-api.flaskdata.io</a></li>
+<li>staging environment : <a href="https://staging-api.flaskdata.io/swagger">staging-api.flaskdata.io</a></li>
+<li>production environment : <a href="https://api.flaskdata.io/swagger">api.flaskdata.io</a></li>
 </ul>
-<p>Each API environments has its own swagger UI - like https://api.flaskdata.io/swagger/</p>
-<p>There are a few specs, Select the relevant spec for API using.</p>
-<p>For using FlaskData API by swagger you need to click on "Try it out" of the relevant API.</p>
-<p><img alt="Screenshot" src="../img/api/try_it_out.PNG" /></p>
-<p>Config/ change header and body request as needed and click on "Execute" button.</p>
-<p><img alt="Screenshot" src="../img/api/execute_api.PNG" /></p>
+<p>Each API environments has its own swagger UI (i.e. https://api.flaskdata.io/swagger/ )</p>
+<p>There are a few specs, select the relevant spec for the API you are using. Options for specs include:</p>
+<ul>
+<li>
+<p>General APIs (i.e. study logs, user ID, etc.)</p>
+</li>
+<li>
+<p>Features (i.e. exporting CRFs to excel)</p>
+</li>
+<li>
+<p>Forms Data (i.e. create event with CRF, update existing event, etc.)</p>
+</li>
+<li>
+<p>Alerts (i.e. alert definition, notification list, metic values, etc.)</p>
+</li>
+<li>
+<p>IDP (i.e. create new mobile user token, logout)</p>
+</li>
+</ul>
+<p>For using the FlaskData API with swagger, you need to click on "Try it out" for the relevant API.</p>
+<p><img alt="Screenshot" src="../img/newSwagger/tryIt.png" /></p>
+<p>Config/change header and body request as needed and click on the "Execute" button.</p>
+<p><img alt="Screenshot" src="../img/newSwagger/execute.png" /></p>
 <h3 id="edc">EDC</h3>
 <p>ClinCapture EDC is a 21 CFR Part 11 compliant EDC system that is integrated into Flask Collect.
-The ClinCapture database uses a standard clinical trial data model (Events  (aka Visits), CRF, Items, Sites, Subjects, Queries, SDV, Audit log and data extracts)</p>
+The ClinCapture database uses a standard clinical trial data model (Events or visits, CRFs, Items, Sites, Subjects, Queries, SDV, Audit logs, and data extracts)</p>
 <p>Users and sites management is performed using the FlaskData UX; the FlaskData API updates/inserts entities into the
 ClinCapture PostgreSQL database.</p>
 <p>There are 3 paths for data capture:
-1. Direct data capture to EDC
-Direct data capture in ClinCapture or data entry from paper source (the traditional way of doing things).</p>
+Direct data capture to EDC, direct data capture in ClinCapture, or data entry from paper source (the traditional way of doing things).</p>
 <ol>
 <li>
-<p>eSource with Flask Forms expand inline update to EDC
-You can design CRFs using Forms - site coordinators (and patients using the Flask ePRO app). Forms will update
-the EDC inline and synchronize CRF fields/metadata and item values.</p>
+<p>eSource with Flask Forms expand online update to EDC
+You can design CRFs using Forms - site coordinators (and patients using the Flask ePRO app). Forms will update the EDC online, synchronize CRF fields/metadata, and item values.</p>
 </li>
 <li>
 <p>Direct data capture with Flask Forms</p>
 </li>
 </ol>
-<p>Automated ETL processes extract  data to Flask Detect and Act for analytics and
-alerts, or you can use FlaskData APIs to extract / insert data in JSON format on
-demand, for your own analytics processing.</p>
+<p>Automated ETL processes extract data to Flask Detect and Act for analytics and alerts, or you can use FlaskData APIs to extract / insert data in JSON format on demand, for your own analytics processing.</p>
 <h3 id="flask-forms-esource">Flask Forms eSource</h3>
-<p>Flask Forms is an eSource platform that includes a visual Forms designer.
-A CRF you design in Forms is designed once and can be rendered on Desktop or Mobile for a native Android app.</p>
+<p>Flask Forms is an eSource platform that includes a visual Forms designer. A CRF you design in Forms is designed once and can be rendered on a Desktop or Mobile device for a native Android app.</p>
 <p>You can use the FlaskData API to extract and insert Forms data.</p>
 <h2 id="getting-started-api">Getting started API</h2>
 <h3 id="authorization">Authorization</h3>
-<p>In order to use the FlaskData APIs you need to first get aa JWT token with the  auth/authorize API.</p>
+<p>In order to use the FlaskData APIs you need to first get a JWT token with the auth/authorize API.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>in development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a></p>
-<p>In the body request (JSON) you need to set your API User's email and password, like:</p>
+<p>On the development swagger environment : <a href="https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize">https://dev-api.flaskdata.io/swagger/#/FLASK/post_auth_authorize</a></p>
+<p>In the body request (JSON), you need to set your API User's email and password, like:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;xxx@gmail.com&quot;</span><span class="p">,</span>
   <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;12345678&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>In the response body you get an access token, like:</p>
+<p>In the response body you will receive an access token, similar to:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiV1BWaEJ3RnVMcGo2RjRTWVlkaENWSDBwZHR0SjlIZSIsImV4cCI6MTU3MjI3NjE5MDQwNywiaWF0IjoxNTcyMjY1MzkwfQ.f9CktAJxJ61D4act9ofB7wzfxOByREn22szMd6VqEW79E0L0AId_xXv4Vs4rdy8k&quot;</span><span class="p">,</span>
   <span class="nt">&quot;expired&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-28T15:23:10.407Z&quot;</span>
@@ -822,10 +834,10 @@ A CRF you design in Forms is designed once and can be rendered on Desktop or Mob
 <h2 id="additional-urls">Additional Urls</h2>
 <p>There are additional swaggers for additional functionality.</p>
 <h3 id="date-server">Date Server</h3>
-<p>By Data server APIs you can get <a href="../manage_forms/">Forms</a> data in csv/json format with include/exclude criteria.</p>
+<p>With Data server APIs, you can get <a href="../manage_forms/">Forms</a> data in csv/json format with include/exclude criteria.</p>
 <p><a href="https://api.flaskdata.io/data-server/swagger/">api.flaskdata.io/data-server</a></p>
 <h3 id="flaskdata-features">FlaskData Features</h3>
-<p>By Features APIs you can process a few additional flaskdata features, like create subject etc.</p>
+<p>Using features APIs, you can process a few additional FlaskData features, such as, create subject, etc.</p>
 <p><a href="https://api.flaskdata.io/features/swagger/">api.flaskdata.io/features</a></p>
                 
               

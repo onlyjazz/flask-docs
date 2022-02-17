@@ -325,18 +325,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../manage_metrics/" class="md-nav__link">
-      Metrics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../tools/" class="md-nav__link">
       Tools
     </a>
@@ -437,6 +425,18 @@
   <li class="md-nav__item">
     <a href="../apiflows/" class="md-nav__link">
       Flows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api_code_examples/" class="md-nav__link">
+      API Code Examples
     </a>
   </li>
 
@@ -653,14 +653,14 @@
 <p>Developers who want to use the RiskGraph API.</p>
 <h2 id="concepts-and-terms">Concepts and terms</h2>
 <p>A developer will need credentials to a <a href="../registration/">User account</a> with a RiskGraph role.</p>
-<p>This User can be <a href="../manage_users/#add-user">created</a> by customer admin role.</p>
+<p>This User can be <a href="../manage_users/#add-user">created</a> by the customer admin role.</p>
 <p>The RiskGraph User has access to call RiskGraph APIs.</p>
 <p>RiskGraph environment: <a href="https://riskgraph-api.flaskdata.io/swagger">riskgraph-api.flaskdata.io</a></p>
 <p>Select HTTPS in the Swagger Schemes dropdown before trying it out.</p>
 <p>For more information about Swagger and Authorization go to <a href="../api_introduction/">API Introduction</a>.</p>
 <h2 id="v01">V0.1</h2>
 <p>Single dimensional case.</p>
-<p>Algorithm for anomaly detection: Distance based. Single variable</p>
+<p>Algorithm for anomaly detection: Distance based, Single variable</p>
 <h3 id="description">Description</h3>
 <p>Client calls API function with an array of <code>{ts: Timestamp,  key:value}</code> where value is a positive integer</p>
 <div class="highlight"><pre><span></span><code>    <span class="p">{</span><span class="err">“device”:</span> <span class="err">type,</span> <span class="err">“tolerance”:</span> <span class="err">t,</span> <span class="err">“lowerBound”:</span> <span class="err">lower,</span> <span class="err">“upperBound”:</span> <span class="err">upper</span>
@@ -704,7 +704,7 @@ when:  Distance(k) &gt; cutoff return isAnomaly: ‘t’, reason: ‘Way out man
 <h2 id="ui">UI</h2>
 <p>RiskGraph UI is available to RiskGraph user.</p>
 <p>Login to <a href="https://app.flaskdata.io">FlaskData</a></p>
-<p>Click on RiskGraph option in the left bar.</p>
+<p>Click on the RiskGraph option in the left bar.</p>
                 
               
               
