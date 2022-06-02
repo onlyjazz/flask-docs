@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -171,8 +172,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -295,8 +295,7 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -317,6 +316,18 @@
   <li class="md-nav__item">
     <a href="../study_dashboard/" class="md-nav__link">
       Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
     </a>
   </li>
 
@@ -472,8 +483,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -510,18 +520,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -534,8 +532,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -690,7 +687,7 @@
 <p>You can use FlaskData and <a href="../manage_studies/#add-study">ClinCapture Database</a> in parallel for your study.</p>
 <p>There are a few functions to connect them:</p>
 <ol>
-<li><a href="../manage_features/#create-user-in-edc">Create user in EDC feature</a> - Create a user in flask and they will be created in EDC.</li>
+<li><a href="../manage_features/#create-user-in-edc">Create user in EDC feature</a> - Create user in flask and he/she will be created in EDC.</li>
 <li><a href="../manage_sites/#add-a-new-site">Create site in Flask</a> - The site will be created in EDC.     </li>
 <li><a href="../manage_subjects/#add-subject">Add subject in Flask</a> - The subject will be added in EDC.</li>
 <li><a href="../study_dashboard/#edc">EDC button</a> - Opens the clincapture in a new window.</li>
@@ -701,40 +698,40 @@
 <div class="admonition important">
 <p class="admonition-title">Create site</p>
 <p>EDC has a lot of connectivity, After you add a site in Flask you must go to EDC and "edit" the site.</p>
-<p>Just click edit and save without editing anything.</p>
+<p>Just Click edit and save without edit anything.</p>
 </div>
 <h2 id="relationship-between-forms-and-edc">Relationship between Forms and EDC</h2>
-<p>If your study uses <a href="../manage_studies/#add-study">ClinCapture Database</a>, you can connect the two.</p>
+<p>If your study uses <a href="../manage_studies/#add-study">ClinCapture Database</a> you can connect the two.</p>
 <h3 id="import-crf-from-edc">Import CRF from EDC</h3>
-<p>You can import CRF from EDC to Forms by click on the blue <strong>IMPORT CRF FROM EDC</strong> button.</p>
+<p>You can import CRF From EDC to Forms by click on <strong>IMPORT CRF FROM EDC</strong> blue button</p>
 <p><img alt="Screenshot" src="../img/forms/forms_import_crf_from_edc.PNG" /></p>
-<p>The CRF list opens and you can import each CRF needed.</p>
+<p>CRF list opens, You can import each CRF you need.</p>
 <p><img alt="Screenshot" src="../img/forms/import_crf_list.PNG" /></p>
-<p>After imported, you can <a href="../manage_forms/#edit-crf-item">edit the CRF</a>.</p>
+<p>After you imported, you can <a href="../manage_forms/#edit-crf-item">edit the CRF</a>.</p>
 <p>Now - You have CRF in Forms related to EDC CRF.</p>
-<p>Each CRF data you enter or edit for specific subject in forms will update the EDC CRF data.</p>
-<p>To detach the CRF from EDC CRF, go to the CRF list <strong>ACTIONS</strong>-&gt;<strong>DETACH CRF</strong></p>
+<p>Each CRF data you enter or edit for specific subject in Forms will update the EDC CRF data.</p>
+<p>For detach the CRF from EDC CRF, Go to CRF list <strong>ACTIONS</strong>-&gt;<strong>DETACH CRF</strong></p>
 <p><img alt="Screenshot" src="../img/forms/detach_crf.PNG" /></p>
 <h3 id="export-crf-to-edc">Export CRF to EDC</h3>
-<p>You can export CRF to EDC by clicking on the <strong>ACTIONS</strong>-&gt;<strong>EXPORT</strong> option</p>
+<p>You can export CRF to EDC by click on <strong>ACTIONS</strong>-&gt;<strong>EXPORT</strong> option</p>
 <p><img alt="Screenshot" src="../img/forms/export_crf.PNG" /></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>If the study uses Flask PRO and EDC DB, you can export the study PRO CRFs to EDC.</p>
-<p>When the subject inserts data in ePRO, the data is inserted into EDC as well.</p>
+<p>Study uses Flask PRO and EDC DB, You can export study PRO CRFs to EDC.</p>
+<p>When subject inserts data in ePRO the data is inserted into EDC as well.</p>
 </div>
 <h3 id="import-event-from-edc">Import Event from EDC</h3>
-<p>You can import event from EDC, including all it's CRFs.</p>
-<p>In the Event Definition tab, click on the blue <strong>IMPORT EVENT DEFITION FROM EDC</strong> button.</p>
+<p>You can import event from EDC includes all it's CRFs.</p>
+<p>In Event Definition tab click on <strong>IMPORT EVENT DEFITION FROM EDC</strong> blue button</p>
 <p><img alt="Screenshot" src="../img/forms/import_event_from_edc.PNG" /></p>
-<p>Event lists appear and you can import each event from there, edit the imported event, and it's CRFs.</p>
+<p>Events list appears, you can import each event from there, edit the imported event, and it's CRFs.</p>
 <h3 id="export-event-to-edc">Export Event to EDC</h3>
-<p>You can export Event to EDC by click on the <strong>ACTIONS</strong>-&gt;<strong>EXPORT</strong> option</p>
+<p>You can export Event to EDC by click on <strong>ACTIONS</strong>-&gt;<strong>EXPORT</strong> option</p>
 <p><img alt="Screenshot" src="../img/forms/export_event.PNG" /></p>
 <p>The export window <strong>Difference between Flask Event Definition and EDC Event Definition preview</strong> shows the event's different definitions between Forms and EDC.</p>
 <p>You can export or cancel the export process.</p>
 <h3 id="export-study">Export study</h3>
-<p>By click on the <strong>Export study</strong> <a href="../manage_forms/#hamburger">Hamburger</a> option, you can export all the Events and CRFs of the study to EDC DB.</p>
+<p>By click on <strong>Export study</strong> <a href="../manage_forms/#hamburger">Hamburger</a> option, You can export to EDC DB all the Events and CRFs of ths study.</p>
 <p><img alt="Screenshot" src="../img/forms/export_study_to_edc.PNG" /></p>
                 
               
@@ -802,8 +799,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

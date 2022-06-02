@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -171,8 +172,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -295,8 +295,7 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -317,6 +316,18 @@
   <li class="md-nav__item">
     <a href="../study_dashboard/" class="md-nav__link">
       Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
     </a>
   </li>
 
@@ -487,8 +498,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -525,18 +535,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -549,8 +547,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -722,9 +719,9 @@
 <p>There are a few available features.</p>
 <h2 id="forms">Forms</h2>
 <p>To add/remove Forms from the left bar - add/delete it from your customer features.</p>
-<p>If this feature is turned on, the <strong>Form designer</strong> field will be added to <a href="../manage_users/#edit-user">user edit</a></p>
+<p>If this feature is turn on, <strong>Form designer</strong> field will be added to <a href="../manage_users/#edit-user">user edit</a></p>
 <p><img alt="Screenshot" src="../img/features/forms_designer_user_edit.PNG" /></p>
-<p>If you mark the <strong>Form designer</strong> option, this user can enter to <a href="../manage_forms/#manage-forms">Flask Forms</a> and modify CRFs, Events, etc.</p>
+<p>If you mark <strong>Form designer</strong> option, this user can enter to <a href="../manage_forms/#manage-forms">Flask Forms</a> and modify CRFs, Events etc.</p>
 <div class="admonition note">
 <p>By default only Customer admin users can enter to Flask Forms.</p>
 </div>
@@ -732,30 +729,30 @@
 <p>This feature related to study with EDC DB.
 It creates user in EDC when you create user in Flask.</p>
 <h2 id="enrollment-target-popup-notification">Enrollment target popup notification</h2>
-<p>Each study has an <a href="../manage_studies/#study-edit">Enrollment Target</a> value.</p>
-<p>The popup feature displays a warning message when user add subject that exceeds the enrollment target number.</p>
+<p>Each study has <a href="../manage_studies/#study-edit">Enrollment Target</a> value.</p>
+<p>This feature popup a warning message when user add subject, If the number of patients is greater than enrollment target number.</p>
 <h2 id="monthly-billing-report-for-customer-administrator">Monthly billing report for Customer Administrator</h2>
-<p>This feature sends billing report each month (at the end of the month) to customer admin user via their email.</p>
+<p>This feature sends billing report in each month (In the end of the month) to customer admin user by his/her email.</p>
 <h2 id="monthly-billing-report-for-pi">Monthly billing report for PI</h2>
-<p>This feature sends billing report in each month (at the end of the month) to the PI user via their email.</p>
+<p>This feature sends billing report in each month (In the end of the month) to PI user by his/her email.</p>
 <h2 id="one-click-add-subject">One click add subject</h2>
-<p>Add subject with one click on the <a href="../manage_subjects/#add-subject">ADD SUBJECT</a> button</p>
-<p>This feature creates a subject without a real email or phone number.</p>
-<p>If study has PRO then this feature is not supported.</p>
-<p>If CRC user is assigned to 2 sites or more, then this feature is not supported (the user should check the relevant site).</p>
-<p>This feature relates to the <strong>Subject Label Calculation</strong> feature.</p>
+<p>Add subject with one click on <a href="../manage_subjects/#add-subject">ADD SUBJECT</a> button</p>
+<p>This feature creates a subject without real email and phone.</p>
+<p>If study has PRO this feature is not supported.</p>
+<p>If CRC user assign to 2 sites and more this feature is not supported (the user should check the relevant site).</p>
+<p>This feature relates to <strong>Subject Label Calculation</strong> feature.</p>
 <h2 id="subject-label-calculation">Subject Label Calculation</h2>
-<p>This feature adds subjects with an automatic label number.</p>
+<p>This feature adds subject with an automatic label number.</p>
 <p><strong>Subject Prefix</strong>
 * <strong>Prefix</strong> Subject label can be defined to start with <a href="../manage_studies/#study-profile">study unique protocol id</a> or <a href="../manage_sites/#site-profile">site unique identifier</a>
-* <strong>Prefix mask</strong> is the number of numbers after the Prefix</p>
+* <strong>Prefix mask</strong> number of numbers after the Prefix</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Prefix = Site unique identifier, Prefix mask = NNN, subjects label seems like site01-001, site1-002 etc.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>If you have an existing study, go to <a href="../manage_studies/#study-edit">study edit</a> to define the subject prefix calculation node.</p>
+<p>If you have existing study, Go to <a href="../manage_studies/#study-edit">study edit</a> to define the subject prefix calculation node.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -766,7 +763,7 @@ It creates user in EDC when you create user in Flask.</p>
 <p><img alt="Screenshot" src="../img/features/subject_label_site_edit.PNG" /></p>
 </div>
 <h2 id="subject-personal-information">Subject Personal Information</h2>
-<p>This feature adds more fields to the <a href="../manage_subjects/#add-subject">add subject</a> function.</p>
+<p>This feature adds more fields to <a href="../manage_subjects/#add-subject">add subject</a> function.</p>
 <ul>
 <li>First name</li>
 <li>Last name</li>
@@ -774,11 +771,11 @@ It creates user in EDC when you create user in Flask.</p>
 <li>Subject signed the ICF</li>
 </ul>
 <h2 id="idp-configuration">IDP configuration</h2>
-<p>This feature allows you to add a GOOGLE Account to user, for customers that do not have their own IDPs like SAML or OpenId.</p>
-<p>In <a href="../manage_users/#add-user">add user</a> and <a href="../manage_users/#edit-user">edit user</a> you can define additional GOOGLE accounts to the user.</p>
-<p>This feature allows the user to login to Flask with multiple GOOGLE accounts.</p>
+<p>This feature allows you to add GOOGLE Account to user, For customers without their own IDPs like SAML or OpenId.</p>
+<p>In <a href="../manage_users/#add-user">add user</a> and <a href="../manage_users/#edit-user">edit user</a> you can define additional GOOGLE accounts to user.</p>
+<p>This feature allows the user to log in to Flask with multiple GOOGLE accounts.</p>
 <p><img alt="Screenshot" src="../img/features/idp_edit_user.PNG" /></p>
-<p>If you want to enable this feature to subjects too then you should define it in your <a href="../manage_studies/#study-edit">study</a></p>
+<p>If you want to enable this feature to subject also, you should define it in your <a href="../manage_studies/#study-edit">study</a></p>
 <p><img alt="Screenshot" src="../img/features/idp_study_edit.PNG" /></p>
                 
               
@@ -846,8 +843,8 @@ It creates user in EDC when you create user in Flask.</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

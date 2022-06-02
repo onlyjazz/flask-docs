@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -173,8 +174,7 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -356,13 +356,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#forget-subject" class="md-nav__link">
-    Forget Subject
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -394,8 +387,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -416,6 +408,18 @@
   <li class="md-nav__item">
     <a href="../study_dashboard/" class="md-nav__link">
       Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
     </a>
   </li>
 
@@ -492,8 +496,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -530,18 +533,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -554,8 +545,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -705,13 +695,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#forget-subject" class="md-nav__link">
-    Forget Subject
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -727,74 +710,58 @@
                 
                 <p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="../img/flaskdata_logo.PNG" /></a></p>
 <h1 id="manage-subjects">Manage Subjects</h1>
-<p>In the left menu bar click on Subjects.</p>
-<p>On this page - Subjects index you can see study subjects and their CRFs data.</p>
-<p>You can filter Subjects by site, or other specifications using <strong>Search</strong> filter and clicking <strong>APPLY</strong>.</p>
-<p>You can click on each subject and go to Flask Events.</p>
+<p>In the left menu bar click on Subjects.
+In this page - Subjects index you can see study subjects and their CRFs data.</p>
+<p>You can filter Subjects by site, or what you want by the <strong>Search</strong> filter and then click <strong>APPLY</strong></p>
+<p>You can click on each subject and go to Flask Events</p>
 <h2 id="flask-events">Flask Events</h2>
-<p>On the flask events page you see all of the subject's events, CRFs and data.</p>
+<p>In flask events page you see al subject's events, crfs and data.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can only view the data (cannot edit or add CRFs).
-Only site role users can edit Subject's data.</p>
+<p>You can just view the data (cannot edit and add CRFs).
+Just site role users can edit Subject's data.</p>
 </div>
 <p>You can see all subject's events list.</p>
-<p>By clicking on an event, a list of this event's CRFs opens.</p>
-<p>You can view the data by click on the subject.</p>
-<p><img alt="Screenshot" src="../img/newSubject/subjectSelection.png" /></p>
-<p>You can now input into the CRF. This data is displayed, however entered data is not saved. </p>
-<p><img alt="Screenshot" src="../img/newSubject/subjectData.png" /></p>
-<p>The customer admin user has permissions to re-open the closed CRFs.</p>
+<p>By click on event - list of this event CRFs opens.</p>
+<p>You can view the data by click on <strong>View</strong> option.</p>
+<p><img alt="Screenshot" src="../img/subjects/flask_events_ca_view.PNG" /></p>
+<p>Customer admin user has permissions to re-open the closed CRFs.</p>
 <h2 id="add-subject">Add Subject</h2>
-<p>Site role user can add subject on their site.</p>
-<p>Click on the green <strong>ADD SUBJECT</strong> button to add a new subject </p>
+<p>Site role user can add subject on his/her site.</p>
+<p>Click on <strong>ADD SUBJECT</strong> green button adds a new subject </p>
 <p><img alt="Screenshot" src="../img/subjects/subjeects_add_one_click.PNG" /></p>
-<p>If the study has ePRO, CRC should define the subject's email and phone number.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tTwSPX_E6co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>If study has ePRO, CRC should define subject's email and phone number</p>
+<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/cvTWk8Bjtl8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-<p>On the subjects index page there is a blue <strong>Actions</strong> button with Edit and Profile options.</p>
-<p>By check a subject and Edit/Profile you open the Profile page.</p>
+<p>In Subjects index page there is <strong>Actions</strong> blue button with Edit and Profile options.</p>
+<p>By check a subject and click Edit/Profile you open Profile page.</p>
 <h2 id="subject-profile">Subject Profile</h2>
-<p>In Subject Profile page, site role user can edit subject's data by clicking on the pen.</p>
+<p>In Subject Profile page site role user can edit subject's data by click on the pen.</p>
 <p><img alt="Screenshot" src="../img/subjects/subject_edit.PNG" /></p>
 <ul>
 <li>Email - The email of this subject</li>
-<li>Mobile phone - The phone number of this subject</li>
+<li>Mobile phone - Phone number</li>
 <li>Status - The status of this subject</li>
 </ul>
 <p>There are Studies, Sites and comments cards of this subject.</p>
 <h3 id="actions">Actions</h3>
-<p>On the subject profile page, there is a green <strong>ACTIONS</strong> button with the following options:</p>
+<p>In subject profile page there is an <strong>ACTIONS</strong> green button with a few options:</p>
 <ul>
 <li>Welcome back - This option appears if study has PRO.</li>
-<li>Reset password - This option sends an email with a reset password required link.</li>
+<li>Reset password - send email with reset password require.</li>
 </ul>
 <h2 id="subject-events">Subject Events</h2>
-<p>By clicking on subject on the Subjects Index page, the Flask Events page opens.</p>
-<p>In this page site role user can <a href="../manage_data/#create-event-by-crf">create events, add CRFs, enter data, deactivate CRF, etc.</a></p>
+<p>By click on subject in Subjects Index page, the Flask Events page opens.</p>
+<p>In this page site role user can <a href="../manage_data/#create-event-by-crf">create events, add CRFs, Enter data, Deactivate CRF etc.</a></p>
 <h3 id="send-message">Send Message</h3>
-<p>To navigate to the send message feature, the site role user should locate the Subject Flask-Events page.</p>
-<p><img alt="Screenshot" src="../img/newSubject/subjectEvent.png" /></p>
-<p>After selecting a subject, there is a blue <strong>SEND MESSAGE</strong> button.</p>
-<p><img alt="Screenshot" src="../img/newSubject/sendMessage.png" /></p>
-<p>Clicking on this button open a page with option to send Email/SMS to the subject.</p>
-<p><img alt="Screenshot" src="../img/newSubject/message.png" style="height:460px;width:700px" /></p>
+<p>In subject's Flask Events page there is <strong>SEND MESSAGE</strong> green button.</p>
+<p>Click on this button open a page with option to send Email/SMS to subject.</p>
+<p><img alt="Screenshot" src="../img/subjects/subject_send_message.PNG" /></p>
 <h3 id="randomize">Randomize</h3>
-<p>If a study has PRO with <a href="../manage_forms/#study-schedules">Randomized option</a></p>
-<p>An additional check box will appear - <strong>RANDOMIZED</strong></p>
-<p>In <strong>Study Schedule by period</strong> you should define the start period and choose the period for this subject. If this is used for randomized subjects, check the box.</p>
-<p><img alt="Screenshot" src="../img/newSubject/randomizeSub.png" /></p>
-<h2 id="forget-subject">Forget Subject</h2>
-<p>Super Admin can define a Customer Admin user as a "DPO user". </p>
-<p><img alt="Screenshot" src="../img/DPOuser/dpo.png" /></p>
-<p>This will generate a PIN that the DPO users can use to delete a subject using the forget option.</p>
-<p><img alt="Screenshot" src="../img/DPOuser/code.png" /></p>
-<p>To forget a subject, navigate to your study subjects using the left bar. Next check the subject you want to forget and click on the blue pull down <strong>Action</strong> button and select forget. A verification message will pop up.</p>
-<p><img alt="Screenshot" src="../img/DPOuser/forget.png" style="height:200px;width:400px" /></p>
-<p>After you select yes, you will be prompted to enter the PIN.</p>
-<p><img alt="Screenshot" src="../img/DPOuser/pin.png" style="height:300px;width:450px" /></p>
-<p>Lastly, you will see the success message. </p>
-<p><img alt="Screenshot" src="../img/DPOuser/success.png" style="height:200px;width:400px" /></p>
+<p>If study has PRO with <a href="../manage_forms/#study-schedules">Randomized option</a></p>
+<p>An additional button will appear - <strong>RANDOMIZED</strong></p>
+<p>In <strong>Generate events by treatment plan period</strong> you should define the start period and choose the period for this subject.</p>
+<p><img alt="Screenshot" src="../img/subjects/flask_events_randomized.PNG" /></p>
                 
               
               
@@ -861,8 +828,8 @@ Only site role users can edit Subject's data.</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

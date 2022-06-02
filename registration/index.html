@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -173,8 +174,7 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -239,7 +239,7 @@
       
         <li class="md-nav__item">
   <a href="#short-video-example-of-registration" class="md-nav__link">
-    Short video example of registration
+    Short video Example of registration
   </a>
   
 </li>
@@ -347,8 +347,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -369,6 +368,18 @@
   <li class="md-nav__item">
     <a href="../study_dashboard/" class="md-nav__link">
       Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
     </a>
   </li>
 
@@ -445,8 +456,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -483,18 +493,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -507,8 +505,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -613,7 +610,7 @@
       
         <li class="md-nav__item">
   <a href="#short-video-example-of-registration" class="md-nav__link">
-    Short video example of registration
+    Short video Example of registration
   </a>
   
 </li>
@@ -635,26 +632,32 @@
 <h1 id="registration">Registration</h1>
 <p>Welcome to FlaskData <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /></p>
 <p>FlaskData is a cloud API platform for clinical data collection and automated monitoring.</p>
-<p>Flaskdata is used in clinical trials to shorten R&amp;D timelines, and in patient care to acquire real-world evidence for safety and efficacy of
+<p>Flaskdata is used in  clinical trials to shorten R&amp;D timelines and in patient
+care in order to acquire real-world evidence for safety and efficacy of
 therapeutics.</p>
-<p>FlaskData is exposed as an open cloud API and is based on a foundation of IAM (identity access management) with strong security &amp; privacy to protect clinical
+<p>FlaskData is exposed as an open cloud API and is based on a foundation of IAM
+(identity access management) with strong security &amp; privacy to protect clinical
 data assets.  FlaskData complies with regulatory requirements for 21 CFR Part
 11, GDPR, HIPAA and Israeli Privacy Rule.</p>
 <p>Flaskdata provides 3 kinds of application services: Collect, Detect and Act.</p>
-<p>FlaskData Collect provides a RESTful API, desktop and mobile apps to manage research studies, and to interact with patients, investigators and devices in clinical trials.</p>
-<p>FlaskData Detect enables you to define patterns of protocol deviations.</p>
-<p>FlaskData Act automates alert notifications to patients and clinical teams on exceptions and missing data.</p>
+<p>FlaskData Collect provides a RESTful API, desktop and mobile apps  to manage
+research studies and to interact  with patients, investigators and devices in
+clinical trials.</p>
+<p>FlaskData Detect enables you to define patterns of protocol deviations and
+FlaskData Act automates alert notifications to patients and clinical teams on
+exceptions and missing data.</p>
 <h3 id="audience">Audience</h3>
-<p>Clinical trial management and operations teams - anyone who is involved with creating and running pre and post-market clinical R&amp;D.</p>
+<p>Clinical trial management and operations teams - anyone who is involved with creating and running pre and post-market
+clinical R&amp;D.</p>
 <h2 id="create-a-new-account">Create a new account</h2>
 <p>How to create a new account? It's so simple...</p>
 <p>Go to <a href="https://app.flaskdata.io/users/register">Registration</a></p>
 <p><img alt="Screenshot" src="../img/customer/registration_page.PNG" /></p>
-<p>Fill in your information  and click <strong>CREATE AN ACCOUNT</strong></p>
-<p>A welcome email will be sent to you.</p>
+<p>Fill your properties and click <strong>CREATE AN ACCOUNT</strong></p>
+<p>Welcome email will be sent to you.</p>
 <p>You're welcome to <a href="../first_study/#define-your-study">define your first study</a></p>
-<h2 id="short-video-example-of-registration">Short video example of registration</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tEkjXn-SwCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 id="short-video-example-of-registration">Short video Example of registration</h2>
+<iframe style="width: 100%;height: 450px;" src="https://www.youtube.com/embed/92tOXKCqvVc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                 
               
               
@@ -721,8 +724,8 @@ data assets.  FlaskData complies with regulatory requirements for 21 CFR Part
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

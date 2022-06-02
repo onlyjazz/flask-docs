@@ -8,19 +8,20 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
-        <title>Manage metrics - FlaskData Documentations</title>
+        <title>Metrics - FlaskData Documentations</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -85,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Manage metrics
+              Metrics
             
           </span>
         </div>
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -171,8 +172,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -290,11 +290,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -316,6 +317,145 @@
     <a href="../study_dashboard/" class="md-nav__link">
       Study Dashboard
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Metrics
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Metrics
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-metrics-pattern-language" class="md-nav__link">
+    The Metrics pattern language
+  </a>
+  
+    <nav class="md-nav" aria-label="The Metrics pattern language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-single-variable-expressions" class="md-nav__link">
+    Simple single variable expressions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-things" class="md-nav__link">
+    Count things
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compound-expressions" class="md-nav__link">
+    Compound expressions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#counting-things" class="md-nav__link">
+    Counting things
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-more-complex-counting" class="md-nav__link">
+    Filter - more complex counting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#under-the-hood-of-the-pattern-language-for-the-curious" class="md-nav__link">
+    Under the hood of the pattern language for the curious
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-expression-to-the-various-components" class="md-nav__link">
+    Examples of expression to the various components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-metric" class="md-nav__link">
+    Add Metric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-study-metrics" class="md-nav__link">
+    Run the study metrics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-metric-values" class="md-nav__link">
+    Study Metric Values
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -391,8 +531,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -429,18 +568,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -453,8 +580,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -658,7 +784,7 @@
 <p>Metrics can be computed using a pattern language referencing data variables in your study.</p>
 <h2 id="the-metrics-pattern-language">The Metrics pattern language</h2>
 <p>The pattern language was designed to enable you to create metrics of performance, exceptions, missing data, or critical values on the patient timeline.</p>
-<p>The language uses item variable names, i.e. $CHANGE_IN_SEVERITY.</p>
+<p>The language uses item variable names - like $CHANGE_IN_SEVERITY.</p>
 <h3 id="simple-single-variable-expressions">Simple single variable expressions</h3>
 <p>You can use a simple expressions like <code>$CHANGE_IN_SEVERITY  == '0'</code>,</p>
 <h3 id="count-things">Count things</h3>
@@ -675,7 +801,7 @@
 </div>
 <h3 id="functions">Functions</h3>
 <h4 id="counting-things">Counting things</h4>
-<p><strong>count(variable, period)</strong> - the count function counts a variable entered in a time period.</p>
+<p><strong>count(variable, period)</strong>- the count function counts a variable entered in a time period.</p>
 <p>The count function will return the number of records in the dataset where the variable has any value.
 If the count is 0 then the data is missing.</p>
 <p>The count function takes 2 arguments:</p>
@@ -754,9 +880,8 @@ on the patient journey.</p>
 <li><code>'-4'</code> - The last 4 events</li>
 </ul>
 </div>
-<div class="admonition note">
+<div class="admonition note"></div>
 <p>the records returned from the database are ordered by date created.</p>
-</div>
 <p>Filter arguments are evaluated in this order:</p>
 <ol>
 <li>filtering by variable</li>
@@ -764,14 +889,13 @@ on the patient journey.</p>
 <li>filtering by 'take'</li>
 <li>filtering by 'value'</li>
 </ol>
-<div class="admonition note">
-<p>If you don't need to use some parameter, you can set it to null instead.</p>
-</div>
+<div class="admonition note"></div>
+<p>if you don't need to use some parameter you can set null instead.</p>
 <div class="admonition example">
 <p class="admonition-title">Usage examples</p>
 </div>
 <ul>
-<li><code>filter($SCREENED)</code> -  count the $SCREENED variable for each patient.</li>
+<li><code>filter($SCREENED)</code> -  count the  $SCREENED variable for each patient.</li>
 <li><code>filter($EPRO_DIARY, '24 hours')</code> - count 1 if any diaries were entered by each patient in the last 24 hours</li>
 <li><code>filter($TOOK_ANALGESICS, '24 hours', '&gt;2')</code> -  count 1 for each patient who took pain analgesics more than twice in the past 24 hours</li>
 <li><code>filter($TOOK_ANALGESICS, null, '&gt;2')</code> - count 1 for each patient who took pain analgesics more than twice in the study</li>
@@ -895,22 +1019,22 @@ on the patient journey.</p>
 </tbody>
 </table>
 <h2 id="add-metric">Add Metric</h2>
-<p>In order to add a metric click on the green <strong>ADD METRIC</strong> button.</p>
+<p>In order to add a metric click on <strong>ADD METRIC</strong> green button.</p>
 <p><img alt="Screenshot" src="../img/metrics/metrics_add_metric.PNG" /></p>
 <p>There are few properties of metric:</p>
 <ul>
-<li><strong>Name</strong> - The name of the new metric.</li>
-<li><strong>Trigger time</strong> - This is an optional field, representing time of metric values generation. If this field is empty, the metric values will generate in real time.</li>
+<li><strong>Name</strong> - the name of the new metric.</li>
+<li><strong>Trigger time</strong> - optional field, time of metric values generation. If this field is empty - metric values will generate in real time.</li>
 <li><strong>Expression</strong> - see <a href="./#the-metrics-pattern-language">Expression</a></li>
 </ul>
 <h2 id="run-the-study-metrics">Run the study metrics</h2>
 <p>In the <strong>RUN</strong> option you can run your study metrics.</p>
-<p>Click on the green <strong>RUN</strong> button to run your study metrics.</p>
+<p>Click <strong>RUN</strong> green button to run your study metrics.</p>
 <p>A success/error message will appear.</p>
 <p><img alt="Screenshot" src="../img/metrics/metrics_run.PNG" /></p>
-<p>To view the result click on the blue <strong>VIEW METRICS VALUE</strong> button.</p>
+<p>For view the result click on <strong>VIEW METRICS VALUE</strong> blue button.</p>
 <h2 id="study-metric-values">Study Metric Values</h2>
-<p>On the <strong>VIEW METRICS VALUE</strong> option you can view your study metric values.</p>
+<p>In the <strong>VIEW METRICS VALUE</strong> option you can view your study metric values.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can filter the metric values table by any string, ordering by each column and export the table to COPY/CSV/PDF/PRINT/EXCEL.</p>
@@ -931,6 +1055,41 @@ on the patient journey.</p>
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../study_dashboard/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Study Dashboard
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../tools/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tools
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -947,8 +1106,8 @@ on the patient journey.</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -171,8 +172,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -295,8 +295,7 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -317,6 +316,18 @@
   <li class="md-nav__item">
     <a href="../study_dashboard/" class="md-nav__link">
       Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
     </a>
   </li>
 
@@ -452,8 +463,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -490,18 +500,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -514,8 +512,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -648,19 +645,19 @@
                 <p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="../img/flaskdata_logo.PNG" /></a></p>
 <h1 id="tools">Tools</h1>
 <p>In left menu bar there is a <strong>Tools</strong> option.</p>
-<p>There is a list of default tools that each customer has.</p>
+<p>There is a list of default tools, each customer has.</p>
 <div class="admonition note">
 <p>If you need special tool open a <a href="..#request-support">support request</a>.</p>
 </div>
 <h2 id="audit-report">Audit Report</h2>
-<p>In the Audit Report tool, there are the following filter options:</p>
+<p>In the Audit Report tool, there are a few filter options:</p>
 <ul>
 <li>Audit logs:<ul>
-<li>database_audit_log - Who changed data and when</li>
-<li>policy_changes_audit_log - Changes to database audit policy, who changed and when</li>
+<li>database_audit_log - who changed data and when</li>
+<li>policy_changes_audit_log - changes to database audit policy, who changed and when</li>
 <li>login_audit_table - Successful and failed login attempts</li>
 <li>object_access_audit - Object access operations (select) at level of ObjectController profile views</li>
-<li>account_management_log - Log of activities by the super admin and customer admin (create user, add study, remove from study, etc.) at level of UserController</li>
+<li>account_management_log - of activities by the  super admin and customer admin (create user, add study, remove from study etc..at level of UserController</li>
 </ul>
 </li>
 <li>From date - logs date &gt;= this date</li>
@@ -672,16 +669,16 @@
 <p>If your account has <a href="../manage_features/#monthly-billing-report-for-customer-administrator">billing report feature</a>, you can see all your reports in this table.</p>
 <p><img alt="Screenshot" src="../img/tools/tool_billing_report.PNG" /></p>
 <h2 id="download-study-data-csvs">Download Study Data CSVs</h2>
-<p>This tool downloads FormsStudyData.zip folder with all your study's data.</p>
+<p>This tool download FormsStudyData.zip folder with all your study's data.</p>
 <p><img alt="Screenshot" src="../img/tools/tool_download_csv.PNG" /></p>
 <p>There is a CSV file for each CRF.</p>
 <h2 id="studies-report">Studies Report</h2>
-<p>This table includes all your <a href="../manage_studies/#studies">studies</a> and a the following parameters</p>
+<p>This table includes all your <a href="../manage_studies/#studies">studies</a> and a few parameters of them</p>
 <p><img alt="Screenshot" src="../img/tools/tool_studies_report.PNG" /></p>
 <ul>
 <li>IRB Number - study unique protocol id</li>
 <li>Protocol Title - study official title</li>
-<li>PI Name - PI username</li>
+<li>PI Name - PI user name</li>
 <li>Auth Name - <a href="../manage_features/#idp-configuration">idp_user_id</a></li>
 <li>Enrollment target - study enrollment target</li>
 <li>Active - Number of active <a href="../manage_subjects/#manage-subjects">subjects</a></li>
@@ -708,7 +705,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../study_dashboard/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../manage_metrics/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -717,7 +714,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Study Dashboard
+                Metrics
               </div>
             </div>
           </a>
@@ -756,8 +753,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

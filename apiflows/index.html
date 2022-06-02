@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -171,8 +172,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -293,8 +293,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -315,6 +314,18 @@
   <li class="md-nav__item">
     <a href="../study_dashboard/" class="md-nav__link">
       Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
     </a>
   </li>
 
@@ -393,8 +404,7 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -715,18 +725,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -739,8 +737,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -1098,8 +1095,8 @@
                 <h1 id="api-flows">API flows</h1>
 <p>The API has 2 parts of APIs - EDC and Flask.</p>
 <ul>
-<li>EDC - APIs are related to an external EDC instance (extract EDC data, etc.)</li>
-<li>Flask - APIs are related to the internal Flask data model (extract data, insert data, etc.)</li>
+<li>EDC - APIs are related to an external EDC instance (extract EDC data etc.)</li>
+<li>Flask - APIs are related to the internal Flask data model (extract data, insert data etc.)</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Request header</p>
@@ -1116,12 +1113,12 @@
 <p>For more details and questions contact us by sending email to <a href="mailto:support@clearclinica.com">support@clearclinica.com</a>.</p>
 <h2 id="edc">EDC</h2>
 <h3 id="extract-edc-data">Extract EDC Data</h3>
-<p>There are a few APIs you can use to extract EDC data.</p>
+<p>There are a few APIs you can use to extract  EDC data.</p>
 <p>For example:</p>
 <h4 id="edcstudyextract-data">/edc/study/extract-data</h4>
-<p>This API extracts EDC data of each table/view/function (i.e. functionName()) and returns a json structure.</p>
-<p>fromDate, toDate, sort, filters and inputVariables are optional values if tableName is a function.</p>
-<p>Filters and inputVariable json objects: The key is the column name/input variable name in the EDC PostgreSQL database, the json value is the corresponding value (like where site = XXX)/ input value in function (i.e. schema.function(XXX)).</p>
+<p>This API extracts EDC data of each table/view/function (like functionName()) and returns a json structure.</p>
+<p>fromDate, toDate, sort, filters and inputVariables(if tableName is a function) are optional values.</p>
+<p>Filters and inputVariable json objects: The key is the column name/input variable name in the EDC PostgreSQL database, the json value is the corresponding value (like where site = XXX)/ input value in function (like schema.function(XXX)).</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1143,7 +1140,7 @@
 <p>This API downloads a zip folder of CSV files with EDC study data.</p>
 <p>Each CSV file contains EDC Event-CRF data (Event is often called a Visit in an EDC)</p>
 <h4 id="edcstudyextract-study-data-at-crf-level">/edc/study/extract-study-data-at-crf-level</h4>
-<p>This API extracts EDC data at the CRF level and returns the data as a json object.</p>
+<p>This API extracts EDC data at CRF level and returns the data as a json object.</p>
 <p>This API returns only CRFs with data.</p>
 <p>This API has filters option (from date and to date are related to date_updated column, filters can include each column and value with equal sign).</p>
 <h4 id="edcstudyextract-study-data-at-crf-level-to-csvs">/edc/study/extract-study-data-at-crf-level-to-csvs</h4>
@@ -1160,9 +1157,9 @@
 <p>This is like an SQL SELECT * FROM statement WHERE XXX</p>
 <div class="admonition example">
 <p>For example, if you need only <strong>Adverse events crf</strong> use:
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;filters&quot;</span><span class="err">:</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="s2">&quot;Adverse events&quot;</span>
-<span class="p">}</span><span class="err">,</span>
+<span class="p">},</span>
 </code></pre></div></p>
 </div>
 <p>Set the column name in the filters object to filter on it, like - crf, event, subject, site etc.</p>
@@ -1170,14 +1167,14 @@
 <p>You can control the shape of the result object by using the <strong>filtersNotIn</strong> field in your request body.</p>
 <p>This is like an SQL SELECT * FROM statement WHERE XXX &lt;&gt; XXX</p>
 <div class="admonition example">
-<p>For example, if you don't need <strong>01B and 02B sites</strong> use:
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;filtersNotIn&quot;</span><span class="err">:</span> <span class="p">{</span>
+<p>For example, if you need only <strong>Adverse events crf</strong> use:
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;filtersNotIn&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="nt">&quot;site&quot;</span><span class="p">:</span> <span class="s2">&quot;01B|02B&quot;</span>
-<span class="p">}</span><span class="err">,</span>
+<span class="p">},</span>
 </code></pre></div></p>
 </div>
-<p>Set the column name in the filtersNotIn object to get the result without it, like - crf, event, subject, site etc.</p>
-<p>The filtersNotIn object can include a list of values with | between the values.</p>
+<p>Set the column name in the filtersNotIn object to filter the result without it, like - crf, event, subject, site etc.</p>
+<p>The filtersNotIn object can includes a list of values with | between the values.</p>
 <h5 id="filter-records-by-date-values">Filter records by date values</h5>
 <p>You can refine record selection by the API with the fromDate and toDate filters.</p>
 <p>This is like the SQL WHERE clause - WHERE CRF updated between fromDate AND toDate.</p>
@@ -1194,14 +1191,14 @@
 <p>Reminder! If you don’t set any filters field you will get all records.</p>
 </div>
 <h4 id="edcsubjectscreate-subject">/edc/subjects/create-subject</h4>
-<p>This API creates a subject in the EDC DB and returns the study_subject_id value.</p>
+<p>This API creates a subject in EDC DB and returns the study_subject_id value.</p>
 <h2 id="flask">Flask</h2>
 <h3 id="flaskcustomerextract-data-to-json">/flask/customer/extract-data-to-json</h3>
 <p>This API extracts data from flask tables and views for your customer.</p>
-<p>The table/ view should have a customer_id column for this process.</p>
+<p>The table/ view should have customer_id column for this process.</p>
 <div class="admonition example">
 <p class="admonition-title">Examples</p>
-<p>studies table, audit_user_login, billing_reports_customer, etc.</p>
+<p>studies table, audit_user_login, billing_reports_customer etc.</p>
 </div>
 <p>studyIds and filters are optional.</p>
 <h3 id="flaskcustomerdownload-billing-reports">/flask/customer/download-billing-reports</h3>
@@ -1214,14 +1211,14 @@
 <h3 id="flaskdeviceget-logs">/flask/device/get-logs</h3>
 <p>This API returns device logs of a study.</p>
 <h3 id="flaskdeviceinsert-log">/flask/device/insert-log</h3>
-<p>This API inserts device log into flaskData with the correct study_id according to EDC.</p>
-<p>The payload parameter is optional and can include each key value pair.</p>
+<p>This API inserts device log into flaskData with correct study_id according to EDC.</p>
+<p>payload parameter is optional and can include each key value pairs.</p>
 <h3 id="flaskstudycreate-update-flask-study">/flask/study/create-update-flask-study</h3>
 <p>This API creates/updates study in FlaskData.</p>
 <h3 id="flasksitecreate-update-flask-site">/flask/site/create-update-flask-site</h3>
 <p>This API creates/updates site in FlaskData.</p>
 <h3 id="flaskstudycreate-update-flask-study-users">/flask/study/create-update-flask-study-users</h3>
-<p>This API creates Users (if they do not exists) and assigned Users to the study.</p>
+<p>This API creates User if not exists and assigned Users to study.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This API deletes the Users that were assigned to this study and assigned the new Users.</p>
@@ -1237,8 +1234,8 @@
 <p>You can control the shape of the result object by using the <strong>columns</strong> field in your request body.
 This is like an SQL SELECT col1, col2, col3 FROM statement</p>
 <div class="admonition example">
-<p>For example: if you need only <strong>crf</strong>, <strong>event</strong> and <strong>value</strong> fields use:
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;columns&quot;</span><span class="err">:</span> <span class="p">{</span>
+<p>For example, if you need only <strong>crf</strong>, <strong>event</strong> and <strong>value</strong> fields use:
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
 <span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
 <span class="nt">&quot;event&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -1251,11 +1248,12 @@ set in the request body when you set them to 1.</p>
 <p>To get all the fields, don't set fields or specify the entire list of fields.
 This is like a SELECT * FROM statement.</p>
 <h4 id="filter-records-by-date-andor-column-value">Filter records by date and/or column value</h4>
-<p>You can refine record selection from the API with the date_from, date_to filters and setting values for fields.</p>
+<p>You can refine record selection by the API with the date_from, date_to filters and setting values for
+fields.</p>
 <p>This is like the SQL WHERE clause - WHERE crf='Demographics' and eventDate between date_from AND date_to.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code>    <span class="s2">&quot;filters&quot;</span><span class="err">:</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code>    <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;date_from&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-01T16:26:54.461Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;date_to&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-12-31T16:26:54.461Z&quot;</span><span class="p">,</span>
     <span class="nt">&quot;crf&quot;</span><span class="p">:</span> <span class="s2">&quot;Demographics&quot;</span><span class="p">,</span>
@@ -1265,7 +1263,7 @@ This is like a SELECT * FROM statement.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Reminder: if you don’t set any filters field you will get all records.</p>
+<p>Reminder! If you don’t set any filters field you will get all records.</p>
 </div>
 <h3 id="flaskcrfcreate-crf-and-insert-data">/flask/crf/create-CRF-and-insert-data</h3>
 <p>This API creates a CRF in an existing event and inserts data into the CRF.</p>
@@ -1274,11 +1272,11 @@ This is like a SELECT * FROM statement.</p>
 </div>
 <h3 id="flaskcrfcreate-event-crf-and-insert-data">/flask/crf/create-event-CRF-and-insert-data</h3>
 <p>This API creates event and CRF and inserts data.</p>
-<p>Example - Create a new Medication event with CRF and inserts data.</p>
+<p>Example - Creates a new Medication event with CRF and inserts data.</p>
 <h3 id="flaskcrfget-crf-data-ids">/flask/crf/get-CRF-data-ids</h3>
-<p>This API returns subject's CRF data ID (unique for each CRF) for specific CRF name.</p>
+<p>This API returns subject's crf data Id (unique for each CRF) for specific crf name.</p>
 <h3 id="flaskcrfupdate-crf-data">/flask/crf/update-CRF-data</h3>
-<p>This API updates CRF data by CRF data ID.</p>
+<p>This API updates CRF data by crf data id.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The following code example should use the latest version of jQuery</p>
@@ -1314,11 +1312,12 @@ This is like a SELECT * FROM statement.</p>
 and you want to save the data to the Flask data model.</p>
 </li>
 <li>
-<p>You have a connected wearable device that connects to your phone app with BLE and you want to save some data to Flask.</p>
+<p>You have a connected wearable device that connects to your phone app with BLE
+and you want to save some data to Flask.</p>
 </li>
 </ol>
 <p><em>Pre-requisites:</em><br />
-In order to insert data, you will have already created the Study, Site, Event, and Form (CRF) entities in the Flask data model:    </p>
+In order to insert data you will have already created the Study, Site, Event and Form (CRF) entities in the Flask data model:    </p>
 <ol>
 <li>
 <p>When you have ePRO (electronic patient reported outcomes), then the user credentials you pass to the API will be for the patient.
@@ -1330,23 +1329,24 @@ The patient then clicks and sets a password. (Alternatively you can enable the p
 </li>
 </ol>
 <p><em>Application flow</em>  </p>
-<p>Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to collect on your mobile app.</p>
-<p>You implement the form on your app with the input field and when the user saves the form on the app, you then save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours of sleep you tracked and save it to Flask every day at 10:00.</p>
+<p>Let's say you have a daily Quality of life Form with a field for hours of sleep that you want to
+collect on your mobile app.</p>
+<p>You implement the form on your app with the input field and when the user saves the form on the app,
+you then save the data in Flask.    Alternatively, if your mobile app does sleep tracking, you can take hours
+of sleep you tracked and save it to Flask every day at 10:00.</p>
 <p>Your app then sends the data to the Flask API as key-value pairs. See below.</p>
 <div class="admonition tip">
 <p class="admonition-title">TIPS</p>
 <ul>
 <li>
-<p>Flask Forms automatically names the item variables; you will probably want to reset variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.</p>
+<p>Flask Forms automatically names the item variables; you will probably want to reset
+variable names to something friendly like PATIENT_AGE or PATIENT_GENDER_CODE.</p>
 </li>
 <li>
-<p>If you are using radio buttons, check, or select boxes in your mobile app - make sure that the values you
-pass are not offset by 1 by mistake.</p>
-</li>
-</ul>
-<p>For example: if PATIENT_GENDER_CODE is (1 - female, 2 - male)
+<p>If you are using radio buttons, check, select boxes in your mobile app - make sure that the values you
+pass are not offset by 1 by mistake - for example if PATIENT_GENDER_CODE is (1 - female, 2 - male)
 then make sure you pass 1 or 2 (and not 0 or 1).</p>
-<ul>
+</li>
 <li>
 <p>When you pass a numeric field - pass it like:  "AGE": 25 not "AGE": "25". In JSON, strings are not integers.</p>
 </li>
@@ -1364,9 +1364,8 @@ then make sure you pass 1 or 2 (and not 0 or 1).</p>
 <p>/data/create/create-event-crf-and-insert-data creates a new event with CRFs and insert CRFs data for one subject</p>
 <p><strong>Important:</strong></p>
 <p>If subject role token is used to call the APIs, then the request body doesn't need to include the subjectLabel or subjectId parameters.</p>
-<p>If the CRC role token is used, then the request body must include subjectLabel or subjectId.</p>
-<p>In the below example, the API sends values of selected checkbox/select box items in the CRF. </p>
-<p>For example: Outcome: 1: 'Ongoing'
+<p>If CRC role token is used, then the request body must include subjectLabel or subjectId.</p>
+<p>In the below example, the API sends values of selected checkbox/select box items in the CRF. For example: Outcome: 1: 'Ongoing'
 <div class="highlight"><pre><span></span><code>    <span class="p">{</span>
           <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">6670398</span><span class="p">,</span>
           <span class="nt">&quot;eventName&quot;</span><span class="p">:</span> <span class="s2">&quot;Common&quot;</span><span class="p">,</span>
@@ -1396,24 +1395,26 @@ then make sure you pass 1 or 2 (and not 0 or 1).</p>
     <span class="p">}</span>
 </code></pre></div></p>
 <h4 id="under-the-hood-code-generator-epro-electronic-patient-reported-outcomes">Under the hood - Code generator - ePRO (Electronic patient reported outcomes)</h4>
-<p>All of this probably seems a little abstract, so lets see some working code.    </p>
+<p>All this probably seems a little abstract, so lets see some working code.    </p>
 <p>Surf over to the <a href="https://api.flaskdata.io/code/">Flask API Example code generator</a></p>
 <p>The Code generator page is a React application that generates working NodeJS code; showing you the API call  with proper arguments.  You can copy and past the code and run it on the command line with nodejs.</p>
 <p>When you hit the green Run Function button - you will see the results from the API call on the page.</p>
-<p>As we mentioned before, the patient (AKA Subject) will have already been screened to the study and have credentials; we'll be using the Subject credentials in this API flow.</p>
-<p>The following sequence will show how to authorize the subject, get his user id an study subject label, and insert some data.</p>
+<p>As we mentioned before, the patient (AKA Subject) will have already been screened to the study and have credentials;
+we'll be using the Subject credentials in this API flow.</p>
+<p>The following sequence will show how to authorize the subject, get his user id and study subject label and insert some data.</p>
 <ol>
 <li>
-<p><strong>Authorization</strong> - pass in the credentials of the subject (email and password). You'll authorize the Subject after they logs in to your app with the credentials they set on their Welcome to Flask email.</p>
+<p><strong>Authorization</strong> - pass the credentials of the subject (email and password). You'll authorize the Subject after she logs in to your app
+with the credentials she set on her Welcome to Flask email.</p>
 </li>
 <li>
-<p><strong>Get User profile</strong> - pass the JWT token and get the Subject ID and Subject label (along with a number of other fields)</p>
+<p><strong>Get User profile</strong> - pass the JWT token and get the Subject ID and Subject label (and a bunch of other fields)</p>
 </li>
 <li>
 <p><strong>Get studies of subject</strong> - pass the JWT token with the Subject ID and get the Study ID of the study where the Subject is enrolled</p>
 </li>
 <li>
-<p><strong>Create CRF and insert data</strong> - pass the JWT token with Study ID, Subject ID, and the CRF payload and voila - you've inserted data!</p>
+<p><strong>Create CRF and insert data</strong> - pass the JWT token with Study ID, Subject ID and the CRF payload and voila - you've inserted data!</p>
 </li>
 </ol>
 <p>```</p>
@@ -1450,13 +1451,13 @@ then make sure you pass 1 or 2 (and not 0 or 1).</p>
           </a>
         
         
-          <a href="../api_code_examples/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../epro/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                API Code Examples
+                Flask ePRO
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1483,8 +1484,8 @@ then make sure you pass 1 or 2 (and not 0 or 1).</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

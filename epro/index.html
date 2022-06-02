@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -171,8 +172,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -293,8 +293,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -315,6 +314,18 @@
   <li class="md-nav__item">
     <a href="../study_dashboard/" class="md-nav__link">
       Study Dashboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
     </a>
   </li>
 
@@ -391,8 +402,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -429,18 +439,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -455,8 +453,7 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -931,141 +928,141 @@
 <h3 id="study-definition">Study definition</h3>
 <p>To define <a href="../manage_studies/#add-study">study</a> with ePRO, the study should be defined as the following:
 1. <strong>Enable patient reported outcome module?</strong>
-3. <strong>PRO URL</strong>: should be <strong>https://epro.flaskdata.io</strong>, (If the study has another PRO, then fill the <em>PRO URL</em> field with your study's PRO URL).</p>
+3. <strong>PRO URL</strong>: should be <strong>https://epro.flaskdata.io</strong>, (If study has another PRO then FlaskData fill the <em>PRO URL</em> field with your study's PRO URL).</p>
 <p><img alt="Screenshot" src="../img/epro/epro_study_definition.PNG" /></p>
 <h3 id="forms-definitions">Forms definitions</h3>
-<p>To define ePRO questionnaire, you need to create <a href="../manage_forms/#crfs">CRF/s</a> and <a href="../manage_forms/#event-definitions">Event</a> that includes your diary CRF(s) first.</p>
-<p>Second you need to create a <a href="../manage_forms/#study-schedules">Study Schedule</a> with your period diary.</p>
+<p>To define ePRO questionnaire, you need to create <a href="../manage_forms/#crfs">CRF/s</a> and <a href="../manage_forms/#event-definitions">Event</a> includes your diary CRF/s first.</p>
+<p>Second you need to create <a href="../manage_forms/#study-schedules">Study Schedule</a> with your period diary.</p>
 <p><img alt="Screenshot" src="../img/epro/epro_study_schedule.PNG" /></p>
 <h2 id="welcome-email-and-sms">Welcome Email and SMS</h2>
-<p>When a subject has been created, the patient receives a welcome email and SMS with the PRO link.</p>
-<p>The patient is invited to enter their diary.</p>
-<p>If the patient forgets their password, <a href="../manage_users/#profile">site role user</a> (CRC or PI) can go to the <a href="../manage_subjects/#actions">subject's profile</a> page and send them a Welcome Back- Reset password email.</p>
+<p>When subject has been created the patient gets a welcome email and SMS with PRO link.</p>
+<p>He/She is invited entering and fill his/her diary.</p>
+<p>If patient forgets his password <a href="../manage_users/#profile">site role user</a> (like CRC or PI) can go to <a href="../manage_subjects/#actions">subject's profile</a> page and send him Welcome back/Reset password email.</p>
 <p><img alt="Screenshot" src="../img/epro/subject_actions.PNG" /></p>
-<p>The patient will receive another welcome email.</p>
+<p>Patient will get a welcome email again.</p>
 <p><img alt="Screenshot" src="../img/epro/inbox_email_invite.PNG" /></p>
 <h2 id="subject-invited">Subject invited</h2>
-<p>When the patient gets a welcome email/SMS,</p>
+<p>When patient gets a welcome emil/SMS</p>
 <p><img alt="Screenshot" src="../img/epro/welcome_back.PNG" /></p>
-<p>they should click on the link.</p>
+<p>He/she should click on the link.</p>
 <p><img alt="Screenshot" src="../img/epro/subject_invite.PNG" /></p>
-<p>The patient is invited to login with their Google account, OR to choose a password.</p>
+<p>The patient is invited to login with his Google account OR to choose a password.</p>
 <p><img alt="Screenshot" src="../img/epro/login_google_account.PNG" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To create a password or reset password - the CRC user should reset the subject's password by clicking on the <a href="../manage_subjects/#subject-profile">Reset password</a> option.</p>
-<p>The patient will receive a reset password email.</p>
+<p>To create a password or reset password - CRC user should reset subject's password by clicking on <a href="../manage_subjects/#subject-profile">Reset password</a> option.</p>
+<p>The patient will get a reset password email</p>
 <p><img alt="Screenshot" src="../img/epro/reset_pass.PNG" /></p>
-<p>After the subject sets their password, they can login to ePRO with their Google account or with their FlaskData password.</p>
+<p>After Subject set his/her password, He can login to ePRO by Google account or with FlaskData password</p>
 <p><img alt="Screenshot" src="../img/epro/login.PNG" /></p>
 </div>
 <h2 id="android-application">Android application</h2>
 <h3 id="installation">Installation</h3>
-<p>If the patient has an Android phone, they can install the Flask ePRO application from the Google play store.</p>
+<p>If patient has an Android phone, he can install Flask ePRO application from Google play store.</p>
 <p><img alt="Screenshot" src="../img/epro/google_play.PNG" /></p>
-<p>Search "flask epro" and install.</p>
+<p>Search flask epro and install it</p>
 <p><img alt="Screenshot" src="../img/epro/flask_epro_application.PNG" /></p>
-<p>After the patient installs the Flask ePRO application, they will see the Flask ePRO icon</p>
+<p>After patient install Flask ePRO application he will see the Flask ePRO icon</p>
 <p><img alt="Screenshot" src="../img/epro/flask_epro_app_flag.PNG" /></p>
 <p>Just click on the application and login to ePRO, Enjoy <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 <h3 id="login-to-flask-epro">Login to Flask ePRO</h3>
-<p>Open Flask ePRO application and login to your diary. (To login by email and password you should create the password first using the <a href="../epro_mobile/#first-login-with-email-and-password">reset password</a> option)</p>
+<p>Open Flask ePRO application and login to your diary. (To login by email and password you should create the password first by <a href="../epro_mobile/#first-login-with-email-and-password">reset password</a> option)</p>
 <p><img alt="Screenshot" src="../img/epro/app_login.PNG" /></p>
 <h3 id="enter-diary">Enter diary</h3>
-<p>When the patient logins to ePRO, they see their diary for the current date.</p>
-<p>They should complete the diary and save.</p>
-<p>If there are a few Forms in the diary, the next form will be opened when the <strong>SAVE AND NEXT</strong> button is clicked.</p>
+<p>While patient logins to ePRO, he see his diary for the current date.</p>
+<p>He should fill his diary and save.</p>
+<p>If there are a few Forms in the diary the next form will be opened when he clicks <strong>SAVE AND NEXT</strong> button.</p>
 <p><img alt="Screenshot" src="../img/epro/app_enter_diary.PNG" /></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <ul>
-<li>If the patient completed a part of their diary, they can continue later.</li>
-<li>If patient forgot to complete in their diary, they can still complete it within the next 2 days (By <a href="./#logs">logs</a> option)</li>
+<li>If patient filed a part of his diary he can continue later.</li>
+<li>If patient forgot to fill his diary, He can fill it next 2 days (By <a href="./#logs">logs</a> option)</li>
 </ul>
 </div>
 <p>Required fields are marked with a red asterisk.</p>
-<p>If patient try to save the diary with missing information, an error flag appears.</p>
-<p>Clicking on the error flag will open the error message.</p>
+<p>If patient try to save the diary with missing information, an error flag appears</p>
+<p>Clicking on the error flag opens the error message.</p>
 <p><img alt="Screenshot" src="../img/epro/app_error_message.PNG" /></p>
 <h3 id="input-data">Input Data</h3>
-<p>The patient can click the <strong>Input Data</strong> option and complete their diary for the current date.</p>
-<p>If they saved their data before, they can only view the data and cannot change it.</p>
+<p>Patient can click <strong>Input Data</strong> option and fill his diary for the current date.</p>
+<p>If he saved his data before, He just see his data and cannot change it.</p>
 <p><img alt="Screenshot" src="../img/epro/app_see_diary.PNG" /></p>
 <h3 id="logs">Logs</h3>
-<p>Patients can view and continue adding to diaries with the <strong>Logs</strong> option</p>
+<p>Patient can see / continue his diaries in <strong>Logs</strong> option</p>
 <p><img alt="Screenshot" src="../img/epro/app_logs.PNG" /></p>
 <h3 id="my-account">My Account</h3>
-<p>Patients can change their account definition by clicking on the <strong>My Account</strong> option</p>
+<p>Patient can change his account definition by clicking on <strong>My Account</strong> option</p>
 <p><img alt="Screenshot" src="../img/epro/app_my_account.PNG" /></p>
-<p>They can change their default language.</p>
+<p>He can change his default language.</p>
 <p><img alt="Screenshot" src="../img/epro/app_languages.PNG" /></p>
 <div class="admonition note">
 <p class="admonition-title">Support languages</p>
-<p>For ePRO language support, the customer admin user should define it in the <a href="../manage_forms/#crfs">CRFs definition</a></p>
+<p>For ePRO lunguages support customer admin user should define it in the <a href="../manage_forms/#crfs">CRFs definition</a></p>
 <p><img alt="Screenshot" src="../img/epro/app_hebrew_forms.PNG" /></p>
 </div>
-<p>Patients can change ePRO display mode by clicking on theme option.</p>
+<p>Patient can change ePRO display mode by clicking on theme option.</p>
 <p><img alt="Screenshot" src="../img/epro/app_theme_option.PNG" /></p>
 <p><img alt="Screenshot" src="../img/epro/app_theme.PNG" /></p>
-<p>If they sets the mode as <strong>Dark</strong> they will see something like this:</p>
+<p>If he sets the mode as <strong>Dark</strong> he will see something like this:</p>
 <p><img alt="Screenshot" src="../img/epro/app_dark_mode.PNG" /></p>
 <h3 id="study-information">Study information</h3>
-<p>The patient can see details of the study they are participating in by clicking on the exclamation mark.</p>
+<p>The patient can see details of the study he is participating in by clicking on the exclamation mark</p>
 <p><img alt="Screenshot" src="../img/epro/study_information_icon.PNG" /></p>
 <p><img alt="Screenshot" src="../img/epro/study_info.PNG" /></p>
 <h2 id="flaskdata-application">FlaskData application</h2>
-<p>If the subject cannot use <a href="#android-application">Flask ePRO</a> android application, they can use FlaskData application to enter their diary.</p>
+<p>If subject cannot use <a href="#android-application">Flask ePRO</a> android application he/she can use FlaskData application to enter his/her diary.</p>
 <p>It's less beautiful but works great. <img alt="👍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44d.svg" title=":+1:" /></p>
-<p>In the case that the patients phone does not support Android it is better for the patient to use their desktop.</p>
+<p>In any case in such a case that the phone does not support Android it is better for the patient to use his desktop.</p>
 <h3 id="login">Login</h3>
-<p>The patient should login to FlaskData ePRO URL (https://epro.flaskdata.io)</p>
+<p>Patient should login to FlaskData ePRO URL (https://epro.flaskdata.io)</p>
 <p><img alt="Screenshot" src="../img/epro/flask_data_login.PNG" /></p>
 <h3 id="input-data_1">Input Data</h3>
-<p>When the patient logs into their diary, a diary for the current date opens.</p>
-<p>They can start to fill the diary.</p>
+<p>When patient login to his diary a diary for the current date opens.</p>
+<p>He can start to fill the diary.</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_enter_data.PNG" /></p>
-<p>If there is another Form in the diary they should click the <strong>SAVE AND NEXT</strong> button.</p>
+<p>If there are another Forms in the diary he should click <strong>SAVE AND NEXT</strong> button</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_save_and_next.PNG" /></p>
-<p>If they completed the last form, they should click the <strong>FINISH</strong> button.</p>
+<p>If he filled the last form he should click <strong>FINISH</strong> button</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_finish_button.PNG" /></p>
-<p>When the patient completes the diary, a success message appears.</p>
+<p>When patient finish fill diary a success message appears</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_success.PNG" /></p>
-<p>To go back to <strong>Input Data</strong>, click on the icon.</p>
+<p>To go back to <strong>Input Data</strong> click on the icon</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_inputdata_icon.PNG" /></p>
 <h3 id="logs_1">Logs</h3>
-<p>The patient can see their diaries using the <strong>Logs</strong> option.</p>
+<p>Patient can see his diaries by <strong>Logs</strong> option</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_logs_option.PNG" /></p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_logs.PNG" /></p>
-<p>Using the logs option, the patient cannot change their diaries, only view them.</p>
+<p>By logs option patient cannot change his diaries, just see them</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_view_mode.PNG" /></p>
 <div class="admonition note">
 <p class="admonition-title">Forget Option</p>
 <ol>
 <li>
-<p>If the patient filled their diary but didn't finish, they can continue using Logs option</p>
-<p>They can continue filling in data from yesterday's diary, as well as, from the diaries of two days ago.</p>
+<p>If patient filled diary but didn't finish all his diary forms he can continue from Logs option</p>
+<p>He can continue filling data for yesterday's diary and for the diary of two days ago.</p>
 </li>
 <li>
-<p>If the patient forgots to fill their diary, they can enter data for yesterday's diary and for the diary of two days ago.</p>
+<p>If patient forgot to fill his diary he can enter data for yesterday's diary and for the diary of two days ago.</p>
 </li>
 </ol>
 </div>
 <h3 id="my-account_1">My Account</h3>
-<p>To see the account definition, click on the <strong>My Account</strong> icon.</p>
+<p>To see account definition click on <strong>My Account</strong> icon</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_my_account.PNG" /></p>
 <div class="admonition note change language">
 <p class="admonition-title">Note</p>
-<p>Patients can change the language by click on the languages icon - this option change the language for this login but it doesn't change patient account definitions. In the next login the language will be set to the default language again.  <br />
+<p>Patient can change the language by click on Languages icon - this option change the language for this login but it doesn't change patient account definitions, So in the next login the language will be the default language again.  <br />
 <img alt="Screenshot" src="../img/epro/langauges_icon.PNG" /></p>
 </div>
-<p>Be sure to save the patient's account information after changing.</p>
+<p>Save patient's account information after changing.</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_update_my_account.PNG" /></p>
 <h3 id="study-information_1">Study information</h3>
-<p>The patient can see details of the study they are participating in by clicking on the exclamation mark.</p>
+<p>The patient can see details of the study he is participating in by clicking on the exclamation mark</p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_study_info.PNG" /></p>
 <p><img alt="Screenshot" src="../img/epro/flaskdata_study_information.PNG" /></p>
 <h3 id="logout">Logout</h3>
-<p>After the patient finish completing their diary, they can logout from the system by clicking the <strong>Logout</strong> icon.</p>
+<p>After patient finish filling his diary he can logout from the system by clicking <strong>Logout</strong> icon.</p>
                 
               
               
@@ -1084,7 +1081,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../api_code_examples/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../apiflows/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1093,7 +1090,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                API Code Examples
+                Flows
               </div>
             </div>
           </a>
@@ -1132,8 +1129,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -8,8 +8,9 @@
       
       
       
+      
       <link rel="shortcut icon" href="../img/favicon.PNG">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -17,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
       
     
@@ -100,7 +101,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -171,8 +172,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -295,8 +295,7 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     <label class="md-nav__link" for="nav-3">
       Running your study
       <span class="md-nav__icon md-icon"></span>
@@ -406,6 +405,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../manage_metrics/" class="md-nav__link">
+      Metrics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../tools/" class="md-nav__link">
       Tools
     </a>
@@ -472,8 +483,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Flask API
       <span class="md-nav__icon md-icon"></span>
@@ -510,18 +520,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../api_code_examples/" class="md-nav__link">
-      API Code Examples
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -534,8 +532,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
     <label class="md-nav__link" for="nav-5">
       ePRO
       <span class="md-nav__icon md-icon"></span>
@@ -687,31 +684,31 @@
                 
                 <p><a href="https://www.flaskdata.io"><img alt="Screenshot" src="../img/flaskdata_logo.PNG" /></a></p>
 <h1 id="study-dashboard">Study Dashboard</h1>
-<p>Study Dashboard shows your study monitoring.</p>
-<p>On the <a href="../manage_studies/#studies">studies index</a> page, click on your study to view your study dashboard.</p>
+<p>Study Dashboard show your study monitoring.</p>
+<p>In <a href="../manage_studies/#studies">studies index</a> page, click on your study, now you see your study dashboard.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>By pressing on study, the study name appear in the title bar and all of the actions will be related to this study (i.e. add user, add site, etc.)</p>
+<p>By press on study the study name appear in title bar and all the actions will be related to this study (like add user, add site etc.)</p>
 </div>
 <p><img alt="Screenshot" src="../img/dashboard/study_dashboard.PNG" /></p>
-<p>To see your data monitoring in the dashboard, you should define it first with the monitoring option.</p>
+<p>To see your data monitoring in the dashboard you should define it first in monitoring option.</p>
 <h2 id="monitoring">Monitoring</h2>
-<p>In the monitoring section there is a slick analytics of your study data.</p>
-<p>The graphs can be viewed as a bar graph, pie graph, table, etc. Graphs can be customized to have different colors (red, green or blue)</p>
+<p>In the monitoring section there is a slick with analytics of your study data.</p>
+<p>The graphs can be as bar, pie, table etc. With different colors (red, green or blue)</p>
 <h2 id="alerts">Alerts</h2>
-<p>In the alerts card, there is a table with the last 10 active alerts.</p>
-<p>If there are active alerts for this study, a bell appears in title bar with the number of alerts.</p>
+<p>In alerts card there is a table withe the last 10 active alerts.</p>
+<p>If there are active alerts to this study a bell appears in title bar with the number of alerts.</p>
 <p><img alt="Screenshot" src="../img/dashboard/alerts_bell.PNG" /></p>
-<p>You can click on each alert to see more properties, add comments, or change its status.</p>
+<p>You can click on each alert to see more properties, add comments or change its status.</p>
 <p><img alt="Screenshot" src="../img/dashboard/study_alert_profile.PNG" /></p>
-<p>To see all alerts from this study click on the blue <strong>All alerts</strong> link.</p>
+<p>To see all alerts of this study click on <strong>All alerts</strong> blue link</p>
 <p><img alt="Screenshot" src="../img/dashboard/all_alerts_link.PNG" /></p>
 <h3 id="all-alerts">All Alerts</h3>
-<p>On the Study-&gt;All Alerts page, you can see all alerts from this study.</p>
-<p>You can filter the alerts, export them to CSV file, and update the alert status by pressing on alert.</p>
+<p>In study All Alerts page you can see all alerts of this study.</p>
+<p>You can filter the alerts, export them to CSV file and update alert status by press on alert.</p>
 <p><img alt="Screenshot" src="../img/dashboard/all_alerts_page.PNG" /></p>
 <h2 id="filters">Filters</h2>
-<p>On the study dashboard page there is a filter option.</p>
+<p>In study dashboard page there is a filter option.</p>
 <ul>
 <li>Period - alert date &lt;= this select date</li>
 <li>Sites</li>
@@ -719,20 +716,20 @@
 </ul>
 <p>This filter filters graphs and alerts accordingly.</p>
 <h2 id="edc">EDC</h2>
-<p>If this study has <a href="../manage_studies/#add-study">EDC DB</a>, the blue <strong>EDC</strong> button appears.</p>
-<p>Clicking it opens a new window with the study ClinCapture app.</p>
+<p>If this study has <a href="../manage_studies/#add-study">EDC DB</a> <strong>EDC</strong> blue button appears.</p>
+<p>Click it opens a new window with study ClinCapture app.</p>
 <p><img alt="Screenshot" src="../img/dashboard/edc_button.PNG" /></p>
 <h2 id="additional-tools">Additional Tools</h2>
 <p>There is option to add tools to your study.</p>
 <p>The optional tools exist in <a href="../tools/#tools">Tools</a>.</p>
-<p>If you want other users (study role and site role users) to see tools, you need to add them to the specific study.</p>
-<p>Click on the blue <strong>ADDITIONAL TOOLS</strong> button, and the study tools page opens.</p>
-<p>You can add/remove tool from this study by click on the green <strong>ADD A TOOL</strong> button.</p>
+<p>If you want other users (study role and site role users) to see tools you need to add them to specific study.</p>
+<p>Click on <strong>ADDITIONAL TOOLS</strong> blue button, Study tools page opens.</p>
+<p>You can add/remove tool from this study by click on <strong>ADD A TOOL</strong> green button.</p>
 <p><img alt="Screenshot" src="../img/dashboard/add_tool.PNG" /></p>
 <p>Manage tools page opens:</p>
 <p><img alt="Screenshot" src="../img/dashboard/manage_tools.PNG" /></p>
 <p>Study tools page available to all research users.</p>
-<p>By pressing tool, you enter that tool and see the data (Of course site role users can only see their site data).</p>
+<p>By pressing tool you enter that tool and see the data (Of course site role users can only see their site data).</p>
                 
               
               
@@ -766,13 +763,13 @@
           </a>
         
         
-          <a href="../tools/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../manage_metrics/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tools
+                Metrics
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -799,8 +796,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
