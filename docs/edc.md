@@ -1,5 +1,5 @@
 <a href="https://www.flaskdata.io">![Screenshot](img/flaskdata_logo.PNG)</a>
-#ClinCapture EDC
+#EDC
 The ClinCapture EDC system runs in the Flaskdata.io cloud.
 
 You can use a standalone ClinCapture EDC instance or ClinCapture integrated with the Flask CTMS (clinical trial management system)(see the [FlaskData - ClinCapture integration for more information](./flask_and_edc.md#flask-and-edc))
