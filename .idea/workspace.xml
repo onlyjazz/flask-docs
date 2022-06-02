@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c2c1d7ac-2aea-4197-b25e-831d9bbfae3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/apiflows.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/apiflows.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manage_forms.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manage_forms.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1j5puYBEzNGfcrt8HOw6YVoguB0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,7 +29,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flask-api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -65,7 +73,18 @@
       <workItem from="1607854366891" duration="2606000" />
       <workItem from="1610266530007" duration="4207000" />
       <workItem from="1611054439409" duration="599000" />
-      <workItem from="1611731716450" duration="1841000" />
+      <workItem from="1611731716450" duration="3761000" />
+      <workItem from="1613902642170" duration="598000" />
+      <workItem from="1613905825910" duration="892000" />
+      <workItem from="1613910357802" duration="1192000" />
+      <workItem from="1614147056465" duration="596000" />
+      <workItem from="1614155713523" duration="597000" />
+      <workItem from="1614673775563" duration="3725000" />
+      <workItem from="1615455165296" duration="598000" />
+      <workItem from="1616310426329" duration="1183000" />
+      <workItem from="1616581653725" duration="4630000" />
+      <workItem from="1617771937455" duration="2484000" />
+      <workItem from="1645095938239" duration="1185000" />
     </task>
     <servers />
   </component>

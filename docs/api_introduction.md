@@ -17,9 +17,8 @@ There are 3 FlaskData API environments:
 * production environment : <a href="https://api.flaskdata.io">api.flaskdata.io</a>
 
 Each API environments has its own swagger UI - like https://api.flaskdata.io/swagger/
-Select HTTPS in the Swagger Schemes dropdown before trying it out.
 
-![Screenshot](img/api/swagger_schemes.PNG)
+There are a few specs, Select the relevant spec for API using.
 
 For using FlaskData API by swagger you need to click on "Try it out" of the relevant API.
 
